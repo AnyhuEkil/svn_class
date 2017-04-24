@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>개인페이지_자가진단</title>
+<style>
+* {
+    box-sizing: border-box;
+	font-family: "윤고딕", sans-serif;
+}
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+
+
+
+
+body{
+	margin:0;
+	padding: 0;
+}
+
+a:active,a:hover,a{text-decoration:none;}
+
+
+
+.header {
+	background-color: #445878;
+	height: 80px;
+	padding: 0;
+	position: fixed;
+	z-index: 100;
+	left:0;
+	top:0;
+	text-align: center;
+}
+
+h1{
+	color:white;
+	margin:10px;
+	padding:10px;
+}
+
+
+
+/*좌우 중앙 전체 div*/
+.container{
+	margin:80px 0 0;
+	z-index: 5;
+}
+
+
+/* 왼쪽 메뉴*/
+.leftMenu{
+	padding-top: 45px;
+
+}
+
+.leftMenuList,.leftMenuList>a{
+	background-color: #92C2E2;
+	color: white;
+	padding: 10px;
+}
+.leftMenuList:hover, .leftMenuList:hover >a{
+	background-color: #5ea5d4;
+}
+
+
+
+
+/* 중앙 컨텐츠 */
+.mainContent{
+	text-align: center;
+	background-color: white;
+	padding:0;
+	margin:0;
+}
+
+#table {
+	display: table; padding: 30px; border: 2px solid #939598; vertical-align: middle;
+}
+.row {
+	display: table-row;  vertical-align: middle;
+}
+.cellLeft{
+	display: table-cell; margin: 10px 0; vertical-align: middle; text-align: left;
+}
+.cellRight{
+	display: table-cell; margin: 10px 0; vertical-align: middle; text-align: left;
+}
+.pointCheck{
+	margin-right:10px;
+}
+.okResetBtn{text-align: center;}
+.pointInput{ width:80px; }
+.pointReset{ width:50px; }
+
+.advice{
+	padding: 30px 30px 30px 50px; margin-bottom:100px; text-align: left; border: 2px solid #939598; vertical-align: middle;
+}
+
+/* 결과 숨긴부분*/
+
+.result07{
+	display: none;
+}
+.result814{
+	display: none;
+}
+.result1521{
+	display: none;
+}
+.result2228{
+	display: none;
+}
+.resultNote{
+	display: none;
+	color: #ff6d70;
+}
+
+/* 상담부분*/
+.advice{
+	display: none;
+}
+.inputReportQue{
+	display: none;
+}
+.advSend{
+	display: none;
+}
+#onlyCharAlert,#onlyNumAlert{
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+/* 우측 빈공간*/
+.rightMenu{
+
+	margin:0 0 -50px;
+}
+
+
+.footer{
+	position: relative;
+	bottom:0;
+	background-color: #92CDCF;
+	height: 50px;
+	text-align: center;
+	margin:0;
+	padding:0;
+}
+
+
+
+
+
+/* 모바일일때 col선언 */
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 768px) {
+/* 일반적인 col선언  */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+}
+</style>
+
+<script type="text/javascript">/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ자바스크립트 시작 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+
+
+	
+	function pointCnt(){
+	var checkRadio=0;
+	var sum=0;
+	var pnt01= document.getElementsByName("pointInput01");
+	var pnt02= document.getElementsByName("pointInput02");
+	var pnt03= document.getElementsByName("pointInput03");
+	var pnt04= document.getElementsByName("pointInput04");
+	var pnt05= document.getElementsByName("pointInput05");
+	var pnt06= document.getElementsByName("pointInput06");
+	var pnt07= document.getElementsByName("pointInput07");
+	
+	for(i=0; i<pnt01.length; i++ ){
+		if(pnt01[i].checked == true){
+			sum += parseInt(pnt01[i].value);
+			checkRadio += 1;
+		}
+	}
+	for(i=0; i<pnt02.length; i++ ){
+		if(pnt02[i].checked == true){
+			sum+= parseInt(pnt02[i].value);
+			checkRadio += 1;
+		}	
+	}
+	for(i=0; i<pnt03.length; i++ ){
+		if(pnt03[i].checked == true){
+			sum += parseInt(pnt03[i].value);
+			checkRadio += 1;
+		}	
+	}
+	for(i=0; i<pnt04.length; i++ ){
+		if(pnt04[i].checked == true){
+			sum += parseInt(pnt04[i].value);
+			checkRadio += 1;
+		}	
+	}
+	for(i=0; i<pnt05.length; i++ ){
+		if(pnt05[i].checked == true){
+			sum += parseInt(pnt05[i].value);
+			checkRadio += 1;
+		}	
+	}
+	for(i=0; i<pnt06.length; i++ ){
+		if(pnt06[i].checked == true){
+			sum += parseInt(pnt06[i].value);
+			checkRadio += 1;
+		}	
+	}
+	for(i=0; i<pnt07.length; i++ ){
+		if(pnt07[i].checked == true){
+			sum += parseInt(pnt07[i].value);
+			checkRadio += 1;
+		}
+	}
+	if (checkRadio < 7){
+		alert("문항을 모두 체크해주세요");
+		return false;
+	}
+	
+	
+	document.getElementsByClassName('resultPoint')[0].innerHTML="당신의 점수는 "+sum+"점입니다";
+	document.getElementsByClassName('advice')[0].style.display="block";
+	
+	if (sum <= 7){
+		document.getElementsByClassName("result07")[0].style.display="block";
+	}else if( sum <= 14){
+		document.getElementsByClassName("result814")[0].style.display="block";
+	}else if( sum <= 21){
+		document.getElementsByClassName("result1521")[0].style.display="block";
+		document.getElementsByClassName("resultNote")[0].style.display="block";
+	}else if( sum <= 28){
+		document.getElementsByClassName("result2228")[0].style.display="block";
+		document.getElementsByClassName("resultNote")[0].style.display="block";
+	}
+	
+	
+	
+}
+/* 입력값 출력 */
+
+	function advBtn(){
+		document.getElementsByClassName('inputReportQue')[0].style.display="block";
+		document.getElementsByClassName('advSend')[0].style.display="block";
+		document.getElementsByClassName('inputReport')[0].innerHTML=document.getElementsByName('advName')[0].value+"<br>";
+		document.getElementsByClassName('inputReport')[0].innerHTML+=document.getElementsByName('advAge')[0].value+"<br>";
+		document.getElementsByClassName('inputReport')[0].innerHTML+=document.getElementsByName('advEmail')[0].value+"<br>";
+		
+	}
+
+	function advSendBtn(){
+		alert("신청되었습니다!");
+		
+	}
+
+/* 특정키만 입력*/
+
+
+	//숫자만 입력가능 처리
+	function onlyNum(event){
+	var keyId = event.keyCode;
+		if( ( keyId>=48 && keyId<=57 ) || ( keyId>=96 && keyId<=105 ) || keyId==8 || keyId==46 || keyId==37 || keyId==39 || keyId==9 ){
+			return;
+		}else{
+			
+			document.getElementById('onlyNumAlert').innerHTML=" 숫자를 입력해주세요"
+			return false;
+		}
+	}
+	//숫자외에 삭제 처리
+	function removeChar(event){
+		var keyId = event.keyCode;
+		if( ( keyId>=48 && keyId<=57 ) || ( keyId>=96 && keyId<=105 ) ){
+			document.getElementById('onlyNumAlert').innerHTML="";
+			return;
+		}else{
+			event.target.value = event.target.value.replace(/[^0-9]/g, "");
+		}	
+	}
+	//숫자 입력불가 처리
+	function noNum(event){
+		var keyId = event.keyCode;
+		if( ( keyId>=48 && keyId<=57 ) || ( keyId>=96 && keyId<=105 ) ){
+			document.getElementById('onlyCharAlert').innerHTML=" 숫자 외에 텍스트를 입력해주세요";
+			return false;
+		}else{
+			document.getElementById('onlyCharAlert').innerHTML="";
+			return;
+		}	
+	}
+	
+	
+
+
+</script>
+
+
+</head>
+<body><!-- ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ html시작 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
+
+
+
+
+<div class="col-12 header">
+	<h1>불면증정도척도 자가진단 TEST</h1>
+</div>
+
+
+
+
+<div class="container">
+
+
+	<div class="col-2 leftMenu">
+		<p class="leftMenuList"><a href="../main0329_whyNot.html" target="_blank">메인페이지</a></p>
+		<p class="leftMenuList"><a href="http://www.sleepnet.or.kr/" target="_blank">대한수면정신학회</a></p>
+	</div>
+
+
+	<div class="col-8 mainContent" >
+		<h3>현재 <span style="color:#464646">(지난 2주 동안)</span> 당신의 <span style="color:#ff6d70">불면증상</span>이 얼마나 심한지 표시해 주십시오.</h3>
+	
+	<form>
+	<div id="table" class="col-12">
+				
+		<div class="row">
+		<span class="cellLeft col-9">잠자리에 누운 후 잠자는데 30분이상 걸린다.</span>
+		<span class="cellRight col-3">
+		<input class="pointCheck" type="radio" name="pointInput01" value=0 />전혀없다<br>
+		<input class="pointCheck" type="radio" name="pointInput01" value=1 />거의 없다<br>
+		<input class="pointCheck" type="radio" name="pointInput01" value=2 />가끔<br>
+		<input class="pointCheck" type="radio" name="pointInput01" value=3 />자주<br>
+		<input class="pointCheck" type="radio" name="pointInput01" value=4 />매우 자주</span>
+		</div>
+		
+		<div class="row">
+		<span class="cellLeft col-9">잠이 들고 얼마 지나지 않아 깬다. 다시 잠들기 힘들다.<br>수면상태 유지가 안된다.</span>
+		<span class="cellRight col-3">
+		<input class="pointCheck" type="radio" name="pointInput02" value=0 />전혀없다<br>
+		<input class="pointCheck" type="radio" name="pointInput02" value=1 />거의 없다<br>
+		<input class="pointCheck" type="radio" name="pointInput02" value=2 />가끔<br>
+		<input class="pointCheck" type="radio" name="pointInput02" value=3 />자주<br>
+		<input class="pointCheck" type="radio" name="pointInput02" value=4 />매우 자주</span>
+		</div>
+		
+		<div class="row">
+		<span class="cellLeft col-9">새벽에 너무 일찍 깬다. 다시 잠들지 못 한다.</span>
+		<span class="cellRight col-3">
+		<input class="pointCheck" type="radio" name="pointInput03" value=0 />전혀없다<br>
+		<input class="pointCheck" type="radio" name="pointInput03" value=1 />거의 없다<br>
+		<input class="pointCheck" type="radio" name="pointInput03" value=2 />가끔<br>
+		<input class="pointCheck" type="radio" name="pointInput03" value=3 />자주<br>
+		<input class="pointCheck" type="radio" name="pointInput03" value=4 />매우 자주</span>
+		</div>
+		
+		<div class="row">
+		<span class="cellLeft col-9">현재 당신의 수면양상에 얼마나 만족하십니까?</span>
+		<span class="cellRight col-3">
+		<input class="pointCheck" type="radio" name="pointInput04" value=0 />매우 만족<br>
+		<input class="pointCheck" type="radio" name="pointInput04" value=1 />만족<br>
+		<input class="pointCheck" type="radio" name="pointInput04" value=2 />중간 정도<br>
+		<input class="pointCheck" type="radio" name="pointInput04" value=3 />불만족<br>
+		<input class="pointCheck" type="radio" name="pointInput04" value=4 />매우 불만족</span>
+		</div>
+		
+		<div class="row">
+		<span class="cellLeft col-9">수면장애로 일과 생활에 얼마나 방해<br>(활동 중 피로감, 업무나 집안일 하기 힘듦, 집중력 저하, 불안, 우울 등)<br>가 됩니까?</span>
+		<span class="cellRight col-3">
+		<input class="pointCheck" type="radio" name="pointInput05" value=0 />전혀 없다<br>
+		<input class="pointCheck" type="radio" name="pointInput05" value=1 />약간<br>
+		<input class="pointCheck" type="radio" name="pointInput05" value=2 />어느 정도<br>
+		<input class="pointCheck" type="radio" name="pointInput05" value=3 />많이<br>
+		<input class="pointCheck" type="radio" name="pointInput05" value=4 />매우많이</span>
+		</div>
+		
+		<div class="row">
+		<span class="cellLeft col-9">당신이 수면문제로 생활에 어려움을 겪는다는 것을<br>주변 사람들이 어느 정도 알고 있습니까?</span>
+		<span class="cellRight col-3">
+		<input class="pointCheck" type="radio" name="pointInput06" value=0 />전혀 모른다<br>
+		<input class="pointCheck" type="radio" name="pointInput06" value=1 />약간 안다<br>
+		<input class="pointCheck" type="radio" name="pointInput06" value=2 />어느 정도 안다<br>
+		<input class="pointCheck" type="radio" name="pointInput06" value=3 />많이 안다<br>
+		<input class="pointCheck" type="radio" name="pointInput06" value=4 />매우 많이 안다</span>
+		</div>
+		
+		<div class="row">
+		<span class="cellLeft col-9">현재 당신의 수면상태에 대해서 얼마나 걱정하고 있습니까?</span>
+		<span class="cellRight col-3">
+		<input class="pointCheck" type="radio" name="pointInput07" value=0 />전혀 걱정 안 함<br>
+		<input class="pointCheck" type="radio" name="pointInput07" value=1 />약간 걱정함<br>
+		<input class="pointCheck" type="radio" name="pointInput07" value=2 />어느 정도 걱정함<br>
+		<input class="pointCheck" type="radio" name="pointInput07" value=3 />많이 걱정함<br> 
+		<input class="pointCheck" type="radio" name="pointInput07" value=4 />매우 많이 걱정함</span>
+		</div>
+
+	</div> <!-- table -->
+	
+		
+
+	<div class="okResetBtn col-12">
+	<input type="button" name="pointCount" value="결과보기" onclick="javascript:pointCnt();">
+	<input type="reset" name="pointReset" value="입력취소" >
+	<br><br><br>
+		<h3 class="resultPoint">문항 체크 후 결과보기를 클릭해주세요</h3>
+		<h3 class="result07">0~7점 임상적으로 불면증 없음</h3>
+		<h3 class="result814">8~14점 기준에 약간 못 미치는 불면증</h3>
+		<h3 class="result1521">15~21점 중간 정도 불면증</h3>
+		<h3 class="result2228">22~28점 심한 정도 불면증</h3>
+		<h3 class="resultNote">15점 이상인 경우는 임상적인 불면증으로 간주됩니다</h3>	
+	</div>
+	</form>
+	
+	<form>
+	<div class="advice col-12">
+		<h3>상담 신청하기</h3>
+		<label>이름: <input type="text" name="advName" value="" placeholder="이름을 입력하세요"
+		onkeydown="javascript:return noNum(event);" ></label><p id="onlyCharAlert"></p><br>
+		<label>나이: <input type="text" name="advAge" placeholder="나이를 입력하세요"
+		onkeydown="javascript:return onlyNum(event);" onkeyup="removeChar(event);"></label><p id="onlyNumAlert"></p><br>
+		<label>이메일: <input type="email" name="advEmail" placeholder="your-email"></label><br>
+		<label><input type="button" name="advInputText" value="입력" onclick="javascript:advBtn();" ></label>
+		<label><input type="reset" name="advInputTextReset" value="취소" onclick="javascript:();" ></label>
+		<br>
+		<span class="inputReport"></span>
+		<span class="inputReportQue">위 내용이 맞습니까?</span>
+		<label><input type="button" name="advSend" class="advSend" value="보내기" onclick="javascript:advSendBtn();"></label>
+	</div>
+	
+	
+	</form>
+		
+	
+	</div><!-- mainContent -->
+		
+	<div class="col-2 rightMenu"></div>
+</div>
+
+<div class="col-12 footer">
+<p style="color:white">2017. Designed by Shin</p>
+</div>
+
+
+
+
+
+
+</body>
+</html>

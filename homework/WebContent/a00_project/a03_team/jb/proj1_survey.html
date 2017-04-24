@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>proj1_survey</title>
+    <link rel="stylesheet" href="style_proj.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+ 
+ function getPreSurveyResult(){
+	 var answer;
+	 var multipleChoice= document.getElementsByName("breakfast3");
+	 for(var idx = 0; idx< multipleChoice.length; idx++){
+		 if(multipleChoice[idx].checked && multipleChoice[idx].value =="예"){
+			var mainQuestions = document.getElementsByClassName("mainQuestion");
+		 	for(var allBlock = 0; allBlock < mainQuestions.length; allBlock++){
+		 		mainQuestions[allBlock].style.display = "block";
+		 	}
+			document.getElementsByName("breakfastResult")[0].style.backgroundColor ="lime";
+			document.getElementsByName("breakfastResult")[0].value ="다음 문제지로!";
+
+		 }
+		 else if(multipleChoice[idx].checked && multipleChoice[idx].value =="아니오"){
+			alert("아쉽지만 다음기회에!");
+		}
+	 }
+		document.getElementsByName("breakfastResult")[0].disabled = true;
+ }
+ 
+ 
+	function showMeMoney(){	// range input의 값출력 func
+	document.getElementById("showMeTheMoney").value 
+	= parseInt(document.getElementById("inputMoney").value/500)*500 + "원정도";
+	}	// range func END.
+ 
+ 
+ var questionArr = ["lunch1","lunch2","lunch3","lunch4"];
+ var answerArr = [];
+	function submitSurvey(){
+		var makeSure = confirm("확실히 모두 작성하셧습니까?");
+		if(makeSure){
+			var answer;
+			var multipleChoice;
+			var checkedQuestion =0;
+			for(var eachQuestion = 0;  eachQuestion < questionArr.length; eachQuestion++){  // 각 문제 확인
+				multipleChoice = document.getElementsByName(questionArr[eachQuestion]);  
+				for(var idx = 0; idx< multipleChoice.length; idx++){	
+					if(multipleChoice[idx].checked){			// 각 문제의 답변 상황 boolean체크
+						answerArr[eachQuestion] = multipleChoice[idx].value;
+ 					checkedQuestion++;
+					}
+				}
+			}
+			answerArr[answerArr.length] = document.getElementById("showMeTheMoney").value;		
+			
+			/*	문항수와 답변수 비교. -> 답변이 부족하면 알림호출. */
+			if( document.getElementById("showMeTheMoney").value == "" ){
+				alert("입력하지않은 답안이 있습니다. \n 다시 확인해주세요!");
+				checkedQuestion =0;
+				return;
+			}
+			else if( document.getElementsByClassName("hiddenQuestion")[0].style.visibility == "visible"
+					&& checkedQuestion != 4){
+				alert("입력하지않은 답안이 있습니다. \n 다시 확인해주세요!");
+				checkedQuestion =0;
+				return;
+			}
+			else if( document.getElementsByClassName("hiddenQuestion")[0].style.visibility != "visible"
+					&& checkedQuestion != 3){
+				alert("입력하지않은 답안이 있습니다. \n 다시 확인해주세요!");
+				checkedQuestion =0;
+				return;
+			}
+			/*	문항수와 답변수 비교. -> 답변이 부족하면 알림호출.  END*/
+			
+			
+			document.getElementById("allDone").value = "설문에 응해주셔서 감사합니다 :)";
+			document.getElementById("allDone").style.backgroundColor = "lime";
+			document.getElementById("allDone").style.color = "darkblue"; 
+			document.getElementById("allDone").disabled = true;
+			
+			
+		/*
+		<!-- ~ 점심을 해결한다. -->
+		<!-- 외부식당에 갈때는 ~ 간다 -->
+		<!-- 나는 점심식사때는 ~ 먹으며, (다음문제) -->
+		<!-- ~ 이야기 한다. -->
+		*/
+			var resultMsg = "***************************************************";
+			resultMsg += "\n설문자님의 결과값: ";
+			resultMsg += "\n 나는 주로 " + answerArr[0] + " 점심을 해결하고..";
+			
+			var hiddenChoice = document.getElementsByName("lunch2");
+			for(var idx = 0; idx< hiddenChoice.length; idx++){
+				if(hiddenChoice[idx].checked){
+					resultMsg += "\n 외부식당에 가는경우에는 " + answerArr[1] + "간다.";
+				}
+			}
+					
+			resultMsg += "\n 점심식사때엔  " + answerArr[2] + " 먹으며, ";
+			resultMsg += "\n "+ answerArr[3] + " 이야기한다.";
+			resultMsg += "\n 점식식사로는 " + answerArr[4] + "가 적당하다고 생각한다. :)";
+			resultMsg += "\n***************************************************";
+			document.getElementById("showResult").value = (resultMsg);
+			
+		} // 확실히 제출하는경우... if END
+		else{
+			alert("한번더 확인해주세요 \'ㅂ\'//");
+		}// 아직 confirm안된경우... else END
+		 
+	 
+	}// function Done
+ 
+	function showHiddenQuestion(){
+		document.getElementsByClassName("hiddenQuestion")[0].style.visibility = "visible";		
+	}
+
+ 
+
+</script>
+
+<style type = "text/css">
+	
+body{
+	background-image: url('http://cfile217.uf.daum.net/image/226FCF4B52B0493821DB42');
+	background-size: cover;
+	background-repeat: no-repeat;
+   	width: 100% ;
+   	min-width: 450px;
+}	
+
+</style>
+
+</head>
+<body>
+<!-- 
+-->
+
+<div class = allwindow>
+<div class = "header col-12 center">
+	<h2 > 여러분의 점심시간은 안녕하십니까?! </h2>
+</div>
+
+<div class = " center">
+	<div class="surveyTable col-12 ">
+		
+		<!-- 조건문제 -->	
+		<div class="row ">
+		<h3 toTheTop class="question cell col-7">자격 인증문제!</h4>
+		</div>	
+		<div class="row">
+		<span class="cell col-7"> 보통 아침식사는 하시나요?</span>
+		<span class="cell col-5">
+			<input type = radio name= breakfast1 value= "예" />예
+			<input type = radio name= breakfast1 value= "아니오" />아니오
+		</span>
+		</div>
+		
+		<div class="row">
+		<span class="cell col-7"> 연령대가 어떻게 되시나요?</span>
+		<span class="cell col-5">
+			<select name= breakfast2 >
+				<option selected disabled> 선택해주세요! </option>
+				<option value = "10대"> 10대 </option>
+				<option value = "20대"> 20대</option>
+				<option value = "30대"> 30대</option>
+				<option value = "40대"> 40대</option>
+			</select>
+		</span>
+		
+		</div>
+		
+		
+		<div class="row">
+		<span class="cell col-7"> 설문조사 성실히 응답해 주실거죠?</span>
+		<span class="cell col-5">
+			<input type = radio name= breakfast3 value= "예" />예
+			<input type = radio name= breakfast3 value= "아니오" />아니오
+		</span>
+		</div>
+		<div class="row">
+		<span class="cell col-7"> 설문조사 자격 인증받기!</span>
+		<span class="cell col-5">
+			<input type = button name = breakfastResult value= 인증받기!  onclick = "getPreSurveyResult();" />
+		</span>
+		
+		</div>
+		
+		<!-- 조건문제 END -->
+		
+		<!-- 본문제  -->
+		<div class="row mainQuestion">
+		<h4 class="question cell col-7">주로 점심을 어떻게 해결하시나요?</h4>
+		<span class="Rtcell col-5">
+			<input type = radio name= lunch1 value= "외부식당으로" onclick = "showHiddenQuestion();" />외부식당에 간다.<br/>
+			<input type = radio name= lunch1 value= "편의점에서" />편의점에서 라면,도시락 등 먹는다.<br/>
+			<input type = radio name= lunch1 value= "집에서 도시락을 챙겨서" />집에서 도시락을 챙긴다<br/>
+			<input type = radio name= lunch1 value= "배달시켜서" />배달시킨다<br/>
+			<input type = radio name= lunch1 value= "굶는걸로" />사먹는 돈이 아까워 굶는다.<br/>
+		</span> <!-- 점심 해결방법 END  // ~ 점심을 해결한다. -->
+		
+		</div>
+
+		<div class="row mainQuestion ">		
+			<div class = hiddenQuestion >
+			<h4 class="question cell col-7">외부식당 답변자) 식당 선정기준은 어떻게되시나요?</h4>
+			<span class="Rtcell col-5">
+				<input type = radio name= lunch2 value= "팀원 들어가는대로 따라 " />팀원이 가는대로 따라간다.<br/>
+				<input type = radio name= lunch2 value= "지인의 추천식당에 " />지인의 추천대로 따라간다.<br/>
+				<input type = radio name= lunch2 value= "늦은점심시간에도 붐비는 곳에 " />늦은시간에도 사람이 붐비는곳에간다.<br/>
+				<input type = radio name= lunch2 value= "무조건 가까운곳에 " />무조건 가까운곳에 간다.<br/>
+				<input type = radio name= lunch2 value= "가성비 좋아보이는곳에 " />가성비 좋아보이는 음식점에간다.<br/>
+			</span> <!-- 히든문제 END  //외부식당에 갈때는 ~ 간다 -->
+			</div>
+		</div>
+		
+		<div class="row mainQuestion">
+		<h4 class="question cell col-7">점심 식사는 누구와 함께 드시나요?</h4>
+		<span class="Rtcell col-5">
+			<input type = radio name= lunch3 value= "같은팀원과" />같은팀끼리 먹는다.<br/>
+			<input type = radio name= lunch3 value= "다른팀원과" />다른팀원과 먹는다. <br/>
+			<input type = radio name= lunch3 value= "애인소환해서" />애인을 소환해서 같이먹는다. <br/>
+			<input type = radio name= lunch3 value= "혼자" />혼자먹는다. <br/>
+			<input type = radio name= lunch3 value= "직원상사분들과" />직원상사분들과 먹는다.. (ㄷㄷ) <br/>
+		</span> <!-- 동행멤버 END  //나는 점심식사때는 ~ 먹으며, (다음문제) -->
+		
+		</div>
+		<div class="row mainQuestion">
+		<h4 class="question cell col-7">점심식사동안 주로 다루는 대화주제는 무엇인가요?</h4>
+		<span class="Rtcell col-5">
+			<input type = radio name= lunch4 value= "수업관련해서 많이 " />수업관련 얘기를 자주 한다.<br/>
+			<input type = radio name= lunch4 value= "요즘 떠오르는 연예계 소식을 " />요즘 떠오르는 연예계 소식을 이야기한다. <br/>
+			<input type = radio name= lunch4 value= "정치뉴스- 그분, 그분친구, 그분친구딸 등..을" />정치뉴스- 그분, 그분친구, 그분친구딸 등..을 얘기한다 <br/>
+			<input type = radio name= lunch4 value= "사적인 고민거리를 " />사적인 고민거리를 나눈다. <br/>
+		</span> <!-- 대화주제 END // ~ 이야기 한다. -->
+		
+		</div>
+		<div class="row mainQuestion">
+		<h4 class="question cell col-7"> 적당하다고 생각하는 식사비용은 얼마인가요?</h4>
+		<span class="cell col-5">
+			<input type = range id =inputMoney  min = "3000" max = "15000" oninput= "showMeMoney();"/>
+			<input id = showMeTheMoney disabled type = "text"/>
+		</span> <!-- 적당한 가격 END  //~ 가 적당하다고 생각한다. -->
+		
+		<hr>
+		<hr>
+		<hr>
+		</div>
+		<div class="row mainQuestion">
+		<h4 class="question cell col-7"> 모두 작성하셨다면, "제출하기"를 눌러주세요 :)</h4>
+		<span class="cell col-5">
+			<input id = allDone type = "submit" value = "제출하기" style = "font-size:15px; font-weight: bold;"
+			onclick= "submitSurvey();"/>
+		</span> <!-- 결과 제출하기 END -->
+		
+		</div>
+		
+		<div class="row mainQuestion">
+		<span class="question cell col-7">
+			<textarea class = col-12 rows="12" cols="20" id = showResult >
+			</textarea></span>
+		<span class="cell col-5">
+		
+			관리자에게 피드백을 보내주세요! <br/> (づ￣ ³￣)づ <br/>
+			
+			<textarea  rows="2"  cols="25"  id = sendMsgToAdmin  >참 잘만드셨어요 'ㅂ'//</textarea>
+			<a href = "mailto:moneymashi@acorn.com" onclick = "alert('메세지를 보냈습니다. \n즐거운하루되세요!')"> <br/>메세지 보내기!</a>
+		</span> <!--  -->
+		
+		</div>
+	</span> <!-- 설문자 결과창 END -->
+	</div>
+
+			
+</div><!-- Body Survey END -->
+	<div style = "position:fixed; bottom: 10px; right: 10px; 
+	background-color: orange; border-radius: 20px 20px 3px 3px;">
+	<a href= "#Top"  > 맨위로!</a>
+	</div>
+
+</div>
+</body>
+</html>

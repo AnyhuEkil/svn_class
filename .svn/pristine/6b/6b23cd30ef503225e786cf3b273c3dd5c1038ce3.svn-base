@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/normalize.css">
+
+<title>whyNot♪</title>
+
+<style type="text/css">
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+
+html,body{margin:0;padding:0;overflow:auto;}
+
+.whyContainer{padding:0px;margin:0px;}
+.whyContainer:AFTER,
+.whyContainer:BEFORE{content:"";display:table;clear:both}
+
+#whyHeader{width:100%;z-index:10;position:fixed;top:0;text-align:center;background-color:#fffcdb;}
+.whyAniopac{position:relative;animation:Aniopac 1s;-moz-animation:Aniopac 1s;-webkit-animation:Aniopac 1s;}
+@keyframes Aniopac{0%{opacity:0}100%{opacity:1}}
+
+
+.whyHeadblock{width:25%;height:50px;float:left;display:inline-block;z-index:10;text-align:center;}
+.whyHeadgo{width:90%;height:100%;display:inline-block;background-size:contain;background-repeat: no-repeat;background-position: center}
+
+#whySection{style="width:100%;diplay:block;"}
+.whyMainpage0{width:100%;height:110vh;text-align:center;position:absolute;background-color:#1f1f1f;color:white;z-index:1;}
+.whyMainpage1{width:100%;height:110vh;text-align:center;position:absolute;background-color:#fffcdb;color:#1f1f1f;display:none;z-index:2;}
+
+
+#whyHello01,
+#whyHelloa00,
+#whyHellob00
+	{animation:Hello01 1s;-moz-animation:Hello01 1s;
+	-webkit-animation:Hello01 1s;}
+@keyframes Hello01{0%{opacity:0}100%{opacity:1}}
+@webkit-keyframes Hello01{0%{opacity:0}100%{opacity:1}}
+
+#whyHeadcontain{width:70%; display:inline-block;}
+.whyCol3{float:left;height:45vh;}
+.whyCol4{float:left;display:inline-block;height:300px;}
+@media (max-width:601px){.whyCol3, #whyHeadcontain{width:99.99999%}}
+@media (max-width:601px){.whyHeadcut{display: none;}}
+@media (max-width:601px){.whyHeadblock{width:33.33333%}}
+@media (min-width:601px){.whyCol3{width:49.99999%;}}
+@media (min-width:993px){.whyCol3{width:33.33333%;}}
+@media (max-width:601px){.whyCol4{width:49.99999%;font-size:20px}}
+@media (min-width:601px){.whyCol4{width:24.99999%;font-size:35px}}
+
+
+.whyHellselect{display:inline-block;height:10vh;float:left;font-weight:bold;text-align:center;line-height:10vh;text-decoration:none;}
+.whyHellhtml1{background-color:#fff710;color:#17049b;}
+.whyHellhtml2{background-color:#82febf;color:#02020c;}
+.whyHellcss1{background-color:#f19df2;color:#082302;}
+.whyHellcss2{background-color:#f4cc12;color:#810100;}
+
+.whyQuiz0{text-align:center;font-size:70px;line-height:44vh}
+.whyQuiz1{background-color:#fff710;color:#17049b;}
+.whyQuiz2{background-color:#82febf;color:#02020c;}
+.whyQuiz3{background-color:#f19df2;color:#082302;}
+.whyQuiz4{background-color:#f4cc12;color:#810100;}
+.whyQuiz1 .question{min-height:10vh;font-size:25px;margin:15px;padding-bottom:15px;border-bottom:3px solid #15049e;}
+.whyQuiz2 .question{min-height:10vh;font-size:25px;margin:15px;padding-bottom:15px;border-bottom:3px solid #02020c;}
+.whyQuiz3 .question{min-height:10vh;font-size:25px;margin:15px;padding-bottom:15px;border-bottom:3px solid #082302;}
+.whyQuiz4 .question{min-height:10vh;font-size:25px;margin:15px;padding-bottom:15px;border-bottom:3px solid #810100;}
+.whyQuiz1 .answer{margin:12px;font-size:22px;line-height:22px}
+.whyQuiz2 .answer{margin:12px;font-size:22px;line-height:22px}
+.whyQuiz3 .answer{margin:12px;font-size:22px;line-height:22px}
+.whyQuiz4 .answer{margin:12px;font-size:22px;line-height:22px}
+
+
+</style>
+
+<script type="text/javascript">
+
+
+function whyNavon() {
+	document.getElementById("whyNavmenu").style.display="inline-block";
+	document.getElementById("whyBtnnavon").style.display="none";
+}
+
+//닫힘 작동안함 왜??
+function whyNavoff() {
+	document.getElementById("whyNavmenu").style.display="none";
+	document.getElementById("whyBtnnavon").style.display="inline-block";
+}
+
+function whyAllnone() {
+	document.getElementById('whyHello00').style.display='none';
+	document.getElementById('whyHello01').style.display='none';
+	document.getElementById('whyHelloa01').style.display='none';
+	document.getElementById('whyHellob01').style.display='none';
+}
+
+
+function whyLowing(){        
+	var whyCorrect = 0;          
+	for(var lowQnum = 1; lowQnum <= 10; lowQnum++){
+		var whyLowradios = document.getElementsByName('whyLowquiz'+lowQnum);
+		for(var j = 0; j < whyLowradios.length; j++) {
+			var radio = whyLowradios[j];
+			if(radio.value == "correct" && radio.checked) {
+				whyCorrect++;
+			}
+		}
+	}
+	document.getElementById('whyScroe').innerHTML = "Low Test 결과 :<br> 총 "+whyCorrect+"문제 정답 ("+whyCorrect*10+"점)";
+}
+
+
+</script>
+</head>
+<body>
+<header id="whyHeader">
+	<div id="whyHeadcontain">
+		<div class="whyHeadblock" onclick="whyAllnone(),document.getElementById('whyHelloa01').style.display='block',
+				location.href='#whyHelloa01'">
+			<div class="whyHeadgo" style="background-image:url('HELLO_memuhell.png');"></div>
+		</div>
+		<div class="whyHeadblock" 
+			onclick="whyAllnone(),document.getElementById('whyHello00').style.display='block', location.href='#whyHello00'">
+			<div class="whyHeadgo" style="background-image:url('HELLO_88.png')"></div>
+		</div>
+		<div class="whyHeadblock"
+			onclick="whyAllnone(),document.getElementById('whyHellob01').style.display='block',
+				location.href='#whyHellob01'">
+			<div class="whyHeadgo" style="background-image:url('HELLO_memulow.png');"></div>
+		</div>
+		<div class="whyHeadblock whyHeadcut"
+			onclick="whyAllnone(),document.getElementById('whyHello00').style.display='block',
+				location.href='#'">
+			<div class="whyHeadgo" style="background-image:url('Hello_a01.png');"></div>
+		</div>
+	</div>
+</header>
+<section id="whySection">
+	<article class="whyMainpage0" id="whyHello00"
+			 	onclick="whyAllnone(),
+			 		document.getElementById('whyHello00').style.display='block',
+			 		document.getElementById('whyHello01').style.display='block'">
+		<div class="whyMain" style="width:70%;margin-top:20vh;display:inline-block;">
+			<img id="mainBox" style="max-width:100%;display:inline-block;" alt="HelLoW" src="HELLO_55.png">
+		</div>
+		<div style="margin-top:10vh; margin-bottom:10vh;hetght:30vh;display:block;text-align:center;">
+			<div style="max-width:70%; font-size:10vmin;display:inline-block;" class="whyAniopac">
+				<a style="color:#fffcdb;display:inline-block;">Welcome</a>
+				<a style="color:gold;display:inline-block;">"whyNot"</a>
+				<a style="color:#fffcdb;display:inline-block;">Page</a>
+			</div>		
+		</div>
+	</article>
+	<article class="whyMainpage1" id="whyHello01">
+		<div style="width:70%;margin-top:20vh;display:inline-block;">
+			<img style="max-width:100%;display:inline-block;" alt="HelLoW" src="HELLO_01.png">
+		</div>
+		<div style="width:100vw;height:20vh;margin-top:15vh;font-size:10vh;
+			background-image:url('arrow.png');background-repeat:no-repeat;background-position:center;
+			background-size: 40%;">
+			<div style="width:49vw;height:20vh;float:left;z-index:4;"
+				class="whyContainer whyLefthover"
+				onmouseover="document.getElementById('whyHelloa00').style.display='block'"
+				onmouseout="document.getElementById('whyHelloa00').style.display='none'"
+				onclick="document.getElementById('whyHelloa01').style.display='block',
+					document.getElementById('whyHello00').style.display='none'">
+			</div>
+			<div style="width:49vw;height:20vh;float:right;z-index:4;"
+				class="whyContainer whyRighthover"
+				onmouseover="document.getElementById('whyHellob00').style.display='block'"
+				onmouseout="document.getElementById('whyHellob00').style.display='none'"
+				onclick="document.getElementById('whyHellob01').style.display='block',
+					document.getElementById('whyHello00').style.display='none'">
+			</div>
+		</div>
+	</article>
+	<article class="whyMainpage1" id="whyHelloa00">
+		<div style="width:70%;margin-top:20vh;display:inline-block;">
+			<img style="max-width:100%;display:inline-block;" alt="HelLoW" src="HELLO_a00.png">
+		</div>
+		<div style="width:100vw;height:20vh;margin-top:15vh;font-size:10vh;
+			background-image:url('arrow.png');background-repeat:no-repeat;background-position:center;
+			background-size: 40%;">
+			<div style="width:49vw;height:20vh;float:left;z-index:4;"
+				class="whyContainer"
+				onmouseover="document.getElementById('whyHelloa00').style.display='block'"
+				onmouseout="document.getElementById('whyHelloa00').style.display='none'"
+				onclick="document.getElementById('whyHelloa01').style.display='block',
+					document.getElementById('whyHello00').style.display='none'">
+			</div>
+			<div style="width:49vw;height:20vh;float:right;z-index:4;"
+				class="whyContainer"
+				onmouseover="document.getElementById('whyHellob00').style.display='block'"
+				onmouseout="document.getElementById('whyHellob00').style.display='none'"
+				onclick="document.getElementById('whyHellob01').style.display='block',
+					document.getElementById('whyHello00').style.display='none'">
+			</div>
+		</div>
+	</article>
+	<article class="whyMainpage1" id="whyHellob00">
+		<div style="width:70%;margin-top:20vh;display:inline-block;">
+			<img style="max-width:100%;display:inline-block;" alt="HelLoW" src="HELLO_b00.png">
+		</div>
+		<div style="width:100vw;height:20vh;margin-top:15vh;font-size:10vh;
+			background-image:url('arrow.png');background-repeat:no-repeat;background-position:center;
+			background-size: 40%;">
+			<div style="width:49vw;height:20vh;float:left;z-index:4;"
+				class="whyContainer"
+				onmouseover="document.getElementById('whyHelloa00').style.display='block'"
+				onmouseout="document.getElementById('whyHelloa00').style.display='none'"
+				onclick="document.getElementById('whyHelloa01').style.display='block',
+					document.getElementById('whyHello00').style.display='none'">
+			</div>
+			<div style="width:49vw;height:20vh;float:right;z-index:4;"
+				class="whyContainer"
+				onmouseover="document.getElementById('whyHellob00').style.display='block'"
+				onmouseout="document.getElementById('whyHellob00').style.display='none'"
+				onclick="document.getElementById('whyHellob01').style.display='block',
+					document.getElementById('whyHello00').style.display='none'">
+			</div>
+		</div>
+	</article>
+	<article style="width:100%;min-height:110vh;text-align:center;
+					background-color:#fffcdb;color:#1f1f1f;display:none;
+					z-index:3;position:absolute;"
+			id="whyHelloa01"
+			class="whyContainer">
+		<div style="width:80vw;margin-top:70px;display:inline-block;">
+			<a href="https://www.w3schools.com/html/exercise.asp?filename=exercise_form_attributes4"
+				class="whyHellselect whyCol4 whyHellhtml1" target="whyHellwindow">
+				HTML 1
+			</a>
+			<a href="https://www.w3schools.com/html/exercise.asp?filename=exercise_form_input_types3"
+				class="whyHellselect whyCol4 whyHellhtml2" target="whyHellwindow">
+				HTML 2
+			</a>
+			<a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_css3_animations5"
+				class="whyHellselect whyCol4 whyHellcss1" target="whyHellwindow">
+				CSS 1
+			</a>
+			<a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_overflow2"
+				class="whyHellselect whyCol4 whyHellcss2" target="whyHellwindow">
+				CSS 2
+			</a>
+		</div>
+		<iframe name="whyHellwindow" style="width:95vw;height:80vh;margin:0 auto;">
+		</iframe>
+
+	</article>	
+ 	<article style="width:100%;min-height:110vh;text-align:center;
+					background-color:#fffcdb;color:#1f1f1f;display:none;
+					z-index:3;position:absolute;"
+			id="whyHellob01">
+		<div style="width:80vw; margin-top:70px;display:inline-block;text-align:left;font-size:20px;font-weight:bold;"
+			class="whyContainer">
+			<div class="whyCol3 whyQuiz1 whyQuiz0">
+				<div>HTML</div>
+			</div>
+			<div class="whyCol3 whyQuiz2">
+				<div class="question">
+					리스트를 숫자로 나열하기 위한 태그는?
+				</div>
+				<div class="answer">
+					<input type="radio" name="whyLowquiz1" value="wrong">
+					ul
+				</div>
+				<div class="answer">
+					<input  type="radio" name="whyLowquiz1" value="wrong">
+					dl
+				</div>
+				<div class="answer">
+					<input  type="radio" name="whyLowquiz1" value="correct">
+					ol
+				</div>
+			</div>
+			<div class="whyCol3 whyQuiz3">
+				<div class="question">
+					시멘틱태그가 아닌 것은?
+				</div>
+				<div class="answer">
+					<input  type="radio" name="whyLowquiz2" value="wrong">
+					section
+				</div>
+				<div class="answer">
+					<input  type="radio" name="whyLowquiz2" value="wrong">
+					aside
+				</div>
+				<div class="answer">
+					<input  type="radio" name="whyLowquiz2" value="correct">
+					head
+				</div>
+			</div>
+			<div class="whyCol3 whyQuiz4">
+				<div class="question">
+					다음 중 가장 큰 글자는?
+				</div>
+				<div class="answer">
+					<input  type="radio" name="whyLowquiz3" value="wrong">
+					h6
+				</div>
+				<div class="answer">
+					<input  type="radio" name="whyLowquiz3" value="wrong">
+					p
+				</div>
+				<div class="answer">
+					<input  type="radio" name="whyLowquiz3" value="correct">
+					h1
+				</div>
+			</div>
+			<div class="whyCol3 whyQuiz1">
+				<div class="question">
+					input 태그에서  여러항목을 선택하기 위한 type은?
+				</div>
+				<div class="answer">
+					<input  type="radio" name="whyLowquiz4" value="wrong">
+					radio
+				</div>
+				<div class="answer">
+					<input  type="radio" name="whyLowquiz4" value="wrong">
+					check
+				</div>
+				<div class="answer">
+					<input  type="radio" name="whyLowquiz4" value="correct">
+					checkbox
+				</div>
+			</div>
+			<div class="whyCol3 whyQuiz2">
+				<div class="question">
+					아랫밑줄을 긋기 위해 쓰는 태그는?
+				</div>
+				<div class="answer">
+					<input  type="radio" name="whyLowquiz5" value="wrong">
+					sub
+				</div>
+				<div class="answer">
+					<input  type="radio" name="whyLowquiz5" value="wrong">
+					del
+				</div>
+				<div class="answer">
+					<input  type="radio" name="whyLowquiz5" value="correct">
+					sup
+				</div>
+			</div>
+			<div class="whyCol3 whyQuiz3 whyQuiz0">
+				<div>CSS</div>
+			</div>		
+			<div class="whyCol3 whyQuiz4">
+				<div class="question">
+					글자색을 나타내는 속성은?
+				</div>
+				<div class="answer">
+					<input  type="radio" name="whyLowquiz6" value="wrong">
+					text-color
+				</div>
+				<div class="answer">
+					<input  type="radio" name="whyLowquiz6" value="wrong">
+					font-color
+				</div>
+				<div class="answer">
+					<input  type="radio" name="whyLowquiz6" value="correct">
+					color
+				</div>
+			</div>
+			<div class="whyCol3 whyQuiz1">
+				<div class="question">
+					여러 태그에 같은 속성값을 주기위한것은?
+				</div>
+				<div class="answer">
+					<input  type="radio" name="whyLowquiz7" value="wrong">
+					id
+				</div>
+				<div class="answer">
+					<input  type="radio" name="whyLowquiz7" value="wrong">
+					[ ]
+				</div>
+				<div class="answer">
+					<input  type="radio" name="whyLowquiz7" value="correct">
+					class
+				</div>
+			</div>
+			<div class="whyCol3 whyQuiz2">
+				<div class="question">
+					클릭할 동안 작용하는 선택자는?
+				</div>
+				<div class="answer">
+					<input  type="radio" name="whyLowquiz8" value="wrong">
+					onclick
+				</div>
+				<div class="answer">
+					<input  type="radio" name="whyLowquiz8" value="wrong">
+					action
+				</div>
+				<div class="answer">
+					<input  type="radio" name="whyLowquiz8" value="correct">
+					active
+				</div>
+			</div>
+			<div class="whyCol3 whyQuiz3">
+				<div class="question">
+					display의 속성값으로 사용할 수 없는것은?
+				</div>
+				<div class="answer">
+					<input  type="radio" name="whyLowquiz9" value="wrong">
+					block
+				</div>
+				<div class="answer">
+					<input  type="radio" name="whyLowquiz9" value="wrong">
+					none
+				</div>
+				<div class="answer">
+					<input  type="radio" name="whyLowquiz9" value="correct">
+					hidden
+				</div>
+			</div>
+			<div class="whyCol3 whyQuiz4">
+				<div class="question">
+					border가 차지하는 크기와 상관없는 것은?
+				</div>
+				<div class="answer">
+					<input  type="radio" name="whyLowquiz10" value="wrong">
+					margin
+				</div>
+				<div class="answer">
+					<input  type="radio" name="whyLowquiz10" value="wrong">
+					padding
+				</div>
+				<div class="answer">
+					<input  type="radio" name="whyLowquiz10" value="correct">
+					radius
+				</div>
+			</div>
+			<div style="width:80vw;margin-top:20px;margin-bottom:100px; display:inline-block;text-align:left;
+					font-size:30px;font-weight:bold;background-color:black;color:white;"
+					class="whyContainer">
+				<div class="" onclick="whyLowing();" style="padding:20px;margin:5px width:15vw;display:inline-block;">
+					<a id="whyScroe">[ 결과 확인 ]</a>
+				</div>
+			</div>
+		</div>
+	</article>
+</section>
+
+</body>
+</html>

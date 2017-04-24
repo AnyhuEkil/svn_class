@@ -1,0 +1,187 @@
+﻿@CHARSET "UTF-8";
+	
+/* 바디 전체 배경색. 글자색 및 글자크기 */	
+	body{background:#f7f5ee; color:#2f2f2f; font-size:14px; box-sizing: border-box;} /* 
+
+/* 헤더(header) 조정*/
+	header{text-align:center; position:relative;}
+	
+/*신문제목(title)*/
+	.title{
+		font-weight:900; font-size:80px;
+		text-transform:uppercase; display:inline-block;
+		line-height:72px; margin-bottom:40px;}	
+			
+/* 날짜(date)*/
+	.date{border-top:2px solid #2f2f2f; font-weight:700;
+		  border-bottom:2px solid #2f2f2f; text-size:20px;
+		  text-transform:uppercase;
+		  padding: 15px 0 15px 0;}
+	audio{float:right;}	  
+
+
+/* 섹션(section) 부분 */
+	section{display:inline-block; margin:30px 3% 0 3%;}
+
+/* 아티클(article) 부분 */
+	article{font-size:14px; width:20%;
+			display:inline-block; vertical-align:top;
+			line-height:20px; padding:0 1% 0 1%;
+			margin-bottom:50px;}	
+
+/* 아티클 사이사이 조정*/
+	article + article{border-left:1px solid #2f2f2f;}
+
+/* 아티클 안의 headline 조정*/
+	.headline{text-align:center; display:block; margin:0 auto; line-height:normal;}
+
+/* headline 설정*/
+	.headline.hl1{
+		font-weight:400; font-style:italic; font-size:36px;
+		padding:10px 0;}
+	
+	.headline.hl2{
+		font-weight:700; font-size:12px;
+		padding:10px 0;}
+	
+	.headline.hl2:before{
+		border-top: 1px solid #2f2f2f; content:'';
+		width:100px; height:7px; display:block; margin:0 auto;}
+	
+	.headline.hl2:after{
+		border-bottom:1px solid #2f2f2f; content:'';
+		width:100px; height:10px; display:block; margin:0 auto;}
+
+/*사진(figure) 설정*/	
+	figure{margin:0 0 20px;}
+	figcaption{font-size:12px; text-align:right; font-style:italic;}	
+	.picture{width:100%;}	
+	.movie{ width:100%; height:400px;}
+	.youtube01{font-size:14px; width:200%; border-top:1px solid #2f2f2f;
+			border-bottom:1px solid #2f2f2f; margin-top:10px;
+			display:inline-block; vertical-align:top;
+			line-height:20px; 
+			margin-bottom:50px;}
+
+/*award 사진 애니메이션*/
+	.award{
+	  	-webkit-animation-name:mychange1;
+  		-webkit-animation-duration:5s;
+  		-webkit-animation-iteration-count: infinite; 
+  		animation-name:mychange1;
+  		animation-duration:5s;
+  		animation-iteration-count: infinite;		
+	}
+	@-webkit-keyframes mychange1{
+		0% {content:url('../img_ho/award01.jpg');}
+
+		50% {content:url('../img_ho/award02.jpg');}
+
+		100% {content:url('../img_ho/award01.jpg');}
+	}
+	keyframes mychange1{
+		0% {content:url('../img_ho/award01.jpg');}
+
+		50% {content:url('../img_ho/award02.jpg');}
+
+		100% {content:url('../img_ho/award01.jpg');}
+	}
+
+
+/* 푸터(footer) 처리 */
+	footer{border-top:3px solid #2f2f2f; border-bottom:3px solid #2f2f2f; text-align:center; padding:10px 0;}
+
+/* aside 배너 드랍다운 및 링크*/
+	aside{float:right; text-align:center; position:fixed; top:250px; left:1670px;}
+	a{display:block; border:1px solid black; padding:20px; width:170px; height:100px;}
+	audio{width:170px;}
+	.luck{background-image: url('../img_ho/luck01.jpg'); background-size:cover; background-repeat:no-repeat;}
+	.quiz{background-image: url('../img_ho/quiz01.JPG'); background-size:cover; background-repeat:no-repeat;}
+	
+	.contact{background:black url('../img_ho/dropdown.png');
+			  background-size:contain; background-repeat:no-repeat; background-position:left;
+			  height:70px; text-align:center; line-height:70px; border:1px solid black; font-weight:900; width:210px;
+			  letter-spacing:3px; font-size:15px; color:white;}		  
+
+	.dropdown-content{display:none; z-index:1;}	
+	.dropdown:hover .dropdown-content{display: block;}
+	.link{border:1px solid black; height:25px; !important;}
+	.real{background: white url('../img_ho/real.png'); background-size:100% 100%; background-repeat:no-repeat;}
+	.cristiano{background-image:url('../img_ho/cristiano.jpg'); background-size:100% 100%; background-repeat:no-repeat;}
+	.wiki{background-image:url('../img_ho/wiki.jpg'); background-size:100% 100%; background-repeat:no-repeat;}
+
+
+
+/*아티클 1 부분 호날두 소개 타이틀 박스 및 애니메이션 효과...*/	
+	.head1{
+  		font-family: 'Oswald', sans-serif;
+  		line-height: 1.2em;
+  		font-size: 40px;
+  		font-weight:600;
+  		background-color:#ddd;
+  		padding:1%;
+  		text-align:center;
+  		-webkit-animation-name:mychamge;
+  		-webkit-animation-duration:5s;
+  		-webkit-animation-iteration-count: infinite; 
+  		animation-name:mychange;
+  		animation-duration:5s;
+  		animation-iteration-count: infinite;}
+		
+	/* Safari 4.0 - 8.0 */
+	@-webkit-keyframes mychange{
+		0% {background-color:#ddd; color:#2f2f2f;}
+		25% {background-color:green; color:pink;}
+		50% {background-color:yellow; color:purple;}
+		75% {background-color:blue; color:white;}
+		100% {background-color:#ddd; color:#2f2f2f;}
+	}
+	keyframes mychange{
+		0% {background-color:#ddd; color:#2f2f2f;}
+		25% {background-color:green; color:pink;}
+		50% {background-color:yellow; color:purple;}
+		75% {background-color:blue; color:white;}
+		100% {background-color:#ddd; color:#2f2f2f;}
+	}
+
+	
+
+/*미디어 쿼리 조정  월요일 다시 조정 필요함. */
+
+@media only all and (max-width: 1683px){
+	aside{width:31%; position:relative; display:block; top:auto; left:auto;}
+}
+
+@media only all and (max-width: 1207px) {
+    article{width: 31%;}
+    aside{width:31%; position:relative; display:block; top:auto; left:auto;}
+	.youtube01{width:100%;}
+}
+@media only all and (max-width: 1100px) {
+    article{width: 34%;}
+    aside{width:31%; position:relative; display:block; top:auto; left:auto;}
+	.youtube01{width:100%;}
+
+@media only all and (max-width: 900px) {
+    article{width: 47%;}
+    aside{width:47%; position:relative; display:block; top:auto; left:auto;}
+    .youtube01{width:100%;}
+
+}
+@media only all and (max-width: 600px) {
+    article{width: 100%;}
+    aside{width:100%; position:relative; display:block; top:auto; left:auto;}
+    .youtube01{width:100%;}
+	article + article {
+		border-left: none;
+      	border-bottom: 1px solid #2f2f2f;
+	}
+    .title{
+        max-width: 320px;
+        font-size: 60px;
+        line-height: 54px;
+        overflow: hidden;
+    }
+    audio{float:inherit;}
+
+}				

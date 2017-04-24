@@ -1,0 +1,414 @@
+@CHARSET "UTF-8";
+
+/* ### attribute to ALL ###*/
+* {
+    box-sizing: border-box;
+    margin: auto ;
+    padding: 0 ;
+    transition: 0.3s;
+}
+
+[class *= "col-"]{ 
+	float: left;
+	}
+/* ### attribute to ALL END ### */
+
+h1{
+	font-size: 25px;
+	padding: 7px 0 0 0;
+	
+}
+h3, h4{
+	height: 45px;
+	text-align: center;
+	background-color: #FFAB38;
+	vertical-align: middle;
+	width: 100%;
+	font-family: fantasy;
+	color: #AA3533;
+	border: 2px solid #C87138;
+	padding: 12px 0 0 0 ;
+} 
+
+.allWindow{
+	overflow:auto;
+    max-width: 1080px;
+}
+
+.center {
+	text-align : center; 
+	width: 90%;
+    margin: auto;
+}
+
+.header{
+	position: fixed;
+	display: block;
+	color : #FFC85A;
+	background-color: #A3623C;
+	height: 50px;
+	width: 100%;
+	max-width: 1080px;
+	z-index: 2;
+	text-align: center;
+}
+
+/*	###header : dropdown ###*/
+.header>.floatMenu{
+	display: none;
+}
+.header:hover .floatMenu{
+	display:block;
+} 
+.floatMenu{
+	float: left;
+	position: relative; 
+	
+}
+
+.dropdown-button{
+  display: inline-block;
+  background-color: #E8870C;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  margin: 0 3px 0 3px;
+  z-index: 10;
+}
+
+.dropdown-content>a{
+	text-decoration: none;
+	display: none;
+	z-index: 10;
+	margin: 2px 0px 2px 0px;
+}
+
+.dropdown-button:hover{
+	background-color: #E8870C;
+	display: block;
+	z-index: 10;
+	margin: 7px 0px 0px 0px;
+}
+.dropdown-content:hover{
+	display: block;
+	background-color: #FF6A00;
+	z-index: 10;
+}
+.dropdown-content:hover>a{
+	display: block;
+	background-color: pink;
+	z-index: 10;
+	padding: 2px 2px 2px 2px;
+}
+
+.dropdown-content>a:nth-child(2n){
+	background-color: #B7DE47;
+	border-radius: 3px;
+}
+.dropdown-content>a:nth-child(2n+1){
+	background-color: #EBE049; 
+	border-radius: 5px;
+}
+/*	###header : dropdown END ###*/
+
+
+
+.container{
+	background-color: rgba(0,0,200, 0);
+	float: left;
+	margin-top: 50px;
+}
+.sidenav{
+	background-color: rgba(0,0,0, 0.5); 
+	border: 3px solid limegreen;
+	color : white;
+	text-align : center;
+	height: 100%;
+    transition: 0.5s;
+	float: left;
+	z-index : 3;
+}
+/*sidenav 부분 자기소개구역*/
+.introTable{
+	display: table;
+	margin:0;
+	padding: 0;
+	text-align: center;
+	align: center;
+}
+.introRow{
+	display:table-row;
+}
+.introCell{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	padding: 1px;
+	margin: 1px 3px 1px 3px;
+	margin: auto;
+	font-size: 14px;
+	color: #7E392F;
+}
+
+
+/* 자기소개 각 cell당 부여효과*/
+.introCell:hover{   
+	color: #20375D;
+	font-weight: bolder;
+	border-radius: 50px 50px 50px 50px;
+	font-style: italic;
+	width: 100%;
+}
+
+/*홀(질문) 짝(답) 칸에 주는 효과*/
+.introCell:nth-child(2n+1){
+	background-color:#E9C425;
+	color: #35478C;
+	opacity: 0.6;
+}
+.introCell:nth-child(2n){
+	background-color:#5F95A5;
+	width: 98%;
+}
+
+/*sidenav 부분 자기소개구역 END*/
+
+
+/*	상단 부분. */
+.upper{
+	background-color: rgba(100,200,255, 0.3);
+	z-index: 1;
+}
+/*	상단 부분. END */
+
+
+/* a 태그에 효과부여 */
+a{
+	text-decoration: none;	
+	font-weight: bolder;
+}
+a:link{  /* 링크 default효과 */
+	background-color: limegreen;
+	color: IndianRed   ;
+}
+a:link:nth-child(2n){  /* 링크 default효과 */
+	background-color: lightgreen;
+	color: teal  ;
+}
+
+
+a:active{   /* 링크에 클릭하는 경우에 주는 이벤트*/
+	text-decoration: none;	
+	font-weight: bold;
+	background-color: lime;
+	color: purple;
+}
+a:visited{  /* 방문한링크에 주는 이벤트*/
+	background-color: #7BA59E;
+	color: gray;
+}
+.introCell>a:visited, .introCell>a:link{  /* 방문한링크에 주는 이벤트*/
+	background-color: #7BA59E;
+	color: #20375D;
+}
+/* a 태그에 효과부여  END */
+
+
+/* 자기소개 이미지 효과.. */
+
+.slideContainer{  /* 가장 큰 액자부분. */
+	position:relative;
+	height: 100%;
+	z-index: 1;
+}
+.slideContainer>.slideImage{  /* 사진 뒷배경부분. */
+	display: none;
+}
+.slideImage>img{  /* 사진 자체에 크기부여 */
+	max-width:100%;  
+}
+/* 자기소개 이미지 효과 END */
+
+/* 추천메뉴 사진 이미지효과 */
+ .hoverImageContainer{
+	max-width: 100%; 
+	height: 300px;
+ }
+.hoverImageContainer>.hoverImage{
+	display: none; 
+	text-align:center;
+}
+.hoverImage>img{
+	max-width:100%;  
+	max-height: 300px;
+	display:inline-block;
+}
+/* 추천메뉴 사진 이미지효과 END */
+
+/* 이미지 바뀔떄마다 잔상효과 */
+.fadeOut {  
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+/* 이미지 바뀔떄마다 잔상효과 END*/
+/* slideshow css END*/
+
+
+/* 하단좌측 */
+.lowerLeft{
+}
+
+
+/* 설문파트- popup으로 다른 html띄우지만 css파일은 공유한다.*/
+
+/* div container에 table효과부여. */
+.surveyTable {
+	background-color: #A4E5FF;
+	display: table; 
+	margin: 70px 0 0 0;
+	padding: 0; 
+	border: 1px solid black; 
+	vertical-align: middle;
+}
+
+/* 다음 div 에  tr 효과부여. */
+.row {
+	display: table-row; 
+	vertical-align: middle;
+	height: 13px;
+}
+
+/* tr 하위 div 에 왼쪽td(질문) 효과부여. */
+.cell {
+	display: table-cell; 
+	vertical-align: middle;
+	padding: 10px;
+	margin: 3px 0px 3px 0px;
+	text-align: center;
+}
+/* tr 하위 div 에  오른쪽td(답변) 효과부여. */
+.Rtcell{
+	display: table-cell; 
+	vertical-align: middle;
+	padding: 10px;
+	margin: 3px 0px 3px 0px;
+	text-align: left;
+}
+
+/* 본문제부분- 숨겻다가 해당조건에 충족시- 본문제돌입.*/
+.mainQuestion{
+	display: none;
+}
+.mainQuestion a{
+	text-decoration: none;
+}
+.hiddenQuestion{
+	visibility: hidden;
+}
+textarea{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* 설문파트 END */
+
+/* 하단 우편부분*/
+.lowerRight{
+	background-color: rgba(100,100,100, 0.3);
+	float: left;
+	position: relative;
+}
+
+/* 이적플레이어_ 효과부여 */
+.playerContainer{
+	display: block;
+	position: relative;
+	height: 70px;
+	margin: 30px 0px 30px 0px;
+	text-align: center;
+	background-image: url( 'jb_resources/img_ejuk.png') ; 
+	background-size: 100% 100%;
+	background-height: 100%;
+	
+}
+.playerContainer>h5{
+	color: #0D1733;
+}
+
+
+#playAudio, button{
+	background-color: black;
+	color: white;
+	width: 20%;
+	padding: 1px;
+	text-align: center;
+}
+
+.footer{ 
+	background-color: rgba(100,100,100, 0.3);
+}
+
+
+@media only screen and (min-width: 400px) {
+    /* 데스크탑 화면: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+}
+
+@media only screen and (max-width: 715px) {
+	[class *= "col-"]{ 	
+	width : 100%; 
+	}
+	.sidenav{ display : none; }
+	.smallHide{	
+		position: absolute;
+		z-index: -1;
+	}
+	
+	a{
+	font-size: 13px;
+	}
+	
+	h1{
+	display: block;
+	font-size: 22px;
+	padding: 7px 0 0 0;
+	}
+	h3, h4{
+	font-size: 17px;
+	} 
+	h4{
+	}
+	.dropdown-button{
+	font-size: 16px;
+	}
+	.hoverImageContainer{
+	height: 100%;
+	}
+	.smallHide{	
+		z-index: -1;
+	}
+}
+@media only screen and (min-width: 900px) 
+and (max-device-width: 1080px) {
+
+	width: 100%;
+	
+}
+

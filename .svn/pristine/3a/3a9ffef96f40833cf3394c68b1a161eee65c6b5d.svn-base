@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var score=0;
+	function test(){
+		if(form01.age[2].checked){score+=10;}
+		if(form01.loc[1].checked){score+=10;}
+		if(form01.firstName[3].checked){score+=10;}
+		if(form01.manFirst[0].checked){score+=10;}
+		if(form01.goal[3].checked){score+=10;}
+		if(form01.injury[0].checked){score+=10;}
+		if(form01.award[1].checked){score+=10;}
+		if(form01.team[2].checked){score+=10;}
+		if(form01.change[0].checked){score+=10;}
+		if(form01.jump[2].checked){score+=10;}
+		if(form01.age.value==""||
+		   form01.loc.value=="" ||
+		   form01.firstName.value=="" ||
+		   form01.manFirst.value=="" ||
+		   form01.goal.value==""||
+		   form01.injury.value=="" ||
+		   form01.award.value=="" ||
+		   form01.team.value==""||
+		   form01.change.value=="" ||
+		   form01.jump.value==""){
+			alert("모든문제를 풀어주세요!");
+		}else if(score=='100'){
+			self.close();
+			window.open("test100.html", "test100", "width=400 height=500 left=150 top=100 menubar=no location=no, resizable=no, toolbar=no");
+		}else if(score=='90'){
+			self.close();
+			window.open("test90.html", "test90", "width=400 height=500 left=150 top=100 menubar=no location=no, resizable=no, toolbar=no");
+		}else if(score=='80'){
+			self.close();
+			window.open("test80.html", "test80", "width=400 height=500 left=150 top=100 menubar=no location=no, resizable=no, toolbar=no");
+		}else if(score=='70'){
+			self.close();
+			window.open("test70.html", "test70", "width=400 height=500 left=150 top=100 menubar=no location=no, resizable=no, toolbar=no");
+		}else if(score=='60'){
+			self.close();
+			window.open("test60.html", "test60", "width=400 height=500 left=150 top=100 menubar=no location=no, resizable=no, toolbar=no");
+		}else if(score=='50'){
+			self.close();
+			window.open("test50.html", "test50", "width=400 height=500 left=150 top=100 menubar=no location=no, resizable=no, toolbar=no");	
+		}else if(score=='40'){
+			self.close();
+			window.open("test40.html", "test40", "width=400 height=500 left=150 top=100 menubar=no location=no, resizable=no, toolbar=no");	
+		}else if(score=='30'){
+			self.close();
+			window.open("test30.html", "test30", "width=400 height=500 left=150 top=100 menubar=no location=no, resizable=no, toolbar=no");
+		}else if(score=='20'){
+			self.close();
+			window.open("test20.html", "test20", "width=400 height=500 left=150 top=100 menubar=no location=no, resizable=no, toolbar=no");
+		}else if(score=='10'){
+			self.close();
+			window.open("test10.html", "test10", "width=400 height=500 left=150 top=100 menubar=no location=no, resizable=no, toolbar=no");
+		}else if(score=='0'){
+			self.close();
+			window.open("test0.html", "test0", "width=400 height=500 left=150 top=100 menubar=no location=no, resizable=no, toolbar=no");
+		}	
+	}	
+</script>
+<style type="text/css">
+	.quiz{font-weight:700; color:white; text-shadow: 2px 2px 4px red; background:skyblue;}
+	
+</style>
+</head>
+<body>
+<h1 class="quiz">QUIZ FOR RONALDO</h1>
+<form name="form01">
+	<div class="no1">
+	<h3>1. 호날두의 현재 나이는 만으로 몇 세일까요?</h3>
+	&ensp;&ensp;<input type="radio" name="age" value="0">&ensp;31세 <br>
+	&ensp;&ensp;<input type="radio" name="age" value="1">&ensp;32세 <br>
+	&ensp;&ensp;<input type="radio" name="age" value="2">&ensp;33세 <br>
+	&ensp;&ensp;<input type="radio" name="age" value="3">&ensp;34세 
+	</div>
+	<hr>
+	<div class="no2">
+	<h3>2. 호날두의 고향으로 포르투갈에선 여름 휴양지로 인기 있는 이 곳은? </h3>
+	&ensp;&ensp;<input type="radio" name="loc" value="0">&ensp;시칠리아<br>
+	&ensp;&ensp;<input type="radio" name="loc" value="1">&ensp;마데이라<br>
+	&ensp;&ensp;<input type="radio" name="loc" value="2">&ensp;리스본 <br>
+	&ensp;&ensp;<input type="radio" name="loc" value="3">&ensp;포르투 
+	</div>
+	<hr>
+	<div class="no3">
+	<h3>3. 크리스티아누 호날두는 호날두의 이름입니다. 호날두의 성은 무엇일까요? </h3>
+	&ensp;&ensp;<input type="radio" name="firstName" value="0">&ensp;Barron Raimos<br> 
+	&ensp;&ensp;<input type="radio" name="firstName" value="1">&ensp;Suarez Maitos<br>  
+	&ensp;&ensp;<input type="radio" name="firstName" value="2">&ensp;Monkey D<br>  
+	&ensp;&ensp;<input type="radio" name="firstName" value="3">&ensp;Santos Averio
+	</div>
+	<hr>
+	<div class="no4">
+	<h3>4. 호날두가 맨유 입단 후 처음으로 우승을 차지한 년도와 대회는? </h3>
+	&ensp;&ensp;<input type="radio" name="manFirst" value="0">&ensp;2004 FA컵<br> 
+	&ensp;&ensp;<input type="radio" name="manFirst" value="1">&ensp;2006 리그컵<br>  
+	&ensp;&ensp;<input type="radio" name="manFirst" value="2">&ensp;2007 프리미어리그<br>  
+	&ensp;&ensp;<input type="radio" name="manFirst" value="3">&ensp;2008 챔피언스리그 
+	</div>
+	<hr>
+	<div class="no5">
+	<h3>5. 호날두는 2014-15시즌 자신의 리그 최다골 기록을 세웠습니다. 몇 골을 넣었을까요? </h3>
+	&ensp;&ensp;<input type="radio" name="goal" value="0">&ensp;45골<br> 
+	&ensp;&ensp;<input type="radio" name="goal" value="1">&ensp;46골<br>  
+	&ensp;&ensp;<input type="radio" name="goal" value="2">&ensp;47골<br>  
+	&ensp;&ensp;<input type="radio" name="goal" value="3">&ensp;48골
+	</div>
+	<hr>
+	<div class="no6">
+	<h3>6. 호날두는 부상을 잘 당하지 않아 거의 매 시즌 리그에서 30경기 이상 출전했습니다. 다음 중 리그 30경기 이하 출전에 그친 시즌으로 올바른 것은?</h3>
+	&ensp;&ensp;<input type="radio" name="injury" value="0">&ensp;2003-04, 2009-10<br> 
+	&ensp;&ensp;<input type="radio" name="injury" value="1">&ensp;2004-05, 2010-11<br>  
+	&ensp;&ensp;<input type="radio" name="injury" value="2">&ensp;2005-06, 2009-10<br>  
+	&ensp;&ensp;<input type="radio" name="injury" value="3">&ensp;2005-06, 2010-11 
+	</div>
+	<hr>
+	<div class="no7">
+	<h3>7. 다음 중 호날두가 수상한 상과 년도가 잘못 짝지어진 것을 고르시오.</h3>
+	&ensp;&ensp;<input type="radio" name="award" value="0">&ensp;발롱도르 - 2008년<br> 
+	&ensp;&ensp;<input type="radio" name="award" value="1">&ensp;푸스카스상 - 2010년<br>  
+	&ensp;&ensp;<input type="radio" name="award" value="2">&ensp;맨유 올해의 선수 - 2006/07시즌<br>  
+	&ensp;&ensp;<input type="radio" name="award" value="3">&ensp;클럽월드컵 골든부츠 - 2016년 
+	</div>
+	<hr>
+	<div class="no8">
+	<h3>8. 호날두는 2016년에도 어김없이 UEFA 올해의 팀에 뽑혔습니다. 몇 년 연속 기록일까요?</h3>
+	&ensp;&ensp;<input type="radio" name="team" value="0">&ensp;8년<br> 
+	&ensp;&ensp;<input type="radio" name="team" value="1">&ensp;9년<br>  
+	&ensp;&ensp;<input type="radio" name="team" value="2">&ensp;10년<br>  
+	&ensp;&ensp;<input type="radio" name="team" value="3">&ensp;11년 
+	</div>
+	<hr>
+	<div class="no9">
+	<h3>9. 유로 2016 결승에서 호날두는 이 선수와 충돌한 후 교체됐습니다. 전 세계적으로 큰 비난을 받기도 했던 이 선수의 이름은?</h3>
+	&ensp;&ensp;<input type="radio" name="change" value="0">&ensp;디미트리 파예<br> 
+	&ensp;&ensp;<input type="radio" name="change" value="1">&ensp;앙투안 그리즈만<br>  
+	&ensp;&ensp;<input type="radio" name="change" value="2">&ensp;폴 포그바<br>  
+	&ensp;&ensp;<input type="radio" name="change" value="3">&ensp;로랑 코시엘니 
+	</div>
+	<hr>
+	<div class="no10">
+	<h3>10. 호날두는 점프력이 좋기로 유명합니다. 유로 2016 웨일스전에서 헤딩골을 넣을 때 그는 얼마나 높이 뛰었을까요?</h3>
+	&ensp;&ensp;<input type="radio" name="jump" value="0">&ensp;59cm<br> 
+	&ensp;&ensp;<input type="radio" name="jump" value="1">&ensp;66cm<br>  
+	&ensp;&ensp;<input type="radio" name="jump" value="2">&ensp;76cm<br>  
+	&ensp;&ensp;<input type="radio" name="jump" value="3">&ensp;86cm 
+	</div>
+	<hr>
+	<input type="button" name="pointCount" value="결과보기" onclick="javascript:test();"> <input type="reset" name="pointReset" value="입력취소" >
+</form>
+</body>
+</html>
