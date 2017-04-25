@@ -1,18 +1,18 @@
-﻿@CHARSET "UTF-8";
+癤?CHARSET "UTF-8";
 	
-/* 바디 전체 배경색. 글자색 및 글자크기 */	
+/* 諛붾뵒 ?꾩껜 諛곌꼍?? 湲?먯깋 諛?湲?먰겕湲?*/	
 	body{background:#f7f5ee; color:#2f2f2f; font-size:14px; box-sizing: border-box;} /* 
 
-/* 헤더(header) 조정*/
+/* ?ㅻ뜑(header) 議곗젙*/
 	header{text-align:center; position:relative;}
 	
-/*신문제목(title)*/
+/*?좊Ц?쒕ぉ(title)*/
 	.title{
 		font-weight:900; font-size:80px;
 		text-transform:uppercase; display:inline-block;
 		line-height:72px; margin-bottom:40px;}	
 			
-/* 날짜(date)*/
+/* ?좎쭨(date)*/
 	.date{border-top:2px solid #2f2f2f; font-weight:700;
 		  border-bottom:2px solid #2f2f2f; text-size:20px;
 		  text-transform:uppercase;
@@ -20,22 +20,22 @@
 	audio{float:right;}	  
 
 
-/* 섹션(section) 부분 */
+/* ?뱀뀡(section) 遺遺?*/
 	section{display:inline-block; margin:30px 3% 0 3%;}
 
-/* 아티클(article) 부분 */
+/* ?꾪떚??article) 遺遺?*/
 	article{font-size:14px; width:20%;
 			display:inline-block; vertical-align:top;
 			line-height:20px; padding:0 1% 0 1%;
 			margin-bottom:50px;}	
 
-/* 아티클 사이사이 조정*/
+/* ?꾪떚???ъ씠?ъ씠 議곗젙*/
 	article + article{border-left:1px solid #2f2f2f;}
 
-/* 아티클 안의 headline 조정*/
+/* ?꾪떚???덉쓽 headline 議곗젙*/
 	.headline{text-align:center; display:block; margin:0 auto; line-height:normal;}
 
-/* headline 설정*/
+/* headline ?ㅼ젙*/
 	.headline.hl1{
 		font-weight:400; font-style:italic; font-size:36px;
 		padding:10px 0;}
@@ -52,7 +52,7 @@
 		border-bottom:1px solid #2f2f2f; content:'';
 		width:100px; height:10px; display:block; margin:0 auto;}
 
-/*사진(figure) 설정*/	
+/*?ъ쭊(figure) ?ㅼ젙*/	
 	figure{margin:0 0 20px;}
 	figcaption{font-size:12px; text-align:right; font-style:italic;}	
 	.picture{width:100%;}	
@@ -63,7 +63,7 @@
 			line-height:20px; 
 			margin-bottom:50px;}
 
-/*award 사진 애니메이션*/
+/*award ?ъ쭊 ?좊땲硫붿씠??/
 	.award{
 	  	-webkit-animation-name:mychange1;
   		-webkit-animation-duration:5s;
@@ -88,10 +88,10 @@
 	}
 
 
-/* 푸터(footer) 처리 */
+/* ?명꽣(footer) 泥섎━ */
 	footer{border-top:3px solid #2f2f2f; border-bottom:3px solid #2f2f2f; text-align:center; padding:10px 0;}
 
-/* aside 배너 드랍다운 및 링크*/
+/* aside 諛곕꼫 ?쒕엻?ㅼ슫 諛?留곹겕*/
 	aside{float:right; text-align:center; position:fixed; top:250px; left:1670px;}
 	a{display:block; border:1px solid black; padding:20px; width:170px; height:100px;}
 	audio{width:170px;}
@@ -112,7 +112,7 @@
 
 
 
-/*아티클 1 부분 호날두 소개 타이틀 박스 및 애니메이션 효과...*/	
+/*?꾪떚??1 遺遺??몃궇???뚭컻 ??댄? 諛뺤뒪 諛??좊땲硫붿씠???④낵...*/	
 	.head1{
   		font-family: 'Oswald', sans-serif;
   		line-height: 1.2em;
@@ -146,7 +146,7 @@
 
 	
 
-/*미디어 쿼리 조정  월요일 다시 조정 필요함. */
+/*誘몃뵒??荑쇰━ 議곗젙  ?붿슂???ㅼ떆 議곗젙 ?꾩슂?? */
 
 @media only all and (max-width: 1683px){
 	aside{width:31%; position:relative; display:block; top:auto; left:auto;}

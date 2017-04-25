@@ -1,12 +1,12 @@
 var score = 0;
 
-// ³ªÀÌ °ªÀ» Ç¥½ÃÇÔ
+// ë‚˜ì´ ê°’ì„ í‘œì‹œí•¨
 function myAge() {
     var age = document.getElementById("age").value;
-    document.getElementById("ageString").innerHTML=age+" »ì?";
+    document.getElementById("ageString").innerHTML=age+" ì‚´?";
 }
 
-// form¿¡ ÀÔ·ÂµÈ °ª°ú ½ÇÁ¦ °ª°ú ºñ±³ ÈÄ Á¡¼ö »êÃâ
+// formì— ì…ë ¥ëœ ê°’ê³¼ ì‹¤ì œ ê°’ê³¼ ë¹„êµ í›„ ì ìˆ˜ ì‚°ì¶œ
 function call() {
 
     if(form01.age.value == 28) { score += 25; }
@@ -14,11 +14,11 @@ function call() {
     if(form01.bloodType[0].checked) { score += 25; }
     if(form01.season.value == "fall") { score += 25; }
 
-    alert(score + "Á¡\n"
-        + "Àú´Â 28»ì ÀÔ´Ï´Ù." + "\n"
-        + "Àú´Â Ã¥ÀĞ±â¿Í °ÔÀÓÇÏ±â¸¦ ÁÁ¾ÆÇÕ´Ï´Ù." + "\n"
-        + "Á¦ Ç÷¾×ÇüÀº AÇüÀÌÁö¸¸ ¼Ò½ÉÇÏÁø ¾Ê¾Æ¿ä." + "\n"
-        + "±×¸®°í Àü °¡À»À» ÁÁ¾ÆÇÕ´Ï´Ù." + "\n");
+    alert(score + "ì \n"
+        + "ì €ëŠ” 28ì‚´ ì…ë‹ˆë‹¤." + "\n"
+        + "ì €ëŠ” ì±…ì½ê¸°ì™€ ê²Œì„í•˜ê¸°ë¥¼ ì¢‹ì•„í•©ë‹ˆë‹¤." + "\n"
+        + "ì œ í˜ˆì•¡í˜•ì€ Aí˜•ì´ì§€ë§Œ ì†Œì‹¬í•˜ì§„ ì•Šì•„ìš”." + "\n"
+        + "ê·¸ë¦¬ê³  ì „ ê°€ì„ì„ ì¢‹ì•„í•©ë‹ˆë‹¤." + "\n");
 
 }
 

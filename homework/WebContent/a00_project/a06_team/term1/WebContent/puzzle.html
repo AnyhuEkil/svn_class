@@ -71,7 +71,7 @@ div{
 	color:gold;
 }
 
-/*flap animation±¸Çö*/
+/*flap animationêµ¬í˜„*/
 .container { 
   width: 100%;
   height: 38px;
@@ -121,15 +121,15 @@ to {  transform:  rotateY( 0deg );}}
 </style>
 
 <script type="text/javascript">
-//17X17 2Â÷¿ø Array ¼±¾ð
+//17X17 2ì°¨ì› Array ì„ ì–¸
 var X= new Array();
 X[0] = new Array();X[1] = new Array();X[2] = new Array();X[3] = new Array();X[4] = new Array();X[5] = new Array();X[6] = new Array();X[7] = new Array();X[8] = new Array();X[9] = new Array();X[10] = new Array();X[11] = new Array();X[12] = new Array();X[13] = new Array();X[14] = new Array();X[15] = new Array();X[16] = new Array();X[17] = new Array();
 
-//°¡·Î ¹× ¼¼·Î ¹®Á¦ Ç®ÀÌ stript¿¡ »ç¿ëµÉ array ¼±¾ð
+//ê°€ë¡œ ë° ì„¸ë¡œ ë¬¸ì œ í’€ì´ striptì— ì‚¬ìš©ë  array ì„ ì–¸
 var verti = new Array();
 var hori = new  Array();
 
-//17X17 2Â÷¿ø Array ÃÊ±â°ª ÀÔ·Â
+//17X17 2ì°¨ì› Array ì´ˆê¸°ê°’ ìž…ë ¥
 X[0][0]=""; X[1][0]=""; X[2][0]=""; X[3][0]="r"; X[4][0]=""; X[5][0]=""; X[6][0]=""; X[7][0]=""; X[8][0]=""; X[9][0]=""; X[10][0]=""; X[11][0]=""; X[12][0]=""; X[13][0]=""; X[14][0]=""; X[15][0]=""; X[16][0]=""; X[17][0]=""; 
 X[0][1]=""; X[1][1]=""; X[2][1]="c"; X[3][1]="o"; X[4][1]="m"; X[5][1]="m"; X[6][1]="i"; X[7][1]="t"; X[8][1]=""; X[9][1]=""; X[10][1]=""; X[11][1]=""; X[12][1]=""; X[13][1]=""; X[14][1]=""; X[15][1]=""; X[16][1]=""; X[17][1]=""; 
 X[0][2]=""; X[1][2]=""; X[2][2]=""; X[3][2]="l"; X[4][2]=""; X[5][2]=""; X[6][2]=""; X[7][2]="a"; X[8][2]="r"; X[9][2]="t"; X[10][2]="i"; X[11][2]="c"; X[12][2]="l"; X[13][2]="e"; X[14][2]=""; X[15][2]=""; X[16][2]=""; X[17][2]=""; 
@@ -149,28 +149,28 @@ X[0][15]=""; X[1][15]="c"; X[2][15]=""; X[3][15]=""; X[4][15]=""; X[5][15]=""; X
 X[0][16]=""; X[1][16]="u"; X[2][16]=""; X[3][16]=""; X[4][16]=""; X[5][16]=""; X[6][16]=""; X[7][16]=""; X[8][16]=""; X[9][16]=""; X[10][16]=""; X[11][16]=""; X[12][16]=""; X[13][16]=""; X[14][16]=""; X[15][16]=""; X[16][16]=""; X[17][16]=""; 
 X[0][17]=""; X[1][17]="s"; X[2][17]=""; X[3][17]=""; X[4][17]=""; X[5][17]=""; X[6][17]=""; X[7][17]=""; X[8][17]=""; X[9][17]=""; X[10][17]=""; X[11][17]=""; X[12][17]=""; X[13][17]=""; X[14][17]=""; X[15][17]=""; X[16][17]=""; X[17][17]=""; 
 
-//°¡·Î ¹× ¼¼·Î Ç®ÀÌ °ª ÀÔ·Â
-hori[0]="µ¥ÀÌÅÍº£ÀÌ½º Æ®·£Àè¼ÇÀÇ ³»¿ë ¾÷µ¥ÀÌÆ®¸¦ ¿µ±¸ÀûÀ¸·Î È®Á¤ÇÏ´Â °Í";
-hori[1]="Semantic TagÀÇ ±âº» ±¸¼º¿ä¼Ò·Î ±ÛÀÚ°¡ ¸¹ÀÌ µé¾î°¡´Â ºÎºÐÀ» ÀÇ¹Ì";
-hori[2]="Å¬¶óÀÌ¾ðÆ®´ÜÀÇ ±¸¼º ¿ä¼Ò Áß ÇÑ °¡Áö·Î °´Ã¼ ±â¹ÝÀÇ ½ºÅ©¸³Æ® ÇÁ·Î±×·¡¹Ö ¾ð¾î";
-hori[3]="DB¿¡¼­ Table »ý¼º½Ã DataÀÇ ¹«°á¼º Á¦¾à Á¶°ÇÀÇ ÇÑ °¡Áö·Î °ø¶õ ¹× Áßº¹ ºÒ°¡¸¦ ¼³Á¤ÇÒ ¶§ »ç¿ëµÊ";
-hori[4]="Html³»ÀÇ EventÀÇ ÇÑ Á¾·ù·Î ¸¶¿ì½º Æ÷ÀÎÆ®°¡ ¿Ã¶ó¿Â °ÍÀ» °¨ÁöÇÔ";
-hori[5]="SQLÀÇ DMLÁß ÇÑ °¡Áö·Î ÇÏ³ª ¶Ç´Â ±× ÀÌ»óÀÇ Å×ÀÌºí¿¡¼­ µ¥ÀÌÅÍ¸¦ ÃßÃâÇÏ´Â ¸í·É¾î";
-hori[6]="DB¿¡¼­ Table³»¿¡ Á¸Àç ÇÏ´Â ±â·ÏÀ» »èÁ¦ÇÒ ¶§ »ç¿ëÇÏ´Â ¸í·É¾î";
-hori[7]="HTML³»¿¡¼­ TableÀ» ±¸¼ºÇÒ ¶§ Çà ¶Ç´Â ¿­À» È®ÀåÇÒ ¶§ »ç¿ëÇÏ´Â ¸í·É¾î";
-hori[8]="°èÃþÇü ±¸Á¶¿¡¼­ Select ±¸¹® ÀÌÈÄ¿¡ °¢ ÇàÀÇ °ü°è¸¦ ¼³Á¤ÇÒ ¶§ »ç¿ëµÇ´Â ¸í·É¾î·Î ÁÖ·Î prior¿Í ÇÔ²² ¾²ÀÎ´Ù.";
-verti[0]="SQL ¸í·É¾î Áß ÇÏ³ª·Î Æ®·£Àè¼Ç ´ÜÀ§·Î µ¥ÀÌÅÍ º£ÀÌ½º¿¡¼­ ¹ß»ýÇÑ ÀÛ¾÷À» µÇµ¹¸± ¶§ »ç¿ëÇÏ´Â ¸í·É¾î";
-verti[1]="HTMLÀÇ ±âº» ±¸Á¶¸¦ ±¸¼ºÇÏ´Â ´ÜÀ§·Î <   >¸¦ ÀÇ¹ÌÇÔ";
-verti[2]="DDL¸í·É¾îÀÇ ÇÑ Á¾·ù·Î Table ³»¿¡ Á¸ÀçÇÏ´Â °³Ã¼ÀÇ Æ¯¼ºÀ» º¯°æÇÒ ¶§ »ç¿ëµÊ";
-verti[3]="Input typeÀÇ ÇÑ ¿ä¼Ò·Î ÁÖ¾îÁø ¸ñ·Ï¿¡¼­ ´ÙÁß¼±ÅÃÀÌ °¡´ÉÇÔ";
-verti[4]="´Ù¸¥ À¥ È¤Àº µ¿ÀÏ À¥ ³»¿¡ Æ¯Á¤ÇÑ °÷À¸·Î ÀÌµ¿½ÃÄÑÁÖ´Â a tagÀÇ Full-name";
-verti[5]="ÁÖ·Î Input ÅÂ±×³»¿¡¼­ ¹ß»ýµÇ´Â EventÁß¿¡ ÇØ´ç tag¿¡ Ä¿¼­°¡ ¿Ã¶ó ¿ÔÀ» ¶§ÀÇ Çàµ¿À» ÁöÁ¤ÇØÁÖ´Â ¸í·É¾î";
-verti[6]="css ¼±¾ðÀ» À§ÇØ¼­ »ç¿ëµÇ´Â tag";
-verti[7]="DDL¸í·É¾îÀÇ ÇÑ Á¾·ù·Î Table¿¡¼­ ¸ðµç ÇàÀ» »èÁ¦ÇÏ´Â ¸í·É¾î";
-verti[8]="ÁÖ·Î µÎ °³ÀÇ TableÀ» ÇÕÄ¥ ¶§ »ç¿ëÇÏ´Â ¸í·É¾î·Î Á¶°Ç¿¡ µû¶ó Update È¤Àº Insert¸¦ °áÇÕÇÑ ÀÛ¾÷À» ¼öÇàÇÔ";
-verti[9]="°èÃþÇü ±¸Á¶¿¡¼­ »ç¿ëµÇ¸ç, ÃÖ»óÀ§ °èÃþ °ª¿¡ µû¸¥ Ã³¸®ÇØ¾ß ÇÒ °ªÀÇ ½ÃÀÛÁ¡À» ¼³Á¤ÇØÁÜ";
+//ê°€ë¡œ ë° ì„¸ë¡œ í’€ì´ ê°’ ìž…ë ¥
+hori[0]="ë°ì´í„°ë² ì´ìŠ¤ íŠ¸ëžœìž­ì…˜ì˜ ë‚´ìš© ì—…ë°ì´íŠ¸ë¥¼ ì˜êµ¬ì ìœ¼ë¡œ í™•ì •í•˜ëŠ” ê²ƒ";
+hori[1]="Semantic Tagì˜ ê¸°ë³¸ êµ¬ì„±ìš”ì†Œë¡œ ê¸€ìžê°€ ë§Žì´ ë“¤ì–´ê°€ëŠ” ë¶€ë¶„ì„ ì˜ë¯¸";
+hori[2]="í´ë¼ì´ì–¸íŠ¸ë‹¨ì˜ êµ¬ì„± ìš”ì†Œ ì¤‘ í•œ ê°€ì§€ë¡œ ê°ì²´ ê¸°ë°˜ì˜ ìŠ¤í¬ë¦½íŠ¸ í”„ë¡œê·¸ëž˜ë° ì–¸ì–´";
+hori[3]="DBì—ì„œ Table ìƒì„±ì‹œ Dataì˜ ë¬´ê²°ì„± ì œì•½ ì¡°ê±´ì˜ í•œ ê°€ì§€ë¡œ ê³µëž€ ë° ì¤‘ë³µ ë¶ˆê°€ë¥¼ ì„¤ì •í•  ë•Œ ì‚¬ìš©ë¨";
+hori[4]="Htmlë‚´ì˜ Eventì˜ í•œ ì¢…ë¥˜ë¡œ ë§ˆìš°ìŠ¤ í¬ì¸íŠ¸ê°€ ì˜¬ë¼ì˜¨ ê²ƒì„ ê°ì§€í•¨";
+hori[5]="SQLì˜ DMLì¤‘ í•œ ê°€ì§€ë¡œ í•˜ë‚˜ ë˜ëŠ” ê·¸ ì´ìƒì˜ í…Œì´ë¸”ì—ì„œ ë°ì´í„°ë¥¼ ì¶”ì¶œí•˜ëŠ” ëª…ë ¹ì–´";
+hori[6]="DBì—ì„œ Tableë‚´ì— ì¡´ìž¬ í•˜ëŠ” ê¸°ë¡ì„ ì‚­ì œí•  ë•Œ ì‚¬ìš©í•˜ëŠ” ëª…ë ¹ì–´";
+hori[7]="HTMLë‚´ì—ì„œ Tableì„ êµ¬ì„±í•  ë•Œ í–‰ ë˜ëŠ” ì—´ì„ í™•ìž¥í•  ë•Œ ì‚¬ìš©í•˜ëŠ” ëª…ë ¹ì–´";
+hori[8]="ê³„ì¸µí˜• êµ¬ì¡°ì—ì„œ Select êµ¬ë¬¸ ì´í›„ì— ê° í–‰ì˜ ê´€ê³„ë¥¼ ì„¤ì •í•  ë•Œ ì‚¬ìš©ë˜ëŠ” ëª…ë ¹ì–´ë¡œ ì£¼ë¡œ priorì™€ í•¨ê»˜ ì“°ì¸ë‹¤.";
+verti[0]="SQL ëª…ë ¹ì–´ ì¤‘ í•˜ë‚˜ë¡œ íŠ¸ëžœìž­ì…˜ ë‹¨ìœ„ë¡œ ë°ì´í„° ë² ì´ìŠ¤ì—ì„œ ë°œìƒí•œ ìž‘ì—…ì„ ë˜ëŒë¦´ ë•Œ ì‚¬ìš©í•˜ëŠ” ëª…ë ¹ì–´";
+verti[1]="HTMLì˜ ê¸°ë³¸ êµ¬ì¡°ë¥¼ êµ¬ì„±í•˜ëŠ” ë‹¨ìœ„ë¡œ <   >ë¥¼ ì˜ë¯¸í•¨";
+verti[2]="DDLëª…ë ¹ì–´ì˜ í•œ ì¢…ë¥˜ë¡œ Table ë‚´ì— ì¡´ìž¬í•˜ëŠ” ê°œì²´ì˜ íŠ¹ì„±ì„ ë³€ê²½í•  ë•Œ ì‚¬ìš©ë¨";
+verti[3]="Input typeì˜ í•œ ìš”ì†Œë¡œ ì£¼ì–´ì§„ ëª©ë¡ì—ì„œ ë‹¤ì¤‘ì„ íƒì´ ê°€ëŠ¥í•¨";
+verti[4]="ë‹¤ë¥¸ ì›¹ í˜¹ì€ ë™ì¼ ì›¹ ë‚´ì— íŠ¹ì •í•œ ê³³ìœ¼ë¡œ ì´ë™ì‹œì¼œì£¼ëŠ” a tagì˜ Full-name";
+verti[5]="ì£¼ë¡œ Input íƒœê·¸ë‚´ì—ì„œ ë°œìƒë˜ëŠ” Eventì¤‘ì— í•´ë‹¹ tagì— ì»¤ì„œê°€ ì˜¬ë¼ ì™”ì„ ë•Œì˜ í–‰ë™ì„ ì§€ì •í•´ì£¼ëŠ” ëª…ë ¹ì–´";
+verti[6]="css ì„ ì–¸ì„ ìœ„í•´ì„œ ì‚¬ìš©ë˜ëŠ” tag";
+verti[7]="DDLëª…ë ¹ì–´ì˜ í•œ ì¢…ë¥˜ë¡œ Tableì—ì„œ ëª¨ë“  í–‰ì„ ì‚­ì œí•˜ëŠ” ëª…ë ¹ì–´";
+verti[8]="ì£¼ë¡œ ë‘ ê°œì˜ Tableì„ í•©ì¹  ë•Œ ì‚¬ìš©í•˜ëŠ” ëª…ë ¹ì–´ë¡œ ì¡°ê±´ì— ë”°ë¼ Update í˜¹ì€ Insertë¥¼ ê²°í•©í•œ ìž‘ì—…ì„ ìˆ˜í–‰í•¨";
+verti[9]="ê³„ì¸µí˜• êµ¬ì¡°ì—ì„œ ì‚¬ìš©ë˜ë©°, ìµœìƒìœ„ ê³„ì¸µ ê°’ì— ë”°ë¥¸ ì²˜ë¦¬í•´ì•¼ í•  ê°’ì˜ ì‹œìž‘ì ì„ ì„¤ì •í•´ì¤Œ";
 
-//±¤¿ªº¯¼ö ¼±¾ð ¹× ¼³Á¤(°¡·Î¼¼·ÎÇ®ÀÌ scriptºÎºÐ)
+//ê´‘ì—­ë³€ìˆ˜ ì„ ì–¸ ë° ì„¤ì •(ê°€ë¡œì„¸ë¡œí’€ì´ scriptë¶€ë¶„)
 var scr_verti_front="";
 var scr_verti_back ="";
 var scr_hori_front="";
@@ -187,13 +187,13 @@ var	initval;
 	
 			
 	function startquiz(){
-		//¸ðµå¿¡ µû¸¥ ¹é±×¶ó¿îµå ¼³Á¤
+		//ëª¨ë“œì— ë”°ë¥¸ ë°±ê·¸ë¼ìš´ë“œ ì„¤ì •
 			if(document.getElementsByName("where_are")[1].checked==true)
 				document.getElementById("quiz").style.backgroundImage="url('img/example1.jpg')";
 			else
 				document.getElementById("quiz").style.backgroundImage="url('img/su.jpg')";
 //			document.body.style.backgroundImage = "url('img_tree.png')";
-		//½ºÅ©¸³Æ® ÃÊ±â°ª³Ö±â
+		//ìŠ¤í¬ë¦½íŠ¸ ì´ˆê¸°ê°’ë„£ê¸°
 		for(i=0;i<X.length;i++){
 			for(j=0;j<X[i].length;j++){
 				k=i+j*18;
@@ -445,21 +445,21 @@ var	initval;
 </div>
 
 <br>
-&ensp; <input type="radio" name="where_are" value="normal"><span id="radio1">ÀÏ¹Ý¸ðµå</span><br>
-&ensp; <input type="radio" name="where_are" value="for19"><span id="radio2">¼ºÀÎ¸ðµå</span><br>
-&ensp; <input type="button" value="½ÃÀÛ" onclick="startquiz()"/>
-&ensp; <input id="check_ans" type="button" value="Á¤´äÈ®ÀÎ" onclick="check_answer()" disabled="disabled"/><br>
+&ensp; <input type="radio" name="where_are" value="normal"><span id="radio1">ì¼ë°˜ëª¨ë“œ</span><br>
+&ensp; <input type="radio" name="where_are" value="for19"><span id="radio2">ì„±ì¸ëª¨ë“œ</span><br>
+&ensp; <input type="button" value="ì‹œìž‘" onclick="startquiz()"/>
+&ensp; <input id="check_ans" type="button" value="ì •ë‹µí™•ì¸" onclick="check_answer()" disabled="disabled"/><br>
 &ensp; <span style="color:white;"> Score : </span><span id="show_score" style="color:white;"></span><span style="color:white;">%</span><br>
 
 &ensp; <input id="test_check" type="text" value="test" onclick="test()" style="width:30px;"/><br> 
   
-&ensp; <input id="fin_hidden"type="button" value="³¡!!" onclick="hidemenu()" hidden="hidden" disabled="disabled"/><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+&ensp; <input id="fin_hidden"type="button" value="ë!!" onclick="hidemenu()" hidden="hidden" disabled="disabled"/><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
 
-<!-- °¡·Î¼¼·ÎÇ®ÀÌ script table -->
+<!-- ê°€ë¡œì„¸ë¡œí’€ì´ script table -->
 <table class="pro_table" border="1">
-<tr><td style="font-size:13px; color:gold;" height="30px">°¡·ÎÇ®ÀÌ</td></tr>
+<tr><td style="font-size:13px; color:gold;" height="30px">ê°€ë¡œí’€ì´</td></tr>
 <tr><td>
 <section class="container">
 <div id="card1">
@@ -471,7 +471,7 @@ var	initval;
 </table>
 <table class="pro_table" border="1">
 
-<tr><td style="font-size:13px; color:gold;" height="30px">¼¼·ÎÇ®ÀÌ</td></tr>
+<tr><td style="font-size:13px; color:gold;" height="30px">ì„¸ë¡œí’€ì´</td></tr>
 <tr><td><section class="container">
 <div id="card2">
 <h6 id="script_verti_f"></h6>

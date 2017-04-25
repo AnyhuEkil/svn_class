@@ -2,7 +2,7 @@
 <html lang="en">
  <head>
   <meta charset="UTF-8">
-  <meta name="Generator" content="EditPlus®">
+  <meta name="Generator" content="EditPlus짰">
   <meta name="Author" content="">
   <meta name="Keywords" content="">
   <meta name="Description" content="">
@@ -10,54 +10,54 @@
   <script type="text/javascript">
   <!--
 /*
-    while :논리연산자로 해당 조건이 있을 때, 무한 반복하게 처리하는
-        반복문을 말한다. 주로, demon처리할 때, 많이 쓰이면, break문
-        으로 반복을 종료 시킨다.
-    while(논리연산자){
-        반복처리..
+    while :?쇰━?곗궛?먮줈 ?대떦 議곌굔???덉쓣 ?? 臾댄븳 諛섎났?섍쾶 泥섎━?섎뒗
+        諛섎났臾몄쓣 留먰븳?? 二쇰줈, demon泥섎━???? 留롮씠 ?곗씠硫? break臾?
+        ?쇰줈 諛섎났??醫낅즺 ?쒗궓??
+    while(?쇰━?곗궛??{
+        諛섎났泥섎━..
     }
-    예제..
+    ?덉젣..
 */    
     var cnt = 1;
-    // 1~4까지 출력 처리하는 내용..
+    // 1~4源뚯? 異쒕젰 泥섎━?섎뒗 ?댁슜..
     //while( cnt<5 ){
-    //    alert( ( cnt++ )+"번째 안녕하세요!!");
+    //    alert( ( cnt++ )+"踰덉㎏ ?덈뀞?섏꽭??!");
     //}
 /*
-    주문 받습니다!!!
-    1. 짜장면
-    2. 짬뽕
-    3. 탕수육
-    주문하실 번호를 입력하세요!!(1~3)
-    종료하실려면 Q를 입력하세요!!
-    주문하신 내용은 !!
-    예외처리생략!!
-    ## 프로그램 처리..
-    1) 화면구성..
-    2) while문을 통한 반복처리..
-    3) 조건을 통해 반복을 벗어나게 처리..
+    二쇰Ц 諛쏆뒿?덈떎!!!
+    1. 吏쒖옣硫?
+    2. 吏щ퐬
+    3. ?뺤닔??
+    二쇰Ц?섏떎 踰덊샇瑜??낅젰?섏꽭??!(1~3)
+    醫낅즺?섏떎?ㅻ㈃ Q瑜??낅젰?섏꽭??!
+    二쇰Ц?섏떊 ?댁슜? !!
+    ?덉쇅泥섎━?앸왂!!
+    ## ?꾨줈洹몃옩 泥섎━..
+    1) ?붾㈃援ъ꽦..
+    2) while臾몄쓣 ?듯븳 諛섎났泥섎━..
+    3) 議곌굔???듯빐 諛섎났??踰쀬뼱?섍쾶 泥섎━..
 */
     var show="";
-    show+="주문 받습니다!!!\n";
-    show+="1. 짜장면, 2. 짬뽕, 3. 탕수육\n ";    
+    show+="二쇰Ц 諛쏆뒿?덈떎!!!\n";
+    show+="1. 吏쒖옣硫? 2. 吏щ퐬, 3. ?뺤닔??n ";    
     alert(show);
     
     var oderStr="";
-    // oderStr에 "Q"가 입력될 때까지 반복한다!
+    // oderStr??"Q"媛 ?낅젰???뚭퉴吏 諛섎났?쒕떎!
     var oderList=[];
     var idx=0;
     while( oderStr!="Q"){
-        show="주문하실 번호를 입력하세요!!(1~3)\n";
-        show+="종료하실려면 Q를 입력하세요!!\n";
+        show="二쇰Ц?섏떎 踰덊샇瑜??낅젰?섏꽭??!(1~3)\n";
+        show+="醫낅즺?섏떎?ㅻ㈃ Q瑜??낅젰?섏꽭??!\n";
         oderStr = prompt(show,"1");
         if( oderStr!="Q"){
             var orderNumber=parseInt( oderStr );
-            var orderMenu=["짜장면","짬뽕","탕수육"];
-            // 주문 list의 배열로 할당..
+            var orderMenu=["吏쒖옣硫?,"吏щ퐬","?뺤닔??];
+            // 二쇰Ц list??諛곗뿴濡??좊떦..
             oderList[ idx++ ]=orderMenu[orderNumber-1];
         }
     }
-    alert("주문하신 메뉴는 "+oderList+"입니다!");
+    alert("二쇰Ц?섏떊 硫붾돱??"+oderList+"?낅땲??");
   //-->
   </script>
  </head>

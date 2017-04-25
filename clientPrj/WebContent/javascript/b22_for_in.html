@@ -2,7 +2,7 @@
 <html lang="en">
  <head>
   <meta charset="UTF-8">
-  <meta name="Generator" content="EditPlus®">
+  <meta name="Generator" content="EditPlus짰">
   <meta name="Author" content="">
   <meta name="Keywords" content="">
   <meta name="Description" content="">
@@ -10,37 +10,37 @@
   <script type="text/javascript">
   <!--
  /*
-    for in 구문
-        for문에 parameter(매개)값을 in이라는 내용으로 간단하게
-        배열 데이터를 index값으로 처리하는 구문..
-    for( 단위 index in 배열 ){
-        배열[ index]
+    for in 援щЦ
+        for臾몄뿉 parameter(留ㅺ컻)媛믪쓣 in?대씪???댁슜?쇰줈 媛꾨떒?섍쾶
+        諛곗뿴 ?곗씠?곕? index媛믪쑝濡?泥섎━?섎뒗 援щЦ..
+    for( ?⑥쐞 index in 諛곗뿴 ){
+        諛곗뿴[ index]
     }
  */  
-    var list=["사과","바나나","딸기"];
+    var list=["?ш낵","諛붾굹??,"?멸린"];
    // for(var idx in list ){
    //     alert( idx + "-" + list[ idx ] );
    // }
 /*
-   확인예제..
-   구매한 물건 값을 3개 입력받아서.
-   for in 구문을 이용하여 전체 합산을 출력하세요..
+   ?뺤씤?덉젣..
+   援щℓ??臾쇨굔 媛믪쓣 3媛??낅젰諛쏆븘??
+   for in 援щЦ???댁슜?섏뿬 ?꾩껜 ?⑹궛??異쒕젰?섏꽭??.
 */
     var prodPrice=[];
     for(var cnt=1;cnt<=3;cnt++){
-       prodPrice[cnt-1]=parseInt( prompt(cnt+"번째 물건값","0")); 
+       prodPrice[cnt-1]=parseInt( prompt(cnt+"踰덉㎏ 臾쇨굔媛?,"0")); 
     }
     //alert( prodPrice );
     var tot=0;
     for(var priceIdx in prodPrice ){
         tot += prodPrice[ priceIdx ];
     }
-    alert("총합산금액:" + tot );
+    alert("珥앺빀?곌툑??" + tot );
 /*
-   응용예제
-    좋아하는 인물 3명을 입력하여,
-    for in 구문으로 아래와 같은 형식으로 출력하세요!! alert
-        좋아하는 인물 Rank3
+   ?묒슜?덉젣
+    醫뗭븘?섎뒗 ?몃Ъ 3紐낆쓣 ?낅젰?섏뿬,
+    for in 援щЦ?쇰줈 ?꾨옒? 媛숈? ?뺤떇?쇰줈 異쒕젰?섏꽭??! alert
+        醫뗭븘?섎뒗 ?몃Ъ Rank3
         1. @@@
         2. @@@
         3. @@@

@@ -2,151 +2,151 @@
 <html lang="en">
  <head>
   <meta charset="UTF-8">
-  <meta name="Generator" content="EditPlus®">
+  <meta name="Generator" content="EditPlus짰">
   <meta name="Author" content="">
   <meta name="Keywords" content="">
   <meta name="Description" content="">
   <title>Document</title>
   <script type="text/javascript">
   <!--
-/* 1. 조건문 : 데이터의 내용에 따라 조건연산자를 만들고,
-      조건연산자의 true/false에 따라 다른 프로세스를 가게
-      만드는 것을 말한다.
-   2. 형식
-    1) if(조건연산자){
-            해당 조건일 때, 처리할 프로세스 내용..
+/* 1. 議곌굔臾?: ?곗씠?곗쓽 ?댁슜???곕씪 議곌굔?곗궛?먮? 留뚮뱾怨?
+      議곌굔?곗궛?먯쓽 true/false???곕씪 ?ㅻⅨ ?꾨줈?몄뒪瑜?媛寃?
+      留뚮뱶??寃껋쓣 留먰븳??
+   2. ?뺤떇
+    1) if(議곌굔?곗궛??{
+            ?대떦 議곌굔???? 泥섎━???꾨줈?몄뒪 ?댁슜..
        }
 */        
-// 점수가 60점이상일때, 합격 메시지처리 그외는 불합격
+// ?먯닔媛 60?먯씠?곸씪?? ?⑷꺽 硫붿떆吏泥섎━ 洹몄쇅??遺덊빀寃?
     var inputPoint=65;
-    var result="불합격";
+    var result="遺덊빀寃?;
     if( inputPoint >= 60 ){
-        result="합격";
+        result="?⑷꺽";
     }
-//    alert("획득점수:"+inputPoint+"\n결과:"+result);
+//    alert("?띾뱷?먯닔:"+inputPoint+"\n寃곌낵:"+result);
 /*
-    지난 배운 함수 :
+    吏??諛곗슫 ?⑥닔 :
         confirm() : true/false
-        prompt() : null/입력된 값..
+        prompt() : null/?낅젰??媛?.
 
 */
 /*
     
 */  
-    var msg = "합격이면 확인버튼을\n 불학격이면 취소버튼을 클릭하세요 ";
-    var result="불합격하셨습니다!";
+    var msg = "?⑷꺽?대㈃ ?뺤씤踰꾪듉??n 遺덊븰寃⑹씠硫?痍⑥냼踰꾪듉???대┃?섏꽭??";
+    var result="遺덊빀寃⑺븯?⑥뒿?덈떎!";
     /*
-    var isPass = confirm( msg ); // isPass를 재활용이 필요할 때.
+    var isPass = confirm( msg ); // isPass瑜??ы솢?⑹씠 ?꾩슂????
     if( isPass ){
-        result="합격하셨습니다!";
+        result="?⑷꺽?섏뀲?듬땲??";
     }
     */
     //alert("true/false"+isPass);
-    //alert("결과는?"+result);
-/* 확인예제.
-    confirm을 활용하여.. 계속 주문여부를 check하세요..
+    //alert("寃곌낵??"+result);
+/* ?뺤씤?덉젣.
+    confirm???쒖슜?섏뿬.. 怨꾩냽 二쇰Ц?щ?瑜?check?섏꽭??.
     
-    물건을 구매하셨습니다!!!
-    계속 구매하시겠습니까?
-    - true ==> 물건 구매 계속하겠습니다.
-    - false ==> 감사합니다!!
+    臾쇨굔??援щℓ?섏뀲?듬땲??!!
+    怨꾩냽 援щℓ?섏떆寃좎뒿?덇퉴?
+    - true ==> 臾쇨굔 援щℓ 怨꾩냽?섍쿋?듬땲??
+    - false ==> 媛먯궗?⑸땲??!
 */
-    var buyMsg="물건을 구매하셨습니다!!!\n계속 구매하시겠습니까?";
-    var resultMsg="감사합니다!!";
+    var buyMsg="臾쇨굔??援щℓ?섏뀲?듬땲??!!\n怨꾩냽 援щℓ?섏떆寃좎뒿?덇퉴?";
+    var resultMsg="媛먯궗?⑸땲??!";
     if( confirm( buyMsg ) ){
-        resultMsg="물건 구매 계속하겠습니다.";
+        resultMsg="臾쇨굔 援щℓ 怨꾩냽?섍쿋?듬땲??";
     }
     alert( resultMsg );
 /*
-    2)if( 조건식){
-        조건식이 true일 때, 처리할 내용.
+    2)if( 議곌굔??{
+        議곌굔?앹씠 true???? 泥섎━???댁슜.
       }else{
-        조건식이 false일 때, 처리할 내용.
+        議곌굔?앹씠 false???? 泥섎━???댁슜.
       }
-    if else문은 범위를 지정하여 처리할 필요가 있을 때, 주로 활용된다.
+    if else臾몄? 踰붿쐞瑜?吏?뺥븯??泥섎━???꾩슂媛 ?덉쓣 ?? 二쇰줈 ?쒖슜?쒕떎.
 */
-/*  청소년 할인 요금 지원여부 처리..
-    8~18까지 청소년 요금제 지원,
-    그외는 해당사항 없음..
+/*  泥?냼???좎씤 ?붽툑 吏?먯뿬遺 泥섎━..
+    8~18源뚯? 泥?냼???붽툑??吏??
+    洹몄쇅???대떦?ы빆 ?놁쓬..
 */
     var age = 10;
     if( age>=8 && age<=18 ){
- //       alert("청소년 할인 요금 지원!");
+ //       alert("泥?냼???좎씤 ?붽툑 吏??");
     }else{
-//        alert("해당 나이는 청소년 할인 요금을\n 지원하지 않습니다");
+//        alert("?대떦 ?섏씠??泥?냼???좎씤 ?붽툑??n 吏?먰븯吏 ?딆뒿?덈떎");
     }
-/*  prompt("메시지","default입력값"); 
-      확인 : 입력된 문자열
-      취소 : null을 처리..
+/*  prompt("硫붿떆吏","default?낅젰媛?); 
+      ?뺤씤 : ?낅젰??臾몄옄??
+      痍⑥냼 : null??泥섎━..
 */
 /*
-*과제 공백과 null 차이..
-가장 친한 친구 3명을 입력하세요.
+*怨쇱젣 怨듬갚怨?null 李⑥씠..
+媛??移쒗븳 移쒓뎄 3紐낆쓣 ?낅젰?섏꽭??
     1. prompt
     2. prompt
     3. prompt
-    입력된 값이 없을 때(취소를 누르거나, 값을 입력하지 않은
-       상태로 확인을 클릭시)
-    입력된 값이 없습니다! 라는 메시지를 출력.. 
-    결과값.
-        가장 친한 친구 list
+    ?낅젰??媛믪씠 ?놁쓣 ??痍⑥냼瑜??꾨Ⅴ嫄곕굹, 媛믪쓣 ?낅젰?섏? ?딆?
+       ?곹깭濡??뺤씤???대┃??
+    ?낅젰??媛믪씠 ?놁뒿?덈떎! ?쇰뒗 硫붿떆吏瑜?異쒕젰.. 
+    寃곌낵媛?
+        媛??移쒗븳 移쒓뎄 list
         1. @@@@
         2. @@@
-        3. 입력된 값이 없습니다.
+        3. ?낅젰??媛믪씠 ?놁뒿?덈떎.
 */
-    var inputMsg ="가장 친한 친구 3명을 입력하세요.";
+    var inputMsg ="媛??移쒗븳 移쒓뎄 3紐낆쓣 ?낅젰?섏꽭??";
  //   alert( inputMsg );
     var number=1;
-    var friend01=prompt( ( number++ )+"번째 친구를 입력하세요","");
-    // 취소를 누르거나 입력값이 없고 확인을 클릭시..
+    var friend01=prompt( ( number++ )+"踰덉㎏ 移쒓뎄瑜??낅젰?섏꽭??,"");
+    // 痍⑥냼瑜??꾨Ⅴ嫄곕굹 ?낅젰媛믪씠 ?녾퀬 ?뺤씤???대┃??.
     if( friend01 ==null || friend01==""){
-        alert("입력된 값이 없습니다! ");
-        friend01="입력된 값이 없습니다! "
-    }else{ alert("정상입력 완료");     }
-    var friend02=prompt( ( number++ )+"번째 친구를 입력하세요",""); if( friend02 ==null || friend02==""){
-        alert("입력된 값이 없습니다! ");
-        friend02="입력된 값이 없습니다! "
-    }else{ alert("정상입력 완료");     }
-    var friend03=prompt( ( number )+"번째 친구를 입력하세요","");  if( friend03 ==null || friend03==""){
-        alert("입력된 값이 없습니다! ");
-        friend03="입력된 값이 없습니다! "
-    }else{ alert("정상입력 완료");     }
+        alert("?낅젰??媛믪씠 ?놁뒿?덈떎! ");
+        friend01="?낅젰??媛믪씠 ?놁뒿?덈떎! "
+    }else{ alert("?뺤긽?낅젰 ?꾨즺");     }
+    var friend02=prompt( ( number++ )+"踰덉㎏ 移쒓뎄瑜??낅젰?섏꽭??,""); if( friend02 ==null || friend02==""){
+        alert("?낅젰??媛믪씠 ?놁뒿?덈떎! ");
+        friend02="?낅젰??媛믪씠 ?놁뒿?덈떎! "
+    }else{ alert("?뺤긽?낅젰 ?꾨즺");     }
+    var friend03=prompt( ( number )+"踰덉㎏ 移쒓뎄瑜??낅젰?섏꽭??,"");  if( friend03 ==null || friend03==""){
+        alert("?낅젰??媛믪씠 ?놁뒿?덈떎! ");
+        friend03="?낅젰??媛믪씠 ?놁뒿?덈떎! "
+    }else{ alert("?뺤긽?낅젰 ?꾨즺");     }
     number=1;
-    var friendList="\t가장 친한 친구 list\n";
-    // += : 누적처리 문자열 누적, 숫자 누적덧셈
+    var friendList="\t媛??移쒗븳 移쒓뎄 list\n";
+    // += : ?꾩쟻泥섎━ 臾몄옄???꾩쟻, ?レ옄 ?꾩쟻?㏃뀍
     //   1. @@@@
     friendList += (number++)+". "+friend01+"\n";
     friendList += (number++)+". "+friend02+"\n";
     friendList += (number++)+". "+friend03+"\n";
 //    alert( friendList );
-/* 확인예제..
-    직급에 따라 보너스를 다르게 처리하는 프로그램을 만들려고 한다.
-    입력값 prompt 직급:사장, 이사, 부장, 차장, 과장, 대리, 사원
-                보너스:  0%   10%,  30%,  25%,  20%,  15%   10%
-           직급에 해당하지 않는 데이터 : 잘못된 데이터 입력입니다.
-           null이거나, 공백일 때 : 직급을 입력하셔야 합니다.
-    초기 메시지 : 직급을 입력하세요..
-    출력 내용 : 직급은 @@@ 이고, 보너스는 @@ %입니다.
+/* ?뺤씤?덉젣..
+    吏곴툒???곕씪 蹂대꼫?ㅻ? ?ㅻⅤ寃?泥섎━?섎뒗 ?꾨줈洹몃옩??留뚮뱾?ㅺ퀬 ?쒕떎.
+    ?낅젰媛?prompt 吏곴툒:?ъ옣, ?댁궗, 遺?? 李⑥옣, 怨쇱옣, ?由? ?ъ썝
+                蹂대꼫??  0%   10%,  30%,  25%,  20%,  15%   10%
+           吏곴툒???대떦?섏? ?딅뒗 ?곗씠??: ?섎せ???곗씠???낅젰?낅땲??
+           null?닿굅?? 怨듬갚????: 吏곴툒???낅젰?섏뀛???⑸땲??
+    珥덇린 硫붿떆吏 : 吏곴툒???낅젰?섏꽭??.
+    異쒕젰 ?댁슜 : 吏곴툒? @@@ ?닿퀬, 蹂대꼫?ㅻ뒗 @@ %?낅땲??
 */
-    var workerGrade=prompt("직급을 입력하세요!","");
-    var msg ="직급을 입력하세요..";
+    var workerGrade=prompt("吏곴툒???낅젰?섏꽭??","");
+    var msg ="吏곴툒???낅젰?섏꽭??.";
     var incentive=0;
-    if( workerGrade == "이사" ||
-        workerGrade == "부장" ||
-        workerGrade == "차장" ||
-        workerGrade == "과장" ||
-        workerGrade == "대리" ||
-        workerGrade == "사원" ){ 
-        if( workerGrade == "이사" ) incentive= 10;
-        if( workerGrade == "부장" ) incentive= 30;
-        if( workerGrade == "차장" ) incentive= 25;
-        if( workerGrade == "과장" ) incentive= 20;
-        if( workerGrade == "대리" ) incentive= 15;
-        if( workerGrade == "사원" ) incentive= 10;
+    if( workerGrade == "?댁궗" ||
+        workerGrade == "遺?? ||
+        workerGrade == "李⑥옣" ||
+        workerGrade == "怨쇱옣" ||
+        workerGrade == "?由? ||
+        workerGrade == "?ъ썝" ){ 
+        if( workerGrade == "?댁궗" ) incentive= 10;
+        if( workerGrade == "遺?? ) incentive= 30;
+        if( workerGrade == "李⑥옣" ) incentive= 25;
+        if( workerGrade == "怨쇱옣" ) incentive= 20;
+        if( workerGrade == "?由? ) incentive= 15;
+        if( workerGrade == "?ъ썝" ) incentive= 10;
 
-        msg ="직급은 "+workerGrade+"이고, 보너스는 "+incentive+ " %입니다.";
+        msg ="吏곴툒? "+workerGrade+"?닿퀬, 蹂대꼫?ㅻ뒗 "+incentive+ " %?낅땲??";
     }else{
-        msg="잘못된 데이터 입력입니다.";    
+        msg="?섎せ???곗씠???낅젰?낅땲??";    
     }
     alert(msg);
 

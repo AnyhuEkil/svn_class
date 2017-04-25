@@ -20,32 +20,32 @@ Declare
         - return R' = R + K(Sa - Ea)
 
 TEST
-* °´Ã¼·Î ÀÌ·ç¾îÁø ¹è¿­À» »ı¼ºÇÑ´Ù.
+* ê°ì²´ë¡œ ì´ë£¨ì–´ì§„ ë°°ì—´ì„ ìƒì„±í•œë‹¤.
     - type Restorant
 * initial R value : 1500
-* ´ëÁøÀ» °áÁ¤ÇÏ±â À§ÇØ random °ªÀ» »ı¼ºÇÑ´Ù.
-    - [?]Åä³Ê¸ÕÆ®°¡ ¾Æ´Ï±â ¶§¹®¿¡ µÎ°³ÀÇ °ª¸¸ Áö¼ÓÀûÀ¸·Î »Ì¾ÆÁÖ¸é µÈ´Ù.
-    - [?]´ë°áÇÏ´Â µÎÆÀÀº ¿ÏÀü ·£´ıÀ¸·Î ÇÒ°ÍÀÎÁö? ¾Æ´Ï¸é property¸¦ Ãß°¡ÇØ¼­ 
-        ÃÖ´ë ´ë°á°ªÀ» Á¦ÇÑÇÏ´Â ¹æ¹ıµµ ÀÖ´Ù.
-* ´ëÁø ÁøÇàµÇ¸é¼­ ½Ç½Ã°£ °á°ú¸¦ Ç¥½ÃÇÑ´Ù.
+* ëŒ€ì§„ì„ ê²°ì •í•˜ê¸° ìœ„í•´ random ê°’ì„ ìƒì„±í•œë‹¤.
+    - [?]í† ë„ˆë¨¼íŠ¸ê°€ ì•„ë‹ˆê¸° ë•Œë¬¸ì— ë‘ê°œì˜ ê°’ë§Œ ì§€ì†ì ìœ¼ë¡œ ë½‘ì•„ì£¼ë©´ ëœë‹¤.
+    - [?]ëŒ€ê²°í•˜ëŠ” ë‘íŒ€ì€ ì™„ì „ ëœë¤ìœ¼ë¡œ í• ê²ƒì¸ì§€? ì•„ë‹ˆë©´ propertyë¥¼ ì¶”ê°€í•´ì„œ 
+        ìµœëŒ€ ëŒ€ê²°ê°’ì„ ì œí•œí•˜ëŠ” ë°©ë²•ë„ ìˆë‹¤.
+* ëŒ€ì§„ ì§„í–‰ë˜ë©´ì„œ ì‹¤ì‹œê°„ ê²°ê³¼ë¥¼ í‘œì‹œí•œë‹¤.
 */
 var currentState = {left: 1, right: 2};
 var myArray = [];
-myArray.push({id: 0, name: 'a', R: 1500, store: "´ë¿ì½Ä´ç", distance: 10});
-myArray.push({id: 1, name: 'b', R: 1500, store: "È£¶ûÀÌ½Ä´ç", distance: 15});
-myArray.push({id: 2, name: 'c', R: 1500, store: "¹«¿ù½ÄÅ¹", distance: 8});
-myArray.push({id: 3, name: 'd', R: 1500, store: "°­³²ºÒ¹é", distance: 3});
-myArray.push({id: 4, name: 'e', R: 1500, store: "ÀÌÀÚ¿Í", distance: 9});
-myArray.push({id: 5, name: 'f', R: 1500, store: "µşºÎÀÚ³×ºÒ¹é", distance: 20});
-myArray.push({id: 6, name: 'g', R: 1500, store: "µÎºÎ°øÀÛ¼Ò", distance: 15});
-myArray.push({id: 7, name: 'h', R: 1500, store: "½º³ë¿ìÆø½º ¹ğ¹ğÁ¡", distance: 25});
+myArray.push({id: 0, name: 'a', R: 1500, store: "ëŒ€ìš°ì‹ë‹¹", distance: 10});
+myArray.push({id: 1, name: 'b', R: 1500, store: "í˜¸ë‘ì´ì‹ë‹¹", distance: 15});
+myArray.push({id: 2, name: 'c', R: 1500, store: "ë¬´ì›”ì‹íƒ", distance: 8});
+myArray.push({id: 3, name: 'd', R: 1500, store: "ê°•ë‚¨ë¶ˆë°±", distance: 3});
+myArray.push({id: 4, name: 'e', R: 1500, store: "ì´ìì™€", distance: 9});
+myArray.push({id: 5, name: 'f', R: 1500, store: "ë”¸ë¶€ìë„¤ë¶ˆë°±", distance: 20});
+myArray.push({id: 6, name: 'g', R: 1500, store: "ë‘ë¶€ê³µì‘ì†Œ", distance: 15});
+myArray.push({id: 7, name: 'h', R: 1500, store: "ìŠ¤ë…¸ìš°í­ìŠ¤ ë±…ë±…ì ", distance: 25});
 
 setTable();
 setStage();
 
 function setTable() {
     for(var i=0; i < myArray.length; i++) {
-        // °´Ã¼ Á¤·Ä
+        // ê°ì²´ ì •ë ¬
         myArray.sort(function(a,b) {
             return a.R > b.R ? -1 : a.R < b.R ? 1 : 0;
         });
@@ -53,7 +53,7 @@ function setTable() {
         document.getElementById("img0"+(i+1)).src = "images/"+myArray[i].name+".jpg"
         document.getElementById("r0"+(i+1)).innerHTML = myArray[i].R;
         document.getElementById("store0"+(i+1)).innerHTML = myArray[i].store;
-        document.getElementById("distance0"+(i+1)).innerHTML = myArray[i].distance+" ºĞ";
+        document.getElementById("distance0"+(i+1)).innerHTML = myArray[i].distance+" ë¶„";
     }
 }
 

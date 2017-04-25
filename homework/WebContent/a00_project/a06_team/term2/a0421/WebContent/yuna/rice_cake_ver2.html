@@ -77,7 +77,7 @@ var myplay;
 var play_times=10;
 var i=0;
 
-//ÆäÀÌÁö ½ÃÀÛ½Ã¿¡ animation¿òÁ÷ÀÓÀ» ÁöÁ¤
+//í˜ì´ì§€ ì‹œì‘ì‹œì— animationì›€ì§ì„ì„ ì§€ì •
 $(document).ready(function(){
 	var i=0;
 	
@@ -93,8 +93,8 @@ $(document).ready(function(){
 	})
 
 function main_pjt(){
-	input_src(X_array_1[0],X_array_1[1],X_array_1[2]); //ÃÊ±â ÀÌ¹ÌÁö Ãâ·Â	
-	myplay = setInterval(function(){ myTimer() }, 1010); //1.01ÃÊ¸¶´Ù myTimer¶ó´Â ÇÔ¼ö ½ÇÇà
+	input_src(X_array_1[0],X_array_1[1],X_array_1[2]); //ì´ˆê¸° ì´ë¯¸ì§€ ì¶œë ¥	
+	myplay = setInterval(function(){ myTimer() }, 1010); //1.01ì´ˆë§ˆë‹¤ myTimerë¼ëŠ” í•¨ìˆ˜ ì‹¤í–‰
 }
 
 function myTimer() {
@@ -105,7 +105,7 @@ function myTimer() {
 	i++;
 	if(i==play_times){
 		clearInterval(myplay);
-		console.log(X_array_1[0]);//È®ÀÎ¿ë 
+		console.log(X_array_1[0]);//í™•ì¸ìš© 
 		console.log(X_array_1[1]);
 		console.log(X_array_1[2]);
 	}
@@ -118,7 +118,7 @@ function myStopFunction() {
 		
 function check_val(){	
 	for(var i=0;i<ran_a.length;i++)
-	console.log(ran_a[i]);//randomÇÔ¼ö°¡ Á¤»óÀûÀ¸·Î ÀÛµ¿Çß´ÂÁö È®ÀÎ
+	console.log(ran_a[i]);//randomí•¨ìˆ˜ê°€ ì •ìƒì ìœ¼ë¡œ ì‘ë™í–ˆëŠ”ì§€ í™•ì¸
 }
 
 
@@ -172,7 +172,7 @@ function input_src(x,y,z){
 </script>
 </head>
 <body>
-<h1>¼öÁöÃ£±â</h1>
+<h1>ìˆ˜ì§€ì°¾ê¸°</h1>
 <img class="ani" id="pos0" ></img>
 <img class="ani" id="pos1" ></img>
 <img class="ani" id="pos2" ></img>
