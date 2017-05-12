@@ -1,7 +1,7 @@
 package javaexp.a05_reference;
-/* È®ÀÎ¿¹Á¦
- *  args°ªÀ¸·Î id¿Í password¸¦ ¹Ş¾Æ
- *  id´Â himan, password´Â 7777À» ÀÔ·Â¹ŞÀ¸¸é ÀÎÁõ ¼º°ø, ¾Æ´Ï¸é ÀÎÁõ½ÇÆĞ
+/* í™•ì¸ì˜ˆì œ
+ *  argsê°’ìœ¼ë¡œ idì™€ passwordë¥¼ ë°›ì•„
+ *  idëŠ” himan, passwordëŠ” 7777ì„ ì…ë ¥ë°›ìœ¼ë©´ ì¸ì¦ ì„±ê³µ, ì•„ë‹ˆë©´ ì¸ì¦ì‹¤íŒ¨
  * */
 public class Homework0417_1 {
 	public static void main(String[] args) {
@@ -9,12 +9,12 @@ public class Homework0417_1 {
 			String id = new String(args[0]);
 			String pw = new String(args[1]);
 			if(id.equals("himan")&&pw.equals("7777")){
-				System.out.println("¡Ú ¡Ù ¡Ú ¡Ù ¡Ú ÀÎÁõ¼º°ø ¡Ú ¡Ù ¡Ú ¡Ù ¡Ú");
+				System.out.println("â˜… â˜† â˜… â˜† â˜… ì¸ì¦ì„±ê³µ â˜… â˜† â˜… â˜† â˜…");
 			}else{
-				System.out.println("£À £À £À £À £À ÀÎÁõ½ÇÆĞ £À £À £À £À £À");
+				System.out.println("ï¼  ï¼  ï¼  ï¼  ï¼  ì¸ì¦ì‹¤íŒ¨ ï¼  ï¼  ï¼  ï¼  ï¼ ");
 			}
 		}else{
-			System.out.println("id¿Í password¸¦ Á¦´ë·Î ÀÔ·ÂÇÏÁö ¾Ê¾Ò³×¿ä");
+			System.out.println("idì™€ passwordë¥¼ ì œëŒ€ë¡œ ì…ë ¥í•˜ì§€ ì•Šì•˜ë„¤ìš”");
 		}
 	}
 }

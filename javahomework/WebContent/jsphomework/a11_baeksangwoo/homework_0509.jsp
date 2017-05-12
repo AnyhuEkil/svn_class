@@ -9,10 +9,10 @@
 <title>Insert title here</title>
 <%
 /*
-µ¿ÀüÀÌ ÀÖ´Â °÷Àº?[  ](1~3) - 1´Ü°è
-[1¹ø][2¹ø][3¹ø](2´Ü°è)
-´ÙÀ½ÆäÀÌÁö¿¡¼­ ¸ÂÀ¸¸é Á¤´ä µ¿Àü È¹µæ
-Æ²¸®¸é ´Ù½Ã page ÀÌµ¿
+ë™ì „ì´ ìˆëŠ” ê³³ì€?[  ](1~3) - 1ë‹¨ê³„
+[1ë²ˆ][2ë²ˆ][3ë²ˆ](2ë‹¨ê³„)
+ë‹¤ìŒí˜ì´ì§€ì—ì„œ ë§ìœ¼ë©´ ì •ë‹µ ë™ì „ íšë“
+í‹€ë¦¬ë©´ ë‹¤ì‹œ page ì´ë™
 */
 %>
 <script>
@@ -28,10 +28,10 @@ $(function(){
 </head>
 <body>
 <form action="a11_responseEx_redirect.jsp" method="post">
-µ¿ÀüÀÌ ÀÖ´Â °÷Àº?[<input name="label"/>]<br>
-<input type="button" value="1¹ø" name="btn">
-<input type="button" value="2¹ø" name="btn">
-<input type="button" value="3¹ø" name="btn">
+ë™ì „ì´ ìˆëŠ” ê³³ì€?[<input name="label"/>]<br>
+<input type="button" value="1ë²ˆ" name="btn">
+<input type="button" value="2ë²ˆ" name="btn">
+<input type="button" value="3ë²ˆ" name="btn">
 </form>
 </body>
 </html>

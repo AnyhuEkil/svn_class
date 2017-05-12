@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class A02_ComDB_0510 {
 
 	/*
-	 * DBÁ¢¼Ó Ã³¸® ¸ğµâ ¼±¾ğ ¹× Ã³¸® ¿Ï·á
+	 * DBì ‘ì† ì²˜ë¦¬ ëª¨ë“ˆ ì„ ì–¸ ë° ì²˜ë¦¬ ì™„ë£Œ
 	 * */
 	private Connection conn;
 	private Statement stmt;
@@ -59,7 +59,7 @@ public class A02_ComDB_0510 {
 			list.add(st);
 		}
 		
-		// ¿¬°á ÇØÁ¦
+		// ì—°ê²° í•´ì œ
 		if(rs != null) rs.close();
 		if(stmt != null) stmt.close();
 		if(conn != null) conn.close();
@@ -88,7 +88,7 @@ public class A02_ComDB_0510 {
 			e.printStackTrace();
 		}
 		
-		// °á°ú Ãâ·Â
+		// ê²°ê³¼ ì¶œë ¥
 		for(Student st : studentsList) {
 			System.out.println(st.getsName()
 					+", "+st.getScoreEnglish()

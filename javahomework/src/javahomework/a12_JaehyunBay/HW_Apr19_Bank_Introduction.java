@@ -1,13 +1,13 @@
 package javahomework.a12_JaehyunBay;
 /*
-ÀºÇà - 1´Ü°è
-°èÁÂ
-	field: °èÁÂ¸í, (ÃÑ¾×)
-	»ı¼ºÀÚ(°èÁÂ¸í ÀÔ·Â)
-	input(ÀÔ±İ¾×)
-		@@@´Ô @@@¿ø ÀÔ±İÇÏ¼Ë½À´Ï´Ù.(ÇöÀÜ¾×@@@)
-	output(Ãâ±İ¾×)
-		@@@´Ô @@@¿ø Ãâ±İÇÏ¼Ë½À´Ï´Ù.(ÇöÀÜ¾×@@@)
+ì€í–‰ - 1ë‹¨ê³„
+ê³„ì¢Œ
+	field: ê³„ì¢Œëª…, (ì´ì•¡)
+	ìƒì„±ì(ê³„ì¢Œëª… ì…ë ¥)
+	input(ì…ê¸ˆì•¡)
+		@@@ë‹˜ @@@ì› ì…ê¸ˆí•˜ì…§ìŠµë‹ˆë‹¤.(í˜„ì”ì•¡@@@)
+	output(ì¶œê¸ˆì•¡)
+		@@@ë‹˜ @@@ì› ì¶œê¸ˆí•˜ì…§ìŠµë‹ˆë‹¤.(í˜„ì”ì•¡@@@)
 */
 class Bank{
 	String owner;
@@ -28,18 +28,18 @@ class Bank{
 		return currValue;
 	}
 	void printOut(){
-		System.out.println(owner+"´Ô\t" + category+" "+input+"¿ø\t ³²ÀºÀÜ¾×: " + currValue+ "¿ø");
+		System.out.println(owner+"ë‹˜\t" + category+" "+input+"ì›\t ë‚¨ì€ì”ì•¡: " + currValue+ "ì›");
 	}
 	
 }
 
 /*
- ÀÚ±â¼Ò°³ - 1´Ü°è
-	field: ÀÌ¸§, »ç´Â°÷, ³ªÀÌ
-	»ı¼ºÀÚ(ÀÌ¸§ÀÔ·Â)
-	inputData(»ç´Â°÷, ³ªÀÌ)
-	introMyself(): Ãâ·ÂÃ³¸®.
-	³»ÀÌ¸§Àº @@ÀÌ°í, ³ªÀÌ´Â @@ÀÌ¸ç, »ç´Â°÷Àº @@@ÀÔ´Ï´Ù.
+ ìê¸°ì†Œê°œ - 1ë‹¨ê³„
+	field: ì´ë¦„, ì‚¬ëŠ”ê³³, ë‚˜ì´
+	ìƒì„±ì(ì´ë¦„ì…ë ¥)
+	inputData(ì‚¬ëŠ”ê³³, ë‚˜ì´)
+	introMyself(): ì¶œë ¥ì²˜ë¦¬.
+	ë‚´ì´ë¦„ì€ @@ì´ê³ , ë‚˜ì´ëŠ” @@ì´ë©°, ì‚¬ëŠ”ê³³ì€ @@@ì…ë‹ˆë‹¤.
 
 */
 
@@ -58,7 +58,7 @@ class Introduction{
 	}
 	
 	void introMyself(){
-		System.out.println(myName + "ÀÔ´Ï´Ù. "+ myLoc +"Áö¿ª¿¡¼­ »ì°í " + age + "»ì ÀÔ´Ï´Ù.");
+		System.out.println(myName + "ì…ë‹ˆë‹¤. "+ myLoc +"ì§€ì—­ì—ì„œ ì‚´ê³  " + age + "ì‚´ ì…ë‹ˆë‹¤.");
 	}
 }
 
@@ -91,14 +91,14 @@ public class HW_Apr19_Bank_Introduction{
 		b2.printOut();
 		
 		
-		Introduction i01 = new Introduction("È«±æµ¿");
-		i01.inputData("µµº¸¿Ë", 28);
+		Introduction i01 = new Introduction("í™ê¸¸ë™");
+		i01.inputData("ë„ë³´ì˜¹", 28);
 		i01.introMyself();
-		Introduction i02 = new Introduction("±İ±æµ¿");
-		i02.inputData("°­ºÏ", 27);
+		Introduction i02 = new Introduction("ê¸ˆê¸¸ë™");
+		i02.inputData("ê°•ë¶", 27);
 		i02.introMyself();
-		Introduction i03 = new Introduction("¿ì±æµ¿");
-		i03.inputData("È­¼º", 22);
+		Introduction i03 = new Introduction("ìš°ê¸¸ë™");
+		i03.inputData("í™”ì„±", 22);
 		i03.introMyself();
 	}
 

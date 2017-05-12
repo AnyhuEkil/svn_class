@@ -2,26 +2,26 @@ package javaexp.a06_object;
 
 import java.util.Date;
 
-/*  ÀºÇà¿¡ °¡¼­ 2´Ü°è
- *  Account2 : °èÁ¤¸í, ÀÔ±İ¾×, Ãâ±İ¾×, ÃÑÀÜ¾×
- *  »ı¼ºÀÚ2°³ - °èÁ¤¸í, °èÁ¤¸í°ú ÀÔ±İ¾×
- *  save(ÀÔ±İ¾×, ³»¿ë, ³¯Â¥){
- *  	°è»êÃ³¸®
- *  	return ÀÔ±İµÈ ±İ¾×
+/*  ì€í–‰ì— ê°€ì„œ 2ë‹¨ê³„
+ *  Account2 : ê³„ì •ëª…, ì…ê¸ˆì•¡, ì¶œê¸ˆì•¡, ì´ì”ì•¡
+ *  ìƒì„±ì2ê°œ - ê³„ì •ëª…, ê³„ì •ëª…ê³¼ ì…ê¸ˆì•¡
+ *  save(ì…ê¸ˆì•¡, ë‚´ìš©, ë‚ ì§œ){
+ *  	ê³„ì‚°ì²˜ë¦¬
+ *  	return ì…ê¸ˆëœ ê¸ˆì•¡
  *  }
- *  withdraw(Ãâ±İ¾×, ³»¿ë, ³¯Â¥)
+ *  withdraw(ì¶œê¸ˆì•¡, ë‚´ìš©, ë‚ ì§œ)
  *  print()
- *  	³¯Â¥ ¿ëµ· [@@@] [@@@] [@@@] */
+ *  	ë‚ ì§œ ìš©ëˆ [@@@] [@@@] [@@@] */
 class Account2{
-	private String accountName; //°èÁ¤¸í
+	private String accountName; //ê³„ì •ëª…
 	private int inMoney;
 	private int outMoney;
-	private String memo; //³»¿ë
+	private String memo; //ë‚´ìš©
 	private Date date;
-	private int balance; //ÀÜ¾×
+	private int balance; //ì”ì•¡
 	public Account2(String accountName){
 		this.accountName = accountName;
-		System.out.println("¡Ú ¡Ù ¡Ú "+ accountName+"°èÁÂÀ» ¿­¾î ÁÖ¼Å¼­ °¨»çÇÕ´Ï´Ù ¡Ú ¡Ù ¡Ú");
+		System.out.println("â˜… â˜† â˜… "+ accountName+"ê³„ì¢Œì„ ì—´ì–´ ì£¼ì…”ì„œ ê°ì‚¬í•©ë‹ˆë‹¤ â˜… â˜† â˜…");
 	}
 	public Account2(String accountName, int balance){
 		this(accountName);
@@ -41,23 +41,23 @@ class Account2{
 			this.date = date;
 			balance -= outMoney;
 		}else{
-			System.out.println("@ @ ÀÜ¾×ÀÌ ºÎÁ·ÇÑ ÁÖÁ¦¿¡ "+outMoney+"¿ø Ãâ±İÇÏ·Á Çß½À´Ï´Ù. ºÒ°¡´ÉÇÕ´Ï´Ù(ÇöÀÜ¾×:"+balance+"¿ø) @ @");
+			System.out.println("@ @ ì”ì•¡ì´ ë¶€ì¡±í•œ ì£¼ì œì— "+outMoney+"ì› ì¶œê¸ˆí•˜ë ¤ í–ˆìŠµë‹ˆë‹¤. ë¶ˆê°€ëŠ¥í•©ë‹ˆë‹¤(í˜„ì”ì•¡:"+balance+"ì›) @ @");
 		}
 	}
 	public void print(){
-		System.out.printf(accountName+" ³¯Â¥:%TF \t ³»¿ë:%s \t ÀÜ¾×:%d\n",date,memo,balance);
+		System.out.printf(accountName+" ë‚ ì§œ:%TF \t ë‚´ìš©:%s \t ì”ì•¡:%d\n",date,memo,balance);
 	}
 }
 public class Homework0419_Account_2step {
 	public static void main(String[] args) {
-		Account2 acc_lee = new Account2("ÀÌ±æµ¿_½ÅÇÑ_110-12-123");
-		Account2 acc_kim = new Account2("±è±æµ¿_½ÅÇÑ_110-12-123",100000);
+		Account2 acc_lee = new Account2("ì´ê¸¸ë™_ì‹ í•œ_110-12-123");
+		Account2 acc_kim = new Account2("ê¹€ê¸¸ë™_ì‹ í•œ_110-12-123",100000);
 		
-		acc_lee.save(20000, "¿ù±Ş", new Date());
+		acc_lee.save(20000, "ì›”ê¸‰", new Date());
 		acc_lee.print();
-		acc_kim.save(20000, "¿ù±Ş", new Date());
+		acc_kim.save(20000, "ì›”ê¸‰", new Date());
 		acc_kim.print();
-		acc_lee.withdraw(2000, "¿ëµ·", new Date());
+		acc_lee.withdraw(2000, "ìš©ëˆ", new Date());
 		acc_kim.print();
 	}
 }

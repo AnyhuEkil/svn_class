@@ -2,11 +2,11 @@ package javahomework.a23_Janghyeyeong.a170421.company.manager;
 
 public class ChiefMember {
 	void thePlan(){
-		System.out.println("ÃÑ¹«±âÈ¹¼­");
+		System.out.println("ì´ë¬´ê¸°íšì„œ");
 	};
 	void searchInf(){
 		HeadMember h= new HeadMember();
 //		h.birthday;
-		System.out.println("ºÎÀå Á¤º¸ È®ÀÎ ºÒ°¡");
+		System.out.println("ë¶€ì¥ ì •ë³´ í™•ì¸ ë¶ˆê°€");
 	}
 }

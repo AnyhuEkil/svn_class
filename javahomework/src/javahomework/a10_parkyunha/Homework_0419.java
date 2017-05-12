@@ -33,8 +33,8 @@ public class Homework_0419 {
 }
 
 /*
- * ???–‰ (1?‹¨ê³?)
- * - ê³„ì¢Œ
+ * ???ë»¾ (1?ë–’æ€¨?)
+ * - æ€¨ê¾©ì¥–
  * 	* field: account-name,
  *  * constructor: input -> account-name,
  *  * method

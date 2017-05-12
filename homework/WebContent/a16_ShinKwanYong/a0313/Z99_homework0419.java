@@ -1,20 +1,20 @@
 package javaexp.a06_object;
 /*
- * ÀºÇà¿¡ °¡¼­
- * field¸í : °èÁ¤¸í, (ÀÔ±İ¾×, Ãâ±İ¾×), ÃÑÀÜ¾×, (³¯Â¥)
- * Account(°èÁÂ°èÁ¤)
- * »ı¼ºÀÚ1 : °èÁ¤¸í ÀÔ·Â
- * »ı¼ºÀÚ2 : °èÁ¤¸í, ÃÊ±âÀÔ±İ¾×
- * save(ÀÔ±İ¾×,³¯Â¥)
- * °è»êÃ³¸®
+ * ì€í–‰ì— ê°€ì„œ
+ * fieldëª… : ê³„ì •ëª…, (ì…ê¸ˆì•¡, ì¶œê¸ˆì•¡), ì´ì”ì•¡, (ë‚ ì§œ)
+ * Account(ê³„ì¢Œê³„ì •)
+ * ìƒì„±ì1 : ê³„ì •ëª… ì…ë ¥
+ * ìƒì„±ì2 : ê³„ì •ëª…, ì´ˆê¸°ì…ê¸ˆì•¡
+ * save(ì…ê¸ˆì•¡,ë‚ ì§œ)
+ * ê³„ì‚°ì²˜ë¦¬
  * - return
  * 
- * ÀÚ±â¼Ò°³
- * field : ÀÌ¸§, »ç´Â°÷, ³ªÀÌ
- * »ı¼ºÀÚ(ÀÌ¸§ÀÔ·Â)
- * inputData(»ç´Â°÷,³ªÀÌ)
- * introMyself():Ãâ·ÂÃ³¸®
- * ³»ÀÌ¸§Àº @@ÀÌ°í, ³ªÀÌ´Â @@, »ç´Â°÷Àº @@ÀÔ´Ï´Ù
+ * ìê¸°ì†Œê°œ
+ * field : ì´ë¦„, ì‚¬ëŠ”ê³³, ë‚˜ì´
+ * ìƒì„±ì(ì´ë¦„ì…ë ¥)
+ * inputData(ì‚¬ëŠ”ê³³,ë‚˜ì´)
+ * introMyself():ì¶œë ¥ì²˜ë¦¬
+ * ë‚´ì´ë¦„ì€ @@ì´ê³ , ë‚˜ì´ëŠ” @@, ì‚¬ëŠ”ê³³ì€ @@ì…ë‹ˆë‹¤
  * 
  * 
  * */
@@ -40,8 +40,8 @@ class Account{
 		return total;
 	}
 	void print(){
-		System.out.println(date01+"\t"+name03+"´Ô"+"\t"+text+"\t"+input+
-				"\tÃÑ¾×: "+total);		
+		System.out.println(date01+"\t"+name03+"ë‹˜"+"\t"+text+"\t"+input+
+				"\tì´ì•¡: "+total);		
 	}
 	
 }
@@ -62,8 +62,8 @@ class Myself{
 	}
 	
 	void introMyself(){
-		System.out.println("³» ÀÌ¸§Àº "+name01+"ÀÌ°í ³ªÀÌ´Â "
-	+age+", »ç´Â°÷Àº "+address+"ÀÔ´Ï´Ù");
+		System.out.println("ë‚´ ì´ë¦„ì€ "+name01+"ì´ê³  ë‚˜ì´ëŠ” "
+	+age+", ì‚¬ëŠ”ê³³ì€ "+address+"ì…ë‹ˆë‹¤");
 	}
 	
 	
@@ -80,9 +80,9 @@ class Bear{
 
 	void eatApple(int bearApple){
 		totApple-=bearApple;
-		System.out.println(name+"°¡ »ç°ú¸¦ ¸Ô´Â´Ù");
-		System.out.println(bearApple+"°³¸¦ ¸Ô¾î¼­");
-		System.out.println("ÃÑ ³²Àº »ç°ú´Â"+totApple);
+		System.out.println(name+"ê°€ ì‚¬ê³¼ë¥¼ ë¨¹ëŠ”ë‹¤");
+		System.out.println(bearApple+"ê°œë¥¼ ë¨¹ì–´ì„œ");
+		System.out.println("ì´ ë‚¨ì€ ì‚¬ê³¼ëŠ”"+totApple);
 	}
 	
 	
@@ -102,19 +102,19 @@ public class Z99_homework0419 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Account p1= new Account("ºÎÀÚ");
-		p1.Save("0419","²Çµ·",50000000);
+		Account p1= new Account("ë¶€ì");
+		p1.Save("0419","ê½ëˆ",50000000);
 		p1.print();
 		System.out.println("-----------------");
 		
 		
-		Myself s = new Myself("½Å°ú´¨");
-		s.InputData("¼­¿ï °­µ¿",31);
+		Myself s = new Myself("ì‹ ê³¼ë‡½");
+		s.InputData("ì„œìš¸ ê°•ë™",31);
 		s.introMyself();
 		System.out.println("-----------------");
 		
 		
-		Bear b1 = new Bear("°õÅÊÀÌ");
+		Bear b1 = new Bear("ê³°íƒ±ì´");
 		Bear.totApple+=10;
 		b1.eatApple(1);
 	

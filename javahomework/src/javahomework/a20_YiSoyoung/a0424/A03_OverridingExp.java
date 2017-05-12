@@ -1,41 +1,41 @@
 package javahomework.a20_YiSoyoung.a0424;
 /* Work - super class
-    ÇÊµå : kind(Á÷¾÷Á¾·ù) 
-   »ı¼ºÀÚ¿¡¼­ ÇÊµå ÃÊ±âÈ­
-    ¸Ş¼­µå : working() @@°¡ ÀÏÀ» ÇÕ´Ï´Ù
+    í•„ë“œ : kind(ì§ì—…ì¢…ë¥˜) 
+   ìƒì„±ìì—ì„œ í•„ë“œ ì´ˆê¸°í™”
+    ë©”ì„œë“œ : working() @@ê°€ ì¼ì„ í•©ë‹ˆë‹¤
  * Engineer extends Work
- 	ÇÊµå : kind(Á÷¾÷Á¾·ù) 
- 	»ı¼ºÀÚ ÇÊµå ÃÊ±âÈ­
- 	¸Ş¼­µå : @@°¡ ÇÁ·Î±×·¥ °³¹ßÀ» ÇÕ´Ï´Ù
+ 	í•„ë“œ : kind(ì§ì—…ì¢…ë¥˜) 
+ 	ìƒì„±ì í•„ë“œ ì´ˆê¸°í™”
+ 	ë©”ì„œë“œ : @@ê°€ í”„ë¡œê·¸ë¨ ê°œë°œì„ í•©ë‹ˆë‹¤
  * PoliceMan extends Work
- 	ÇÊµå : kind(Á÷¾÷Á¾·ù) 
- 	»ı¼ºÀÚ ÇÊµå ÃÊ±âÈ­
- 	¸Ş¼­µå : @@°¡ µµµÏÀ» Àâ½À´Ï´Ù */
+ 	í•„ë“œ : kind(ì§ì—…ì¢…ë¥˜) 
+ 	ìƒì„±ì í•„ë“œ ì´ˆê¸°í™”
+ 	ë©”ì„œë“œ : @@ê°€ ë„ë‘‘ì„ ì¡ìŠµë‹ˆë‹¤ */
 class Work{
 	private String kind;
 	public Work(){}
 	public Work(String kind){this.kind = kind;}
-	public void working(){System.out.println(kind+"°¡ ÀÏÀ» ÇÕ´Ï´Ù");}
+	public void working(){System.out.println(kind+"ê°€ ì¼ì„ í•©ë‹ˆë‹¤");}
 	public String getKind() {return kind;}
 }
 class Engineer extends Work{
 	public Engineer(String kind){super(kind);}
 	@Override
 	public void working() {
-		System.out.println(getKind()+"°¡ ÇÁ·Î±×·¥ °³¹ßÀ» ÇÕ´Ï´Ù");
+		System.out.println(getKind()+"ê°€ í”„ë¡œê·¸ë¨ ê°œë°œì„ í•©ë‹ˆë‹¤");
 	}
 }
 class PoliceMan extends Work{
 	public PoliceMan(String kind){super(kind);}
 	@Override
 	public void working() {
-		System.out.println(getKind()+"°¡ µµµÏÀ» Àâ½À´Ï´Ù");
+		System.out.println(getKind()+"ê°€ ë„ë‘‘ì„ ì¡ìŠµë‹ˆë‹¤");
 	}
 }
 public class A03_OverridingExp {
 	public static void main(String[] args) {
-		PoliceMan p = new PoliceMan("°æ»ç");
-		Engineer e = new Engineer("°úÀå ÇÁ·Î±×·¡¸Ó");
+		PoliceMan p = new PoliceMan("ê²½ì‚¬");
+		Engineer e = new Engineer("ê³¼ì¥ í”„ë¡œê·¸ë˜ë¨¸");
 		p.working();
 		e.working();
 	}

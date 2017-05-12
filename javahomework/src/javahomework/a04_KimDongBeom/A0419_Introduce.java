@@ -14,7 +14,7 @@ class SelfIntro {
 	}
 	
 	void introMyself(){
-		System.out.println("³» ÀÌ¸§Àº "+name+"ÀÌ°í, ³ªÀÌ´Â "+age+"ÀÌ¸ç, »ç´Â °÷Àº "+loca+"ÀÔ´Ï´Ù.");
+		System.out.println("ë‚´ ì´ë¦„ì€ "+name+"ì´ê³ , ë‚˜ì´ëŠ” "+age+"ì´ë©°, ì‚¬ëŠ” ê³³ì€ "+loca+"ì…ë‹ˆë‹¤.");
 	}
 }
 

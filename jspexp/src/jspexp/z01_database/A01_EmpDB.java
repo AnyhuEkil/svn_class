@@ -11,56 +11,56 @@ import java.util.ArrayList;
 import jspexp.z02_vo.Emp;
 // jspexp.z01_database.A01_EmpDB
 public class A01_EmpDB {
-	// field ¼±¾ğ
-	// 1. Connection con : ¿¬°á °´Ã¼
-	// 2. Statement stmt : ´ëÈ­
+	// field ì„ ì–¸
+	// 1. Connection con : ì—°ê²° ê°ì²´
+	// 2. Statement stmt : ëŒ€í™”
 //	      PreparedStatement pstmt
-//	   3. ResultSet rs;  : °á°ú
+//	   3. ResultSet rs;  : ê²°ê³¼
 	private Connection con;
 	private Statement stmt;
 	private PreparedStatement pstmt;
 	private ResultSet rs;
 	
-	// ¿¬°áÃ³¸®ÇÑ ¸Ş¼­µå : ¿¹¿Ü»çÇ× À§ÀÓÃ³¸®
+	// ì—°ê²°ì²˜ë¦¬í•œ ë©”ì„œë“œ : ì˜ˆì™¸ì‚¬í•­ ìœ„ì„ì²˜ë¦¬
 	private void setConn() throws ClassNotFoundException, SQLException{
-//		1. driver¸Ş¸ğ¸®¿¡ ¿Ã¸®±â
+//		1. driverë©”ëª¨ë¦¬ì— ì˜¬ë¦¬ê¸°
 //		2. DriverManger.getConnection(url, id,pass)
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			// dbµå¶óÀÌ¹öÁ¾·ù(thin)@ip:port:sid
+			// dbë“œë¼ì´ë²„ì¢…ë¥˜(thin)@ip:port:sid
 			String conInfo="jdbc:oracle:thin:@localhost:1521:xe";
 			con = DriverManager.getConnection(conInfo, "scott", "tiger");
-			System.out.println("Á¤»ó Á¢¼Ó ¼º°ø!!");
+			System.out.println("ì •ìƒ ì ‘ì† ì„±ê³µ!!");
 	}
-	// emp Å×ÀÌºí¿¡ select * from empÅëÇØ¼­ °¡Á®¿À´Â µ¥ÀÌÅÍ¸¦
-	// ArrayList<Emp>·Î °¡Á®¿Å
+	// emp í…Œì´ë¸”ì— select * from empí†µí•´ì„œ ê°€ì ¸ì˜¤ëŠ” ë°ì´í„°ë¥¼
+	// ArrayList<Emp>ë¡œ ê°€ì ¸ì˜®
 	public ArrayList<Emp> empList(){
 		ArrayList<Emp> list = new ArrayList<Emp>();
-//		1. ¿¬°á
+//		1. ì—°ê²°
 		try {
 			setConn();
-//		2. ´ëÈ­
+//		2. ëŒ€í™”
 			stmt=con.createStatement();
-//			sqlÃ³¸®
+//			sqlì²˜ë¦¬
 			String sql="SELECT * FROM EMP ";
-//			´ëÈ­¸¦ ÇÏ°í, °á°ú°ª(ResultSet)
+//			ëŒ€í™”ë¥¼ í•˜ê³ , ê²°ê³¼ê°’(ResultSet)
 			rs = stmt.executeQuery(sql);
-//		3. °á°ú(select==> ResultSet, insert/update/delete ==> DB³» Ã³¸®)
-//			rs.next() : loop ºí·°{}À» Ã³¸®ÇÑ ÈÄ¿¡, ´ÙÀ½ row¿¡ µ¥ÀÌÅÍ°¡
-//			            ÀÖ´ÂÁö ¿©ºÎ¸¦ return true/false
-//			rs.getXXXX("ÄÃ·³¸í") ÄÃ·³¸í:sql¹®¿¡ ³ªÅ¸³ª´Â title ÄÃ·³¸í
-//			                     database¿¡  ÄÃ·³¸íX
-//			1)  ArrayList<Emp>¿¡ µ¥ÀÌÅÍ¸¦ ´ãÀº ´ÜÀ§°´Ã¼(Emp)¸¦ Ãß°¡
-//			    Emp(»ı¼º, µ¥ÀÌÅÍÇÒ´ç)  --> ArrayList<Emp> add
-			Emp emp=null; // ´ÜÀ§ °´Ã¼ ¼±¾ğ
-			// Emp emp ¸¦ loop¹® ¾È¿¡ ¼±¾ğÇÏ¸é ÂüÁ¶°´Ã¼°¡ ¹İº¹¸¸Å­ »ı°Ü ¸Ş¸ğ¸®
-			// ºÎÇÏ¹ß»ı
-		    // Emp emp = new Emp(); loop¹® ¹Û¿¡¼­ »ı¼ºÇÏ°í, loop¹® ¾È¿¡ »ı¼º
-			// ÇÏÁö ¾ÊÀ¸¸é °°Àº °´Ã¼¸¦ ÂüÁ¶ÇÏ±â, ¸¶Áö¸· µ¥ÀÌÅÍ¸¦ µ¥ÀÌÅÍ °Ç¼ö¸¸Å­
-			// ÇÒ´ç
+//		3. ê²°ê³¼(select==> ResultSet, insert/update/delete ==> DBë‚´ ì²˜ë¦¬)
+//			rs.next() : loop ë¸”ëŸ­{}ì„ ì²˜ë¦¬í•œ í›„ì—, ë‹¤ìŒ rowì— ë°ì´í„°ê°€
+//			            ìˆëŠ”ì§€ ì—¬ë¶€ë¥¼ return true/false
+//			rs.getXXXX("ì»¬ëŸ¼ëª…") ì»¬ëŸ¼ëª…:sqlë¬¸ì— ë‚˜íƒ€ë‚˜ëŠ” title ì»¬ëŸ¼ëª…
+//			                     databaseì—  ì»¬ëŸ¼ëª…X
+//			1)  ArrayList<Emp>ì— ë°ì´í„°ë¥¼ ë‹´ì€ ë‹¨ìœ„ê°ì²´(Emp)ë¥¼ ì¶”ê°€
+//			    Emp(ìƒì„±, ë°ì´í„°í• ë‹¹)  --> ArrayList<Emp> add
+			Emp emp=null; // ë‹¨ìœ„ ê°ì²´ ì„ ì–¸
+			// Emp emp ë¥¼ loopë¬¸ ì•ˆì— ì„ ì–¸í•˜ë©´ ì°¸ì¡°ê°ì²´ê°€ ë°˜ë³µë§Œí¼ ìƒê²¨ ë©”ëª¨ë¦¬
+			// ë¶€í•˜ë°œìƒ
+		    // Emp emp = new Emp(); loopë¬¸ ë°–ì—ì„œ ìƒì„±í•˜ê³ , loopë¬¸ ì•ˆì— ìƒì„±
+			// í•˜ì§€ ì•Šìœ¼ë©´ ê°™ì€ ê°ì²´ë¥¼ ì°¸ì¡°í•˜ê¸°, ë§ˆì§€ë§‰ ë°ì´í„°ë¥¼ ë°ì´í„° ê±´ìˆ˜ë§Œí¼
+			// í• ë‹¹
 			while(rs.next()){
 				emp = new Emp();
-				// emp.setEmpno()¿¡  °¡Á®¿Â µ¥ÀÌÅÍ(rs.getInt("empno"))
-//				  ÇÒ´çÇÔÀ¸·Î empno ÇÊµå¿¡ µ¥ÀÌÅÍ¸¦ ÀúÀå
+				// emp.setEmpno()ì—  ê°€ì ¸ì˜¨ ë°ì´í„°(rs.getInt("empno"))
+//				  í• ë‹¹í•¨ìœ¼ë¡œ empno í•„ë“œì— ë°ì´í„°ë¥¼ ì €ì¥
 				emp.setEmpno(rs.getInt("empno"));
 				emp.setEname(rs.getString("ename"));
 				emp.setJob(rs.getString("job"));
@@ -71,21 +71,21 @@ public class A01_EmpDB {
 				emp.setDeptno(rs.getInt("deptno"));
 				list.add(emp);		
 			}
-			// ¼öÁ¤, »èÁ¦, µî·Ï  ½Ã ==> commit()
+			// ìˆ˜ì •, ì‚­ì œ, ë“±ë¡  ì‹œ ==> commit()
 			
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			// ¼öÁ¤,»èÁ¦, µî·Ï  rollback()
+			// ìˆ˜ì •,ì‚­ì œ, ë“±ë¡  rollback()
 			e.printStackTrace();
 		}finally{
 			
-			// ÀÚ¿ø ÇØÁ¦
+			// ìì› í•´ì œ
 			try {
 				if(rs!=null){
-					// ResultSet°¡ ÇöÀç ¸Ş¸ğ¸®¿¡ ÇÒ´ç µÇ¾î ÀÖ´Ù¸é.
+					// ResultSetê°€ í˜„ì¬ ë©”ëª¨ë¦¬ì— í• ë‹¹ ë˜ì–´ ìˆë‹¤ë©´.
 					rs.close();
 				}
 				if(stmt!=null){
@@ -101,7 +101,14 @@ public class A01_EmpDB {
 		}
 		return list;
 	}
-	// °Ë»ö ¸Ş¼­µå
+	// ê²€ìƒ‰ ë©”ì„œë“œ
+	// input(Person p){
+	//   
+	//}
+	// ë©”ì¸ ë©”ì„œë“œ
+	// Person p = new Person();
+	// p.name="í™ê¸¸ë™"
+	// input(p)
 	public ArrayList<Emp> search(Emp sch){
 		ArrayList<Emp> list = new ArrayList<Emp>();
 		try {
@@ -113,7 +120,7 @@ public class A01_EmpDB {
 					+ "AND JOB LIKE '%"+sch.getJob()+"%' ";
 			System.out.println(sql);
 			rs = stmt.executeQuery(sql);
-			Emp emp=null; // ´ÜÀ§ °´Ã¼ ¼±¾ğ
+			Emp emp=null; // ë‹¨ìœ„ ê°ì²´ ì„ ì–¸
 			while(rs.next()){
 				emp = new Emp();
 				emp.setEmpno(rs.getInt("empno"));
@@ -131,13 +138,13 @@ public class A01_EmpDB {
 			e.printStackTrace();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			// ¼öÁ¤,»èÁ¦, µî·Ï  rollback()
+			// ìˆ˜ì •,ì‚­ì œ, ë“±ë¡  rollback()
 			e.printStackTrace();
 		}finally{
-			// ÀÚ¿ø ÇØÁ¦
+			// ìì› í•´ì œ
 			try {
 				if(rs!=null){
-					// ResultSet°¡ ÇöÀç ¸Ş¸ğ¸®¿¡ ÇÒ´ç µÇ¾î ÀÖ´Ù¸é.
+					// ResultSetê°€ í˜„ì¬ ë©”ëª¨ë¦¬ì— í• ë‹¹ ë˜ì–´ ìˆë‹¤ë©´.
 					rs.close();
 				}
 				if(stmt!=null){
@@ -153,23 +160,24 @@ public class A01_EmpDB {
 		}
 		return list;
 	}
-	// °Ë»ö ¸Ş¼­µå
+	// ê²€ìƒ‰ ë©”ì„œë“œ
 	public ArrayList<Emp> searchPre(Emp sch){
 		ArrayList<Emp> list = new ArrayList<Emp>();
 		try {
 			setConn();
 
 			String sql="SELECT * \n"
-					+ "FROM EMP  \n"
+					+ "FROM EMP  \n" 
 					+ "WHERE ENAME LIKE '%' || ? || '%'  \n"
-					+ "AND JOB LIKE '%'||?||'%' ";
+					+ "AND JOB LIKE '%'||?||'%' \n"
+					+ "ORDER BY EMPNO DESC ";
 			System.out.println(sql);
 			pstmt=con.prepareStatement(sql);
-			pstmt.setString(1, sch.getEname()); //Ã¹¹øÂ°
-			pstmt.setString(2, sch.getJob());//µÎ¹øÂ°
+			pstmt.setString(1, sch.getEname()); //ì²«ë²ˆì§¸
+			pstmt.setString(2, sch.getJob());//ë‘ë²ˆì§¸
 			
 			rs = pstmt.executeQuery();
-			Emp emp=null; // ´ÜÀ§ °´Ã¼ ¼±¾ğ
+			Emp emp=null; // ë‹¨ìœ„ ê°ì²´ ì„ ì–¸
 			while(rs.next()){
 				emp = new Emp();
 				emp.setEmpno(rs.getInt("empno"));
@@ -187,13 +195,13 @@ public class A01_EmpDB {
 			e.printStackTrace();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			// ¼öÁ¤,»èÁ¦, µî·Ï  rollback()
+			// ìˆ˜ì •,ì‚­ì œ, ë“±ë¡  rollback()
 			e.printStackTrace();
 		}finally{
-			// ÀÚ¿ø ÇØÁ¦
+			// ìì› í•´ì œ
 			try {
 				if(rs!=null){
-					// ResultSet°¡ ÇöÀç ¸Ş¸ğ¸®¿¡ ÇÒ´ç µÇ¾î ÀÖ´Ù¸é.
+					// ResultSetê°€ í˜„ì¬ ë©”ëª¨ë¦¬ì— í• ë‹¹ ë˜ì–´ ìˆë‹¤ë©´.
 					rs.close();
 				}
 				if(stmt!=null){
@@ -209,11 +217,123 @@ public class A01_EmpDB {
 		}
 		return list;
 	}
-	
-
+	// ÀÔ·Â¸Ş¼­µå ¸¸µé±â..
+	public void insertEmp(Emp ins){
+		// db ¿¬°áÃ³¸®..
+		try {
+			con=A00_DB.conn();
+			String sql="INSERT INTO EMP VALUES( EMP_SEQ.NEXTVAL,"
+					+ "?,?,?,SYSDATE,?,?,?)";
+			/* COMMIT
+			 autocommit ¿É¼ÇÀ» false»ç¿ëÇÏ¿© commitÇÏÁö ÇÏÁö ¾ÊÀ¸¸é 
+			 Æ®·£Àè¼Ç È®Á¤ Ã³¸®µÇÁö ¾Êµµ·Ï ÇÑ´Ù. setAutoCommit(false) 
+			 * */
+			con.setAutoCommit(false);
+			pstmt=con.prepareStatement(sql);	
+			pstmt.setString(1, ins.getEname());
+			pstmt.setString(2, ins.getJob());
+			pstmt.setInt(3, ins.getMgr());
+			pstmt.setDouble(4, ins.getSal());
+			pstmt.setDouble(5, ins.getComm());
+			pstmt.setInt(6, ins.getDeptno());
+			pstmt.executeUpdate();
+			// Á¤»óÀûÀ¸·Î Ã³¸® µÇ¾úÀ» ¶§, commit
+			con.commit();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			// µî·Ï½Ã, ¿¹¿Ü ¹ß»ıÀ¸·Î ÀüÃ¼ µ¥ÀÌÅÍ ÀÔ·Â Ãë¼Ò
+			try {
+				con.rollback();
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		}finally{
+			try {
+				pstmt.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			try {
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+	}
+	// ¼öÁ¤Ã³¸®.
+	public void updateEmp(Emp upt){
+		try {
+			con = A00_DB.conn();
+			con.setAutoCommit(false);
+			String sql="update emp      "+
+						"   set ename=?,"+
+						"	   job=?,   "+
+						"	   mgr=?,   "+
+						"	   sal=?,   "+
+						"	   comm=?,  "+
+						"	   deptno=? "+
+						"where empno=?  ";
+			pstmt=con.prepareStatement(sql);
+			pstmt.setString(1, upt.getEname());
+			pstmt.setString(2, upt.getJob());
+			pstmt.setInt(3,  upt.getMgr());
+			pstmt.setDouble(4,  upt.getSal());
+			pstmt.setDouble(5,  upt.getComm());
+			pstmt.setInt(6,  upt.getDeptno());
+			pstmt.setInt(7,  upt.getEmpno());
+			pstmt.executeUpdate();
+			con.commit();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			
+			try {
+				con.rollback();
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		}finally{
+			try {
+				pstmt.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			try {
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		A01_EmpDB db = new A01_EmpDB();
+		// ¼öÁ¤ÇÒ ³»¿ë DTO
+		Emp dto= new Emp();
+		dto.setEname("¼öÁö");
+		dto.setJob("°¡¼ö");
+		dto.setMgr(7839);
+		dto.setSal(8888);
+		dto.setComm(888);
+		dto.setDeptno(40);
+		dto.setEmpno(7936);
+//		db.insertEmp(dto); // µ¥ÀÌÅÍ ÀÔ·ÂÃ³¸®.
+		db.updateEmp(dto); // ¼öÁ¤Ã³¸®..
 		System.out.println(db.empList().size());
 		for(Emp emp:db.empList()){
 			System.out.print(emp.getEmpno()+"\t");
@@ -225,10 +345,11 @@ public class A01_EmpDB {
 			System.out.print(emp.getComm()+"\t");
 			System.out.print(emp.getDeptno()+"\n");
 		}
-		Emp sch = new Emp();
-		sch.setEname("S");
-		System.out.println("°Ë»ö Ã³¸® ¸Ş¼­µå È£Ãâ~~~~");
-		for(Emp emp:db.search(sch)){
+		/*
+		Emp sch01 = new Emp();
+		sch01.setEname("S");
+		System.out.println("ê²€ìƒ‰ ì²˜ë¦¬ ë©”ì„œë“œ í˜¸ì¶œ~~~~");
+		for(Emp emp:db.search(sch01)){
 			System.out.print(emp.getEmpno()+"\t");
 			System.out.print(emp.getEname()+"\t");
 			System.out.print(emp.getMgr()+"\t");
@@ -237,7 +358,8 @@ public class A01_EmpDB {
 			System.out.print(emp.getSal()+"\t");
 			System.out.print(emp.getComm()+"\t");
 			System.out.print(emp.getDeptno()+"\n");
-		}		
+		}	
+		*/	
 		
 	}
 

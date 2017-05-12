@@ -40,7 +40,7 @@ public class A02_StudentDB {
 			e.printStackTrace();
 		}finally{
 			
-			// ÀÚ¿ø ÇØÁ¦
+			// ìì› í•´ì œ
 			try {
 				if(rs!=null)rs.close();
 				if(stmt!=null)stmt.close();	
@@ -52,7 +52,63 @@ public class A02_StudentDB {
 		}
 		return list;
 	}	
+	// ÀÔ·Â¸Ş¼­µå ¸¸µé±â..
+	public void insertStudent(Student ins){
+		try {
+			con=A00_DB.conn();
+			String sql="INSERT INTO STUDENT VALUES(?,?,?,?,?,?)";
+			con.setAutoCommit(false);
+			pstmt=con.prepareStatement(sql);	
+			pstmt.setString(1, ins.getName());
+			pstmt.setInt(2, ins.getGrade());
+			pstmt.setInt(3, ins.getSect());
+			pstmt.setInt(4, ins.getKor());
+			pstmt.setInt(5, ins.getEng());
+			pstmt.setInt(6, ins.getMath());
+			pstmt.executeUpdate();
+			// Á¤»óÀûÀ¸·Î Ã³¸® µÇ¾úÀ» ¶§, commit
+			con.commit();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			// µî·Ï½Ã, ¿¹¿Ü ¹ß»ıÀ¸·Î ÀüÃ¼ µ¥ÀÌÅÍ ÀÔ·Â Ãë¼Ò
+			try {
+				con.rollback();
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		}finally{
+			try {
+				pstmt.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			try {
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+	}
+	
 	public static void main(String args[]){
-		System.out.println(new A02_StudentDB().stuList().size());
+		A02_StudentDB dao=new A02_StudentDB();
+		System.out.println(dao.stuList().size());
+		Student ins = new Student();
+		ins.setName("ÀÌ±âÀÚ");
+		ins.setGrade(3);
+		ins.setSect(2);
+		ins.setKor(70);
+		ins.setEng(70);
+		ins.setMath(100);
+		dao.insertStudent(ins);
+		System.out.println(dao.stuList().size());
 	}
 }

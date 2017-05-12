@@ -69,8 +69,8 @@ h4{
 			         
 			          <div class="modal-body myColor noscroll">
 			       		<p><h4>Total</h4> :&nbsp;$<input type="text" class="span3 myColor" id="money" value="1000" disabled></p>   
-    					<p><h4>Betting</h4> :&nbsp;<input type="text" class="span3 myColor" id="answer" placeholder="bettingÇÒ ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä"></p>
-    					<p><h4>Money</h4> :&nbsp;$<input type="text" class="span3 myColor" id="batting_money" placeholder="betting ±İ¾× ÀÔ·ÂÇÏ¼¼¿ä"></p>
+    					<p><h4>Betting</h4> :&nbsp;<input type="text" class="span3 myColor" id="answer" placeholder="bettingí•  ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”"></p>
+    					<p><h4>Money</h4> :&nbsp;$<input type="text" class="span3 myColor" id="batting_money" placeholder="betting ê¸ˆì•¡ ì…ë ¥í•˜ì„¸ìš”"></p>
     					<p>
     						<a class="btn btn-primary" onclick="javascript:sendAnswer();">Bet</a>
     						
@@ -152,21 +152,21 @@ h4{
             webSocket2.onmessage = function(message) {
             	if(server_message == null){
             		i++;
-            		messageFromServer.value += "<°øÁö»çÇ×"+i+">\n"+message.data;
+            		messageFromServer.value += "<ê³µì§€ì‚¬í•­"+i+">\n"+message.data;
             		$("#answer").val("");
             		$("#batting_money").val("");
             		}
             	
             	if(server_message == "correct"){
-            		messageTextArea.value += $("#answer").val()+"¿¡ °É¾î¼­ "+$("#batting_money").val()+"¿ø ¶¤½À´Ï´Ù.\n";
-            		messageTextArea.value += "ÇöÀç ÀÜ¾× : "+ money +"¿ø\n"
+            		messageTextArea.value += $("#answer").val()+"ì— ê±¸ì–´ì„œ "+$("#batting_money").val()+"ì› ë•„ìŠµë‹ˆë‹¤.\n";
+            		messageTextArea.value += "í˜„ì¬ ì”ì•¡ : "+ money +"ì›\n"
             		$("#money").val(money);
             		$("#answer").val("");
             		$("#batting_money").val("");
             		}
             	else if(server_message == "wrong"){
-            		messageTextArea.value += $("#answer").val()+"¿¡ °É¾î¼­ "+$("#batting_money").val()+"¿ø ÀÒ¾ú½À´Ï´Ù.\n";
-            		messageTextArea.value += "ÇöÀç ÀÜ¾× : "+ money + "¿ø\n"
+            		messageTextArea.value += $("#answer").val()+"ì— ê±¸ì–´ì„œ "+$("#batting_money").val()+"ì› ìƒì—ˆìŠµë‹ˆë‹¤.\n";
+            		messageTextArea.value += "í˜„ì¬ ì”ì•¡ : "+ money + "ì›\n"
             		$("#money").val(money);
             		$("#answer").val("");
             		$("#batting_money").val("");
@@ -198,7 +198,7 @@ h4{
        
         function sendReady(){
     	
-            var message = $("#id").val()+"´ÔÀÌ ÀÔÀåÇß½À´Ï´Ù.";          
+            var message = $("#id").val()+"ë‹˜ì´ ì…ì¥í–ˆìŠµë‹ˆë‹¤.";          
             webSocket1.send(message);
             
         }
@@ -210,7 +210,7 @@ h4{
             webSocket.send(message);
             console.log(message);            
             message.value = "";
-            messageTextArea.value += $("#id").html()+"´Ô ¹èÆÃ¿Ï·á.\n";
+            messageTextArea.value += $("#id").html()+"ë‹˜ ë°°íŒ…ì™„ë£Œ.\n";
         } 
       
         function resultSend(){    
@@ -218,7 +218,7 @@ h4{
             webSocket.send(message);
             console.log(message);            
             message.value = "";
-            messageTextArea.value += $("#id").html()+"´Ô ¹èÆÃ¿Ï·á.\n";
+            messageTextArea.value += $("#id").html()+"ë‹˜ ë°°íŒ…ì™„ë£Œ.\n";
         }
         
       

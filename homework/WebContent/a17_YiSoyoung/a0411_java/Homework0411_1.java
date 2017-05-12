@@ -2,29 +2,29 @@ package javaexp.a02_variable;
 
 public class homework0411_1 {
 	public static void main(String[] args) {
-		/* È®ÀÎ ¹× Á¤¸®
-		 ¡á º¯¼ö ÀÌ¸§À¸·Î »ç¿ë°¡´ÉÇÑ °ÍÀ» ¼±ÅÃÇÏ¼¼¿ä
+		/* í™•ì¸ ë° ì •ë¦¬
+		 â–  ë³€ìˆ˜ ì´ë¦„ìœ¼ë¡œ ì‚¬ìš©ê°€ëŠ¥í•œ ê²ƒì„ ì„ íƒí•˜ì„¸ìš”
 		 	modelName(O), class(X) 6hour(X), $value(O), _age(O), int(X)
-		 ¡á ±âº» data typeÀ» 8°³ Àû¾îº¸¼¼¿ä
-		 	Å©±â	1byte	2byte	4byte	8byte
-		 	Á¤¼ö byte  	short	int		long
-		 	½Ç¼ö 				float	double
-		 	³í¸® boolean
-		 ¡á ´ÙÀ½ ÄÚµå¿¡¼­ Å¸ÀÔ, º¯¼ö ÀÌ¸§, ¸®ÅÍ·²¿¡ ÇØ´çÇÏ´Â °ÍÀ» Àû¾î º¸¼¼¿ä */
+		 â–  ê¸°ë³¸ data typeì„ 8ê°œ ì ì–´ë³´ì„¸ìš”
+		 	í¬ê¸°	1byte	2byte	4byte	8byte
+		 	ì •ìˆ˜ byte  	short	int		long
+		 	ì‹¤ìˆ˜ 				float	double
+		 	ë…¼ë¦¬ boolean
+		 â–  ë‹¤ìŒ ì½”ë“œì—ì„œ íƒ€ì…, ë³€ìˆ˜ ì´ë¦„, ë¦¬í„°ëŸ´ì— í•´ë‹¹í•˜ëŠ” ê²ƒì„ ì ì–´ ë³´ì„¸ìš” */
 		int age;
 		age = 10;
 		double price = 3.14;
-		/*	Å¸ÀÔ : int, double
-		  	º¯¼ö ÀÌ¸§ : age, price
-		  	¸®ÅÍ·²	: 10,3.14		*/
+		/*	íƒ€ì… : int, double
+		  	ë³€ìˆ˜ ì´ë¦„ : age, price
+		  	ë¦¬í„°ëŸ´	: 10,3.14		*/
 		/*
-		 ¡á ÀÚµ¿ Å¸ÀÔ º¯È¯¿¡ ´ëÇÑ ³»¿ëÀ¸·Î ÄÄÆÄÀÏ ¿¡·¯°¡ ¹ß»ıÇÏ´Â °ÍÀº ? ©è
+		 â–  ìë™ íƒ€ì… ë³€í™˜ì— ëŒ€í•œ ë‚´ìš©ìœ¼ë¡œ ì»´íŒŒì¼ ì—ëŸ¬ê°€ ë°œìƒí•˜ëŠ” ê²ƒì€ ? â‘µ
 		  bye byteValue = 10;
 		  char charValue = 'A';
-		 	©ç int intValue = byteValue;
-		 	©è int intValue = charValue;
-		 	©é short shortValue = charValue;
-		 	©ê double doubleValue = byteValue;
+		 	â‘´ int intValue = byteValue;
+		 	â‘µ int intValue = charValue;
+		 	â‘¶ short shortValue = charValue;
+		 	â‘· double doubleValue = byteValue;
 		 */
 	}
 }

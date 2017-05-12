@@ -29,22 +29,22 @@ class Account
 	int save(int deposit, String content, String date)
 	{
 		this.balance += deposit;
-		printList += "³¯Â¥ : " + date + 
-					"	¿ëµ· : " + this.balance + 
-					"	°èÁ¤ : " + this.accountName + 
-					"	ÀÔ±İ¾× : " + deposit + 
-					"	³»¿ë : " + content + "\n";
+		printList += "ë‚ ì§œ : " + date + 
+					"	ìš©ëˆ : " + this.balance + 
+					"	ê³„ì • : " + this.accountName + 
+					"	ì…ê¸ˆì•¡ : " + deposit + 
+					"	ë‚´ìš© : " + content + "\n";
 		return this.balance;
 	}
 	
 	int withdraw(int withdraw, String content, String date)
 	{
 		this.balance -= withdraw;
-		printList += "³¯Â¥ : " + date + 
-					"	¿ëµ· : " + this.balance + 
-					"	°èÁ¤ : " + this.accountName + 
-					"	Ãâ±İ¾× : " + withdraw + 
-					"	³»¿ë : " + content + "\n";
+		printList += "ë‚ ì§œ : " + date + 
+					"	ìš©ëˆ : " + this.balance + 
+					"	ê³„ì • : " + this.accountName + 
+					"	ì¶œê¸ˆì•¡ : " + withdraw + 
+					"	ë‚´ìš© : " + content + "\n";
 		return this.balance;
 	}
 	
@@ -59,9 +59,9 @@ public class My11_homework {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Account account01 = new Account("È«±æµ¿", 10000);
-		account01.save(1000, "Àú±İ", "2017.04.16");
-		account01.withdraw(2000, "Á¡½É½Ä´ë", "2017.04.17");
+		Account account01 = new Account("í™ê¸¸ë™", 10000);
+		account01.save(1000, "ì €ê¸ˆ", "2017.04.16");
+		account01.withdraw(2000, "ì ì‹¬ì‹ëŒ€", "2017.04.17");
 		account01.print();
 	}
 

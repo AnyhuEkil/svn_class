@@ -8,12 +8,12 @@ class Account_1{
 		this.aname = aname;
 	}
 	void input(int num){
-		System.out.println(aname+" ´Ô "+num+" ¿ø ÀÔ±İÇß½À´Ï´Ù.");
-		System.out.println("ÃÑ ÀÜ¾× : "+(totMoney+=num));
+		System.out.println(aname+" ë‹˜ "+num+" ì› ì…ê¸ˆí–ˆìŠµë‹ˆë‹¤.");
+		System.out.println("ì´ ì”ì•¡ : "+(totMoney+=num));
 	}
 	void output(int num){
-		System.out.println(aname+" ´Ô "+num+" ¿ø Ãâ±İÇß½À´Ï´Ù.");
-		System.out.println("ÃÑ ÀÜ¾× : "+(totMoney-=num));
+		System.out.println(aname+" ë‹˜ "+num+" ì› ì¶œê¸ˆí–ˆìŠµë‹ˆë‹¤.");
+		System.out.println("ì´ ì”ì•¡ : "+(totMoney-=num));
 	}
 }
 

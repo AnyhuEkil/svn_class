@@ -2,31 +2,31 @@ package javaexp.a04_statement;
 
 public class Homework0412_1 {
 	public static void main(String[] args) {
-		/* ¹°Ç° list ¹è¿­À» ¸¸µé°í °¡°İ list¹è¿­µµ ¸¸µé°í
-		 * °¢°¢ for µÎ¹øÂ° Çü½ÄÀ» ÀÌ¿ëÇÏ¿© Ãâ·Â	
-		 * ¸¶Áö¸· for Ã¹¹øÂ° Çü½ÄÀ» ÀÌ¿ëÇØ¼­ ÅëÇÕ Ãâ·Â*/
-		String[] products = {"¶ó¸é","ÆÄ","¼Ò°í±â","°úÀÚ"};
+		/* ë¬¼í’ˆ list ë°°ì—´ì„ ë§Œë“¤ê³  ê°€ê²© listë°°ì—´ë„ ë§Œë“¤ê³ 
+		 * ê°ê° for ë‘ë²ˆì§¸ í˜•ì‹ì„ ì´ìš©í•˜ì—¬ ì¶œë ¥	
+		 * ë§ˆì§€ë§‰ for ì²«ë²ˆì§¸ í˜•ì‹ì„ ì´ìš©í•´ì„œ í†µí•© ì¶œë ¥*/
+		String[] products = {"ë¼ë©´","íŒŒ","ì†Œê³ ê¸°","ê³¼ì"};
 		int[] prices = {5000,2000,22000,4000};
-		System.out.println("¦£¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¤");
-		System.out.println("¦¢\t¹°°Ç¸í\t¦¢");
-		System.out.println("¦§¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦©");
+		System.out.println("â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”");
+		System.out.println("â”‚\të¬¼ê±´ëª…\tâ”‚");
+		System.out.println("â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤");
 		for(String product : products){
-			System.out.println("¦¢\t"+product+"\t¦¢");
+			System.out.println("â”‚\t"+product+"\tâ”‚");
 		}
-		System.out.println("¦¦¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¥");
-		System.out.println("¦£¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¤");
-		System.out.println("¦¢\t°¡°İ\t¦¢");
-		System.out.println("¦§¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦©");
+		System.out.println("â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜");
+		System.out.println("â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”");
+		System.out.println("â”‚\tê°€ê²©\tâ”‚");
+		System.out.println("â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤");
 		for(int price : prices){
-			System.out.println("¦¢\t"+price+"\t¦¢");
+			System.out.println("â”‚\t"+price+"\tâ”‚");
 		}
-		System.out.println("¦¦¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¥");
-		System.out.println("¦£¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¨¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¤");
-		System.out.println("¦¢\t¹°°Ç¸í\t¦¢\t°¡°İ\t¦¢");
-		System.out.println("¦§¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦«¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦©");
+		System.out.println("â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜");
+		System.out.println("â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”");
+		System.out.println("â”‚\të¬¼ê±´ëª…\tâ”‚\tê°€ê²©\tâ”‚");
+		System.out.println("â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤");
 		for(int idx=0 ; idx<products.length ; idx++){
-			System.out.println("¦¢\t"+products[idx]+"\t¦¢\t"+prices[idx]+"\t¦¢");
+			System.out.println("â”‚\t"+products[idx]+"\tâ”‚\t"+prices[idx]+"\tâ”‚");
 		}
-		System.out.println("¦¦¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦ª¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¥");
+		System.out.println("â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜");
 	}
 }

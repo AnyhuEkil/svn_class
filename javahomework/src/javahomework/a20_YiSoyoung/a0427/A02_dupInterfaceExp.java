@@ -1,13 +1,13 @@
 package javahomework.a20_YiSoyoung.a0427;
-/* 1´Ü°è) MusicStartListener : À½¾ÇÀÌ ÄÑÁö´Â ¸®½º³Ê ±¸Çö 
- * 2´Ü°è)
+/* 1ë‹¨ê³„) MusicStartListener : ìŒì•…ì´ ì¼œì§€ëŠ” ë¦¬ìŠ¤ë„ˆ êµ¬í˜„ 
+ * 2ë‹¨ê³„)
 	- Draw
-		ÇÊµå¼±¾ğ..
-		OnTouchListener(ÁßÃ¸ÀÎÅÍÆäÀÌ½º)
-			onTouch(); - Ãß»ó¸Ş¼­µå
+		í•„ë“œì„ ì–¸..
+		OnTouchListener(ì¤‘ì²©ì¸í„°í˜ì´ìŠ¤)
+			onTouch(); - ì¶”ìƒë©”ì„œë“œ
 		drawing()
-	- CircleListener : µ¿±×¶ó¹Ì ±×·ÁÁÖ´Â ½ÇÁ¦Å¬·¡½º
-	- TriangleListener : ¼¼¸ğ¸¦ ±×·ÁÁÖ´Â ½ÇÁ¦Å¬·¡½º */
+	- CircleListener : ë™ê·¸ë¼ë¯¸ ê·¸ë ¤ì£¼ëŠ” ì‹¤ì œí´ë˜ìŠ¤
+	- TriangleListener : ì„¸ëª¨ë¥¼ ê·¸ë ¤ì£¼ëŠ” ì‹¤ì œí´ë˜ìŠ¤ */
 class Draw{
 	private OnTouchListener touchListener;
 	public void setOnTouchListener(OnTouchListener touchListener) {
@@ -17,7 +17,7 @@ class Draw{
 		if(touchListener!=null)
 			touchListener.onTouch();
 		else
-			System.out.println("¸®½º³Êµµ ÇÒ´ç ¾È µÊ");
+			System.out.println("ë¦¬ìŠ¤ë„ˆë„ í• ë‹¹ ì•ˆ ë¨");
 	}
 	interface OnTouchListener{
 		public void onTouch();
@@ -26,14 +26,14 @@ class Draw{
 class CircleListener implements Draw.OnTouchListener{
 	@Override
 	public void onTouch() {
-		System.out.println("µ¿±×¶ó¹Ì¸¦ ±×·ÁÁà¿ä");
+		System.out.println("ë™ê·¸ë¼ë¯¸ë¥¼ ê·¸ë ¤ì¤˜ìš”");
 		
 	}
 }
 class TriangleListener implements Draw.OnTouchListener{
 	@Override
 	public void onTouch() {
-		System.out.println("»ï°¢ÇüÀ» ±×·ÁÁà¿ä");
+		System.out.println("ì‚¼ê°í˜•ì„ ê·¸ë ¤ì¤˜ìš”");
 		
 	}
 }

@@ -1,21 +1,21 @@
 package javaexp.a09_exception;
 /*
- * a09/a06 ╪Ва╕;
- * PointException: а║╪Ж╟║ ф╞а╓ а║╪Жюлго╥н ╣г╬Зю╩▀ , ©╧©эцЁ╦╝╥н
- * "╨ргу╟щют╢о╢ы. юГ╪Ж╟╜ю╩ ╨не╧╣Е╦Ё╢о╢ы."
+ * a09/a06 Л┬≥Л═°;
+ * PointException: Л═░Л┬≤Й╟─ М┼╧Л═∙ Л═░Л┬≤Л²╢М∙≤К║° К░≤Л≈┬Л²└К√└, Л≤┬Л≥╦Л╡≤К╕╛К║°
+ * "К╤┬М∙╘Й╡╘Л·┘К▀┬К▀╓. Л·╛Л┬≤Й╟∙Л²└ К╤─М┐│К⌠°К╕╫К▀┬К▀╓."
  * 
  * exam:
- * 	getPoint(юсюгюг а║╪Ж): ©╧©эцЁ╦╝ ╦ч╪╜╣Е
- * 	-ют╥б╧чю╨ а║╪Ж╟║ 60а║ юлгоюо▀ , ©╧©э╟╢ц╪хёцБ
+ * 	getPoint(Л·└Л²≤Л²≤ Л═░Л┬≤): Л≤┬Л≥╦Л╡≤К╕╛ К╘■Л└°К⌠°
+ * 	-Л·┘К═╔К╟⌡Л²─ Л═░Л┬≤Й╟─ 60Л═░ Л²╢М∙≤Л²╪К√└, Л≤┬Л≥╦Й╟²Л╡╢М≤╦Л╤°
  * 	-Main()
  * 
- * 2╢э╟Х -
+ * 2К▀╗ЙЁ└ -
  * PointException
- * цъ╟║ ╦ч╪╜╣Е: showResult()
- *  @@╟З╦Я, @@а║ х╧╣Ф-- ╟А╟З╢б @@@(гу╟щ/╨ргу╟щ) ют╢о╢ы.
+ * Л╤■Й╟─ К╘■Л└°К⌠°: showResult()
+ *  @@ЙЁ╪К╙╘, @@Л═░ М █К⌠²-- Й╡╟ЙЁ╪К┼■ @@@(М∙╘Й╡╘/К╤┬М∙╘Й╡╘) Л·┘К▀┬К▀╓.
  * Exam
- * 	╟З╦Я╦М, ╫цгХа║╪Ж
- * 	getPoint(): ╟З╦Я╟З Random next()х╟©К.
+ * 	ЙЁ╪К╙╘К╙┘, Л▀°М≈≤Л═░Л┬≤
+ * 	getPoint(): ЙЁ╪К╙╘ЙЁ╪ Random next()М≥°Л ╘.
  */
 
 class Check{
@@ -24,16 +24,16 @@ class Check{
 	public void getPoint(int grade) throws PointException{
 		this.grade = grade;
 		if(this.grade <= 60){
-			throw new PointException("╨ргу╟щют╢о╢ы. юГ╪Ж╟╜ю╩ ╨не╧╣Е╦Ё╢о╢ы.");
+			throw new PointException("К╤┬М∙╘Й╡╘Л·┘К▀┬К▀╓. Л·╛Л┬≤Й╟∙Л²└ К╤─М┐│К⌠°К╕╫К▀┬К▀╓.");
 		}
 		else{
-			System.out.println("гу╟щго╪л╫ю╢о╢ы. цЮго╣Е╦Ё╢о╢ы!");
+			System.out.println("М∙╘Й╡╘М∙≤Л┘╗Л┼╣К▀┬К▀╓. Л╤∙М∙≤К⌠°К╕╫К▀┬К▀╓!");
 		}
 	}
 	public void showResult(String subject, int grade) throws PointException{
 		this.subject = subject;
 		this.grade = grade;
-		System.out.print("╟З╦Я: "+ this.subject + " \tа║╪Ж: "+ this.grade + "   \t╟А╟З╢б...");
+		System.out.print("ЙЁ╪К╙╘: "+ this.subject + " \tЛ═░Л┬≤: "+ this.grade + "   \tЙ╡╟ЙЁ╪К┼■...");
 		getPoint(this.grade);
 	}
 }
@@ -60,7 +60,7 @@ public class HW0504_gradeSorU {
 			for(int idx = 0; idx<gradeList.length; idx++){
 				gradeList[idx][0] = (int)(Math.random()*4);
 				gradeList[idx][1] = (int)(Math.random()*101);
-				//System.out.println( "гп╩Щ╧Ьхё "+idx+"\tSub: "+ subject[gradeList[idx][0]] + "\tgrade: "+ gradeList[idx][1]);
+				//System.out.println( "М∙≥Л┐²К╡┬М≤╦ "+idx+"\tSub: "+ subject[gradeList[idx][0]] + "\tgrade: "+ gradeList[idx][1]);
 				//chk01.getPoint(gradeList[idx][1]);
 				chk01.showResult(subject[gradeList[idx][0]], gradeList[idx][1]);
 			}

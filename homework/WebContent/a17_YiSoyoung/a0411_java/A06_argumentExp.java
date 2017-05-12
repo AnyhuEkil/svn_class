@@ -1,23 +1,23 @@
 package javaexp.a03_operator;
 
 public class A06_argumentExp {
-	/* È®ÀÎ¿¹Á¦ : »õ·Î¿î ÆÄÀÏ A06_argumentExp.java
+	/* í™•ì¸ì˜ˆì œ : ìƒˆë¡œìš´ íŒŒì¼ A06_argumentExp.java
 	 * Favorite Movie
-	 * args => ¿µÈ­¸í1 »ó¿µ³âµµ ¿µÈ­¸í2 »ó¿µ¿¬µµ
-	 * ³»°¡ ÁÁ¾ÆÇÏ´Â ¿µÈ­
-	 * ¿µÈ­¸í »ó¿µ Áö±İÀ¸·ÎºÎÅÍ
-	 * ¿µÈ­¸í XXX 2017-@@@
+	 * args => ì˜í™”ëª…1 ìƒì˜ë…„ë„ ì˜í™”ëª…2 ìƒì˜ì—°ë„
+	 * ë‚´ê°€ ì¢‹ì•„í•˜ëŠ” ì˜í™”
+	 * ì˜í™”ëª… ìƒì˜ ì§€ê¸ˆìœ¼ë¡œë¶€í„°
+	 * ì˜í™”ëª… XXX 2017-@@@
 	 */
 	public static void main(String[] args) {
-		System.out.println("¡Ú ³»°¡ ÁÁ¾ÆÇÏ´Â ¿µÈ­ ¡Ú");
-		System.out.println("¿µÈ­¸í\t»ó¿µ\tÁö±İÀ¸·ÎºÎÅÍ");
-		System.out.println("¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á");
+		System.out.println("â˜… ë‚´ê°€ ì¢‹ì•„í•˜ëŠ” ì˜í™” â˜…");
+		System.out.println("ì˜í™”ëª…\tìƒì˜\tì§€ê¸ˆìœ¼ë¡œë¶€í„°");
+		System.out.println("â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– ");
 		int no=0;
 		for(int i=0 ; i<args.length ; i+=2){
-			System.out.println("¿µÈ­¸í\t"+args[i]+"\t"+args[i+1]);
+			System.out.println("ì˜í™”ëª…\t"+args[i]+"\t"+args[i+1]);
 			no ++;
 		}
-		System.out.println("¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á");
-		System.out.println("ÀÌ»ó ÀÔ·ÂÇÏ½Å ¿µÈ­ °¹¼ö : "+no);
+		System.out.println("â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– ");
+		System.out.println("ì´ìƒ ì…ë ¥í•˜ì‹  ì˜í™” ê°¯ìˆ˜ : "+no);
 	}
 }

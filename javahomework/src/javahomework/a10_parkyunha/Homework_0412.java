@@ -4,10 +4,10 @@ public class Homework_0412 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// 2. for¹®À» ÀÌ¿ëÇÏ¿© 10~150±îÁö Á¤¼ö Áß¿¡ 5ÀÇ ¹è¼öÀÇ ÃÑÇÕÀ» ±¸ÇÏ´Â ÄÚµå¸¦ ÀÛ¼ºÇÏ¼¼¿ä.
-		// 3. while¹®, Math.random()À» ÀÌ¿ëÇÏ¿©, ÁÖ»çÀ§ ¼ıÀÚ µÎ °³°¡ ³ª¿À°Ô ÇÏ°í, ÁÖ»çÀ§ ÇÕÀÌ 5°¡ 
-		//		¾Æ´Ï¸é °è¼Ó, ÇÕÀÌ 5ÀÌ¸é Áß´Ü Ã³¸®µÇ°Ô ÇÏ¼¼¿ä
-		// 4. ÀÌÁß for¹®À» ÀÌ¿ëÇÏ¿© ¹æÁ¤½Ä 4x + 5y = 60ÀÎ ¸ğµç ÇØ¸¦ ±¸ÇÏ¼¼¿ä. (x, y´Â 10ÀÌÇÏ Á¤¼ö)
+		// 2. forë¬¸ì„ ì´ìš©í•˜ì—¬ 10~150ê¹Œì§€ ì •ìˆ˜ ì¤‘ì— 5ì˜ ë°°ìˆ˜ì˜ ì´í•©ì„ êµ¬í•˜ëŠ” ì½”ë“œë¥¼ ì‘ì„±í•˜ì„¸ìš”.
+		// 3. whileë¬¸, Math.random()ì„ ì´ìš©í•˜ì—¬, ì£¼ì‚¬ìœ„ ìˆ«ì ë‘ ê°œê°€ ë‚˜ì˜¤ê²Œ í•˜ê³ , ì£¼ì‚¬ìœ„ í•©ì´ 5ê°€ 
+		//		ì•„ë‹ˆë©´ ê³„ì†, í•©ì´ 5ì´ë©´ ì¤‘ë‹¨ ì²˜ë¦¬ë˜ê²Œ í•˜ì„¸ìš”
+		// 4. ì´ì¤‘ forë¬¸ì„ ì´ìš©í•˜ì—¬ ë°©ì •ì‹ 4x + 5y = 60ì¸ ëª¨ë“  í•´ë¥¼ êµ¬í•˜ì„¸ìš”. (x, yëŠ” 10ì´í•˜ ì •ìˆ˜)
 		
 		one();
 		two();
@@ -16,7 +16,7 @@ public class Homework_0412 {
 	}
 	
 	public static void one() {
-		System.out.println("1) Á¶°Ç¹®°ú ¹İº¹¹®");
+		System.out.println("1) ì¡°ê±´ë¬¸ê³¼ ë°˜ë³µë¬¸");
 		System.out.println("conditional statements : if, switch");
 		System.out.println("loop statements : for, while, do-while\n");
 	}
@@ -28,7 +28,7 @@ public class Homework_0412 {
 			sum += (i % 5 == 0) ? i : 0; 
 		}
 		
-		System.out.println("2) 10~150 »çÀÌÀÇ Á¤¼öÁß 5ÀÇ ¹è¼öÀÇ ÇÕ\nSum is "+sum + "\n");
+		System.out.println("2) 10~150 ì‚¬ì´ì˜ ì •ìˆ˜ì¤‘ 5ì˜ ë°°ìˆ˜ì˜ í•©\nSum is "+sum + "\n");
 	}
 	
 	public static void three() {
@@ -39,7 +39,7 @@ public class Homework_0412 {
 			dice02 = (int)(Math.random()*6) + 1;
 		} while((dice01 + dice02) != 5);
 		
-		System.out.println("3) ÁÖ»çÀ§ÀÇ ÇÕÀÌ 5\n"
+		System.out.println("3) ì£¼ì‚¬ìœ„ì˜ í•©ì´ 5\n"
 				+dice01+" + "+dice02+" = "+(dice01+dice02) + "\n");
 	}
 	
@@ -53,7 +53,7 @@ public class Homework_0412 {
 			}
 		}
 		
-		System.out.println("4) 10ÀÌÇÏÀÇ ¾çÀÇ Á¤¼ö x, y¿¡ ´ëÇØ 4x + 5y = 60¸¦ ¸¸Á·ÇÏ´Â ¼ø¼­½Ö\n"+pairs + "\n");
+		System.out.println("4) 10ì´í•˜ì˜ ì–‘ì˜ ì •ìˆ˜ x, yì— ëŒ€í•´ 4x + 5y = 60ë¥¼ ë§Œì¡±í•˜ëŠ” ìˆœì„œìŒ\n"+pairs + "\n");
 	}
 
 }

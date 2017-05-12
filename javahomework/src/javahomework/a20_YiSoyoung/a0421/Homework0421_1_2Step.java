@@ -1,15 +1,15 @@
 package javahomework.a20_YiSoyoung.a0421;
 
-/* 1´Ü°è : 
- * 	-¸ÀÀÖ´Â À½½ÄÁ¡¿¡ °¡¼­ (Å¬·¡½º »ı¼º)
- *      orderFood(°¡º¯ÀÎÀÚÃ³¸®)
- *  - Ãâ·Â³»¿ë
- *  	ÁÖ¹®ÇÏ½ÅÀ½½ÄÀº : @@
- *  	ÁÖ¹®ÇÏ½ÅÀ½½ÄÀº : @@ °¡º¯Ã³¸®
- *  2´Ü°è
- *   - °¡°ÔÀÌ¸§À» »ı¼ºÀÚ·Î ÀÔ·Â¹Ş°Ô Ã³¸®
- *   - orderFood¸¦ ÅëÇØ¼­ ÁÖ¹®µÈ À½½ÄÀÇ Á¾·ù¿¡ µû¶ó ¸ÅÇÎµÇ¾î ÀÖ´Â °¡°İÀ» °è»êÇØ¼­ °è»ê¼­
- *   	±îÁö Ãâ·ÂÃ³¸®
+/* 1ë‹¨ê³„ : 
+ * 	-ë§›ìˆëŠ” ìŒì‹ì ì— ê°€ì„œ (í´ë˜ìŠ¤ ìƒì„±)
+ *      orderFood(ê°€ë³€ì¸ìì²˜ë¦¬)
+ *  - ì¶œë ¥ë‚´ìš©
+ *  	ì£¼ë¬¸í•˜ì‹ ìŒì‹ì€ : @@
+ *  	ì£¼ë¬¸í•˜ì‹ ìŒì‹ì€ : @@ ê°€ë³€ì²˜ë¦¬
+ *  2ë‹¨ê³„
+ *   - ê°€ê²Œì´ë¦„ì„ ìƒì„±ìë¡œ ì…ë ¥ë°›ê²Œ ì²˜ë¦¬
+ *   - orderFoodë¥¼ í†µí•´ì„œ ì£¼ë¬¸ëœ ìŒì‹ì˜ ì¢…ë¥˜ì— ë”°ë¼ ë§¤í•‘ë˜ì–´ ìˆëŠ” ê°€ê²©ì„ ê³„ì‚°í•´ì„œ ê³„ì‚°ì„œ
+ *   	ê¹Œì§€ ì¶œë ¥ì²˜ë¦¬
  * */
 class Restaurant2{
 	private String name;
@@ -19,29 +19,29 @@ class Restaurant2{
 		price = 0;
 	}
 	public void orderFood(String ...foods){
-		// ¿ì¸® ½Ä´çÀº Â«ºÀ, Â¥Àå, ººÀ½¹ä¸¸ ¸Ş´º¿¡ ÀÖ¾î
-		//Â«»ÍÀº 5000¿ø Â¥ÀåÀº 4000¿ø ººÀ½¹äÀº 5500¿øÀ¸·Î
-		System.out.println(" * "+name+" ½Ä´ç ÁÖ¹®¼­ * ");
+		// ìš°ë¦¬ ì‹ë‹¹ì€ ì§¬ë´‰, ì§œì¥, ë³¶ìŒë°¥ë§Œ ë©”ë‰´ì— ìˆì–´
+		//ì§¬ë½•ì€ 5000ì› ì§œì¥ì€ 4000ì› ë³¶ìŒë°¥ì€ 5500ì›ìœ¼ë¡œ
+		System.out.println(" * "+name+" ì‹ë‹¹ ì£¼ë¬¸ì„œ * ");
 		System.out.println("********************************");
 		for(String food : foods){
-			if(food.equals("Â«»Í")){
-				System.out.println("ÁÖ¹®ÇÏ½Å À½½ÄÀº " + food + "\t5000¿ø");
+			if(food.equals("ì§¬ë½•")){
+				System.out.println("ì£¼ë¬¸í•˜ì‹  ìŒì‹ì€ " + food + "\t5000ì›");
 				price += 5000;
-			}else if(food.equals("Â¥Àå")){
-				System.out.println("ÁÖ¹®ÇÏ½Å À½½ÄÀº " + food + "\t4000¿ø");
+			}else if(food.equals("ì§œì¥")){
+				System.out.println("ì£¼ë¬¸í•˜ì‹  ìŒì‹ì€ " + food + "\t4000ì›");
 				price += 4000;
-			}else if(food.equals("ººÀ½¹ä")){
-				System.out.println("ÁÖ¹®ÇÏ½Å À½½ÄÀº " + food + "\t5500¿ø");
+			}else if(food.equals("ë³¶ìŒë°¥")){
+				System.out.println("ì£¼ë¬¸í•˜ì‹  ìŒì‹ì€ " + food + "\t5500ì›");
 				price += 5500;
 			}
 		}
 		System.out.println("********************************");
-		System.out.println("ÃÑ °¡°İ : "+price);
+		System.out.println("ì´ ê°€ê²© : "+price);
 	}
 }
 public class Homework0421_1_2Step {
 	public static void main(String[] args) {
-		Restaurant2 restaurant2 = new Restaurant2("È«Äá¹İÁ¡");
-		restaurant2.orderFood("Â¥Àå","ººÀ½¹ä");
+		Restaurant2 restaurant2 = new Restaurant2("í™ì½©ë°˜ì ");
+		restaurant2.orderFood("ì§œì¥","ë³¶ìŒë°¥");
 	}
 }

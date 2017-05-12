@@ -2,38 +2,38 @@ package javaexp.a06_object;
 
 import java.util.Date;
 
-/*  ÀºÇà¿¡ °¡¼­ 1´Ü°è
- *  Account1 : °èÁ¤¸í, ÃÑÀÜ¾×
- *  »ı¼ºÀÚ- °èÁ¤¸íÀ¸·Î »ı¼º
- *  input(ÀÔ±İ¾×){
- *  	@@´Ô @@¿ø ÀÔ±İÇß½À´Ï´Ù(ÇöÀÜ¾×:@@@)
+/*  ì€í–‰ì— ê°€ì„œ 1ë‹¨ê³„
+ *  Account1 : ê³„ì •ëª…, ì´ì”ì•¡
+ *  ìƒì„±ì- ê³„ì •ëª…ìœ¼ë¡œ ìƒì„±
+ *  input(ì…ê¸ˆì•¡){
+ *  	@@ë‹˜ @@ì› ì…ê¸ˆí–ˆìŠµë‹ˆë‹¤(í˜„ì”ì•¡:@@@)
  *  }
- *  output(Ãâ±İ¾×)
- *  	@@´Ô @@¿ø Ãâ±İÇß½À´Ï´Ù(ÇöÀÜ¾×:@@@)
+ *  output(ì¶œê¸ˆì•¡)
+ *  	@@ë‹˜ @@ì› ì¶œê¸ˆí–ˆìŠµë‹ˆë‹¤(í˜„ì”ì•¡:@@@)
  * */
 class Account1{
-	private String accountName; //°èÁ¤¸í
-	private int balance; //ÀÜ¾×
+	private String accountName; //ê³„ì •ëª…
+	private int balance; //ì”ì•¡
 	public Account1(String accountName){
 		this.accountName = accountName;
-		System.out.println("¡Ú ¡Ù ¡Ú "+ accountName+"°èÁÂÀ» ¿­¾î ÁÖ¼Å¼­ °¨»çÇÕ´Ï´Ù ¡Ú ¡Ù ¡Ú");
+		System.out.println("â˜… â˜† â˜… "+ accountName+"ê³„ì¢Œì„ ì—´ì–´ ì£¼ì…”ì„œ ê°ì‚¬í•©ë‹ˆë‹¤ â˜… â˜† â˜…");
 	}
 	public void input(int inMoney){
 		balance+=inMoney;
-		System.out.println(accountName+"´Ô\t"+inMoney+"¿ø ÀÔ±İÇÏ¼Ì½À´Ï´Ù(ÇöÀÜ¾×:"+balance+"¿ø)");
+		System.out.println(accountName+"ë‹˜\t"+inMoney+"ì› ì…ê¸ˆí•˜ì…¨ìŠµë‹ˆë‹¤(í˜„ì”ì•¡:"+balance+"ì›)");
 	}
 	public void output(int outMoney){
 		if(balance>=outMoney){
 			balance -= outMoney;
-			System.out.println(accountName+"´Ô\t"+outMoney+"¿ø ÀÔ±İÇÏ¼Ì½À´Ï´Ù(ÇöÀÜ¾×:"+balance+"¿ø)");
+			System.out.println(accountName+"ë‹˜\t"+outMoney+"ì› ì…ê¸ˆí•˜ì…¨ìŠµë‹ˆë‹¤(í˜„ì”ì•¡:"+balance+"ì›)");
 		}else{
-			System.out.println("@ @ ÀÜ¾×ÀÌ ºÎÁ·ÇÏ¿© "+outMoney+"¿ø Ãâ±İÀÌ ºÒ°¡´ÉÇÕ´Ï´Ù(ÇöÀÜ¾×:"+balance+"¿ø) @ @");
+			System.out.println("@ @ ì”ì•¡ì´ ë¶€ì¡±í•˜ì—¬ "+outMoney+"ì› ì¶œê¸ˆì´ ë¶ˆê°€ëŠ¥í•©ë‹ˆë‹¤(í˜„ì”ì•¡:"+balance+"ì›) @ @");
 		}
 	}
 }
 public class Homework0419_Account_1step {
 	public static void main(String[] args) {
-		Account1 acc_hong = new Account1("È«±æµ¿_½ÅÇÑ_110-12-123");
+		Account1 acc_hong = new Account1("í™ê¸¸ë™_ì‹ í•œ_110-12-123");
 		acc_hong.input(3000);
 		acc_hong.output(5000);
 		acc_hong.input(6000);

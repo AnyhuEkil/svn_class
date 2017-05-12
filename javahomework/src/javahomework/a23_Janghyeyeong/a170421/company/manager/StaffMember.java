@@ -1,11 +1,11 @@
 package javahomework.a23_Janghyeyeong.a170421.company.manager;
 
 public class StaffMember {
-	public String notice="Àå°¡-°øÁö»çÇ× Á¤º¸";
+	public String notice="ì¥ê°€-ê³µì§€ì‚¬í•­ ì •ë³´";
 	
 	void searchInf(){
 		ChiefMember c = new ChiefMember();
-		System.out.println("°úÀå Á¤º¸ È®ÀÎ");
+		System.out.println("ê³¼ì¥ ì •ë³´ í™•ì¸");
 		c.searchInf();
 		c.thePlan();
 		

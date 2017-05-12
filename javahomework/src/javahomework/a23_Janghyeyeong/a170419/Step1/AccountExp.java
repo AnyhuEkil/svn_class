@@ -9,12 +9,12 @@ class Account{
 	}
 	int input(int inMoney){
 		total+=inMoney;
-		System.out.println(name+"´Ô "+inMoney+"¿ø ÀÔ±İÇß½À´Ï´Ù. \t[Çö ÀÜ¾× "+total+"]");
+		System.out.println(name+"ë‹˜ "+inMoney+"ì› ì…ê¸ˆí–ˆìŠµë‹ˆë‹¤. \t[í˜„ ì”ì•¡ "+total+"]");
 		return total;
 	}
 	int output(int outMoney){
 		total-=outMoney;
-		System.out.println(name+"´Ô "+outMoney+"¿ø Ãâ±İÇß½À´Ï´Ù. \t[Çö ÀÜ¾× "+total+"]");
+		System.out.println(name+"ë‹˜ "+outMoney+"ì› ì¶œê¸ˆí–ˆìŠµë‹ˆë‹¤. \t[í˜„ ì”ì•¡ "+total+"]");
 		return total;
 	}
 	
@@ -24,9 +24,9 @@ public class AccountExp {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Account a1 = new Account("È«±æµ¿");
-		Account a2 = new Account("±è±æµ¿");
-		Account a3 = new Account("½Å±æµ¿");
+		Account a1 = new Account("í™ê¸¸ë™");
+		Account a2 = new Account("ê¹€ê¸¸ë™");
+		Account a3 = new Account("ì‹ ê¸¸ë™");
 		
 		a1.input(200000);
 		a1.output(10000);

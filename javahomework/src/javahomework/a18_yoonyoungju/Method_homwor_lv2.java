@@ -1,21 +1,21 @@
 package javahomework.a18_yoonyoungju;
 /*
-ÀºÇà¿¡ °¡¼­ ( 2´Ü°è)
-- Account(°èÁÂ°èÁ¤)
-	field¸í : °èÁ¤¸í, (ÀÔ±İ¾×,Ãâ±İ¾×),ÃÑÀÜ¾×,(³¯Â¥),(³»¿ë)
+ì€í–‰ì— ê°€ì„œ ( 2ë‹¨ê³„)
+- Account(ê³„ì¢Œê³„ì •)
+	fieldëª… : ê³„ì •ëª…, (ì…ê¸ˆì•¡,ì¶œê¸ˆì•¡),ì´ì”ì•¡,(ë‚ ì§œ),(ë‚´ìš©)
 
-»ı¼ºÀÚ : °èÁ¤¸í ÀÔ·Â
-»ı¼ºÀÚ 2: °èÁ¤¸í , ÃÊ±â ÀÔ±İ¾×
-save(ÀÔ±İ¾×, ³»¿ë , ³¯Â¥ )
-	-°è»êÃ³¸® 
-	-returnÀÔ±İµÈ ±İ¾×
-withdraw( Ãâ±İ¾×, ³»¿ë , ³¯Â¥)
--°è»êÃ³¸®
-- return Ãâ±İ¾× ±İ¾×
+ìƒì„±ì : ê³„ì •ëª… ì…ë ¥
+ìƒì„±ì 2: ê³„ì •ëª… , ì´ˆê¸° ì…ê¸ˆì•¡
+save(ì…ê¸ˆì•¡, ë‚´ìš© , ë‚ ì§œ )
+	-ê³„ì‚°ì²˜ë¦¬ 
+	-returnì…ê¸ˆëœ ê¸ˆì•¡
+withdraw( ì¶œê¸ˆì•¡, ë‚´ìš© , ë‚ ì§œ)
+-ê³„ì‚°ì²˜ë¦¬
+- return ì¶œê¸ˆì•¡ ê¸ˆì•¡
 
-withdraw(Ãâ±İ¾×, ³»¿ë, ³¯Â¥)
+withdraw(ì¶œê¸ˆì•¡, ë‚´ìš©, ë‚ ì§œ)
 print()
-³¯Â¥ ¿ëµ· [@@@] [@@@@] [@@@@@]
+ë‚ ì§œ ìš©ëˆ [@@@] [@@@@] [@@@@@]
 */
 class Account{
 	String accountname;
@@ -54,12 +54,12 @@ class Account{
 public class Method_homwor_lv2{
 	public static void main(String[] args) {
 			// TODO Auto-generated method stub
-		Account a = new Account("À±¿µÁÖ");
-			a.total=a.save(12000,"¾Ë¹Ùºñ","2017.04.01");
+		Account a = new Account("ìœ¤ì˜ì£¼");
+			a.total=a.save(12000,"ì•Œë°”ë¹„","2017.04.01");
 			a.print();
-			a.total += a.withdraw(5000,"ÆíÀÇÁ¡","2017.04.11");
+			a.total += a.withdraw(5000,"í¸ì˜ì ","2017.04.11");
 			a.print();
-			a.total += a.save(30000,"¿ëµ·","2017.04.20");
+			a.total += a.save(30000,"ìš©ëˆ","2017.04.20");
 			a.print();
 	}
 }

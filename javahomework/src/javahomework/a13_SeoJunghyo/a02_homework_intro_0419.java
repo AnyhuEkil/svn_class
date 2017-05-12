@@ -1,19 +1,19 @@
-/* ¼÷Á¦
- ÀºÇà¿¡ °¡¼­(1´Ü°è)
- 1) °èÁÂ
- filed : °èÁÂ¸í
- »ı¼ºÀÚ(°èÁÂ¸í ÀÔ·Â)
- input(ÀÔ±İ¾×)
- 	@@@´Ô @@@¿ø ÀÔ±İÇß½À´Ï´Ù.(ÇöÀÜ¾× @@@)
- output(Ãâ±İ¾×)
- 	@@@´Ô @@@¿ø Ãâ±İÇß½À´Ï´Ù.(ÇöÀÜ¾× @@@)
+/* ìˆ™ì œ
+ ì€í–‰ì— ê°€ì„œ(1ë‹¨ê³„)
+ 1) ê³„ì¢Œ
+ filed : ê³„ì¢Œëª…
+ ìƒì„±ì(ê³„ì¢Œëª… ì…ë ¥)
+ input(ì…ê¸ˆì•¡)
+ 	@@@ë‹˜ @@@ì› ì…ê¸ˆí–ˆìŠµë‹ˆë‹¤.(í˜„ì”ì•¡ @@@)
+ output(ì¶œê¸ˆì•¡)
+ 	@@@ë‹˜ @@@ì› ì¶œê¸ˆí–ˆìŠµë‹ˆë‹¤.(í˜„ì”ì•¡ @@@)
  
- ÀÚ±â¼Ò°³(1´Ü°è)
- filed : ÀÌ¸§, »ç´Â°÷, ³ªÀÌ
- 	- »ı¼ºÀÚ(ÀÌ¸§ÀÔ·Â)
- 	- inputdata(»ç´Â°÷, ³ªÀÌ)
- 	- introMyself() : Ãâ·ÂÃ³¸®
- 	³»ÀÌ¸§Àº @@ÀÌ°í ³ªÀÌ´Â @@ÀÌ¸ç »ç´Â °÷Àº @@ÀÌ´Ù.
+ ìê¸°ì†Œê°œ(1ë‹¨ê³„)
+ filed : ì´ë¦„, ì‚¬ëŠ”ê³³, ë‚˜ì´
+ 	- ìƒì„±ì(ì´ë¦„ì…ë ¥)
+ 	- inputdata(ì‚¬ëŠ”ê³³, ë‚˜ì´)
+ 	- introMyself() : ì¶œë ¥ì²˜ë¦¬
+ 	ë‚´ì´ë¦„ì€ @@ì´ê³  ë‚˜ì´ëŠ” @@ì´ë©° ì‚¬ëŠ” ê³³ì€ @@ì´ë‹¤.
 */ 	
 package javahomework.a13_SeoJunghyo;
 class Intro{
@@ -24,7 +24,7 @@ class Intro{
 
 	Intro(String name){
 		this.name=name;
-		this.loc="ºê¶óÁú";
+		this.loc="ë¸Œë¼ì§ˆ";
 		this.age=31;
 	}
 	
@@ -33,19 +33,19 @@ class Intro{
 		this.age=age;
 	}
 	void introMyself(){
-		System.out.println("³»ÀÌ¸§Àº "+name+"ÀÌ°í ³ªÀÌ´Â "+age+"¼¼ÀÌ¸ç »ç´Â °÷Àº "+loc+"ÀÌ´Ù");
+		System.out.println("ë‚´ì´ë¦„ì€ "+name+"ì´ê³  ë‚˜ì´ëŠ” "+age+"ì„¸ì´ë©° ì‚¬ëŠ” ê³³ì€ "+loc+"ì´ë‹¤");
 	}
 }
 public class a02_homework_intro_0419 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Intro me =  new Intro("È£³¯µÎ");
-		Intro rival = new Intro("¸Ş½Ã");
-		Intro friend = new Intro("¸¶¸£¼¿·ç");
-		me.info("Æ÷·çÅõ°¥", 32);
+		Intro me =  new Intro("í˜¸ë‚ ë‘");
+		Intro rival = new Intro("ë©”ì‹œ");
+		Intro friend = new Intro("ë§ˆë¥´ì…€ë£¨");
+		me.info("í¬ë£¨íˆ¬ê°ˆ", 32);
 		me.introMyself();
-		rival.info("¾Æ¸£ÇîÆ¼³ª", 31);
+		rival.info("ì•„ë¥´í—¨í‹°ë‚˜", 31);
 		rival.introMyself();
 		friend.introMyself();
 

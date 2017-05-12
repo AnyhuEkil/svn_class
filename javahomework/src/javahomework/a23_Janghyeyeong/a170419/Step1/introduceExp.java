@@ -16,8 +16,8 @@ class Intro{
 	}
 	
 	void introMyself(){
-		System.out.println(" ³» ÀÌ¸§Àº "+name+"ÀÌ°í, ³ªÀÌ´Â "
-				+age+"ÀÌ¸ç, »ç´Â °÷Àº "+loc+"ÀÔ´Ï´Ù.");
+		System.out.println(" ë‚´ ì´ë¦„ì€ "+name+"ì´ê³ , ë‚˜ì´ëŠ” "
+				+age+"ì´ë©°, ì‚¬ëŠ” ê³³ì€ "+loc+"ì…ë‹ˆë‹¤.");
 	}
 	
 }
@@ -27,9 +27,9 @@ public class introduceExp {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Intro i1 = new Intro("È«±æµ¿");
+		Intro i1 = new Intro("í™ê¸¸ë™");
 		
-		i1.inputData("°­³²", 24);
+		i1.inputData("ê°•ë‚¨", 24);
 		i1.introMyself();
 		
 

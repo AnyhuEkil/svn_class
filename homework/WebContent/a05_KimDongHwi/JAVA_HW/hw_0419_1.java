@@ -8,9 +8,9 @@ class Product{
 	int totP;
 	Product(){}
 	Product(String pname){
-		System.out.println("~~"+pname+"¸¶Æ®¿¡ ¿À½Å °ÍÀ» È¯¿µÇÕ´Ï´Ù!! ");
-		System.out.println("### ±¸¸Å¹°Ç° ÇöÈ² ###");
-		System.out.println("¹°°Ç¸í\t°¡°İ\t°¹¼ö\t°è");	
+		System.out.println("~~"+pname+"ë§ˆíŠ¸ì— ì˜¤ì‹  ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤!! ");
+		System.out.println("### êµ¬ë§¤ë¬¼í’ˆ í˜„í™© ###");
+		System.out.println("ë¬¼ê±´ëª…\tê°€ê²©\tê°¯ìˆ˜\tê³„");	
 	}
 	
 	
@@ -34,12 +34,12 @@ class Product{
 public class hw_0419_1 {
 
 	public static void main(String[] args) {
-		 Product p = new Product("¾ÖÇÃ ");
-		 int sum = p.cart("¾ÆÀÌÆù", 2,100);
+		 Product p = new Product("ì• í”Œ ");
+		 int sum = p.cart("ì•„ì´í°", 2,100);
 		 p.calc();
-		 sum += p.cart("¸Æ  ºÏ", 1, 333);
+		 sum += p.cart("ë§¥  ë¶", 1, 333);
 		 p.calc();
-		 sum += p.cart("ÀÌ¾îÆù", 1, 3);
+		 sum += p.cart("ì´ì–´í°", 1, 3);
 		 p.calc();
 	}
 

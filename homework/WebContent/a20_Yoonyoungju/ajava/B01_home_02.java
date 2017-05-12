@@ -5,11 +5,11 @@ public class B01_home_02 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		/*
-		  3.while ¹®À» ÀÌ¿ëÇÏ¿© Math.random()À» ÀÌ¿ëÇÏ¿© , 
-		  ÁÖ»çÀ§ ¼ıÀÚ µÎ°³°¡ ³ª¿À°Ô ÇÏ°í , 
-		  ÁÖ»çÀ§ ÇÕÀÌ 5°¡ ¾Æ´Ï¸é °è¼Ó , 
-		  ÇÕÀÌ 5ÀÌ¸é Áß´Ü Ã³¸®µÇ°Ô ÇÏ¼¼¿ä ,
-			Ãâ·Â Çü½Ä : @@@, @@@  ÇÕ @@@ 
+		  3.while ë¬¸ì„ ì´ìš©í•˜ì—¬ Math.random()ì„ ì´ìš©í•˜ì—¬ , 
+		  ì£¼ì‚¬ìœ„ ìˆ«ì ë‘ê°œê°€ ë‚˜ì˜¤ê²Œ í•˜ê³  , 
+		  ì£¼ì‚¬ìœ„ í•©ì´ 5ê°€ ì•„ë‹ˆë©´ ê³„ì† , 
+		  í•©ì´ 5ì´ë©´ ì¤‘ë‹¨ ì²˜ë¦¬ë˜ê²Œ í•˜ì„¸ìš” ,
+			ì¶œë ¥ í˜•ì‹ : @@@, @@@  í•© @@@ 
 		*/
 
 		int sum  =0;
@@ -18,12 +18,12 @@ public class B01_home_02 {
 		do{
 			gameIdx01 = (int)(Math.random()*5);
 			gameIdx02 = (int)(Math.random()*5);
-			System.out.println("Ã¹¹øÂ° ÁÖ»çÀ§ : "+gameIdx01);
-			System.out.println("µÎ¹øÂ° ÁÖ»çÀ§ : "+gameIdx02);
+			System.out.println("ì²«ë²ˆì§¸ ì£¼ì‚¬ìœ„ : "+gameIdx01);
+			System.out.println("ë‘ë²ˆì§¸ ì£¼ì‚¬ìœ„ : "+gameIdx02);
 			sum = gameIdx01+gameIdx02;
-			System.out.println("ÇÕ:"+sum);
+			System.out.println("í•©:"+sum);
 		}while(sum != 5);
-			System.out.println("ÁÖ»çÀ§ ÇÕÀÌ 5 Áß´Ü ! ");
+			System.out.println("ì£¼ì‚¬ìœ„ í•©ì´ 5 ì¤‘ë‹¨ ! ");
 	}
 
 }

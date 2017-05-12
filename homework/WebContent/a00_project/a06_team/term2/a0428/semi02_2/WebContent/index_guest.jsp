@@ -89,7 +89,7 @@
         </div>
     </section>    
     
-    <!-- Game1 --><!-- iframe °¢ °ÔÀÓ ¿¬°á -->
+    <!-- Game1 --><!-- iframe ê° ê²Œì„ ì—°ê²° -->
     
     
     <!-- Game2 -->
@@ -117,17 +117,17 @@
     	$('#my_iframe02')[0].contentWindow.renew();
     }
     
-    // ¸Ş´º ´İ±â
+    // ë©”ë‰´ ë‹«ê¸°
     $("#menu-close").click(function(e) {
         e.preventDefault();
         $("#sidebar-wrapper").toggleClass("active");
     });
-    // ¸Ş´º ¿­±â
+    // ë©”ë‰´ ì—´ê¸°
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#sidebar-wrapper").toggleClass("active");
     });
-    // ½Ì±ÛÆäÀÌÁö ÇØ´ç ¸Ş´º·Î ÀÌµ¿
+    // ì‹±ê¸€í˜ì´ì§€ í•´ë‹¹ ë©”ë‰´ë¡œ ì´ë™
     $(function() {
         $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {

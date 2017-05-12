@@ -3,29 +3,29 @@ package javaexp.a06_object;
  *  Late HW. Apr21_vehicle.
  * 
  * 
-¼÷Á¦ 0421.
-1) ºÎ¸ğ
-Å¬·¡½º Vehicle
-ÇÊµå : Á¾·ù, ÃÖ°í¼Óµµ
-¸Ş¼­µå : showInfo()
-@@@ÀÎµ¥ ÃÖ°í ¼Óµµ°¡ @@@´Ù
-2) ÀÚ½Ä
-Å¬·¡½º Car
-¸Ş¼­µå driverCar()
-@@@@ÀÎµ¥ ÃÖ°í¼Óµµ°¡ @@@´Ù
-Å¸´Â »ç¶÷Àº @@@@¸íÀÌ´Ù.
+ìˆ™ì œ 0421.
+1) ë¶€ëª¨
+í´ë˜ìŠ¤ Vehicle
+í•„ë“œ : ì¢…ë¥˜, ìµœê³ ì†ë„
+ë©”ì„œë“œ : showInfo()
+@@@ì¸ë° ìµœê³  ì†ë„ê°€ @@@ë‹¤
+2) ìì‹
+í´ë˜ìŠ¤ Car
+ë©”ì„œë“œ driverCar()
+@@@@ì¸ë° ìµœê³ ì†ë„ê°€ @@@ë‹¤
+íƒ€ëŠ” ì‚¬ëŒì€ @@@@ëª…ì´ë‹¤.
 */
 
 class Vehicle{
 	public String kind;
 	public int maxVel;
-	Vehicle(){}  // ÇÊ¼ö..
+	Vehicle(){}  // í•„ìˆ˜..
 	Vehicle(String kind, int maxVel){
 		this.kind = kind;
 		this.maxVel = maxVel;
 	}
 	public void showInfo(){
-		System.out.println(kind+"ÀÎµ¥ ÃÖ°í¼Óµµ´Â "+ maxVel+ "mph ÀÔ´Ï´Ù.");
+		System.out.println(kind+"ì¸ë° ìµœê³ ì†ë„ëŠ” "+ maxVel+ "mph ì…ë‹ˆë‹¤.");
 	}
 }
 class Car02 extends Vehicle{
@@ -36,7 +36,7 @@ class Car02 extends Vehicle{
 	}
 	public void driverCar(){
 		super.showInfo();
-		System.out.println("Å¸´Â »ç¶÷Àº " + riders + "¸í ÀÔ´Ï´Ù.");
+		System.out.println("íƒ€ëŠ” ì‚¬ëŒì€ " + riders + "ëª… ì…ë‹ˆë‹¤.");
 	}
 	
 }
@@ -46,9 +46,9 @@ public class HW_Apr21_Vehicle {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Vehicle v01 = new Vehicle("º¥Ã÷", 180);
+		Vehicle v01 = new Vehicle("ë²¤ì¸ ", 180);
 		v01.showInfo();
-		Car02 c02 = new Car02("¹Ù¸£¸¶Èå", 190, 6);
+		Car02 c02 = new Car02("ë°”ë¥´ë§ˆí", 190, 6);
 		c02.driverCar();
 	}
 

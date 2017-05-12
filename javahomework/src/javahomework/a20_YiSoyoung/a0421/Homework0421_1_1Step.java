@@ -1,25 +1,25 @@
 package javahomework.a20_YiSoyoung.a0421;
 
-/* 1´Ü°è : 
- * 	-¸ÀÀÖ´Â À½½ÄÁ¡¿¡ °¡¼­ (Å¬·¡½º »ı¼º)
- *      orderFood(°¡º¯ÀÎÀÚÃ³¸®)
- *  - Ãâ·Â³»¿ë
- *  	ÁÖ¹®ÇÏ½ÅÀ½½ÄÀº : @@
- *  	ÁÖ¹®ÇÏ½ÅÀ½½ÄÀº : @@ °¡º¯Ã³¸®
- *  2´Ü°è
- *   - °¡°ÔÀÌ¸§À» »ı¼ºÀÚ·Î ÀÔ·Â¹Ş°Ô Ã³¸®
- *   - orderFood¸¦ ÅëÇØ¼­ ÁÖ¹®µÈ À½½ÄÀÇ Á¾·ù¿¡ µû¶ó ¸ÅÇÎµÇ¾î ÀÖ´Â °¡°İÀ» °è»êÇØ¼­ °è»ê¼­
- *   	±îÁö Ãâ·ÂÃ³¸®
+/* 1ë‹¨ê³„ : 
+ * 	-ë§›ìˆëŠ” ìŒì‹ì ì— ê°€ì„œ (í´ë˜ìŠ¤ ìƒì„±)
+ *      orderFood(ê°€ë³€ì¸ìì²˜ë¦¬)
+ *  - ì¶œë ¥ë‚´ìš©
+ *  	ì£¼ë¬¸í•˜ì‹ ìŒì‹ì€ : @@
+ *  	ì£¼ë¬¸í•˜ì‹ ìŒì‹ì€ : @@ ê°€ë³€ì²˜ë¦¬
+ *  2ë‹¨ê³„
+ *   - ê°€ê²Œì´ë¦„ì„ ìƒì„±ìë¡œ ì…ë ¥ë°›ê²Œ ì²˜ë¦¬
+ *   - orderFoodë¥¼ í†µí•´ì„œ ì£¼ë¬¸ëœ ìŒì‹ì˜ ì¢…ë¥˜ì— ë”°ë¼ ë§¤í•‘ë˜ì–´ ìˆëŠ” ê°€ê²©ì„ ê³„ì‚°í•´ì„œ ê³„ì‚°ì„œ
+ *   	ê¹Œì§€ ì¶œë ¥ì²˜ë¦¬
  * */
 class Restaurant{
 	public void orderFood(String ...foods){
 		for(String food : foods)
-			System.out.println("ÁÖ¹®ÇÏ½Å À½½ÄÀº " + food);
+			System.out.println("ì£¼ë¬¸í•˜ì‹  ìŒì‹ì€ " + food);
 	}
 }
 public class Homework0421_1_1Step {
 	public static void main(String[] args) {
 		Restaurant restaurant = new Restaurant();
-		restaurant.orderFood("Â«»Í","Â¥Àå¸é");
+		restaurant.orderFood("ì§¬ë½•","ì§œì¥ë©´");
 	}
 }

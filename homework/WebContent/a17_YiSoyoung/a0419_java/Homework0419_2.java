@@ -1,6 +1,6 @@
 package javaexp.a06_object;
-/* È®ÀÎ¿¹Á¦
- * Mart Å¬·¡½º - ¹°°Ç¸í, ´Ü°¡, °¹¼ö, cart()
+/* í™•ì¸ì˜ˆì œ
+ * Mart í´ë˜ìŠ¤ - ë¬¼ê±´ëª…, ë‹¨ê°€, ê°¯ìˆ˜, cart()
  * */
 class Mart{
 	private String name;
@@ -15,16 +15,16 @@ class Mart{
 		return unitPrice*ps;
 	}
 	private void calcu(){
-		System.out.println("¹°°Ç¸í : "+name + "\t´Ü°¡ : "+unitPrice+"\t°¹¼ö : "+ps);
+		System.out.println("ë¬¼ê±´ëª… : "+name + "\të‹¨ê°€ : "+unitPrice+"\tê°¯ìˆ˜ : "+ps);
 	}
 }
 public class Homework0419_2 {
 	public static void main(String[] args) {
 		int money = 0;
 		Mart homeplus = new Mart();
-		money += homeplus.cart("»õ¿ì±ø", 1000, 2);
-		money += homeplus.cart("¸À³­¿ìÀ¯", 5000, 2);
-		System.out.println("¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á");
-		System.out.println(" ¸¶Æ®¼­ ¾´ µ·ÀÌ ÃÑ "+money+"¿øÀÔ´Ï´Ù");
+		money += homeplus.cart("ìƒˆìš°ê¹¡", 1000, 2);
+		money += homeplus.cart("ë§›ë‚œìš°ìœ ", 5000, 2);
+		System.out.println("â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– ");
+		System.out.println(" ë§ˆíŠ¸ì„œ ì“´ ëˆì´ ì´ "+money+"ì›ì…ë‹ˆë‹¤");
 	}
 }

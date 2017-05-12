@@ -15,8 +15,8 @@ public class CheifMember {
 		HeadMember h01 = new HeadMember();
 		StaffMember s01 = new StaffMember();
 
-//		System.out.println(c01.projectConsult); //defaultÁ¢±ÙÁ¦¾îÀÚ. : °°Àº ÆĞÅ°Áö±îÁö¸¸
-//		System.out.println(h01.familyBDdate); // private Á¢±ÙÁ¦¾îÀÚ. : °°Àº Å¬·¡½º¿¡¸¸.
+//		System.out.println(c01.projectConsult); //defaultì ‘ê·¼ì œì–´ì. : ê°™ì€ íŒ¨í‚¤ì§€ê¹Œì§€ë§Œ
+//		System.out.println(h01.familyBDdate); // private ì ‘ê·¼ì œì–´ì. : ê°™ì€ í´ë˜ìŠ¤ì—ë§Œ.
 		System.out.println(s01.marriageDate);
 		s01.checkOthers();
 		

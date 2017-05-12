@@ -1,26 +1,26 @@
 package javahomework.a04_KimDongBeom;
 
 /*
-	»ı¼ºÀÚ1 : °èÁ¤¸í
-	»ı¼ºÀÚ2 : ¤¤
+	ìƒì„±ì1 : ê³„ì •ëª…
+	ìƒì„±ì2 : ã„´
 */
 
 class Account{
-	String aname;			// °èÁ¤¸í
-	int ioMoney;			// ÀÔÃâ±İ¾×
-	int totMoney;			// ÃÑÀÜ¾×
-	String date;			// ³¯Â¥
-	String content;			// ³»¿ë
+	String aname;			// ê³„ì •ëª…
+	int ioMoney;			// ì…ì¶œê¸ˆì•¡
+	int totMoney;			// ì´ì”ì•¡
+	String date;			// ë‚ ì§œ
+	String content;			// ë‚´ìš©
 	String printf;
 	
 	Account(String aname){
 		this.aname = aname;
-		this.printf = aname+" ´ÔÀÇ ÀÜ¾×\n³¯Â¥\tÀÔÃâ±İ¾×\tÀÜ¾×\t³»¿ë\n";
+		this.printf = aname+" ë‹˜ì˜ ì”ì•¡\në‚ ì§œ\tì…ì¶œê¸ˆì•¡\tì”ì•¡\të‚´ìš©\n";
 	}
 	Account(String aname, int totMoney){
 		this.aname = aname;
 		this.totMoney = totMoney;
-		this.printf = aname+" ´ÔÀÇ ÀÜ¾×\n³¯Â¥\tÀÔÃâ±İ¾×\tÀÜ¾×\t³»¿ë\n";
+		this.printf = aname+" ë‹˜ì˜ ì”ì•¡\në‚ ì§œ\tì…ì¶œê¸ˆì•¡\tì”ì•¡\të‚´ìš©\n";
 	}
 	int save(int ioMoney, String content, String date){
 		this.totMoney += ioMoney;
@@ -46,11 +46,11 @@ public class A0419_Account {
 		Account a1 = new Account("ABC");
 		Account a2 = new Account("DEF",80000);
 		
-		a1.save(100000, "¿ëµ·", "2017/4/15");
-		a2.save(150000, "¿ëµ·", "2017/4/16");
+		a1.save(100000, "ìš©ëˆ", "2017/4/15");
+		a2.save(150000, "ìš©ëˆ", "2017/4/16");
 		
-		a1.withdraw(50000, "±³Àçºñ", "2017/4/15");
-		a2.withdraw(200000, "À¯Èïºñ", "2017/4/17");
+		a1.withdraw(50000, "êµì¬ë¹„", "2017/4/15");
+		a2.withdraw(200000, "ìœ í¥ë¹„", "2017/4/17");
 		
 		a1.print();
 		a2.print();

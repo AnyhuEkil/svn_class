@@ -5,8 +5,8 @@ public class HW_exp3 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		/*---------------------------------------------*/
-		// 3) while, math.random() ÀÌ¿ëÇÏ¿© ÁÖ»çÀ§ 2°³ ³ª¿À°í ÇÕÀÌ 5°¡ ¾Æ´Ï¸é °è¼Ó/5¸é Áß´Ü
-		// Ãâ·Â @@@,@@@ ÇÕ @@@
+		// 3) while, math.random() ì´ìš©í•˜ì—¬ ì£¼ì‚¬ìœ„ 2ê°œ ë‚˜ì˜¤ê³  í•©ì´ 5ê°€ ì•„ë‹ˆë©´ ê³„ì†/5ë©´ ì¤‘ë‹¨
+		// ì¶œë ¥ @@@,@@@ í•© @@@
 		
 	
 		while(true){
@@ -16,10 +16,10 @@ public class HW_exp3 {
 			
 			if(diceSum!=5){
 				System.out.println(dice01+" + "+dice02+" = "+diceSum);
-				System.out.println(" ÇÕÀÌ 5°¡ ¾Æ´Ï¹Ç·Î °è¼Ó ½ÇÇà ");
+				System.out.println(" í•©ì´ 5ê°€ ì•„ë‹ˆë¯€ë¡œ ê³„ì† ì‹¤í–‰ ");
 			}else{
 				System.out.println(dice01+" + "+dice02+" = "+diceSum);				
-				System.out.println(" ÇÕÀÌ 5ÀÌ¹Ç·Î Á¾·á ");
+				System.out.println(" í•©ì´ 5ì´ë¯€ë¡œ ì¢…ë£Œ ");
 				break;
 			}
 		}

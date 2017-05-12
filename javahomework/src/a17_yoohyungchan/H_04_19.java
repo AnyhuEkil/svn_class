@@ -2,14 +2,14 @@ package a17_yoohyungchan;
 
 
 
-// ÀºÇà 1´Ü°è
+// ì€í–‰ 1ë‹¨ê³„
 class Account {
 	String name;
 	int account;
 	int inputMoney;
 	int outputMoney;
 	int sum;
-	static int tot = 10000000; //±ÇÀåÇÏÁö ¾Ê´Â ¹æ¹ı..
+	static int tot = 10000000; //ê¶Œì¥í•˜ì§€ ì•ŠëŠ” ë°©ë²•..
 	
 	Account(String name, int account){
 		this.name = name;
@@ -29,13 +29,13 @@ class Account {
 	}
 	
 	void currentMoney(){
-		System.out.println(name+"´Ô  "+inputMoney+"¿ø ÀÔ±İ" );		
-		System.out.println(name+"´Ô  "+outputMoney+"¿ø Ãâ±İ" );		
-		System.out.println(name+"´Ô °èÁÂ¹øÈ£ : "+account+"  ÀÜ¾× : "+tot+"¿ø");		
+		System.out.println(name+"ë‹˜  "+inputMoney+"ì› ì…ê¸ˆ" );		
+		System.out.println(name+"ë‹˜  "+outputMoney+"ì› ì¶œê¸ˆ" );		
+		System.out.println(name+"ë‹˜ ê³„ì¢Œë²ˆí˜¸ : "+account+"  ì”ì•¡ : "+tot+"ì›");		
 	}
 }
 
-//ÀÚ±â¼Ò°³ 1´Ü°è
+//ìê¸°ì†Œê°œ 1ë‹¨ê³„
 class Introduce{
 	String name;
 	String address;
@@ -52,7 +52,7 @@ class Introduce{
 	}
 	
 	void introMyself(){
-		System.out.println("³»ÀÌ¸§Àº "+name+"ÀÌ°í, ³ªÀÌ´Â "+age+"ÀÌ¸ç, »ç´Â °÷Àº "+address+"ÀÔ´Ï´Ù.");
+		System.out.println("ë‚´ì´ë¦„ì€ "+name+"ì´ê³ , ë‚˜ì´ëŠ” "+age+"ì´ë©°, ì‚¬ëŠ” ê³³ì€ "+address+"ì…ë‹ˆë‹¤.");
 	}
 }
 
@@ -66,7 +66,7 @@ class AccountVer2{
 		this.accountName = accountName;
 		this.accountMum = accountMum;
 		AccountVer2.tot = tot;
-		System.out.println("¿¹±İÁÖ : "+accountName+"\n°èÁÂ¹øÈ£ :"+accountMum);
+		System.out.println("ì˜ˆê¸ˆì£¼ : "+accountName+"\nê³„ì¢Œë²ˆí˜¸ :"+accountMum);
 	}
 	
 	int save(int inputMoney, String inputWhy, String inputDate){
@@ -83,7 +83,7 @@ class AccountVer2{
 	
 	void print(){
 		System.out.println(show);
-		System.out.println("ÀÜ¾× : "+tot);
+		System.out.println("ì”ì•¡ : "+tot);
 		
 	}
 }
@@ -93,22 +93,22 @@ public class H_04_19 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		// ÀºÇà 1´Ü°è
-		Account a1 = new Account("À¯ÇüÂù", 11099999);
+		// ì€í–‰ 1ë‹¨ê³„
+		Account a1 = new Account("ìœ í˜•ì°¬", 11099999);
 		a1.input(50000);
 		a1.output(90000);
 		a1.currentMoney();
 		
-		// ÀÚ±â¼Ò°³ 1´Ü°è
-		Introduce i1 = new Introduce("À¯ÇüÂù");
-		i1.inputData("ºĞ´ç", 26);
+		// ìê¸°ì†Œê°œ 1ë‹¨ê³„
+		Introduce i1 = new Introduce("ìœ í˜•ì°¬");
+		i1.inputData("ë¶„ë‹¹", 26);
 		i1.introMyself();
 		
-		// ÀºÇà 2´Ü°è
+		// ì€í–‰ 2ë‹¨ê³„
 		
-		AccountVer2 a2 = new AccountVer2("À¯ÇüÂù",123456, 999999999);
-		a2.save(100000,"¿ëµ·","17/04/19");
-		a2.withdraw(20000, "¹ä", "17/04/19");
+		AccountVer2 a2 = new AccountVer2("ìœ í˜•ì°¬",123456, 999999999);
+		a2.save(100000,"ìš©ëˆ","17/04/19");
+		a2.withdraw(20000, "ë°¥", "17/04/19");
 		a2.print();
 		
 	}

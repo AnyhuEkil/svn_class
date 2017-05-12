@@ -17,10 +17,10 @@ class Account01{
 	Account01(String aName, int tot){
 		this.aName=aName;
 		this.tot=tot;
-		System.out.println(aName+" °èÁÂÀÔ´Ï´Ù.");
-		System.out.println("Çö ÅëÀåÀÜ°í´Â "+tot+"¿øÀÔ´Ï´Ù.");
-		System.out.println("³¯Â¥\t\tÃâÀÔ±İ\t\t³»¿ë\t\tÀÜ°í");
-		System.out.println("2017/01/01\t+"+tot+"\t\tÃÖÃÊ°¡ÀÔ\t\t"+tot);
+		System.out.println(aName+" ê³„ì¢Œì…ë‹ˆë‹¤.");
+		System.out.println("í˜„ í†µì¥ì”ê³ ëŠ” "+tot+"ì›ì…ë‹ˆë‹¤.");
+		System.out.println("ë‚ ì§œ\t\tì¶œì…ê¸ˆ\t\të‚´ìš©\t\tì”ê³ ");
+		System.out.println("2017/01/01\t+"+tot+"\t\tìµœì´ˆê°€ì…\t\t"+tot);
 	}
 	
 	int withdraw(int money, String body, String date){
@@ -53,14 +53,14 @@ public class A20170419_hw3 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Account01 a1 = new Account01("KB±¹¹ÎÇàº¹ÀúÃàÅëÀå",100000);
-		a1.withdraw(5000,"´ã¹è","2017/02/15");
+		Account01 a1 = new Account01("KBêµ­ë¯¼í–‰ë³µì €ì¶•í†µì¥",100000);
+		a1.withdraw(5000,"ë‹´ë°°","2017/02/15");
 		a1.print();
 		
-		a1.withdraw(10000,"¸ÆÁÖ","2017/02/27");
+		a1.withdraw(10000,"ë§¥ì£¼","2017/02/27");
 		a1.print();
 		
-		a1.deposit(500000, "»ıÀÏ°İ·Á±İ", "2017/04/17");
+		a1.deposit(500000, "ìƒì¼ê²©ë ¤ê¸ˆ", "2017/04/17");
 		a1.print();
 		
 		

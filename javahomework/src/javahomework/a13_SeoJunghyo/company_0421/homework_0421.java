@@ -1,17 +1,17 @@
-/* javaexp.a06_object.access¿¡ company ÆĞÅ°Áö »ı¼º
-	manager(ÃÑ¹«ºÎ) package »ı¼º
-		1) class headManger(ºÎÀå)
-			- ºÎÀåÁ¤º¸
-			- °¡Á·»ıÀÏ(°³ÀÎÁ¤º¸) - private
-		2) class ChiefMember(°úÀå)
-			- ÃÑ¹«ºÎ±âÈ¹¼­(ÆĞÅ°Áö ³»¿¡¼­¸¸ Á¤º¸È®ÀÎ)
-			- ºÎÀåÁ¤º¸ È®ÀÎ
-		3) class StaffMember(»ç¿ø)
-			- Àå°¡ - °øÁö»çÇ× Á¤º¸
-			- °úÀåÁ¤º¸È®ÀÎ
+/* javaexp.a06_object.accessì— company íŒ¨í‚¤ì§€ ìƒì„±
+	manager(ì´ë¬´ë¶€) package ìƒì„±
+		1) class headManger(ë¶€ì¥)
+			- ë¶€ì¥ì •ë³´
+			- ê°€ì¡±ìƒì¼(ê°œì¸ì •ë³´) - private
+		2) class ChiefMember(ê³¼ì¥)
+			- ì´ë¬´ë¶€ê¸°íšì„œ(íŒ¨í‚¤ì§€ ë‚´ì—ì„œë§Œ ì •ë³´í™•ì¸)
+			- ë¶€ì¥ì •ë³´ í™•ì¸
+		3) class StaffMember(ì‚¬ì›)
+			- ì¥ê°€ - ê³µì§€ì‚¬í•­ ì •ë³´
+			- ê³¼ì¥ì •ë³´í™•ì¸
 			
-	personnel(ÀÎ»çºÎ) package »ı¼º
-		1) ChiefMember(°úÀå) - ÇØ´ç Á¢±ÙÁ¦¾îÀÚ¿¡ µû¶ó Á¢±Ù ¿©ºÎ¸¦ È®ÀÎ
+	personnel(ì¸ì‚¬ë¶€) package ìƒì„±
+		1) ChiefMember(ê³¼ì¥) - í•´ë‹¹ ì ‘ê·¼ì œì–´ìì— ë”°ë¼ ì ‘ê·¼ ì—¬ë¶€ë¥¼ í™•ì¸
 */
 package javahomework.a13_SeoJunghyo.company_0421;
 

@@ -1,13 +1,13 @@
 package javahomework.a20_YiSoyoung.a0426;
-/* È®ÀÎ¿¹Á¦
- * 1´Ü°è - Audio Å¬·¡½º ±¸Çö main()¿¡¼­ È£Ãâ
- * 2´Ü°è(¼÷Á¦)
- 		- AttackWay ÀÎÅÍÆäÀÌ½º - Ãß»ó¸Ş¼Òµå attack()
- 		- RocketAttackÅ¬·¡½º ; AttackWay¸¦ ±¸Çö(»ó¼Ó°ú´Â ±¸º°ÇØ¼­ ¸¹Àº Ã¥ÀÌ Ç¥ÇöÇÕ´Ï´Ù)ÇÑ ½ÇÁ¦ Å¬·¡½º 
-				¸Ş¼Òµå : attack() ·ÎÄÏ °ø°İÇÏ´Ù
-		- Robot Å¬·¡½º ; 
-				ÇÊµå : attackWay
-				¸Ş¼­µå : showAttack(){attack();}
+/* í™•ì¸ì˜ˆì œ
+ * 1ë‹¨ê³„ - Audio í´ë˜ìŠ¤ êµ¬í˜„ main()ì—ì„œ í˜¸ì¶œ
+ * 2ë‹¨ê³„(ìˆ™ì œ)
+ 		- AttackWay ì¸í„°í˜ì´ìŠ¤ - ì¶”ìƒë©”ì†Œë“œ attack()
+ 		- RocketAttackí´ë˜ìŠ¤ ; AttackWayë¥¼ êµ¬í˜„(ìƒì†ê³¼ëŠ” êµ¬ë³„í•´ì„œ ë§ì€ ì±…ì´ í‘œí˜„í•©ë‹ˆë‹¤)í•œ ì‹¤ì œ í´ë˜ìŠ¤ 
+				ë©”ì†Œë“œ : attack() ë¡œì¼“ ê³µê²©í•˜ë‹¤
+		- Robot í´ë˜ìŠ¤ ; 
+				í•„ë“œ : attackWay
+				ë©”ì„œë“œ : showAttack(){attack();}
  * */
 interface AttackWay{
 	public void attack();
@@ -15,7 +15,7 @@ interface AttackWay{
 class RocketAttack implements AttackWay{
 	@Override
 	public void attack() {
-		System.out.println("·ÎÄÏ °ø°İÇÏ´Ù");	
+		System.out.println("ë¡œì¼“ ê³µê²©í•˜ë‹¤");	
 	}
 }
 class Robot{
@@ -24,7 +24,7 @@ class Robot{
 		rocketAttack = new RocketAttack();	
 	}
 	public void showAttack(){
-		System.out.print("·Îº¿ÀÌ ");
+		System.out.print("ë¡œë´‡ì´ ");
 		rocketAttack.attack();
 	}
 	public void setRocketAttack(RocketAttack rocketAttack) {

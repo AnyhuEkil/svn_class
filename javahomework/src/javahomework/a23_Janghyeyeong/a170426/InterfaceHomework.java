@@ -9,7 +9,7 @@ class RocketAttack implements AttackWay{
 	@Override
 	public void attack() {
 		// TODO Auto-generated method stub
-		System.out.println("·ÎÄÏ°ø°ÝÇÏ´Ù");
+		System.out.println("ë¡œì¼“ê³µê²©í•˜ë‹¤");
 	}
 }
 

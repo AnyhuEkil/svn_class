@@ -10,7 +10,7 @@ class Vehicle{
 	}
 	
 	void showInfo(){
-		System.out.println(kind+"´Â ÃÖ°í ¼Óµµ°¡ "+maxSpeed);
+		System.out.println(kind+"ëŠ” ìµœê³  ì†ë„ê°€ "+maxSpeed);
 	}
 	
 	
@@ -28,7 +28,7 @@ class Car extends Vehicle{
 	}
 	
 	void showInfo2(){
-		System.out.println("Å¸´Â »ç¶÷Àº "+person+" "+kind+"´Â ÃÖ°í ¼Óµµ°¡ "+maxSpeed);
+		System.out.println("íƒ€ëŠ” ì‚¬ëŒì€ "+person+" "+kind+"ëŠ” ìµœê³  ì†ë„ê°€ "+maxSpeed);
 	}
 	
 }
@@ -41,10 +41,10 @@ public class z99_homework0421 {
 		// TODO Auto-generated method stub
 		
 		Vehicle v1 = new Vehicle();
-		v1.setInfo("¹ö½º", 150);
+		v1.setInfo("ë²„ìŠ¤", 150);
 		v1.showInfo();
 		Car c1= new Car();
-		c1.setInfo2("¾ÆÀç", "Â÷", 200);
+		c1.setInfo2("ì•„ì¬", "ì°¨", 200);
 		c1.showInfo2();
 		
 		

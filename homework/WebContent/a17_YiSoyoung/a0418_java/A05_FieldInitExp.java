@@ -1,17 +1,17 @@
 package javaexp.a06_object;
-/* È®ÀÎ¿¹Á¦
- * BaseballTeam °´Ã¼ Å¬·¡½º ÆÀ¸í, ½Â, ¹«, ÆĞ, ½Â·ü
- * Ãâ·Â ÇüÅÂ
- * @@@ÆÀ, @@½Â, @@¹«, @@ÆĞ, ½Â·ü @@@
- * ÀÔ·Â°ªÀÌ ¾ø´Â »ı¼ºÀÚ¸¦ ÅëÇØ Ãâ·Â
- * field°ªÀ» Ã³¸®ÇÑ »ı¼ºÀÚ¸¦ ÅëÇØ ÃÊ±â µ¥ÀÌÅÍ ¼³Á¤
+/* í™•ì¸ì˜ˆì œ
+ * BaseballTeam ê°ì²´ í´ë˜ìŠ¤ íŒ€ëª…, ìŠ¹, ë¬´, íŒ¨, ìŠ¹ë¥ 
+ * ì¶œë ¥ í˜•íƒœ
+ * @@@íŒ€, @@ìŠ¹, @@ë¬´, @@íŒ¨, ìŠ¹ë¥  @@@
+ * ì…ë ¥ê°’ì´ ì—†ëŠ” ìƒì„±ìë¥¼ í†µí•´ ì¶œë ¥
+ * fieldê°’ì„ ì²˜ë¦¬í•œ ìƒì„±ìë¥¼ í†µí•´ ì´ˆê¸° ë°ì´í„° ì„¤ì •
  * */
 class BaseballTeam{
 	private String teamName;
-	private int win; 	//½Â
-	private int tie;	//¹«
-	private int loss;	//ÆĞ
-	private double winRate; //½Â·ü
+	private int win; 	//ìŠ¹
+	private int tie;	//ë¬´
+	private int loss;	//íŒ¨
+	private double winRate; //ìŠ¹ë¥ 
 	public BaseballTeam(){	}
 	public BaseballTeam(String teamName,int win,int tie,int loss){
 		this.teamName = teamName;
@@ -23,21 +23,21 @@ class BaseballTeam{
 	@Override
 	public String toString() {
 		String temp;
-		temp = teamName +"ÆÀ,\t"+win+"½Â,\t"+tie+"¹«,\t"+loss+"ÆĞ,\t½Â·ü "+winRate;
+		temp = teamName +"íŒ€,\t"+win+"ìŠ¹,\t"+tie+"ë¬´,\t"+loss+"íŒ¨,\tìŠ¹ë¥  "+winRate;
 		return temp;
 	}
 }
 public class A05_FieldInitExp {
 	public static void main(String[] args) {
 		BaseballTeam hanwha = new BaseballTeam();
-		BaseballTeam dusan = new BaseballTeam("µÎ»ê",9,0,0);
+		BaseballTeam dusan = new BaseballTeam("ë‘ì‚°",9,0,0);
 		System.out.println(hanwha);
 		System.out.println(dusan);
-		// °´Ã¼¹è¿­µµ ÀÌ¿ëÇØ º¸ÀÚ
-		System.out.println("¡Ú ¡Ú ¡Ú ¾Æ·¡´Â °´Ã¼ ¹è¿­·Î Ã³¸®ÇÔ ¡Ú ¡Ú ¡Ú");
+		// ê°ì²´ë°°ì—´ë„ ì´ìš©í•´ ë³´ì
+		System.out.println("â˜… â˜… â˜… ì•„ë˜ëŠ” ê°ì²´ ë°°ì—´ë¡œ ì²˜ë¦¬í•¨ â˜… â˜… â˜…");
 		BaseballTeam[] teams = new BaseballTeam[2];
 		teams[0] = new BaseballTeam();
-		teams[1] = new BaseballTeam("µÎ»ê",9,0,0);
+		teams[1] = new BaseballTeam("ë‘ì‚°",9,0,0);
 		for(BaseballTeam t : teams)
 			System.out.println(t);
 	}

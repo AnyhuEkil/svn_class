@@ -4,53 +4,53 @@ package javaexp_00;
 //import java.io.Console;
 import java.io.IOException;
 
-//@SuppressWarnings("unused") // java.util.Scanner;À» »ç¿ëÇŞ´õ´Ï »ı±è. °øºÎÇÒ°Ô ¸¹ÀÌ¼­ ÀÏ´ÜÀº ÆĞ½º.
+//@SuppressWarnings("unused") // java.util.Scanner;ì„ ì‚¬ìš©í–‡ë”ë‹ˆ ìƒê¹€. ê³µë¶€í• ê²Œ ë§ì´ì„œ ì¼ë‹¨ì€ íŒ¨ìŠ¤.
 public class HW_0412 {
 
 	public static void main(String[] args) throws IOException{
 		// TODO Auto-generated method stub
-		System.out.println("1. Á¶°Ç¹®°ú ¹İº¹¹®ÀÇ Á¾·ù¸¦ °ıÈ£ ¼Ó¿¡ ³Ö¾îº¸¼¼¿ä.");
-		System.out.println("´ä :Á¶°Ç¹® (if) (switch)\n ¹İº¹¹® (for) (while) (do while)");
-		//	1.	 Á¶°Ç¹® (if) (switch)
-		//		 ¹İº¹¹® (for) (while) (do while)
+		System.out.println("1. ì¡°ê±´ë¬¸ê³¼ ë°˜ë³µë¬¸ì˜ ì¢…ë¥˜ë¥¼ ê´„í˜¸ ì†ì— ë„£ì–´ë³´ì„¸ìš”.");
+		System.out.println("ë‹µ :ì¡°ê±´ë¬¸ (if) (switch)\n ë°˜ë³µë¬¸ (for) (while) (do while)");
+		//	1.	 ì¡°ê±´ë¬¸ (if) (switch)
+		//		 ë°˜ë³µë¬¸ (for) (while) (do while)
 		
-		//	2.	10~ 150±îÁö 5ÀÇ ¹è¼ö ÃÑÇÕ!
-		System.out.println("\n** ¿£ÅÍÅ°¸¦ ÀÔ·ÂÇÏ½Ã¸é ´ÙÀ½¹®Á¦°¡ Ãâ·ÂµË´Ï´Ù.");
+		//	2.	10~ 150ê¹Œì§€ 5ì˜ ë°°ìˆ˜ ì´í•©!
+		System.out.println("\n** ì—”í„°í‚¤ë¥¼ ì…ë ¥í•˜ì‹œë©´ ë‹¤ìŒë¬¸ì œê°€ ì¶œë ¥ë©ë‹ˆë‹¤.");
 		System.in.read();
 		System.in.read();
-		System.out.println("\n2. for¹®À» ÀÌ¿ëÇÏ¿© 10~150±îÁö Á¤¼ö Áß¿¡ 5ÀÇ ¹è¼öÀÇ ÃÑÇÕÀ» ±¸ÇÏ´Â ÄÚµå¸¦ ÀÛ¼ºÇÏ¼¼¿ä.");
+		System.out.println("\n2. forë¬¸ì„ ì´ìš©í•˜ì—¬ 10~150ê¹Œì§€ ì •ìˆ˜ ì¤‘ì— 5ì˜ ë°°ìˆ˜ì˜ ì´í•©ì„ êµ¬í•˜ëŠ” ì½”ë“œë¥¼ ì‘ì„±í•˜ì„¸ìš”.");
 		int sumNum = 0;
 		for(int idx=10;idx<=150;idx++){
 			if(idx%5==0){
 			sumNum += idx;
 			}
 		}
-		System.out.println("´ä : 10~150Áß 5¹è¼ö ÃÑÇÕ: "+sumNum);
+		System.out.println("ë‹µ : 10~150ì¤‘ 5ë°°ìˆ˜ ì´í•©: "+sumNum);
 		
-		//	2.2³ªÈ¥ÀÚ ¹®Á¦.
+		//	2.2ë‚˜í˜¼ì ë¬¸ì œ.
 		int startNum = 10;
 		int endNum = 150;
-/* 1±ÛÀÚ¸¸ ¹Ş¾ÆÁ®¼­ ´Ù¸¥¹æ¹ı ¸ğ»ö
-		System.out.println("\n2.2 10~ 150 ´ë½Å¿¡ ÀÔ·ÂÃ¢À¸·Î ¹Ş°Ú½À´Ï´Ù.");
-		System.out.println("Ã¹¹øÂ° ¼ıÀÚ¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä");
+/* 1ê¸€ìë§Œ ë°›ì•„ì ¸ì„œ ë‹¤ë¥¸ë°©ë²• ëª¨ìƒ‰
+		System.out.println("\n2.2 10~ 150 ëŒ€ì‹ ì— ì…ë ¥ì°½ìœ¼ë¡œ ë°›ê² ìŠµë‹ˆë‹¤.");
+		System.out.println("ì²«ë²ˆì§¸ ìˆ«ìë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš”");
 		startNum = (int)System.in.read();
-		System.out.println("Ã¹¹øÂ° ÀÔ·ÂÇÑ ¼ıÀÚ´Â : "+startNum);
-		System.out.println("µÎ¹øÂ° ¼ıÀÚ¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä");
+		System.out.println("ì²«ë²ˆì§¸ ì…ë ¥í•œ ìˆ«ìëŠ” : "+startNum);
+		System.out.println("ë‘ë²ˆì§¸ ìˆ«ìë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš”");
 		endNum = (int)System.in.read();
-		System.out.println("µÎ¹øÂ° ÀÔ·ÂÇÑ ¼ıÀÚ´Â : "+endNum);
+		System.out.println("ë‘ë²ˆì§¸ ì…ë ¥í•œ ìˆ«ìëŠ” : "+endNum);
  */
-/*	scaner?¸¦ ÇØºÃÁö¸¸ ¿À·ù ÇØ°áÇÏ±â¿¡ ½Ã°£ÀÌ ³Ê¹« °É·Á¼­ ´ÙÀ½¿¡ ÇØ°áÇÏ±â·ÎÇÔ.
+/*	scaner?ë¥¼ í•´ë´¤ì§€ë§Œ ì˜¤ë¥˜ í•´ê²°í•˜ê¸°ì— ì‹œê°„ì´ ë„ˆë¬´ ê±¸ë ¤ì„œ ë‹¤ìŒì— í•´ê²°í•˜ê¸°ë¡œí•¨.
 		Console console = System.console();
 		String s = console.readLine();
 		int i = Integer.parseInt(console.readLine());
 
 		
-		System.out.println("Ã¹¹øÂ° ¼ıÀÚ¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä");
+		System.out.println("ì²«ë²ˆì§¸ ìˆ«ìë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš”");
 		startNum = (int)System.in.read();
-		System.out.println("Ã¹¹øÂ° ÀÔ·ÂÇÑ ¼ıÀÚ´Â : "+startNum);
-		System.out.println("µÎ¹øÂ° ¼ıÀÚ¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä");
+		System.out.println("ì²«ë²ˆì§¸ ì…ë ¥í•œ ìˆ«ìëŠ” : "+startNum);
+		System.out.println("ë‘ë²ˆì§¸ ìˆ«ìë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš”");
 		endNum = (int)System.in.read();
-		System.out.println("µÎ¹øÂ° ÀÔ·ÂÇÑ ¼ıÀÚ´Â : "+endNum);
+		System.out.println("ë‘ë²ˆì§¸ ì…ë ¥í•œ ìˆ«ìëŠ” : "+endNum);
 */
 		sumNum = 0;
 		for(int idx=startNum;idx<=endNum;idx++){
@@ -58,29 +58,29 @@ public class HW_0412 {
 			sumNum += idx;
 			}
 		}
-		System.out.println("´ä : 10~150Áß 5¹è¼ö ÃÑÇÕ: "+sumNum);
+		System.out.println("ë‹µ : 10~150ì¤‘ 5ë°°ìˆ˜ ì´í•©: "+sumNum);
 		
-		System.out.println("\n** ¿£ÅÍÅ°¸¦ ÀÔ·ÂÇÏ½Ã¸é ´ÙÀ½¹®Á¦°¡ Ãâ·ÂµË´Ï´Ù.");
+		System.out.println("\n** ì—”í„°í‚¤ë¥¼ ì…ë ¥í•˜ì‹œë©´ ë‹¤ìŒë¬¸ì œê°€ ì¶œë ¥ë©ë‹ˆë‹¤.");
 		System.in.read();
 		System.in.read();
-		// 3. while¹®À¸·Î ÁÖ»çÀ§ µÎ°³°ªÀÌ 5°¡ ³ª¿À±â Àü±îÁö °è¼Ó ±¼¸®±â
-		System.out.println("\n3. while¹®À¸·Î ÁÖ»çÀ§ µÎ°³°ªÀÌ 5°¡ ³ª¿À±â Àü±îÁö °è¼Ó ±¼¸®±â");
-		System.out.println("  À§ Á¶°Ç ´ë½Å¿¡, ÁÖ»çÀ§ µÎ°³ °ªÀÌ °°À»°æ¿ì·Î ¼³Á¤ÇÔ(5,5)°¡ ³Ê¹« ¾È³ª¿Í¼­...");
-		System.out.println("¢Ñ  [¿£ÅÍÅ°]: ÁÖ»çÀ§ ±¼¸®±â [0ÀÔ·Â]: Á¾·á ");
+		// 3. whileë¬¸ìœ¼ë¡œ ì£¼ì‚¬ìœ„ ë‘ê°œê°’ì´ 5ê°€ ë‚˜ì˜¤ê¸° ì „ê¹Œì§€ ê³„ì† êµ´ë¦¬ê¸°
+		System.out.println("\n3. whileë¬¸ìœ¼ë¡œ ì£¼ì‚¬ìœ„ ë‘ê°œê°’ì´ 5ê°€ ë‚˜ì˜¤ê¸° ì „ê¹Œì§€ ê³„ì† êµ´ë¦¬ê¸°");
+		System.out.println("  ìœ„ ì¡°ê±´ ëŒ€ì‹ ì—, ì£¼ì‚¬ìœ„ ë‘ê°œ ê°’ì´ ê°™ì„ê²½ìš°ë¡œ ì„¤ì •í•¨(5,5)ê°€ ë„ˆë¬´ ì•ˆë‚˜ì™€ì„œ...");
+		System.out.println("â˜  [ì—”í„°í‚¤]: ì£¼ì‚¬ìœ„ êµ´ë¦¬ê¸° [0ì…ë ¥]: ì¢…ë£Œ ");
 		String dice00 [] ={
-				"¦® ¦¬  ¦¬  ¦¬  ¦¯\n¦­                  ¦­\n¦­       ¡Ú        ¦­\n¦­                  ¦­\n¦± ¦¬  ¦¬  ¦¬  ¦° ",
-				"¦® ¦¬  ¦¬  ¦¬  ¦¯\n¦­  ¡Ú             ¦­\n¦­                  ¦­\n¦­             ¡Ú  ¦­\n¦± ¦¬  ¦¬  ¦¬  ¦° ",
-				"¦® ¦¬  ¦¬  ¦¬  ¦¯\n¦­  ¡Ú             ¦­\n¦­       ¡Ú        ¦­\n¦­             ¡Ú  ¦­\n¦± ¦¬  ¦¬  ¦¬  ¦° ",
-				"¦® ¦¬  ¦¬  ¦¬  ¦¯\n¦­  ¡Ú       ¡Ú  ¦­\n¦­                  ¦­\n¦­  ¡Ú       ¡Ú  ¦­\n¦± ¦¬  ¦¬  ¦¬  ¦° ",
-				"¦® ¦¬  ¦¬  ¦¬  ¦¯\n¦­  ¡Ú       ¡Ú  ¦­\n¦­       ¡Ú        ¦­\n¦­  ¡Ú       ¡Ú  ¦­\n¦± ¦¬  ¦¬  ¦¬  ¦° ",
-				"¦® ¦¬  ¦¬  ¦¬  ¦¯\n¦­  ¡Ú       ¡Ú  ¦­\n¦­  ¡Ú       ¡Ú  ¦­\n¦­  ¡Ú       ¡Ú  ¦­\n¦± ¦¬  ¦¬  ¦¬  ¦° "
+				"â” â”  â”  â”  â”“\nâ”ƒ                  â”ƒ\nâ”ƒ       â˜…        â”ƒ\nâ”ƒ                  â”ƒ\nâ”— â”  â”  â”  â”› ",
+				"â” â”  â”  â”  â”“\nâ”ƒ  â˜…             â”ƒ\nâ”ƒ                  â”ƒ\nâ”ƒ             â˜…  â”ƒ\nâ”— â”  â”  â”  â”› ",
+				"â” â”  â”  â”  â”“\nâ”ƒ  â˜…             â”ƒ\nâ”ƒ       â˜…        â”ƒ\nâ”ƒ             â˜…  â”ƒ\nâ”— â”  â”  â”  â”› ",
+				"â” â”  â”  â”  â”“\nâ”ƒ  â˜…       â˜…  â”ƒ\nâ”ƒ                  â”ƒ\nâ”ƒ  â˜…       â˜…  â”ƒ\nâ”— â”  â”  â”  â”› ",
+				"â” â”  â”  â”  â”“\nâ”ƒ  â˜…       â˜…  â”ƒ\nâ”ƒ       â˜…        â”ƒ\nâ”ƒ  â˜…       â˜…  â”ƒ\nâ”— â”  â”  â”  â”› ",
+				"â” â”  â”  â”  â”“\nâ”ƒ  â˜…       â˜…  â”ƒ\nâ”ƒ  â˜…       â˜…  â”ƒ\nâ”ƒ  â˜…       â˜…  â”ƒ\nâ”— â”  â”  â”  â”› "
 		};
 		int keyCode;
 		while(true){
 			keyCode=(int)System.in.read();
 			System.in.read();
 			if(keyCode==13){
-/*				ÄÜ¼ÖÃ¢¿¡¼­´Â ±¼·¯°¡´Â ¸ğ¾ç ±¸Çö¸øÇÔ.;; 
+/*				ì½˜ì†”ì°½ì—ì„œëŠ” êµ´ëŸ¬ê°€ëŠ” ëª¨ì–‘ êµ¬í˜„ëª»í•¨.;; 
  * 				int noR1 = (int)(Math.random()*6);
  *				int noR2 = (int)(Math.random()*6);
  *				System.out.println(dice00[noR1]);
@@ -91,34 +91,34 @@ public class HW_0412 {
 				int no2 = (int)(Math.random()*6);
 				System.out.println(dice00[no1]); 
 				System.out.println(dice00[no2]);
-				if(no1 == no2){ // 5,5°¡ ³Ê¹« ¾È³ª¿Í¼­ Á¶°Ç º¯°æ
+				if(no1 == no2){ // 5,5ê°€ ë„ˆë¬´ ì•ˆë‚˜ì™€ì„œ ì¡°ê±´ ë³€ê²½
 					System.out.println("****** CONGRATULATIONS ******");
-					System.out.println("°°Àº ¼ıÀÚ["+(no1+1)+"]°¡ ³ª¿Í¼­ °ÔÀÓÀ» Á¾·áÇÕ´Ï´Ù.");
+					System.out.println("ê°™ì€ ìˆ«ì["+(no1+1)+"]ê°€ ë‚˜ì™€ì„œ ê²Œì„ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 					System.out.println("****** CONGRATULATIONS ******");
 					break;
 				}else{
-					System.out.println("ÁÖ»çÀ§1:["+(no1+1)+"], ÁÖ»çÀ§2:["+(no2+1)+"], ÇÕ:["+(no1+no2+2)+"]ÀÔ´Ï´Ù");
+					System.out.println("ì£¼ì‚¬ìœ„1:["+(no1+1)+"], ì£¼ì‚¬ìœ„2:["+(no2+1)+"], í•©:["+(no1+no2+2)+"]ì…ë‹ˆë‹¤");
 				}
 			}else if(keyCode==48){
-				System.out.println("[0]ÀÌ ÀÔ·ÂµÇ¾î °ÔÀÓÀ» Á¾·áÇÕ´Ï´Ù!");
+				System.out.println("[0]ì´ ì…ë ¥ë˜ì–´ ê²Œì„ì„ ì¢…ë£Œí•©ë‹ˆë‹¤!");
 				break;
 			}
 		}
-		System.out.println("\n** ¿£ÅÍÅ°¸¦ ÀÔ·ÂÇÏ½Ã¸é ´ÙÀ½¹®Á¦°¡ Ãâ·ÂµË´Ï´Ù.");
+		System.out.println("\n** ì—”í„°í‚¤ë¥¼ ì…ë ¥í•˜ì‹œë©´ ë‹¤ìŒë¬¸ì œê°€ ì¶œë ¥ë©ë‹ˆë‹¤.");
 		System.in.read();
 		System.in.read();
 
 
-		System.out.println("\n4. ÀÌÁß for¹®À¸·Î ¹æÁ¤½Ä 4x+5y =60ÀÎ ¸ğµçÇØ¸¦ ±¸ÇÏ¶ó.\nx,y´Â 10ÀÌÇÏ Á¤¼ö.");
+		System.out.println("\n4. ì´ì¤‘ forë¬¸ìœ¼ë¡œ ë°©ì •ì‹ 4x+5y =60ì¸ ëª¨ë“ í•´ë¥¼ êµ¬í•˜ë¼.\nx,yëŠ” 10ì´í•˜ ì •ìˆ˜.");
 		int intX=0;
 		int intY=0;
-		/*		È¥ÀÚ ½ÇÇèÇØº½
+		/*		í˜¼ì ì‹¤í—˜í•´ë´„
 		intX=10;
 		intY=15;
 		for(int idx=0;idx<= (intX>=intY ? intX : intY);idx++){
 			System.out.println(idx);
 		}
-		System.out.println("\n** ¿£ÅÍÅ°¸¦ ÀÔ·ÂÇÏ½Ã¸é ´ÙÀ½¹®Á¦°¡ Ãâ·ÂµË´Ï´Ù.");
+		System.out.println("\n** ì—”í„°í‚¤ë¥¼ ì…ë ¥í•˜ì‹œë©´ ë‹¤ìŒë¬¸ì œê°€ ì¶œë ¥ë©ë‹ˆë‹¤.");
 		System.in.read();
 		System.in.read();
 */
@@ -127,30 +127,30 @@ public class HW_0412 {
 			for(intY=0;intY<=10;intY++){
 				if((4*intX)+(5*intY)==60){
 					cntFunction++;
-					System.out.println("- "+cntFunction+"¹øÂ° ÇØ [ x:"+intX+", y:"+intY+" ]");
+					System.out.println("- "+cntFunction+"ë²ˆì§¸ í•´ [ x:"+intX+", y:"+intY+" ]");
 				}
 			}
 		}
 		
-		System.out.println("ÃÑ "+cntFunction+"°³ÀÇ ÇØ°¡ ³ª¿Ô½À´Ï´Ù.\n\n¸ğµç ÇØ¸¦ ±¸ÇÏ¿´À¸¹Ç·Î, ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
-		System.out.println("\n** ¿£ÅÍÅ°¸¦ ÀÔ·ÂÇÏ½Ã¸é ´ÙÀ½¹®Á¦°¡ Ãâ·ÂµË´Ï´Ù.");
+		System.out.println("ì´ "+cntFunction+"ê°œì˜ í•´ê°€ ë‚˜ì™”ìŠµë‹ˆë‹¤.\n\nëª¨ë“  í•´ë¥¼ êµ¬í•˜ì˜€ìœ¼ë¯€ë¡œ, í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
+		System.out.println("\n** ì—”í„°í‚¤ë¥¼ ì…ë ¥í•˜ì‹œë©´ ë‹¤ìŒë¬¸ì œê°€ ì¶œë ¥ë©ë‹ˆë‹¤.");
 		System.in.read();
 		System.in.read();
 		
-		System.out.println("\n** ¸ğµç ¹®Á¦°¡ ³¡³µ½À´Ï´Ù. °¨»çÇÕ´Ï´Ù. **");
+		System.out.println("\n** ëª¨ë“  ë¬¸ì œê°€ ëë‚¬ìŠµë‹ˆë‹¤. ê°ì‚¬í•©ë‹ˆë‹¤. **");
 // 
-		/* ½ºÄ³³Ê¸¦ ¾²°Å³ª, ¹Ş¾ÆµéÀÎ °¢ Å°ÄÚµå °ªÀ» ´Ù½Ã ÄÉÀÌ½º¹®À» ÅëÇØ ¼³Á¤ÇØÁà¾ßµÊ.
-		 	µÉÁö ¾ÈµÉÁö ¸ğ¸£Áö¸¸ ÇØº¸°ÙÀ½.
+		/* ìŠ¤ìºë„ˆë¥¼ ì“°ê±°ë‚˜, ë°›ì•„ë“¤ì¸ ê° í‚¤ì½”ë“œ ê°’ì„ ë‹¤ì‹œ ì¼€ì´ìŠ¤ë¬¸ì„ í†µí•´ ì„¤ì •í•´ì¤˜ì•¼ë¨.
+		 	ë ì§€ ì•ˆë ì§€ ëª¨ë¥´ì§€ë§Œ í•´ë³´ê²ŸìŒ.
 		 */
 /*		int cnslInput = 0;
-		// ÇÔ¼ö ¼ÒÈ¯ÀÌ ¾ÈµÇ¼­ ÀÏ´Ü Á¢¾îµÒ.
+		// í•¨ìˆ˜ ì†Œí™˜ì´ ì•ˆë˜ì„œ ì¼ë‹¨ ì ‘ì–´ë‘ .
 		void ChangeVal(){
 			for (int idx=0;idx<=9;idx++){
 				cnslInput = x;
 			}
 		}
-		System.out.println("**** ³»¸¾´ë·Î ´Ù½Ã ¹®Á¦ º¯°æ ****");
-		System.out.println("4.2 Ax^2+Bx+C=y ¿Í Ax=CyÀÇ ÇØ¸¦ ±¸ÇÏ¶ó. A,B,CÀº 0~9ÀÇ ¼ıÀÚ·Î ÀÔ·Â¹Ş´Â´Ù.");
+		System.out.println("**** ë‚´ë§˜ëŒ€ë¡œ ë‹¤ì‹œ ë¬¸ì œ ë³€ê²½ ****");
+		System.out.println("4.2 Ax^2+Bx+C=y ì™€ Ax=Cyì˜ í•´ë¥¼ êµ¬í•˜ë¼. A,B,Cì€ 0~9ì˜ ìˆ«ìë¡œ ì…ë ¥ë°›ëŠ”ë‹¤.");
 		int A = 0;
 		int B = 0;
 		int C = 0;

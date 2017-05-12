@@ -1,7 +1,7 @@
 package javaexp.a06_object;
-/* È®ÀÎ¿¹Á¦
- * Class´Â ÁÁ¾ÆÇÏ´Â ¿¬¿¹ÀÎ
- * 	ÀÌ¸§, ¼ºº°, ºĞ¾ß, »ı¼ºÀÚµé
+/* í™•ì¸ì˜ˆì œ
+ * ClassëŠ” ì¢‹ì•„í•˜ëŠ” ì—°ì˜ˆì¸
+ * 	ì´ë¦„, ì„±ë³„, ë¶„ì•¼, ìƒì„±ìë“¤
  * */
 class Entertainer{
 	private static int cnt=0;
@@ -10,13 +10,13 @@ class Entertainer{
 	private char gender;
 	private String kind;
 	public Entertainer(){
-		this("¹Ú¹Ì°æ", 'f',"°¡¼ö");
+		this("ë°•ë¯¸ê²½", 'f',"ê°€ìˆ˜");
 	}
 	public Entertainer(String name){
-		this(name, 'f',"°¡¼ö");
+		this(name, 'f',"ê°€ìˆ˜");
 	}
 	public Entertainer(String name, char gender){
-		this(name, gender, "°¡¼ö");
+		this(name, gender, "ê°€ìˆ˜");
 	}
 	public Entertainer(String name, char gender, String kind){
 		no = ++cnt;
@@ -35,9 +35,9 @@ public class Homework0419_1 {
 	public static void main(String[] args) {
 		Entertainer[] entertainers = new Entertainer[4];
 		entertainers[0] = new Entertainer();
-		entertainers[1] = new Entertainer("ÇÏ´Ï");
-		entertainers[2] = new Entertainer("±è°Ç¸ğ");
-		entertainers[3] = new Entertainer("Á¤ÁØ¿µ",'m',"¹è¿ì");
+		entertainers[1] = new Entertainer("í•˜ë‹ˆ");
+		entertainers[2] = new Entertainer("ê¹€ê±´ëª¨");
+		entertainers[3] = new Entertainer("ì •ì¤€ì˜",'m',"ë°°ìš°");
 		for(Entertainer entertainer: entertainers)
 			System.out.println(entertainer);
 	}

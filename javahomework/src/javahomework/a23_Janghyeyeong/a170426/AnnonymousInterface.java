@@ -1,27 +1,27 @@
 package javahomework.a23_Janghyeyeong.a170426;
 /*
-ÀÚÆÇ±â (ÀÎÅÍÆäÀÌ½º)
-Ãß»ó¸Ş¼­µå
-display();	@@@@À» ÆÇ¸ÅÇÏ´Â ÀÚÆÇ±â
-menu(); 	1. @@ : @@@@¿ø¡¦.
-°øÅë¸Ş¼­µå
-insertCoin(ÀÔ·Â°ª) @@@ ¿øÀÌ ÀÔ·ÂµÇ¾ú½À´Ï´Ù.
-choiceMenu(¹øÈ£³ª ¹®ÀÚ¿­)
-outProduct() @@@ÀÌ ³ª¿É´Ï´Ù. ÀÜ¾×Àº @@@ÀÔ´Ï´Ù.
+ìíŒê¸° (ì¸í„°í˜ì´ìŠ¤)
+ì¶”ìƒë©”ì„œë“œ
+display();	@@@@ì„ íŒë§¤í•˜ëŠ” ìíŒê¸°
+menu(); 	1. @@ : @@@@ì›â€¦.
+ê³µí†µë©”ì„œë“œ
+insertCoin(ì…ë ¥ê°’) @@@ ì›ì´ ì…ë ¥ë˜ì—ˆìŠµë‹ˆë‹¤.
+choiceMenu(ë²ˆí˜¸ë‚˜ ë¬¸ìì—´)
+outProduct() @@@ì´ ë‚˜ì˜µë‹ˆë‹¤. ì”ì•¡ì€ @@@ì…ë‹ˆë‹¤.
 */
 interface VendingMachine{
-	String NAMES[] = {"¾Æ¸Ş¸®Ä«³ë","Ä¼¶ó¸á¸¶³¢¾Æ¶Ç","Ä«Æä¶ó¶¼","¾ÆÆ÷°¡Åä"};
+	String NAMES[] = {"ì•„ë©”ë¦¬ì¹´ë…¸","ìº¬ë¼ë©œë§ˆë¼ì•„ë˜","ì¹´í˜ë¼ë–¼","ì•„í¬ê°€í† "};
 	int PRICE[] ={2000,3000,4000,5000};
 	
 	public void display();
 	public void menu();
 	default void outProduct(int insertCoin, int choiceMenu){
-		System.out.println(insertCoin+"¿øÀÌ ÀÔ·ÂµÇ¾ú½À´Ï´Ù.");
+		System.out.println(insertCoin+"ì›ì´ ì…ë ¥ë˜ì—ˆìŠµë‹ˆë‹¤.");
 		if(insertCoin>=PRICE[choiceMenu-1]){
-			System.out.println("\""+NAMES[choiceMenu-1]+"\"°¡ ³ª¿É´Ï´Ù.");
-			System.out.println("ÀÜ¾×Àº "+(insertCoin-PRICE[choiceMenu-1])+"¿ø ÀÔ´Ï´Ù.");
+			System.out.println("\""+NAMES[choiceMenu-1]+"\"ê°€ ë‚˜ì˜µë‹ˆë‹¤.");
+			System.out.println("ì”ì•¡ì€ "+(insertCoin-PRICE[choiceMenu-1])+"ì› ì…ë‹ˆë‹¤.");
 		}else
-			System.out.println("ÀÜ¾×ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+			System.out.println("ì”ì•¡ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 		
 	};
 }
@@ -37,7 +37,7 @@ public class AnnonymousInterface {
 			@Override
 			public void display() {
 				// TODO Auto-generated method stub
-				System.out.println("###Ä¿ÇÇ¸¦ ÆÇ¸ÅÇÏ´Â ÀÚÆÇ±â###");
+				System.out.println("###ì»¤í”¼ë¥¼ íŒë§¤í•˜ëŠ” ìíŒê¸°###");
 			}
 
 			@Override
@@ -45,7 +45,7 @@ public class AnnonymousInterface {
 				for(int i=0; i<NAMES.length; i++){
 					System.out.println((i+1)+". "+NAMES[i]+" : "+PRICE[i]);
 					if(i==NAMES.length-1){
-						System.out.println("\n¸Ş´ºÀÇ ¼ıÀÚ¸¦ ´­·¯ÁÖ¼¼¿ä.");
+						System.out.println("\në©”ë‰´ì˜ ìˆ«ìë¥¼ ëˆŒëŸ¬ì£¼ì„¸ìš”.");
 					}
 				}
 			}

@@ -1,9 +1,9 @@
 package javaexp.a06_object;
-/* ÀÚ±â¼Ò°³1´Ü°è
- * field : ÀÌ¸§, »ç´Â °÷, ³ªÀÌ
- * »ı¼ºÀÚ(ÀÌ¸§ÀÔ·Â)
- * inputData(»ç´Â °÷, ³ªÀÌ)
- * introMyself() ³»ÀÌ¸§Àº @@ÀÌ°í ³ªÀÌ´Â XXÀÌ¸ç »ç´Â°÷Àº ¾îµğÀÔ´Ï´Ù
+/* ìê¸°ì†Œê°œ1ë‹¨ê³„
+ * field : ì´ë¦„, ì‚¬ëŠ” ê³³, ë‚˜ì´
+ * ìƒì„±ì(ì´ë¦„ì…ë ¥)
+ * inputData(ì‚¬ëŠ” ê³³, ë‚˜ì´)
+ * introMyself() ë‚´ì´ë¦„ì€ @@ì´ê³  ë‚˜ì´ëŠ” XXì´ë©° ì‚¬ëŠ”ê³³ì€ ì–´ë””ì…ë‹ˆë‹¤
  * */
 class MySelfIntro {
 	private String name;
@@ -18,13 +18,13 @@ class MySelfIntro {
 		this.age = age;
 	}
 	public void introMyself(){
-		System.out.println("³» ÀÌ¸§Àº "+name+"ÀÌ°í ³ªÀÌ´Â "+age+"»ìÀÌ¸ç »ç´Â °÷Àº "+address+"ÀÔ´Ï´Ù.");
+		System.out.println("ë‚´ ì´ë¦„ì€ "+name+"ì´ê³  ë‚˜ì´ëŠ” "+age+"ì‚´ì´ë©° ì‚¬ëŠ” ê³³ì€ "+address+"ì…ë‹ˆë‹¤.");
 	}
 }
 public class Homework0419_selfintro_1step {
 	public static void main(String[] args) {
-		MySelfIntro lee = new MySelfIntro("ÀÌ±æµ¿");
-		lee.inputData("¼­¿ï ¿ë»ê", 25);
+		MySelfIntro lee = new MySelfIntro("ì´ê¸¸ë™");
+		lee.inputData("ì„œìš¸ ìš©ì‚°", 25);
 		lee.introMyself();
 	}
 }

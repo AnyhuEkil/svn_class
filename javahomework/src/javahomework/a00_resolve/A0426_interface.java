@@ -8,7 +8,7 @@ class RocketAttack implements AttackWay{
 	@Override
 	public void attack() {
 		// TODO Auto-generated method stub
-		System.out.println("·ÎÄÏ°ø°İÀ» ÇÏ´Ù.");
+		System.out.println("ë¡œì¼“ê³µê²©ì„ í•˜ë‹¤.");
 	}	
 }
 class Robot{
@@ -22,11 +22,11 @@ class Robot{
 	}
 	public void showAttack(){  
 		
-		System.out.println(name+"ÀÌ ");
+		System.out.println(name+"ì´ ");
 		if(way!=null){
 			way.attack();
 		}else{
-			System.out.println("°ø°İÀ» ÇÏÁö ¸øÇÕ´Ï´Ù.");
+			System.out.println("ê³µê²©ì„ í•˜ì§€ ëª»í•©ë‹ˆë‹¤.");
 		}
 	}
 	
@@ -35,7 +35,7 @@ public class A0426_interface {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Robot b1 = new Robot("°Ç´ã");
+		Robot b1 = new Robot("ê±´ë‹´");
 		b1.setWay(new RocketAttack());
 		b1.showAttack();
 	}

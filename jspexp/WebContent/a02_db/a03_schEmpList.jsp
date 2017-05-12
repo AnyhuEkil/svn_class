@@ -20,7 +20,10 @@
 </script>
 <script type="text/javascript">
 $(document).ready(function(){
-	
+	$("#regBtn").click(function(){
+		alert("등록 화면 이동");
+		$(location).attr("href","a04_insertEmp.jsp");
+	});
 });
 </script>
 </head>
@@ -49,6 +52,7 @@ if( job!=null && !job.trim().equals("") ){
 	이름 : <input type="text" name="name" value="<%=sch.getEname()%>"/>
 	직책 : <input type="text" name="job" value="<%=sch.getJob()%>"/>
 	<input type="submit" value="검색" />
+	<input type="button" value="등록" id="regBtn"/>
 </form>
 
 <table align="center" border>

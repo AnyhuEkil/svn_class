@@ -1,14 +1,14 @@
-/* È®ÀÎ¿¹Á¦
- °õµ¹ÀÌ 3ÇüÁ¦°¡ »ç°ú ¸Ô´Â ÀÌ¾ß±â
- Å¬·¡½º Bear
- filed¸í : ÀÌ¸§, °¢ÀÚ°¡ ¸ÔÀº °¹¼ö, ÇöÀç ÀüÃ¼ ³²Àº °¹¼ö
- »ı¼ºÀÚ ÀÌ¸§ ÇÒ´ç
- ¸Ş¼­µå : restoreApple(»ç°ú °³¼öÃß°¡)
- 		  eatApple(): °¢ °õµ¹ÀÌ°¡ »ç°ú¸¦ ¸ÔÀ» ‹š Ã³¸® : °¢ÀÚ ¸ÔÀº °¹¼ö, ÇöÀç ÀüÃ¼ ³²Àº °¹¼ö.
- Ãâ·Â
- @@@°¡ »ç°ú¸¦ ¸Ô´Â´Ù.
- @@@ ¸ÔÀº »ç°ú°¹¼ö´Â @@@
- ÇöÀç ³²Àº »ç°ú°¹¼ö @@´Ù.		  
+/* í™•ì¸ì˜ˆì œ
+ ê³°ëŒì´ 3í˜•ì œê°€ ì‚¬ê³¼ ë¨¹ëŠ” ì´ì•¼ê¸°
+ í´ë˜ìŠ¤ Bear
+ filedëª… : ì´ë¦„, ê°ìê°€ ë¨¹ì€ ê°¯ìˆ˜, í˜„ì¬ ì „ì²´ ë‚¨ì€ ê°¯ìˆ˜
+ ìƒì„±ì ì´ë¦„ í• ë‹¹
+ ë©”ì„œë“œ : restoreApple(ì‚¬ê³¼ ê°œìˆ˜ì¶”ê°€)
+ 		  eatApple(): ê° ê³°ëŒì´ê°€ ì‚¬ê³¼ë¥¼ ë¨¹ì„ ë–„ ì²˜ë¦¬ : ê°ì ë¨¹ì€ ê°¯ìˆ˜, í˜„ì¬ ì „ì²´ ë‚¨ì€ ê°¯ìˆ˜.
+ ì¶œë ¥
+ @@@ê°€ ì‚¬ê³¼ë¥¼ ë¨¹ëŠ”ë‹¤.
+ @@@ ë¨¹ì€ ì‚¬ê³¼ê°¯ìˆ˜ëŠ” @@@
+ í˜„ì¬ ë‚¨ì€ ì‚¬ê³¼ê°¯ìˆ˜ @@ë‹¤.		  
 */
 
 package javahomework.a13_SeoJunghyo;
@@ -23,21 +23,21 @@ class Bear{
 	}
 	void addApple(int addCount){
 		nowCount+=addCount;
-		System.out.println(name+"ÀÌ Ãß°¡ÇÑ »ç°ú °¹¼ö: "+addCount+"\t ³²Àº »ç°ú °¹¼ö: "+nowCount);
+		System.out.println(name+"ì´ ì¶”ê°€í•œ ì‚¬ê³¼ ê°¯ìˆ˜: "+addCount+"\t ë‚¨ì€ ì‚¬ê³¼ ê°¯ìˆ˜: "+nowCount);
 	}
 	void eatApple(int eatCount){
 		nowCount-=eatCount;
-		System.out.println(name+"ÀÌ ¸ÔÀº »ç°ú °¹¼ö: "+eatCount+"  \t ³²Àº »ç°ú °¹¼ö: "+nowCount);
+		System.out.println(name+"ì´ ë¨¹ì€ ì‚¬ê³¼ ê°¯ìˆ˜: "+eatCount+"  \t ë‚¨ì€ ì‚¬ê³¼ ê°¯ìˆ˜: "+nowCount);
 	}
 }
 public class a02_homework_staticBear_0419 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Bear b1 = new Bear("ÀÏÁø°õ");
-		Bear b2 = new Bear("Âğµû°õ");
-		Bear b3 = new Bear("¹ÌÄ£°õ");
-		System.out.println("ÇöÀç »ç°ú °¹¼ö: "+Bear.nowCount);
+		Bear b1 = new Bear("ì¼ì§„ê³°");
+		Bear b2 = new Bear("ì°ë”°ê³°");
+		Bear b3 = new Bear("ë¯¸ì¹œê³°");
+		System.out.println("í˜„ì¬ ì‚¬ê³¼ ê°¯ìˆ˜: "+Bear.nowCount);
 		b1.eatApple(10);
 		b2.eatApple(12);
 		b3.addApple(14);

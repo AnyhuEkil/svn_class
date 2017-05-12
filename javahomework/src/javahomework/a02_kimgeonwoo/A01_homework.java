@@ -39,15 +39,15 @@ class Bank{
 		this.logWithDrawDate.add(Date);
 	}
 	public void print(){
-		System.out.println("ÀÔ±İ³»¿ª");
-		System.out.println("³¯Â¥\t¿ëµ·\t");
+		System.out.println("ì…ê¸ˆë‚´ì—­");
+		System.out.println("ë‚ ì§œ\tìš©ëˆ\t");
 		for(int idx = 0 ; idx < this.logSaveDate.size(); idx++){
 			System.out.println(this.logSaveDate.get(idx).toString() + '\t' + this.total + '\t' 
 					+ this.logSaveContent.get(idx).toString() + '\t' + this.logSave.get(idx).toString());
 		}
 		System.out.println();
-		System.out.println("Ãâ±İ³»¿ª");
-		System.out.println("³¯Â¥\t¿ëµ·\t");
+		System.out.println("ì¶œê¸ˆë‚´ì—­");
+		System.out.println("ë‚ ì§œ\tìš©ëˆ\t");
 		for(int idx = 0 ; idx < this.logWithDrawDate.size(); idx++){
 			System.out.println(this.logWithDrawDate.get(idx).toString() + '\t' + this.total + '\t' 
 					+ this.logWithDrawContent.get(idx).toString() + '\t' + this.logWithDraw.get(idx).toString());
@@ -61,9 +61,9 @@ public class A01_homework {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Bank a = new Bank(12345465, "±è°Ç¿ì", 1200000);
-		a.save(5000, "ÀÔ±İ", "2017/04/04");
-		a.withdraw(5000, "Ãâ±İ", "2017/04/05");
+		Bank a = new Bank(12345465, "ê¹€ê±´ìš°", 1200000);
+		a.save(5000, "ì…ê¸ˆ", "2017/04/04");
+		a.withdraw(5000, "ì¶œê¸ˆ", "2017/04/05");
 		a.print();
 	}
 

@@ -4,19 +4,19 @@ import java.io.IOException;
 public class A08_dowhile {
 	public static void main(String[] args) throws IOException {
 		char choieMenu = 'Q';
-		System.out.print("¸Ş´º ¹øÈ£¸¦ ¼±ÅÃÇÏ¼¼¿ä(1:Â¥Àå¸é, 2:Â«»Í,3:ÅÁ¼öÀ°,Q:Á¾·á) ¢Ñ");
+		System.out.print("ë©”ë‰´ ë²ˆí˜¸ë¥¼ ì„ íƒí•˜ì„¸ìš”(1:ì§œì¥ë©´, 2:ì§¬ë½•,3:íƒ•ìˆ˜ìœ¡,Q:ì¢…ë£Œ) â˜");
 		do{
 			choieMenu = (char)System.in.read();
 			if((int)choieMenu==13||(int)choieMenu==10){
 				continue;
-			}else if(choieMenu=='1') System.out.println("Â¥Àå¸é ¼±ÅÃ");
-			else if(choieMenu=='2') System.out.println("Â«»Í ¼±ÅÃ");
-			else if(choieMenu=='3') System.out.println("ÅÁ¼öÀ° ¼±ÅÃ");
-			else System.out.println("1,2,3,Q Áß¿¡ ÇÏ³ª¸¸ ÀÔ·Â°¡´ÉÇØ¿ä");
-			System.out.print("¸Ş´º ¹øÈ£¸¦ ¼±ÅÃÇÏ¼¼¿ä(1:Â¥Àå¸é, 2:Â«»Í,3:ÅÁ¼öÀ°,Q:Á¾·á) ¢Ñ");
+			}else if(choieMenu=='1') System.out.println("ì§œì¥ë©´ ì„ íƒ");
+			else if(choieMenu=='2') System.out.println("ì§¬ë½• ì„ íƒ");
+			else if(choieMenu=='3') System.out.println("íƒ•ìˆ˜ìœ¡ ì„ íƒ");
+			else System.out.println("1,2,3,Q ì¤‘ì— í•˜ë‚˜ë§Œ ì…ë ¥ê°€ëŠ¥í•´ìš”");
+			System.out.print("ë©”ë‰´ ë²ˆí˜¸ë¥¼ ì„ íƒí•˜ì„¸ìš”(1:ì§œì¥ë©´, 2:ì§¬ë½•,3:íƒ•ìˆ˜ìœ¡,Q:ì¢…ë£Œ) â˜");
 		}while(choieMenu!='Q');
-		System.out.println("¡Ú ¡Ù ¡Ú ¡Ù ¡Ú ¡Ù ¡Ú ¡Ù ¡Ú ¡Ù ¡Ú ¡Ù ¡Ú ¡Ù ¡Ú");
-		System.out.println("  Áß´ÜÇÕ´Ï´Ù. ¾È³çÈ÷ °¡¼¼¿ä");
-		System.out.println("¡Ú ¡Ù ¡Ú ¡Ù ¡Ú ¡Ù ¡Ú ¡Ù ¡Ú ¡Ù ¡Ú ¡Ù ¡Ú ¡Ù ¡Ú");
+		System.out.println("â˜… â˜† â˜… â˜† â˜… â˜† â˜… â˜† â˜… â˜† â˜… â˜† â˜… â˜† â˜…");
+		System.out.println("  ì¤‘ë‹¨í•©ë‹ˆë‹¤. ì•ˆë…•íˆ ê°€ì„¸ìš”");
+		System.out.println("â˜… â˜† â˜… â˜† â˜… â˜† â˜… â˜† â˜… â˜† â˜… â˜† â˜… â˜† â˜…");
 	}
 }

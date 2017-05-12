@@ -1,6 +1,6 @@
 package javaexp.a00_basic;
 
-import java.sql.*; // java.sql.* ÇÏÀ§ ¸ğµç °Í import ÇÏ°Ú´Ù.
+import java.sql.*; // java.sql.* í•˜ìœ„ ëª¨ë“  ê²ƒ import í•˜ê² ë‹¤.
 
 public class A12_Database {
 
@@ -8,37 +8,37 @@ public class A12_Database {
 		// TODO Auto-generated method stub
 
 		/*
-		 * DB ¿Í javaÀÇ ¸¸³²¿¡ ÇÊ¿äÇÑ ¿ä¼Òµé
-		 * 	1) ¿¬°áÇÏ´Â ´Ù¸®
-		 * 		- ¸Ş¸ğ¸®(driver) jdbc
-		 * 		- Class.forName("µå¶óÀÌ¹ö")
+		 * DB ì™€ javaì˜ ë§Œë‚¨ì— í•„ìš”í•œ ìš”ì†Œë“¤
+		 * 	1) ì—°ê²°í•˜ëŠ” ë‹¤ë¦¬
+		 * 		- ë©”ëª¨ë¦¬(driver) jdbc
+		 * 		- Class.forName("ë“œë¼ì´ë²„")
 		 * 
-		 * 	2) ´ë»ó DB server °´Ã¼ ¿¬°á
+		 * 	2) ëŒ€ìƒ DB server ê°ì²´ ì—°ê²°
 		 * 		- ip, port, sid, id/pw
-		 * 		- Connetion °´Ã¼
+		 * 		- Connetion ê°ì²´
 		 * 		- DriverManager.getConnection("ip","id","password")
 		 * 
-		 * 	3) sqlÀ» ½ÇÇà, server¿¡ Àü´Ş
-		 * 		- ´ëÈ­°´Ã¼ createStatement()
-		 * 		- StatementÀÇ executeQuery("select * from emp");
+		 * 	3) sqlì„ ì‹¤í–‰, serverì— ì „ë‹¬
+		 * 		- ëŒ€í™”ê°ì²´ createStatement()
+		 * 		- Statementì˜ executeQuery("select * from emp");
 		 * 
-		 * 	4) select ÀÏ °æ¿ì, °á°ú°ªÀ» ¹Ş¾Æ¾ß
-		 * 		- ResultSet À¸·Î StatementÀÇ executeQuery("select * from emp");
-		 * 		- À» ¹Ş´Â
+		 * 	4) select ì¼ ê²½ìš°, ê²°ê³¼ê°’ì„ ë°›ì•„ì•¼
+		 * 		- ResultSet ìœ¼ë¡œ Statementì˜ executeQuery("select * from emp");
+		 * 		- ì„ ë°›ëŠ”
 		 * 		- while(rs.next()){
-		 * 			rs.getString("ÄÃ·³¸í")
+		 * 			rs.getString("ì»¬ëŸ¼ëª…")
 		 * 		}
 		 * */
 
-		//¿¬°á
+		//ì—°ê²°
 		Connection con=null;
-		//´ëÈ­
+		//ëŒ€í™”
 		Statement stmt=null;
-		//´ëÈ­¸¦ ³ª´« °á°ú°ª .. select * from emp;
+		//ëŒ€í™”ë¥¼ ë‚˜ëˆˆ ê²°ê³¼ê°’ .. select * from emp;
 		ResultSet rs=null;
 
 		try {
-			// IO ¿¹¿ÜÃ³¸® ÇØÁÖ¾î¾ß !
+			// IO ì˜ˆì™¸ì²˜ë¦¬ í•´ì£¼ì–´ì•¼ !
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			
 			// ip : localhost
@@ -47,11 +47,11 @@ public class A12_Database {
 			// id : scott
 			// pw : tiger
 			// jdbc:oracle:thin:@
-			// µå¶óÀÌ¹ö Á¾·ù @ ip:port:sid
-			// toad - ÇØ´ç °èÁ¤ - properties ¿¡¼­ È®ÀÎ°¡´É
+			// ë“œë¼ì´ë²„ ì¢…ë¥˜ @ ip:port:sid
+			// toad - í•´ë‹¹ ê³„ì • - properties ì—ì„œ í™•ì¸ê°€ëŠ¥
 			String url = "jdbc:oracle:thin:@localhost:1521:xe";
-			// IO ¿¹¿ÜÃ³¸®
-			// ctrl + 1 ÀÌÈÄ catch clause ÇÏ¸é Ãß°¡ÀûÀ¸·Î Ã³¸®µÈ´Ù
+			// IO ì˜ˆì™¸ì²˜ë¦¬
+			// ctrl + 1 ì´í›„ catch clause í•˜ë©´ ì¶”ê°€ì ìœ¼ë¡œ ì²˜ë¦¬ëœë‹¤
 			con = DriverManager.getConnection(url,"scott","tiger");
 			
 
@@ -59,7 +59,7 @@ public class A12_Database {
 			String sql="SELECT * FROM EMP";
 			
 			rs=stmt.executeQuery(sql);
-			// µ¥ÀÌÅÍ°¡ ÀÖÀ»¶§±îÁö
+			// ë°ì´í„°ê°€ ìˆì„ë•Œê¹Œì§€
 			while(rs.next()){
 				System.out.println(rs.getInt("empno")+"\t"+rs.getString("ename"));
 			}
@@ -74,7 +74,7 @@ public class A12_Database {
 			e.printStackTrace();
 		} finally{
 			try {
-				// IO ¿¹¿ÜÃ³¸®
+				// IO ì˜ˆì™¸ì²˜ë¦¬
 				rs.close();
 				stmt.close();
 				con.close();		

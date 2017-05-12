@@ -7,7 +7,7 @@ interface AttackWay{
 class RocketAttack implements AttackWay{
 	@Override
 	public void attack(){
-		System.out.println("·Îº¿ °ø°Ý");
+		System.out.println("ë¡œë´‡ ê³µê²©");
 	}
 }
 

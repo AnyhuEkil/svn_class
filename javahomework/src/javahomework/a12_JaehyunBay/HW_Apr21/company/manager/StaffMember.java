@@ -7,7 +7,7 @@ public class StaffMember {
 		System.out.println(cheif.projectConsult);
 		
 		HeadMember head = new HeadMember();
-	//	System.out.println(head.familyBDdate); privateÁ¢±ÙÁ¦¾îÀÚ·Î Á¢±ÙºÒ°¡È®ÀÎ.
+	//	System.out.println(head.familyBDdate); privateì ‘ê·¼ì œì–´ìë¡œ ì ‘ê·¼ë¶ˆê°€í™•ì¸.
 		
 	}
 }

@@ -13,7 +13,7 @@ public class homework_0509 {
 		for(int i=0; i<fruitList.length; i++){
 			sellList.add(i,fruitList[i]);
 		}
-		System.out.println("1´Ü°è sellLists");
+		System.out.println("1ë‹¨ê³„ sellLists");
 		for(String sl : sellList) System.out.print(sl+" ");
 		System.out.println();
 		
@@ -22,38 +22,38 @@ public class homework_0509 {
 		sellList.remove("apple");
 		sellList.remove("strawberry");
 		
-		System.out.println("2´Ü°è buyList ");
+		System.out.println("2ë‹¨ê³„ buyList ");
 		for(String bl : buyList) System.out.print(bl+" ");
 		System.out.println();
-		System.out.println("2´Ü°è sellList ");
+		System.out.println("2ë‹¨ê³„ sellList ");
 		for(String sl : sellList) System.out.print(sl+" ");
 		System.out.println();
 		
 		sellList.set(0, "apple");
-		System.out.println("3´Ü°è sellList ");
+		System.out.println("3ë‹¨ê³„ sellList ");
 		for(String sl : sellList) System.out.print(sl+" ");
 		System.out.println();
 		
 		buyList.remove("apple");
 		buyList.remove("strawberry");
-		System.out.println("4´Ü°è buyList ");
+		System.out.println("4ë‹¨ê³„ buyList ");
 		for(String bl : buyList) System.out.print(bl+" ");
-		System.out.println("°úÀÏ ´Ù ¸ÔÀ½");
+		System.out.println("ê³¼ì¼ ë‹¤ ë¨¹ìŒ");
 		
 		int whichFruit = (int)(Math.random()*3);
 		buyList.add(sellList.get(whichFruit));
-		System.out.println("»çÀºÇ°À¸·Î ¹ÞÀº °úÀÏ¸í : "+sellList.get(whichFruit));
+		System.out.println("ì‚¬ì€í’ˆìœ¼ë¡œ ë°›ì€ ê³¼ì¼ëª… : "+sellList.get(whichFruit));
 		
 		
 	}
 }
-/* »ç°ú ¹Ù³ª³ª µþ±â ¿À·»Áö ¼ö¹Ú ÀúÀå 
- * Àåº¸´Â »ç¶÷ÀÌ »ç°ú¿Í µþ±â ±¸¸Å
+/* ì‚¬ê³¼ ë°”ë‚˜ë‚˜ ë”¸ê¸° ì˜¤ë Œì§€ ìˆ˜ë°• ì €ìž¥ 
+ * ìž¥ë³´ëŠ” ì‚¬ëžŒì´ ì‚¬ê³¼ì™€ ë”¸ê¸° êµ¬ë§¤
  * 
  * remove, add
- * ¹Ù³ª³ª¸¦ -> »ç°ú·Î º¯°æ 
- * Àåº¸´Â »ç¶÷ÀÌ »ç°ú¿Í µþ±â ´Ù ¸ÔÀ½
- * Àåº¸´Â »ç¶÷ÀÌ °¡Áö°í ÀÖ´Â °úÀÏÀÌ ¾ø´Ù¸é °úÀÏ°¡°Ô¿¡¼­ ³²Àº °úÀÏ Áß ÇÏ³ª¸¦ Àåº¸´Â »ç¶÷¿¡°Ô »çÀºÇ° 
+ * ë°”ë‚˜ë‚˜ë¥¼ -> ì‚¬ê³¼ë¡œ ë³€ê²½ 
+ * ìž¥ë³´ëŠ” ì‚¬ëžŒì´ ì‚¬ê³¼ì™€ ë”¸ê¸° ë‹¤ ë¨¹ìŒ
+ * ìž¥ë³´ëŠ” ì‚¬ëžŒì´ ê°€ì§€ê³  ìžˆëŠ” ê³¼ì¼ì´ ì—†ë‹¤ë©´ ê³¼ì¼ê°€ê²Œì—ì„œ ë‚¨ì€ ê³¼ì¼ ì¤‘ í•˜ë‚˜ë¥¼ ìž¥ë³´ëŠ” ì‚¬ëžŒì—ê²Œ ì‚¬ì€í’ˆ 
  * 
  * 
  * 

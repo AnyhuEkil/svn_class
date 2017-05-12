@@ -3,38 +3,38 @@ package javaexp.a04_statement;
 public class Homework_170412 {
 
 	public static void main(String[] args) {
-	// 1. Á¶°Ç¹®°ú ¹İº¹¹®ÀÇ Á¾·ù¸¦ °ıÈ£ ¼Ó¿¡ ³Ö¾îº¸¼¼¿ä.
-	//		1_1. Á¶°Ç¹® : if, switch
-	//		1_2. ¹İº¹¹® : for,while,do while
+	// 1. ì¡°ê±´ë¬¸ê³¼ ë°˜ë³µë¬¸ì˜ ì¢…ë¥˜ë¥¼ ê´„í˜¸ ì†ì— ë„£ì–´ë³´ì„¸ìš”.
+	//		1_1. ì¡°ê±´ë¬¸ : if, switch
+	//		1_2. ë°˜ë³µë¬¸ : for,while,do while
 		
 	/***********************/
-	// 2. for¹®À» ÀÌ¿ëÇÏ¿© 10~150±îÁö Á¤¼ö Áß¿¡ 5ÀÇ ¹è¼öÀÇ ÃÑÇÕÀ» ±¸ÇÏ´Â ÄÚµå¸¦ ÀÛ¼ºÇÏ¼¼¿ä.
-		System.out.println("####2¹ø¹®Á¦####");
+	// 2. forë¬¸ì„ ì´ìš©í•˜ì—¬ 10~150ê¹Œì§€ ì •ìˆ˜ ì¤‘ì— 5ì˜ ë°°ìˆ˜ì˜ ì´í•©ì„ êµ¬í•˜ëŠ” ì½”ë“œë¥¼ ì‘ì„±í•˜ì„¸ìš”.
+		System.out.println("####2ë²ˆë¬¸ì œ####");
 		int sum=0;
 		for(int num=10; num<=150; num++)
-			if(num%5==0) sum+=num; //5ÀÇ ¹è¼öÀÏ ¶§¸¸ sum¿¡ ÀúÀå
-		System.out.println(sum); //°á°ú Ãâ·Â
+			if(num%5==0) sum+=num; //5ì˜ ë°°ìˆ˜ì¼ ë•Œë§Œ sumì— ì €ì¥
+		System.out.println(sum); //ê²°ê³¼ ì¶œë ¥
 	/***********************/	
 		System.out.println("-------------------");
-		System.out.println("### 3¹ø¹®Á¦ ###");
-	// 3. while¹®, Math.random()À» ÀÌ¿ëÇÏ¿©, ÁÖ»çÀ§ ¼ıÀÚ µÎ °³°¡ ³ª¿À°Ô ÇÏ°í, 
-	// ÁÖ»çÀ§ ÇÕÀÌ 5°¡ ¾Æ´Ï¸é °è¼Ó, ÇÕÀÌ 5ÀÌ¸é Áß´ÜÃ³¸® µÇ°Ô ÇÏ¼¼¿ä.
+		System.out.println("### 3ë²ˆë¬¸ì œ ###");
+	// 3. whileë¬¸, Math.random()ì„ ì´ìš©í•˜ì—¬, ì£¼ì‚¬ìœ„ ìˆ«ì ë‘ ê°œê°€ ë‚˜ì˜¤ê²Œ í•˜ê³ , 
+	// ì£¼ì‚¬ìœ„ í•©ì´ 5ê°€ ì•„ë‹ˆë©´ ê³„ì†, í•©ì´ 5ì´ë©´ ì¤‘ë‹¨ì²˜ë¦¬ ë˜ê²Œ í•˜ì„¸ìš”.
 		while(true){
 			int dice1=(int)(Math.random()*6+1);
 			int dice2=(int)(Math.random()*6+1);
-			System.out.println("ÁÖ»çÀ§1:"+dice1+" ÁÖ»çÀ§2:"+dice2);
+			System.out.println("ì£¼ì‚¬ìœ„1:"+dice1+" ì£¼ì‚¬ìœ„2:"+dice2);
 			
 			if(dice1+dice2==5){
-				System.out.println("!!!! ÇÕÀÌ 5ÀÌ¹Ç·Î Áß´ÜÇÕ´Ï´Ù. !!!!");
-				System.out.println(dice1+", "+dice2+"ÀÌ¹Ç·Î ÇÕ "+(dice1+dice2));
+				System.out.println("!!!! í•©ì´ 5ì´ë¯€ë¡œ ì¤‘ë‹¨í•©ë‹ˆë‹¤. !!!!");
+				System.out.println(dice1+", "+dice2+"ì´ë¯€ë¡œ í•© "+(dice1+dice2));
 				break;
 			}
 				
 		}
 		System.out.println("---------------------");
-	// 4. ÀÌÁß for¹®À» ÀÌ¿ëÇÏ¿© ¹æÁ¤½Ä 4x + 5y = 60ÀÎ ¸ğµç ÇØ¸¦ ±¸ÇÏ¼¼¿ä x, y´Â 10ÀÌÇÏ ¾çÀÇ Á¤¼ö
-		System.out.println("### 4¹ø¹®Á¦ ###");
-		System.out.println("4x + 5y = 60ÀÎ ¸ğµç ÇØ¸¦ ±¸ÇÕ´Ï´Ù.");
+	// 4. ì´ì¤‘ forë¬¸ì„ ì´ìš©í•˜ì—¬ ë°©ì •ì‹ 4x + 5y = 60ì¸ ëª¨ë“  í•´ë¥¼ êµ¬í•˜ì„¸ìš” x, yëŠ” 10ì´í•˜ ì–‘ì˜ ì •ìˆ˜
+		System.out.println("### 4ë²ˆë¬¸ì œ ###");
+		System.out.println("4x + 5y = 60ì¸ ëª¨ë“  í•´ë¥¼ êµ¬í•©ë‹ˆë‹¤.");
 		int quest=0;
 		for(int x=0; x<=10; x++){
 			for(int y=0; y<=10; y++){

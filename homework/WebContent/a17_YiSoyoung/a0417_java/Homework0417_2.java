@@ -2,13 +2,13 @@ package javaexp.a05_reference0417;
 
 public class Homework0417_2 {
 	public static void main(String[] args) {
-		String[] orginArray = {"»ç°ú","¹Ù³ª³ª","µþ±â"};
+		String[] orginArray = {"ì‚¬ê³¼","ë°”ë‚˜ë‚˜","ë”¸ê¸°"};
 		String[] targetArray = new String[5];
 		System.arraycopy(orginArray, 1, targetArray, 3, 2);
 		for(int idx=0 ; idx<targetArray.length ; idx++)
 			if(targetArray[idx]!=null)
-				System.out.println(idx+"¹øÂ° µ¥ÀÌÅÍ : "+targetArray[idx]);
+				System.out.println(idx+"ë²ˆì§¸ ë°ì´í„° : "+targetArray[idx]);
 			else
-				System.out.println(idx+"¹øÂ° µ¥ÀÌÅÍ : NULL");
+				System.out.println(idx+"ë²ˆì§¸ ë°ì´í„° : NULL");
 	}
 }

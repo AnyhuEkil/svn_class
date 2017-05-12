@@ -4,13 +4,13 @@ public class HW_exp4 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// 4) ÀÌÁß for ¹®À» ÀÌ¿äÇÏ¿© ¹æÁ¤½Ä 4x+5y=60ÀÎ ÇØ¸¦ ±¸ÇÏ½Ã¿À
-		// x,y´Â 10 ÀÌÇÏÀÇ Á¤¼ö =>>   Ãâ·ÂÇü½Ä x:@@, y:@@ 
+		// 4) ì´ì¤‘ for ë¬¸ì„ ì´ìš”í•˜ì—¬ ë°©ì •ì‹ 4x+5y=60ì¸ í•´ë¥¼ êµ¬í•˜ì‹œì˜¤
+		// x,yëŠ” 10 ì´í•˜ì˜ ì •ìˆ˜ =>>   ì¶œë ¥í˜•ì‹ x:@@, y:@@ 
 		 
 		for(int x=1; x<=10; x++){
 			for(int y=1; y<=10; y++){
 				if(((4*x)+(5*y))==60){
-						System.out.println("x °ª "+x+" , "+"y °ª "+y);
+						System.out.println("x ê°’ "+x+" , "+"y ê°’ "+y);
 						System.out.println("4 * "+x+" + "+"5 * "+y+" =  60");
 				}
 			}

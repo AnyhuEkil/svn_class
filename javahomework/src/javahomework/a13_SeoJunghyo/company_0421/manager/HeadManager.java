@@ -20,7 +20,7 @@ public class HeadManager {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("Proposal's title : "+Proposal.title);
-//		staticÀÌ¸é »ı¼ºÀÚ¸¦ ¸¸µéÇÊ¿ä¾øÀÌ ¹Ù·Î ¼ÒÈ¯ °¡´É
+//		staticì´ë©´ ìƒì„±ìë¥¼ ë§Œë“¤í•„ìš”ì—†ì´ ë°”ë¡œ ì†Œí™˜ ê°€ëŠ¥
 		StaffMember s1 = new StaffMember();
 		System.out.println(s1.WeddingDate);
 	}

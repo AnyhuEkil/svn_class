@@ -7,7 +7,7 @@ class Vehicle{
 		this.maxSpeed = maxSpeed;
 	}
 	public void showInfo(){
-		System.out.println("Á¾·ù´Â "+kind+", ÃÖ°í¼Óµµ´Â "+maxSpeed);
+		System.out.println("ì¢…ë¥˜ëŠ” "+kind+", ìµœê³ ì†ë„ëŠ” "+maxSpeed);
 	}
 	public String getKind() {return kind;}
 	public void setKind(String kind) {this.kind = kind;}
@@ -15,19 +15,19 @@ class Vehicle{
 	public void setMaxSpeed(int maxSpeed) {this.maxSpeed = maxSpeed;}
 }
 class Car extends Vehicle{
-	private int number; //Å¸´Â »ç¶÷¼ö
+	private int number; //íƒ€ëŠ” ì‚¬ëŒìˆ˜
 	public Car(String kind, int maxSpeed, int number){
 		super(kind, maxSpeed);
 		this.number = number;
 	}
 	public void driverCar(){
-		System.out.print(getKind()+"ÀÎµ¥, ÃÖ°í¼Óµµ°¡ "+getMaxSpeed()+"ÀÌ´Ù. ");
-		System.out.println("Å¸´Â »ç¶÷Àº "+number+"¸íÀÔ´Ï´Ù");
+		System.out.print(getKind()+"ì¸ë°, ìµœê³ ì†ë„ê°€ "+getMaxSpeed()+"ì´ë‹¤. ");
+		System.out.println("íƒ€ëŠ” ì‚¬ëŒì€ "+number+"ëª…ì…ë‹ˆë‹¤");
 	}
 }
 public class Homework0421_3 {
 	public static void main(String[] args) {
-		Car phrsche = new Car("Æ÷¸£½¦",250,5);
+		Car phrsche = new Car("í¬ë¥´ì‰",250,5);
 		phrsche.driverCar();
 	}
 }

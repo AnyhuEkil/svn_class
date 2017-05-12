@@ -102,7 +102,7 @@ function betting(){
 		}else{
 			alert("Not enough money.");
 		}
-	}else alert("Betting�쓽 理쒖냼�떒�쐞�뒗 10�썝遺��꽣�엯�땲�떎.");
+	}else alert("Betting占쎌벥 筌ㅼ뮇?쇽옙?믭옙?욑옙??10占쎌뜚?븝옙占쎄숲占쎌뿯占쎈빍占쎈뼄.");
 }
 
 function giveBackMoney(winner){

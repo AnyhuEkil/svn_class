@@ -30,6 +30,7 @@ table#search input[type=button] {padding:10px;}
 	else searchName = searchName.trim();
 	String sql = "SELECT * FROM STUDENT WHERE NAME LIKE '%"+searchName+"%' ";
 	String no = request.getParameter("no");
+	if(no==null) no="hakno";
 	String searchNo = request.getParameter("searchNo");
 	if(searchNo==null) searchNo="";
 	else searchNo = searchNo.trim();
@@ -39,14 +40,15 @@ table#search input[type=button] {padding:10px;}
 		sql += "AND CLASSNO ="+searchNo  + " ";
 	}
 	String score = request.getParameter("score");
+	if(score==null) score = "kor";
 	String scoreNo = request.getParameter("scoreNo");
 	if(scoreNo==null) scoreNo="";
 	else scoreNo = scoreNo.trim();
 	if(!scoreNo.equals("") && score.equals("kor")) {
 		sql += "AND KOR ="+scoreNo + " ";
-	}else if(!searchNo.equals("") && no.equals("eng")){
+	}else if(!searchNo.equals("") && score.equals("eng")){
 		sql += "AND ENG ="+scoreNo  + " ";
-	}else if(!searchNo.equals("") && no.equals("mat")){
+	}else if(!searchNo.equals("") && score.equals("mat")){
 		sql += "AND MAT ="+scoreNo  + " ";
 	}
 	String driver = "oracle.jdbc.driver.OracleDriver";
@@ -91,14 +93,14 @@ table#search input[type=button] {padding:10px;}
 		<caption>학생 명단</caption>
 		<tr><td colspan="7">이름 <input type="text" name="searchName" value="<%=searchName%>" size="10"/>
 			<select name="no">
-				<option value="hakno">학년</option>
-				<option value="classno">반</option>
+				<option value="hakno" <%if(no.equals("hakno")){ %> selected="selected" <%} %>>학년</option>
+				<option value="classno" <%if(no.equals("classno")){ %> selected="selected" <%} %>>반</option>
 			</select>
 			<input type="text" name="searchNo" value="<%=searchNo%>" size="2"/>
 			<select name="score">
-				<option value="kor">국어</option>
-				<option value="eng">영어</option>
-				<option value="mat">수학</option>
+				<option value="kor" <%if(score.equals("eng")){ %> selected="selected" <%} %>>국어</option>
+				<option value="eng" <%if(score.equals("eng")){ %> selected="selected" <%} %>>영어</option>
+				<option value="mat" <%if(score.equals("mat")){ %> selected="selected" <%} %>>수학</option>
 			</select>
 			<input type="text" name="scoreNo" value="<%=scoreNo%>" size="2"/>
 			<input type="submit" value="검색">

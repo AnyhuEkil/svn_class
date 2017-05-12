@@ -2,10 +2,10 @@ package javahomework.a20_YiSoyoung.a0509;
 
 import java.util.ArrayList;
 
-/* Food Å¬·¡½º : À½½Ä¸í, °¡°İ
- * 	ArrayList¿¡ 3°Ç ³Ö°í Ãâ·Â(add()¿Í get()ÀÌ¿ë)
- * 	Çü½ÄÀº
- * No À½½Ä¸í  °¡°İ
+/* Food í´ë˜ìŠ¤ : ìŒì‹ëª…, ê°€ê²©
+ * 	ArrayListì— 3ê±´ ë„£ê³  ì¶œë ¥(add()ì™€ get()ì´ìš©)
+ * 	í˜•ì‹ì€
+ * No ìŒì‹ëª…  ê°€ê²©
  * 1  XXX    XX
  * 2  XXX    XX
  * 3  XXX    XX
@@ -27,11 +27,11 @@ class Food{
 public class A02_Exp {
 	public static void main(String[] args) {
 		ArrayList<Food> foods = new ArrayList<Food>();
-		foods.add(new Food("ºÒ°í±âµ¤¹ä",7000));
-		foods.add(new Food("Ä¡Áîµ·°¡½º",7500));
-		foods.add(new Food("¹ö¼¸ºÒ°í±â",8000));
-		System.out.println("NO\tÀ½½Ä¸í\t\t°¡°İ");
-		System.out.println("¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á");
+		foods.add(new Food("ë¶ˆê³ ê¸°ë®ë°¥",7000));
+		foods.add(new Food("ì¹˜ì¦ˆëˆê°€ìŠ¤",7500));
+		foods.add(new Food("ë²„ì„¯ë¶ˆê³ ê¸°",8000));
+		System.out.println("NO\tìŒì‹ëª…\t\tê°€ê²©");
+		System.out.println("â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– ");
 		for(int idx=0 ; idx<foods.size() ; idx++)
 			System.out.println(""+(idx+1)+foods.get(idx));
 	}

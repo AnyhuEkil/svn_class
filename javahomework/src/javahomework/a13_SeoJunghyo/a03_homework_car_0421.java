@@ -1,15 +1,15 @@
 /*
- ¼÷Á¦
- 1) ºÎ¸ğ
- Å¬·¡½º Vehicle
- ÇÊµå : Á¾·ù, ÃÖ°í¼Óµµ
- ¸Ş¼­µå : showInfo()
- @@@ÀÎµ¥ ÃÖ°í ¼Óµµ°¡ @@@´Ù
- 2) ÀÚ½Ä
- Å¬·¡½º Car
- ¸Ş¼­µå driverCar()
- @@@@ÀÎµ¥ ÃÖ°í¼Óµµ°¡ @@@´Ù
- Å¸´Â »ç¶÷Àº @@@@¸íÀÌ´Ù.
+ ìˆ™ì œ
+ 1) ë¶€ëª¨
+ í´ë˜ìŠ¤ Vehicle
+ í•„ë“œ : ì¢…ë¥˜, ìµœê³ ì†ë„
+ ë©”ì„œë“œ : showInfo()
+ @@@ì¸ë° ìµœê³  ì†ë„ê°€ @@@ë‹¤
+ 2) ìì‹
+ í´ë˜ìŠ¤ Car
+ ë©”ì„œë“œ driverCar()
+ @@@@ì¸ë° ìµœê³ ì†ë„ê°€ @@@ë‹¤
+ íƒ€ëŠ” ì‚¬ëŒì€ @@@@ëª…ì´ë‹¤.
 */
 package javahomework.a13_SeoJunghyo;
 class Vehicle{
@@ -21,8 +21,8 @@ class Vehicle{
 	}
 
 	void showInfo(){
-		System.out.println("Á¾·ù: "+kind);
-		System.out.println("ÃÖ°í½Ã¼Ó: "+maxSpeed+"km/h");
+		System.out.println("ì¢…ë¥˜: "+kind);
+		System.out.println("ìµœê³ ì‹œì†: "+maxSpeed+"km/h");
 	}
 }
 class Car extends Vehicle{
@@ -33,7 +33,7 @@ class Car extends Vehicle{
 	}
 	void showInfo2(){
 		showInfo();
-		System.out.println("Å¾½ÂÀÎ¿ø: "+personCnt+"¸í");
+		System.out.println("íƒ‘ìŠ¹ì¸ì›: "+personCnt+"ëª…");
 	}
 
 }
@@ -41,7 +41,7 @@ public class a03_homework_car_0421 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Vehicle v1 = new Vehicle("¾Æ¿ìµğ", 270);
+		Vehicle v1 = new Vehicle("ì•„ìš°ë””", 270);
 		v1.showInfo();
 		Car c1 = new Car("BMW", 260, 15);
 		c1.showInfo2();

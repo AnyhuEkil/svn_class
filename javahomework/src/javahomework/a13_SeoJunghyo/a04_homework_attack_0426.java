@@ -1,14 +1,14 @@
 /*
- ¼÷Á¦ - A14_0426
- ÀÎÅÍÆäÀÌ½º AttackWay
- Ãß»ó¸Ş¼­µå attack();
- RocketAttack : AttackWay¸¦ »ó¼Ó¹ŞÀº ½ÇÁ¦ Å¬·¡½º
- attack() : ·ÎÄÏ°ø°İÇÏ´Ù
- RobotÅ¬·¡½º
- ÇÊµå: AttackWay
- ¸Ş¼­µå : showAttack(){ 
+ ìˆ™ì œ - A14_0426
+ ì¸í„°í˜ì´ìŠ¤ AttackWay
+ ì¶”ìƒë©”ì„œë“œ attack();
+ RocketAttack : AttackWayë¥¼ ìƒì†ë°›ì€ ì‹¤ì œ í´ë˜ìŠ¤
+ attack() : ë¡œì¼“ê³µê²©í•˜ë‹¤
+ Robotí´ë˜ìŠ¤
+ í•„ë“œ: AttackWay
+ ë©”ì„œë“œ : showAttack(){ 
  -attack()
- ¸Ş¼­µå setAttackWay(AttackWay attway)
+ ë©”ì„œë“œ setAttackWay(AttackWay attway)
 */
 package javahomework.a13_SeoJunghyo;
 
@@ -21,13 +21,13 @@ class Blizzard implements SkillWay{
 	@Override
 	public void master() {
 		// TODO Auto-generated method stub
-		System.out.println("ºí¸®ÀÚµå ½ºÅ³ ¹è¿ò.");
+		System.out.println("ë¸”ë¦¬ìë“œ ìŠ¤í‚¬ ë°°ì›€.");
 	}
 
 	@Override
 	public void cast() {
 		// TODO Auto-generated method stub
-		System.out.println("ºí¸®ÀÚµå ½ÃÀü!");
+		System.out.println("ë¸”ë¦¬ìë“œ ì‹œì „!");
 	}
 	
 }
@@ -36,13 +36,13 @@ class Meteo implements SkillWay{
 	@Override
 	public void master() {
 		// TODO Auto-generated method stub
-		System.out.println("¸ŞÅ×¿À ½ºÅ³ ¹è¿ò.");
+		System.out.println("ë©”í…Œì˜¤ ìŠ¤í‚¬ ë°°ì›€.");
 	}
 
 	@Override
 	public void cast() {
 		// TODO Auto-generated method stub
-		System.out.println("¸ŞÅ×¿À ½ÃÀü!");
+		System.out.println("ë©”í…Œì˜¤ ì‹œì „!");
 	}
 	
 }
@@ -52,12 +52,12 @@ class Sorceress{
 		this.s=skill;
 	}
 	void castSkill(){
-		System.out.print("¼Ò¼­¸®½º ");
+		System.out.print("ì†Œì„œë¦¬ìŠ¤ ");
 		if(s!=null){
 			s.master();
 			s.cast();
 		}else{
-			System.out.println("½ºÅ³À» ¾ÆÁ÷ ¹è¿ìÁö ¸øÇÔ");
+			System.out.println("ìŠ¤í‚¬ì„ ì•„ì§ ë°°ìš°ì§€ ëª»í•¨");
 		}
 	}
 }

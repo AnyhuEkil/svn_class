@@ -10,26 +10,26 @@ class Account{
 	Account(String name, String aName){
 		this.name=name;
 		tot=10000000;
-		System.out.println(name+"´ÔÀÇ "+aName+" °èÁÂÀÔ´Ï´Ù.");
-		System.out.println("Çö ÅëÀåÀÜ°í´Â "+tot+"¿øÀÔ´Ï´Ù.");
+		System.out.println(name+"ë‹˜ì˜ "+aName+" ê³„ì¢Œì…ë‹ˆë‹¤.");
+		System.out.println("í˜„ í†µì¥ì”ê³ ëŠ” "+tot+"ì›ì…ë‹ˆë‹¤.");
 	}
 	
 	int withdraw(int money){
 		this.money=money;
-		this.cal="ÀÎÃâ";
+		this.cal="ì¸ì¶œ";
 		tot-=money;
 		return tot; 
 	}
 	
 	int deposit(int money){
 		this.money=money;
-		this.cal="ÀÔ±İ";
+		this.cal="ì…ê¸ˆ";
 		tot+=money;
 		return tot;
 	}
 	
 	void calCu(){
-		System.out.println(name+"´Ô, "+money+"¿ø "+cal+"Çß½À´Ï´Ù."+"(Çö ÀÜ¾× : "+tot+"¿ø)");
+		System.out.println(name+"ë‹˜, "+money+"ì› "+cal+"í–ˆìŠµë‹ˆë‹¤."+"(í˜„ ì”ì•¡ : "+tot+"ì›)");
 	}
 
 }
@@ -39,7 +39,7 @@ public class A20170419_hw1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Account a1 = new Account("Choi","ÁÖÅÃÃ»¾à");
+		Account a1 = new Account("Choi","ì£¼íƒì²­ì•½");
 		
 		a1.withdraw(5000);
 		a1.calCu();

@@ -172,7 +172,7 @@ $(document).ready(function(){
 function main_pjt(){
 	
 	
-	// ¼öÁ¤ÇØÁà¾ßÇÔ DCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDC
+	// ìˆ˜ì •í•´ì¤˜ì•¼í•¨ DCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDC
 	setTimeout(function(){
 		input_src(X_array_1[0],X_array_1[1],X_array_1[2]);	
 		myplay = setInterval(function(){ myTimer() }, 1010);
@@ -251,9 +251,9 @@ function input_src(x,y,z){
 		
 
 		
-<!-- 	b1:ready+Á¤´äÀ» º¸³»±â
+<!-- 	b1:ready+ì •ë‹µì„ ë³´ë‚´ê¸°
 		b2:finish
-		b3:¾Ö´Ï¸ŞÀÌ¼Ç ±¸µ¿ÇÏ±â
+		b3:ì• ë‹ˆë©”ì´ì…˜ êµ¬ë™í•˜ê¸°
 		
 
  -->
@@ -311,14 +311,14 @@ function ready_g1(){
 	webSocket1.send(answer);
 	console.log(answer);
 	
-	webSocket2.send($("#g1").val()+" ¹èÆÃ ½ÃÀÛ"+"\n");
-	console.log($("#g1").val()+"¹èÆÃ½ÃÀÛ"+"\n");
+	webSocket2.send($("#g1").val()+" ë°°íŒ… ì‹œì‘"+"\n");
+	console.log($("#g1").val()+"ë°°íŒ…ì‹œì‘"+"\n");
 	return false;
 }
 
 function finish_g1(){	
-	webSocket2.send($("#g1").val()+" ³¡"+"\n");
-	console.log($("#g1").val()+"³¡"+"\n");
+	webSocket2.send($("#g1").val()+" ë"+"\n");
+	console.log($("#g1").val()+"ë"+"\n");
 	return false;
 }
 

@@ -2,9 +2,9 @@ package a04_statedment;
 
 public class HW_exp1n2 {
 	public static void main(String[] args) {
-		// 1) Á¶°Ç¹® if/ if,else
-		//	¹İº¹¹® for / while / do while
-		// 2) 10~150 ±îÁöÀÇ Á¤¼ö Áß 5¹è¼ö ÃÑÇÕÀ» ±¸ÇÏ´Â ÄÚµå ÀÛ¼º
+		// 1) ì¡°ê±´ë¬¸ if/ if,else
+		//	ë°˜ë³µë¬¸ for / while / do while
+		// 2) 10~150 ê¹Œì§€ì˜ ì •ìˆ˜ ì¤‘ 5ë°°ìˆ˜ ì´í•©ì„ êµ¬í•˜ëŠ” ì½”ë“œ ì‘ì„±
 		int sum = 0;
 		for(int i=10; i<=150;i++){
 			if(i%5==0){

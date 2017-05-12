@@ -2,24 +2,24 @@ package javahomework.a20_YiSoyoung.a0427;
 
 import java.util.Scanner;
 
-/* È®ÀÎ¿¹Á¦
- * 1´Ü°è) id¸¦ ÀÔ·ÂÇÏ¼¼¿ä
-		id=null; ÀÔ·ÂÀÌ ¾È µÈ °æ¿ì, id="himan";
-	- catchºí·°¿£ id°ªÀÌ ÀÔ·ÂµÇÁö ¾Ê¾Ò½À´Ï´Ù.
- * 2´Ü°è) id¿Í pw ´Ù Ã³¸®
+/* í™•ì¸ì˜ˆì œ
+ * 1ë‹¨ê³„) idë¥¼ ì…ë ¥í•˜ì„¸ìš”
+		id=null; ì…ë ¥ì´ ì•ˆ ëœ ê²½ìš°, id="himan";
+	- catchë¸”ëŸ­ì—” idê°’ì´ ì…ë ¥ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.
+ * 2ë‹¨ê³„) idì™€ pw ë‹¤ ì²˜ë¦¬
  * */
 public class A01_exception_homework {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String id, pw;
-		System.out.print(" id ¢Ñ ");
+		System.out.print(" id â˜ ");
 		id = sc.nextLine();
-		System.out.print(" password ¢Ñ ");
+		System.out.print(" password â˜ ");
 		pw = sc.nextLine();
 		if(id.equals("")||pw.equals("")){
-			// id³ª pw¸¦ ÀÔ·ÂÇÏÁö ¾ÊÀ¸¸é °­Á¦·Î ¿¹¿Ü ¹ß»ı.
+			// idë‚˜ pwë¥¼ ì…ë ¥í•˜ì§€ ì•Šìœ¼ë©´ ê°•ì œë¡œ ì˜ˆì™¸ ë°œìƒ.
 			try {
-				throw new Exception("id ¶Ç´Â password¸¦ ÀÔ·ÂÇÏÁö ¾Ê¾Ò½À´Ï´Ù");
+				throw new Exception("id ë˜ëŠ” passwordë¥¼ ì…ë ¥í•˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤");
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
 				id = "himan";

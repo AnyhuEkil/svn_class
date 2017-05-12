@@ -1,16 +1,16 @@
 package javahomework.a12_JaehyunBay;
 /*
-°õµ¹ÀÌ »ç°ú ¸Ô±â.
-Å¬·¡½º Bear
-field¸í: ÀÌ¸§, °¢ÀÚ°¡ ¸ÔÀº °¹¼ö, ÇöÀç ÀüÃ¼°¹¼ö.
-»ı¼ºÀÚ: ÀÌ¸§ÇÒ´ç
-method: restoreApple(»ç°ú°¹¼ö Ãß°¡)
-eatApple() : °¢ °õµ¹ÀÌ°¡ »ç°ú¸¦ ¸ÔÀ»‹š Ã³¸®.
-	°¢ÀÚ°¡ ¸ÔÀº °¹¼ö, ÇöÀç ÀüÃ¼³²Àº°¹¼ö.
+ê³°ëŒì´ ì‚¬ê³¼ ë¨¹ê¸°.
+í´ë˜ìŠ¤ Bear
+fieldëª…: ì´ë¦„, ê°ìê°€ ë¨¹ì€ ê°¯ìˆ˜, í˜„ì¬ ì „ì²´ê°¯ìˆ˜.
+ìƒì„±ì: ì´ë¦„í• ë‹¹
+method: restoreApple(ì‚¬ê³¼ê°¯ìˆ˜ ì¶”ê°€)
+eatApple() : ê° ê³°ëŒì´ê°€ ì‚¬ê³¼ë¥¼ ë¨¹ì„ë–„ ì²˜ë¦¬.
+	ê°ìê°€ ë¨¹ì€ ê°¯ìˆ˜, í˜„ì¬ ì „ì²´ë‚¨ì€ê°¯ìˆ˜.
 
-output: @@@»ç°ú¸¦ ¸Ô´Â´Ù.
-		@@@¸ÔÀº »ç°ú°¹¼ö @@@
-		ÇöÀç ³²Àº »ç°ú°¹¼ö@@@.
+output: @@@ì‚¬ê³¼ë¥¼ ë¨¹ëŠ”ë‹¤.
+		@@@ë¨¹ì€ ì‚¬ê³¼ê°¯ìˆ˜ @@@
+		í˜„ì¬ ë‚¨ì€ ì‚¬ê³¼ê°¯ìˆ˜@@@.
 */
 class Bear01{
 	String name;
@@ -22,7 +22,7 @@ class Bear01{
 		return name;
 	}
 	void print(){
-		System.out.println(name+ "°¡ "+ nowEat +"°³¸¦ ¿ì°Æ¿ì°Æ!!"+" Áö±İ "+ currRest+"°³ ³²¾Ñ³×¿ä.");
+		System.out.println(name+ "ê°€ "+ nowEat +"ê°œë¥¼ ìš°ê±±ìš°ê±±!!"+" ì§€ê¸ˆ "+ currRest+"ê°œ ë‚¨ì•—ë„¤ìš”.");
 	}
 }
 
@@ -33,17 +33,17 @@ public class HW_Apr19_apple {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Bear01 b1 = new Bear01();
-		System.out.println("¿ø·¡ »ç°ú°¹¼ö´Â "+ Bear01.currRest +"°³ ÀÔ´Ï´Ù!");
-		b1.eating("taddy1",3);  // Ãâ·ÂÀ» À§ÇÑ.. name, nowEat;
-		Bear01.currRest -= 3;  // °øµ¿ »ç°ú°¹¼ö Ã³¸®  »ç½Ç b1,b2,b3»ó°ü¾ø¾î¼­ Bear01Å¬·¡½º·Î ¹Ù²Ù´Âµí..
+		System.out.println("ì›ë˜ ì‚¬ê³¼ê°¯ìˆ˜ëŠ” "+ Bear01.currRest +"ê°œ ì…ë‹ˆë‹¤!");
+		b1.eating("taddy1",3);  // ì¶œë ¥ì„ ìœ„í•œ.. name, nowEat;
+		Bear01.currRest -= 3;  // ê³µë™ ì‚¬ê³¼ê°¯ìˆ˜ ì²˜ë¦¬  ì‚¬ì‹¤ b1,b2,b3ìƒê´€ì—†ì–´ì„œ Bear01í´ë˜ìŠ¤ë¡œ ë°”ê¾¸ëŠ”ë“¯..
 		b1.print();
 		Bear01 b2 = new Bear01();
-		b2.eating("taddy2",1);  // Ãâ·ÂÀ» À§ÇÑ.. name, nowEat;
-		b2.currRest -= 1;// °øµ¿ »ç°ú°¹¼ö Ã³¸®
+		b2.eating("taddy2",1);  // ì¶œë ¥ì„ ìœ„í•œ.. name, nowEat;
+		b2.currRest -= 1;// ê³µë™ ì‚¬ê³¼ê°¯ìˆ˜ ì²˜ë¦¬
 		b2.print();
 		Bear01 b3 = new Bear01();
-		b3.eating("taddy3",4);   // Ãâ·ÂÀ» À§ÇÑ.. name, nowEat;
-		b3.currRest -= 4;// °øµ¿ »ç°ú°¹¼ö Ã³¸®
+		b3.eating("taddy3",4);   // ì¶œë ¥ì„ ìœ„í•œ.. name, nowEat;
+		b3.currRest -= 4;// ê³µë™ ì‚¬ê³¼ê°¯ìˆ˜ ì²˜ë¦¬
 		b3.print();
 		
 	}

@@ -35,14 +35,14 @@ class Account{
 			total-=outMoney;
 			print+=date+"\t"+content+"\t0\t\t"+outMoney+"\t\t"+total+"\n";
 		}else
-			print+="ÀÜ¾×ÀÌ ºÎÁ·ÇÕ´Ï´Ù.\n";
+			print+="ì”ì•¡ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.\n";
 		
 		return outMoney;
 	}
 	
 	void print(){
-		System.out.println("###### "+name+"´ÔÀÇ °èÁÂ ######");
-		System.out.println("³¯Â¥\t\t³»¿ë\t[ÀÔ±İ¾×]\t\t[Ãâ±İ¾×]\t\t[ÃÑ ÀÜ¾×]");
+		System.out.println("###### "+name+"ë‹˜ì˜ ê³„ì¢Œ ######");
+		System.out.println("ë‚ ì§œ\t\të‚´ìš©\t[ì…ê¸ˆì•¡]\t\t[ì¶œê¸ˆì•¡]\t\t[ì´ ì”ì•¡]");
 		System.out.println(print);
 		}
 	
@@ -57,15 +57,15 @@ public class AccountExp2 {
 		Account a1 = new Account("test");
 		Account a2 = new Account("test",100000);
 		
-		a1.save(3000000,"¿ù±Ş","2017/04/17");
-		a1.withdraw(800000,"¾ÆÀÌÆĞµå","2017/04/17");
-		a1.withdraw(400000,"ÇÃ½º","2017/04/17");
-		a1.withdraw(1800000,"ÆÄ»ê","2017/04/17");
-		a1.withdraw(1800000,"»çÄ¡","2017/04/17");
+		a1.save(3000000,"ì›”ê¸‰","2017/04/17");
+		a1.withdraw(800000,"ì•„ì´íŒ¨ë“œ","2017/04/17");
+		a1.withdraw(400000,"í”ŒìŠ¤","2017/04/17");
+		a1.withdraw(1800000,"íŒŒì‚°","2017/04/17");
+		a1.withdraw(1800000,"ì‚¬ì¹˜","2017/04/17");
 		
 		
-		a2.withdraw(20000,"½Äºñ","2017/04/17");
-		a2.save(3000000,"¿ù±Ş","2017/04/17");
+		a2.withdraw(20000,"ì‹ë¹„","2017/04/17");
+		a2.save(3000000,"ì›”ê¸‰","2017/04/17");
 		
 		a1.print();
 		a2.print();

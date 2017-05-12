@@ -1,22 +1,22 @@
 package javahomework.a20_YiSoyoung.a0426;
-/* ÀÚÆÇ±â ÀÎÅÍÆäÀÌ½º(VendingMachine)
- 	- Ãß»ó¸Ş¼­µå : display() @@@À» ÆÇ¸ÅÇÏ´Â ÀÚÆÇ±â
- 				 menu(); @@ : @@¿ø
- 	- °øÅë¸Ş¼­µå : insertCoin(ÀÔ·Â°ª) @@¿øÀÌ ÀÔ·ÂµÇ¾ú½À´Ï´Ù
- 				 choiceMenu(¹øÈ£³ª ¹®ÀÚ¿­)
- 				 outProduct() @@ÀÌ ³ª¿É´Ï´Ù. ÀÜ¾×Àº @@ÀÔ´Ï´Ù
+/* ìíŒê¸° ì¸í„°í˜ì´ìŠ¤(VendingMachine)
+ 	- ì¶”ìƒë©”ì„œë“œ : display() @@@ì„ íŒë§¤í•˜ëŠ” ìíŒê¸°
+ 				 menu(); @@ : @@ì›
+ 	- ê³µí†µë©”ì„œë“œ : insertCoin(ì…ë ¥ê°’) @@ì›ì´ ì…ë ¥ë˜ì—ˆìŠµë‹ˆë‹¤
+ 				 choiceMenu(ë²ˆí˜¸ë‚˜ ë¬¸ìì—´)
+ 				 outProduct() @@ì´ ë‚˜ì˜µë‹ˆë‹¤. ì”ì•¡ì€ @@ì…ë‹ˆë‹¤
  * */
 interface VendingMachine{
-	public static final String MENU = "Ä¿ÇÇ";
+	public static final String MENU = "ì»¤í”¼";
 	public static final int PRICE = 1500;
 	public void display();
 	public void menu();
 	default void insertCoin(int money){
-		System.out.println(money+"¿øÀÌ ÀÔ·ÂµÇ¾ú½À´Ï´Ù");
+		System.out.println(money+"ì›ì´ ì…ë ¥ë˜ì—ˆìŠµë‹ˆë‹¤");
 	}
 	default void chioceMenu(int no){	}
 	default void outProduct(){
-		System.out.print(MENU+"°¡ ³ª¿É´Ï´Ù");
+		System.out.print(MENU+"ê°€ ë‚˜ì˜µë‹ˆë‹¤");
 	}
 }
 public class A15_annonymous_interface_Homework {
@@ -29,7 +29,7 @@ public class A15_annonymous_interface_Homework {
 			}
 			@Override
 			public void display() {
-				System.out.println(MENU+"¸¦ ÆÇ¸ÅÇÏ´Â ÀÚÆÇ±â");
+				System.out.println(MENU+"ë¥¼ íŒë§¤í•˜ëŠ” ìíŒê¸°");
 			}
 			@Override
 			public void insertCoin(int money) {
@@ -40,11 +40,11 @@ public class A15_annonymous_interface_Homework {
 			public void outProduct() {
 				VendingMachine.super.outProduct();
 				if(inMoney>PRICE)
-					System.out.println((inMoney-PRICE)+"¿ø ÀÜ¾×ÀÔ´Ï´Ù");
+					System.out.println((inMoney-PRICE)+"ì› ì”ì•¡ì…ë‹ˆë‹¤");
 				else if(inMoney==PRICE)
-					System.out.println("ÀÜ¾×ÀÌ ¾ø½À´Ï´Ù");
+					System.out.println("ì”ì•¡ì´ ì—†ìŠµë‹ˆë‹¤");
 				else
-					System.out.println("ÀÜ¾×ÀÌ ºÎÁ·ÇÕ´Ï´Ù. ²À °±À¸¼¼¿ä");
+					System.out.println("ì”ì•¡ì´ ë¶€ì¡±í•©ë‹ˆë‹¤. ê¼­ ê°šìœ¼ì„¸ìš”");
 			}
 		};
 		vendingMachine.menu();

@@ -1,11 +1,11 @@
 package javahomework.a20_YiSoyoung.a0424;
-/* Vehicle1 Å¬·¡½º
- * 	¼Ó¼º : kind, maxSpeed, curSpeed
- * 	¸Ş¼Òµå : speedUp, drive(Å»°ÍÀ» ¾î¶»°Ô ¿îÇà)
+/* Vehicle1 í´ë˜ìŠ¤
+ * 	ì†ì„± : kind, maxSpeed, curSpeed
+ * 	ë©”ì†Œë“œ : speedUp, drive(íƒˆê²ƒì„ ì–´ë–»ê²Œ ìš´í–‰)
  * Bus extends Vehicle
- * 	¸Ş¼Òµå : speedUp(¼ÓµµÁõ°¡·®Â÷ÀÌ), drive(»ç¶÷À» ¸¹ÀÌ ÅÂ¿ì°í ¿îÇàÇÑ´Ù)
+ * 	ë©”ì†Œë“œ : speedUp(ì†ë„ì¦ê°€ëŸ‰ì°¨ì´), drive(ì‚¬ëŒì„ ë§ì´ íƒœìš°ê³  ìš´í–‰í•œë‹¤)
  * Ship extends Vehicle
- * 	¸Ş¼Òµå : speedUp(¼ÓµµÁõ°¡·®Â÷ÀÌ), drive(»ç¶÷À» ¸¹ÀÌ ÅÂ¿ì°í ¿îÇàÇÑ´Ù) */
+ * 	ë©”ì†Œë“œ : speedUp(ì†ë„ì¦ê°€ëŸ‰ì°¨ì´), drive(ì‚¬ëŒì„ ë§ì´ íƒœìš°ê³  ìš´í–‰í•œë‹¤) */
 class Vehicle1 {
 	private String kind;
 	private int maxSpeed;
@@ -17,7 +17,7 @@ class Vehicle1 {
 	public void speedUp(){
 		if(curSpeed<maxSpeed) curSpeed++;
 	}
-	public void drive(){System.out.println(kind+"¸¦ ¿îÇàÇÑ´Ù");}
+	public void drive(){System.out.println(kind+"ë¥¼ ìš´í–‰í•œë‹¤");}
 	public int getCurSpeed() {return curSpeed;}
 	public void setCurSpeed(int curSpeed) {this.curSpeed = curSpeed;}
 	public int getMaxSpeed() {return maxSpeed;}
@@ -31,7 +31,7 @@ class Bus extends Vehicle1{
 		else
 			setCurSpeed(getMaxSpeed());
 	}
-	public void drive(){System.out.println(getKind()+"°¡ »ç¶÷À» ¸¹ÀÌ ½Æ°í ¿îÇàÇÑ´Ù");}
+	public void drive(){System.out.println(getKind()+"ê°€ ì‚¬ëŒì„ ë§ì´ ì‹£ê³  ìš´í–‰í•œë‹¤");}
 }
 class Ship extends Vehicle1{
 	public Ship(String kind, int maxSpeed){super(kind,maxSpeed);}
@@ -41,12 +41,12 @@ class Ship extends Vehicle1{
 		else
 			setCurSpeed(getMaxSpeed());
 	}
-	public void drive(){System.out.println(getKind()+"°¡ ¹°À§¸¦ ¿îÇàÇÑ´Ù");}
+	public void drive(){System.out.println(getKind()+"ê°€ ë¬¼ìœ„ë¥¼ ìš´í–‰í•œë‹¤");}
 }
 public class A07_polymorphismExp {
 	public static void main(String[] args) {
-		Vehicle1 bus = new Bus("´ë¿ì",200);
-		Vehicle1 ship = new Ship("¿À¸£ºñ½º",800);
+		Vehicle1 bus = new Bus("ëŒ€ìš°",200);
+		Vehicle1 ship = new Ship("ì˜¤ë¥´ë¹„ìŠ¤",800);
 		bus.speedUp();
 		bus.drive();
 		ship.speedUp();

@@ -1,15 +1,15 @@
-/* ¼÷Á¦
- ÀºÇà¿¡ °¡¼­(2´Ü°è)
- 1) Account (°èÁÂ°èÁ¤)
- 2) field¸í °èÁ¤¸í, ÀÔ±İ¾×, Ãâ±İ¾×, ÃÑÀÜ¾×, ³¯Â¥, ³»¿ë
- 3) »ı¼ºÀÚ1 °èÁ¤¸í ÀÔ·Â
- 4) »ı¼ºÀÚ2 °èÁ¤¸í, ÃÊ±âÀÔ±İ¾×
- 5) save(ÀÔ±İ¾×, ³¯Â¥)
- 		- °è»êÃ³¸®
- 		- return ÀÔ±İµÈ ±İ¾×
- 6) withdarw(Ãâ±İ¾×, ³¯Â¥)
+/* ìˆ™ì œ
+ ì€í–‰ì— ê°€ì„œ(2ë‹¨ê³„)
+ 1) Account (ê³„ì¢Œê³„ì •)
+ 2) fieldëª… ê³„ì •ëª…, ì…ê¸ˆì•¡, ì¶œê¸ˆì•¡, ì´ì”ì•¡, ë‚ ì§œ, ë‚´ìš©
+ 3) ìƒì„±ì1 ê³„ì •ëª… ì…ë ¥
+ 4) ìƒì„±ì2 ê³„ì •ëª…, ì´ˆê¸°ì…ê¸ˆì•¡
+ 5) save(ì…ê¸ˆì•¡, ë‚ ì§œ)
+ 		- ê³„ì‚°ì²˜ë¦¬
+ 		- return ì…ê¸ˆëœ ê¸ˆì•¡
+ 6) withdarw(ì¶œê¸ˆì•¡, ë‚ ì§œ)
  7) print()
- 		³¯Â¥ ¿ëµ· ÀÔ±İ¾× Ãâ±İ¾× ÃÑÀÜ¾×
+ 		ë‚ ì§œ ìš©ëˆ ì…ê¸ˆì•¡ ì¶œê¸ˆì•¡ ì´ì”ì•¡
 
 */
 package javahomework.a13_SeoJunghyo;
@@ -50,7 +50,7 @@ class Account{
 	}
 	void print(String date, String staus, int depositMoney, int withdrawMoney, int nowMoney, String name){
 		if(nowMoney<0){
-			System.out.println(name+"´Ô. ÀÜ°í°¡ "+withdrawMoney+"¿ø ºÎÁ·ÇÏ¿© Ãâ±İÀ» ÇÒ¼ö°¡ ¾ø½À´Ï´Ù.");
+			System.out.println(name+"ë‹˜. ì”ê³ ê°€ "+withdrawMoney+"ì› ë¶€ì¡±í•˜ì—¬ ì¶œê¸ˆì„ í• ìˆ˜ê°€ ì—†ìŠµë‹ˆë‹¤.");
 		}else{
 			System.out.println(date+"\t\t"+staus+" \t"+depositMoney+"$\t\t"+withdrawMoney+"$\t\t"+nowMoney+"$"+"\t\t"+name);
 		}

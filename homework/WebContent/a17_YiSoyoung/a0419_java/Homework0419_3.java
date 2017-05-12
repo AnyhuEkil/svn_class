@@ -1,12 +1,12 @@
 package javaexp.a06_object;
-/* °õµ¹ÀÌ 3ÇüÁ¦°¡ »ç°ú ¸Ô´Â ÀÌ¾ß±â
- *   field¸í : ÀÌ¸§, °¢ÀÚ ¸ÔÀº °¹¼ö, ÇöÀç ³²Àº »ç°ú°¹¼ö
- *    restoreApple(»ç°ú°¹¼ö Ãß°¡)
+/* ê³°ëŒì´ 3í˜•ì œê°€ ì‚¬ê³¼ ë¨¹ëŠ” ì´ì•¼ê¸°
+ *   fieldëª… : ì´ë¦„, ê°ì ë¨¹ì€ ê°¯ìˆ˜, í˜„ì¬ ë‚¨ì€ ì‚¬ê³¼ê°¯ìˆ˜
+ *    restoreApple(ì‚¬ê³¼ê°¯ìˆ˜ ì¶”ê°€)
  *    eatApple();
- *    °¢ÀÚ°¡ ¸ÔÀº °¹¼ö, ÇöÀç ÀüÃ¼ ³²Àº »ç°ú °¹¼ö
- *    Ãâ·Â : @@@°¡ »ç°ú ¸Ô´Â´Ù
- *          @@@°¡ ¸ÔÀº »ç°ú °¹¼ö´Â @@@
- *          ÇöÀç ³²Àº »ç°ú °¹¼ö @@
+ *    ê°ìê°€ ë¨¹ì€ ê°¯ìˆ˜, í˜„ì¬ ì „ì²´ ë‚¨ì€ ì‚¬ê³¼ ê°¯ìˆ˜
+ *    ì¶œë ¥ : @@@ê°€ ì‚¬ê³¼ ë¨¹ëŠ”ë‹¤
+ *          @@@ê°€ ë¨¹ì€ ì‚¬ê³¼ ê°¯ìˆ˜ëŠ” @@@
+ *          í˜„ì¬ ë‚¨ì€ ì‚¬ê³¼ ê°¯ìˆ˜ @@
  * */
 class Bear{
 	private String name;
@@ -15,15 +15,15 @@ class Bear{
 	public Bear(String name){
 		this.name = name;
 	}
-	public void restoreApple(int appleNo){ //  »ç°ú°¹¼ö Ãß°¡
+	public void restoreApple(int appleNo){ //  ì‚¬ê³¼ê°¯ìˆ˜ ì¶”ê°€
 		this.appleNo += appleNo;
 	}
 	public void eatApple(){
 		eatNo++;
 		appleNo--;
-		System.out.print(name+"°¡(ÀÌ) »ç°ú¸¦ ¸Ô´Â´Ù. ");
-		System.out.println(name+"°¡(ÀÌ) ¸ÔÀº »ç°ú °¹¼ö´Â "+eatNo);
-		System.out.println("ÇöÀç ³²Àº »ç°ú °¹¼ö : "+appleNo);
+		System.out.print(name+"ê°€(ì´) ì‚¬ê³¼ë¥¼ ë¨¹ëŠ”ë‹¤. ");
+		System.out.println(name+"ê°€(ì´) ë¨¹ì€ ì‚¬ê³¼ ê°¯ìˆ˜ëŠ” "+eatNo);
+		System.out.println("í˜„ì¬ ë‚¨ì€ ì‚¬ê³¼ ê°¯ìˆ˜ : "+appleNo);
 	}
 }
 public class Homework0419_3 {
@@ -31,7 +31,7 @@ public class Homework0419_3 {
 		Bear first = new Bear("first");
 		Bear second = new Bear("second");
 		Bear third = new Bear("third");
-		first.restoreApple(100); //Ã¹Â°°¡ »ç°ú¸¦ 100°³ Ã¤¿ö ³ÖÀ½. µÑÂ°¶û ¼ÂÂ°µµ ÁÁ°Ú³×¿ä
+		first.restoreApple(100); //ì²«ì§¸ê°€ ì‚¬ê³¼ë¥¼ 100ê°œ ì±„ì›Œ ë„£ìŒ. ë‘˜ì§¸ë‘ ì…‹ì§¸ë„ ì¢‹ê² ë„¤ìš”
 		first.eatApple();
 		first.eatApple();
 		second.eatApple();

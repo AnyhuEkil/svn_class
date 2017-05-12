@@ -26,6 +26,6 @@ public class ChiefMember {
 		System.out.println("HeadManager salary : "+h1.sal);
 		System.out.println("HeadManager bonus : "+h1.comm);
 //		System.out.println("HeadManager wifeName : "+h1.wifeName);
-// 		HeadManager wifeName, wifeAge¿¡ Á¢±ÙÁ¦¾îÀÚ privateÀÌ °É·ÁÀÖ¾î¼­ ºÒ¾î¿Ã ¼ö ¾øÀ½		
+// 		HeadManager wifeName, wifeAgeì— ì ‘ê·¼ì œì–´ì privateì´ ê±¸ë ¤ìˆì–´ì„œ ë¶ˆì–´ì˜¬ ìˆ˜ ì—†ìŒ		
 	}
 }

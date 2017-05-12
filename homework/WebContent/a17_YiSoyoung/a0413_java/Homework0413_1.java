@@ -1,9 +1,9 @@
 package a00_basic0413;
-/* È®ÀÎ¿¹Á¦..
- * Workman ¼Ó¼º°ª kind(Á÷¾÷ÀÇ Á¾·ù)
- *         ¸Ş¼­µå work() @@°¡ ÀÏÀ» ÇÏ´Ù
- * FireMan ¼Ó¼º°ª wkLoc(ÀÏÀ» ÇÏ´Â Àå¼Ò)
- *         ¸Ş¼­µå turnoff() @@°¡ @@¿¡¼­ ºÒÀ» ²ô´Ù
+/* í™•ì¸ì˜ˆì œ..
+ * Workman ì†ì„±ê°’ kind(ì§ì—…ì˜ ì¢…ë¥˜)
+ *         ë©”ì„œë“œ work() @@ê°€ ì¼ì„ í•˜ë‹¤
+ * FireMan ì†ì„±ê°’ wkLoc(ì¼ì„ í•˜ëŠ” ì¥ì†Œ)
+ *         ë©”ì„œë“œ turnoff() @@ê°€ @@ì—ì„œ ë¶ˆì„ ë„ë‹¤
  * */
 class Workman {
 	private String kind;
@@ -12,7 +12,7 @@ class Workman {
 		this.kind = kind;
 	}
 	public void work(){
-		System.out.println(kind+"°¡ ÀÏÀ» ÇÏ´Ù");
+		System.out.println(kind+"ê°€ ì¼ì„ í•˜ë‹¤");
 	}
 	public String getKind() {return kind;}
 	public void setKind(String kind) {this.kind = kind;}
@@ -25,12 +25,12 @@ class FireMan extends Workman{
 		this.wkLoc = wkLoc;
 	}
 	public void turnoff(){
-		System.out.println(getKind()+"°¡(ÀÌ) "+wkLoc+"¿¡¼­ ºÒÀ» ²ô´Ù");
+		System.out.println(getKind()+"ê°€(ì´) "+wkLoc+"ì—ì„œ ë¶ˆì„ ë„ë‹¤");
 	}
 }
 public class Homework0413_1 {
 	public static void main(String[] args) {
-		FireMan fireMan = new FireMan("¼Ò¹æ°ü","°­³²´ë·Î94±æ");
+		FireMan fireMan = new FireMan("ì†Œë°©ê´€","ê°•ë‚¨ëŒ€ë¡œ94ê¸¸");
 		fireMan.turnoff();
 	}
 }

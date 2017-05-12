@@ -26,16 +26,16 @@
 		int ranNum = (int) (Math.random() * 3 + 1);
 		String msg = "";
 
-		if (whichBtn.equals("1¹ø"))
+		if (whichBtn.equals("1ë²ˆ"))
 			whichNum = 1;
-		if (whichBtn.equals("2¹ø"))
+		if (whichBtn.equals("2ë²ˆ"))
 			whichNum = 2;
-		if (whichBtn.equals("3¹ø"))
+		if (whichBtn.equals("3ë²ˆ"))
 			whichNum = 3;
 
 		if (whichNum == ranNum) {
 	%>
-	Á¤´ä µ¿Àü È¹µæ
+	ì •ë‹µ ë™ì „ íšë“
 	<button>Page Back</button>
 	<%
 		} else {

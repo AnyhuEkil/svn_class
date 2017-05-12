@@ -8,9 +8,9 @@ class Bank{
 	
 	Bank(){}
 	Bank(String id){
-		System.out.println("##"+id+"ÀºÇàÀÔ´Ï´Ù##");
-		System.out.println("#### ÅëÀå °Å·¡³»¿ª ####");
-		System.out.println("°Å·¡ÀÚ\tÀÔ±İ\tÃâ±İ\tÀÜ¾×");
+		System.out.println("##"+id+"ì€í–‰ì…ë‹ˆë‹¤##");
+		System.out.println("#### í†µì¥ ê±°ë˜ë‚´ì—­ ####");
+		System.out.println("ê±°ë˜ì\tì…ê¸ˆ\tì¶œê¸ˆ\tì”ì•¡");
 	}
 	
 	int calcM(String id, int inputM, int outputM){
@@ -36,7 +36,7 @@ class Bank{
 public class hw_0419_2 {
 
 	public static void main(String[] args) {
-		Bank b = new Bank("±â¾÷");
+		Bank b = new Bank("ê¸°ì—…");
 		int sum = b.calcM("kdh", 1000, 0);
 		b.calcP();
 		sum += b.calcM("kdh", 0, 5000);
