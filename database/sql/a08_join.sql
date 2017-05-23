@@ -1,7 +1,7 @@
 /*a08_join.sql*/
 select count(*)
-from emp, dept; -- (empÅ×ÀÌºí)  X  (deptÅ×ÀÌºí)
--- Å©·Î½º Á¶ÀÎ
+from emp, dept; -- (empí…Œì´ë¸”)  X  (deptí…Œì´ë¸”)
+-- í¬ë¡œìŠ¤ ì¡°ì¸
 select count(*)
 from emp;
 /
@@ -11,36 +11,36 @@ select count(*) from dept;
 select * from emp;
 select * from dept;
 /*
-equal join : µÎ°³ÀÌ»ó Å×ÀÌºí¿¡¼­ °¢Å×ÀÌºí¿¡ ¼Ò¼ÓµÇ¾î ÀÖ´Â ÄÃ·³ÀÇ µ¥ÀÌÅÍ°¡ °°Àº °ªÀÌ ÀÖÀ» ¶§,
-¿¬°üÇÏ¿© Ã³¸®ÇÒ ¼ö ÀÖ´Â joinÀ» ¸»ÇÑ´Ù.
-Çü½Ä  
-	select Ç¥ÇöÇÒÄÃ·³
-	from Å×ÀÌºí1, Å×ÀÌºí2
-	where Å×ÀÌºí1.°øÅëÄÃ·³ = Å×ÀÌºí2.°øÅëÄÃ·³
-	°øÅëÄÃ·³ : °°Àº µ¥ÀÌÅÍ°¡ ÀÖ´Â ÄÃ·³..
+equal join : ë‘ê°œì´ìƒ í…Œì´ë¸”ì—ì„œ ê°í…Œì´ë¸”ì— ì†Œì†ë˜ì–´ ìˆëŠ” ì»¬ëŸ¼ì˜ ë°ì´í„°ê°€ ê°™ì€ ê°’ì´ ìˆì„ ë•Œ,
+ì—°ê´€í•˜ì—¬ ì²˜ë¦¬í•  ìˆ˜ ìˆëŠ” joinì„ ë§í•œë‹¤.
+í˜•ì‹  
+	select í‘œí˜„í• ì»¬ëŸ¼
+	from í…Œì´ë¸”1, í…Œì´ë¸”2
+	where í…Œì´ë¸”1.ê³µí†µì»¬ëŸ¼ = í…Œì´ë¸”2.ê³µí†µì»¬ëŸ¼
+	ê³µí†µì»¬ëŸ¼ : ê°™ì€ ë°ì´í„°ê°€ ìˆëŠ” ì»¬ëŸ¼..
 */
 select * 
 from emp, dept
 where emp.deptno = dept.deptno; 
--- »ç¿øÀÌ ÀÌ¸§°ú Á÷Ã¥, ¼Ò¼ÓºÎ¼­¸íÀ» Ãâ·ÂÇÏ¼¼¿ä..
+-- ì‚¬ì›ì´ ì´ë¦„ê³¼ ì§ì±…, ì†Œì†ë¶€ì„œëª…ì„ ì¶œë ¥í•˜ì„¸ìš”..
 select ename, job, dname
 from emp, dept
 where emp.DEPTNO = dept.DEPTNO;
 select * from emp;
--- ex) dept¸¦ Á¶°ÇÇÏ¿© »ç¿ø¸í, ºÎ¼­À§Ä¡(loc)¸¦ Ãâ·Â
+-- ex) deptë¥¼ ì¡°ê±´í•˜ì—¬ ì‚¬ì›ëª…, ë¶€ì„œìœ„ì¹˜(loc)ë¥¼ ì¶œë ¥
 select * from dept;
 select ename, loc
 from emp, dept
 where emp.DEPTNO = dept.DEPTNO;
--- È®ÀÎ¿¹Á¦) º¸³Ê½º°¡ ÀÖ´Â »ç¿øÀÇ ÀÌ¸§°ú ºÎ¼­¸íÀ» Ãâ·ÂÇÏ¼¼¿ä!!
+-- í™•ì¸ì˜ˆì œ) ë³´ë„ˆìŠ¤ê°€ ìˆëŠ” ì‚¬ì›ì˜ ì´ë¦„ê³¼ ë¶€ì„œëª…ì„ ì¶œë ¥í•˜ì„¸ìš”!!
 select * from emp;
 select ename, dname
 from emp a, dept b
 where a.DEPTNO = b.DEPTNO
 and a.comm is not null;
-/*°úÁ¦
-	ºÎ¼­À§Ä¡º° »ç¿øÀÇ ¼ö¸¦ ¾Æ·¡ Çü½ÄÀ¸·Î Ãâ·ÂÇÏ¼¼¿ä..
-	ºÎ¼­À§Ä¡   »ç¿ø ¼ö..
+/*ê³¼ì œ
+	ë¶€ì„œìœ„ì¹˜ë³„ ì‚¬ì›ì˜ ìˆ˜ë¥¼ ì•„ë˜ í˜•ì‹ìœ¼ë¡œ ì¶œë ¥í•˜ì„¸ìš”..
+	ë¶€ì„œìœ„ì¹˜   ì‚¬ì› ìˆ˜..
 */
 select loc, count(*)
 from emp e, dept d
@@ -50,29 +50,29 @@ group by loc;
 select * from emp;
 /*
 non-equi join
-Å×ÀÌºí »çÀÌ¿¡ ÄÃ·³ÀÇ °ªÀÌ Á÷Á¢ÀûÀ¸·Î ÀÏÄ¡ÇÏÁö ¾ÊÀ» ½Ã »ç¿ëÇÏ´Â Á¶ÀÎÀ¸·Î '='¸¦ Á¦¿ÜÇÑ ¿¬»êÀÚ¸¦ »ç¿ëÇÑ´Ù.
+í…Œì´ë¸” ì‚¬ì´ì— ì»¬ëŸ¼ì˜ ê°’ì´ ì§ì ‘ì ìœ¼ë¡œ ì¼ì¹˜í•˜ì§€ ì•Šì„ ì‹œ ì‚¬ìš©í•˜ëŠ” ì¡°ì¸ìœ¼ë¡œ '='ë¥¼ ì œì™¸í•œ ì—°ì‚°ìë¥¼ ì‚¬ìš©í•œë‹¤.
 */
 select * from salgrade;
--- ±Ş¿© µî±ŞÀ» 5°³·Î ³ª´©°í ÀÌ µî±ŞÀ» Ç¥½ÃÇÏ½Ã¿À..
+-- ê¸‰ì—¬ ë“±ê¸‰ì„ 5ê°œë¡œ ë‚˜ëˆ„ê³  ì´ ë“±ê¸‰ì„ í‘œì‹œí•˜ì‹œì˜¤..
 --  where sal between [losal] and [hisal]
--- ÀÌ¸§°ú ¿¬ºÀ ¿¬ºÀµî±ŞÀ» Ãâ·ÂÇÏ¼¼¿ä..
---  Å×ÀÌºí alias »ç¿ëÇÏ±â :Å×ÀÌºíÀÇ ÄÃ·³¿¡ °°Àº ÀÌ¸§ÀÌ ¾øÀ¸¸é ÀÇ¹Ì°¡ ¾øÁö¸¸
--- 	   °°Àº ÀÌ¸§ÀÌ ÀÖÀ¸¸é ±¸ºĞÇÏ±âÀ§ÇØ Å×ÀÌºí¸í[°ø¹é]alias¸¦ È°¿ëÇÑ´Ù.
---    Å×ÀÌºíalias.ÄÃ·³¸í
---    ¶ÇÇÑ, µ¥ÀÌÅÍ ÄÃ·³ÀÇ ¸íÀÌ ¸¹¾Æ, °¡µ¶¼ºÀ» À§ÇØ ±â¼úÇÏ´Â °æ¿ìµµ ÀÖ´Ù.
+-- ì´ë¦„ê³¼ ì—°ë´‰ ì—°ë´‰ë“±ê¸‰ì„ ì¶œë ¥í•˜ì„¸ìš”..
+--  í…Œì´ë¸” alias ì‚¬ìš©í•˜ê¸° :í…Œì´ë¸”ì˜ ì»¬ëŸ¼ì— ê°™ì€ ì´ë¦„ì´ ì—†ìœ¼ë©´ ì˜ë¯¸ê°€ ì—†ì§€ë§Œ
+-- 	   ê°™ì€ ì´ë¦„ì´ ìˆìœ¼ë©´ êµ¬ë¶„í•˜ê¸°ìœ„í•´ í…Œì´ë¸”ëª…[ê³µë°±]aliasë¥¼ í™œìš©í•œë‹¤.
+--    í…Œì´ë¸”alias.ì»¬ëŸ¼ëª…
+--    ë˜í•œ, ë°ì´í„° ì»¬ëŸ¼ì˜ ëª…ì´ ë§ì•„, ê°€ë…ì„±ì„ ìœ„í•´ ê¸°ìˆ í•˜ëŠ” ê²½ìš°ë„ ìˆë‹¤.
 select e.ename, e.sal, s.grade
 from emp e, salgrade s
 where e.sal BETWEEN s.LOSAL and s.HISAL;
-/* ¼÷Á¦
-student10  ¾ÆÀÌµğ, ÀÌ¸§ 
-studentPoint ¾ÆÀÌµğ, °ú¸ñ, Á¡¼ö
-gradeCheck ÃÖÀúÁ¡¼ölopoint, ÃÖ°íÁ¡¼öhipoint, ÇĞÁ¡µî±Ş(A~F)
-1) ¾ÆÀÌµğ¸¦ Á¶ÀÎÇØ¼­(equal join)
-	ÀÌ¸§ °ú¸ñ Á¡¼ö  Ãâ·Â
-2) 	Á¡¼ö¸¦ Á¶ÀÎÇØ¼­(not equal join)
-    °ú¸ñ  Á¡¼ö ÇĞÁ¡µî±Ş
-3) 	student10 studentPoint gradeCheck Á¶ÀÎÀ» ÇÏ¿©..
-   ÀÌ¸§  °ú¸ñ  ÇĞÁ¡µî±Ş
+/* ìˆ™ì œ
+student10  ì•„ì´ë””, ì´ë¦„ 
+studentPoint ì•„ì´ë””, ê³¼ëª©, ì ìˆ˜
+gradeCheck ìµœì €ì ìˆ˜lopoint, ìµœê³ ì ìˆ˜hipoint, í•™ì ë“±ê¸‰(A~F)
+1) ì•„ì´ë””ë¥¼ ì¡°ì¸í•´ì„œ(equal join)
+	ì´ë¦„ ê³¼ëª© ì ìˆ˜  ì¶œë ¥
+2) 	ì ìˆ˜ë¥¼ ì¡°ì¸í•´ì„œ(not equal join)
+    ê³¼ëª©  ì ìˆ˜ í•™ì ë“±ê¸‰
+3) 	student10 studentPoint gradeCheck ì¡°ì¸ì„ í•˜ì—¬..
+   ì´ë¦„  ê³¼ëª©  í•™ì ë“±ê¸‰
 */
 CREATE TABLE student_main
 (
@@ -92,73 +92,73 @@ create table gradecheck(
    lopt   NUMBER,
    hipt   NUMBER	
 );
-insert into gradecheck values('AÇĞÁ¡',90,100);
-insert into gradecheck values('BÇĞÁ¡',80,89);
-insert into gradecheck values('CÇĞÁ¡',70,79);
-insert into gradecheck values('DÇĞÁ¡',60,69);
-insert into gradecheck values('FÇĞÁ¡',0,59);
+insert into gradecheck values('Aí•™ì ',90,100);
+insert into gradecheck values('Bí•™ì ',80,89);
+insert into gradecheck values('Cí•™ì ',70,79);
+insert into gradecheck values('Dí•™ì ',60,69);
+insert into gradecheck values('Fí•™ì ',0,59);
 
 SELECT * FROM STUDENT_MAIN;
 SELECT * FROM STUDENT_POINT;
-INSERT INTO STUDENT_MAIN VALUES('C001001','7777','È«±æµ¿');
-INSERT INTO STUDENT_MAIN VALUES('C001002','7777','½Å±æµ¿');
-INSERT INTO STUDENT_MAIN VALUES('C001003','7777','¸¶±æµ¿');
+INSERT INTO STUDENT_MAIN VALUES('C001001','7777','í™ê¸¸ë™');
+INSERT INTO STUDENT_MAIN VALUES('C001002','7777','ì‹ ê¸¸ë™');
+INSERT INTO STUDENT_MAIN VALUES('C001003','7777','ë§ˆê¸¸ë™');
 /*
 outer join
-µÎ°³ÀÇ Á¶ÀÎ °ü°è¿¡ ÀÖ´Â Å×ÀÌºí¿¡ ÀÖ¼­, ÇÑÂÊ ¶Ç´Â ¾çÂÊ´Ù 
-Á¶°ÇÀÌ ¸¸Á·ÇÏÁö ¾Ê¾Æµµ µ¥ÀÌÅÍ °á°ú¸¦ Ãâ·ÂÇØ¾ß ÇÏ´Â °æ¿ì¿¡ È°¿ëµÇ´Â Á¶ÀÎÀÌ´Ù.
-where µ¥ÀÌÅÍ°¡ ¾ø´Â Å×ÀÌºí.ÄÃ·³¸í(+) = µ¥ÀÌÅÍ°¡ ÀÖ´Â Å×ÀÌºí.ÄÃ·³¸í
+ë‘ê°œì˜ ì¡°ì¸ ê´€ê³„ì— ìˆëŠ” í…Œì´ë¸”ì— ìˆì„œ, í•œìª½ ë˜ëŠ” ì–‘ìª½ë‹¤ 
+ì¡°ê±´ì´ ë§Œì¡±í•˜ì§€ ì•Šì•„ë„ ë°ì´í„° ê²°ê³¼ë¥¼ ì¶œë ¥í•´ì•¼ í•˜ëŠ” ê²½ìš°ì— í™œìš©ë˜ëŠ” ì¡°ì¸ì´ë‹¤.
+where ë°ì´í„°ê°€ ì—†ëŠ” í…Œì´ë¸”.ì»¬ëŸ¼ëª…(+) = ë°ì´í„°ê°€ ìˆëŠ” í…Œì´ë¸”.ì»¬ëŸ¼ëª…
 */
 select * from dept;
 select distinct deptno from emp;
--- ºÎ¼­¹øÈ£º°·Î ¸ÅÄªµÇ´Â »ç¿øÀÌ¸§À» Ãâ·ÂÇÏµÇ, 
---    ÀÌ¸§ÀÌ ¾øÀ¸¸é ¾ø´Ù´Â Ç¥½Ã°¡ ÇÊ¿ä
+-- ë¶€ì„œë²ˆí˜¸ë³„ë¡œ ë§¤ì¹­ë˜ëŠ” ì‚¬ì›ì´ë¦„ì„ ì¶œë ¥í•˜ë˜, 
+--    ì´ë¦„ì´ ì—†ìœ¼ë©´ ì—†ë‹¤ëŠ” í‘œì‹œê°€ í•„ìš”
 -- 
---ºÎ¼­¹øÈ£, ºÎ¼­¸í,  ÀÌ¸§
-select d.deptno, d.dname, nvl(e.ename,'ÀÎ¿ø¾øÀ½') ename
+--ë¶€ì„œë²ˆí˜¸, ë¶€ì„œëª…,  ì´ë¦„
+select d.deptno, d.dname, nvl(e.ename,'ì¸ì›ì—†ìŒ') ename
 from emp e, dept d
 where e.deptno(+) = d.deptno
 order by e.deptno;
 /*
-¼÷Á¦) outer join, groupÀ» È°¿ëÇÏ¿© 
-	  ºÎ¼­¸íº°  ÀÎ¿øÀ» È®ÀÎÇÒ·Á°í ÇÑ´Ù.
-	  ¾Æ·¡ÀÇ Çü½ÄÀ¸·Î Ãâ·ÂÇÏ¼¼¿ä  ÀÎ¿øÀÌ ¾ø´Â °÷Àº 0À¸·Î Ç¥½Ã
-	  ºÎ¼­¸í  ÀÎ¿ø
+ìˆ™ì œ) outer join, groupì„ í™œìš©í•˜ì—¬ 
+	  ë¶€ì„œëª…ë³„  ì¸ì›ì„ í™•ì¸í• ë ¤ê³  í•œë‹¤.
+	  ì•„ë˜ì˜ í˜•ì‹ìœ¼ë¡œ ì¶œë ¥í•˜ì„¸ìš”  ì¸ì›ì´ ì—†ëŠ” ê³³ì€ 0ìœ¼ë¡œ í‘œì‹œ
+	  ë¶€ì„œëª…  ì¸ì›
 */
 /*
-self join : ¸» ±×´ë·Î ÀÚ±â ÀÚ½Å°ú Á¶ÀÎÀ» ¸Î´Â °ÍÀ» ¸»ÇÑ´Ù.
-fromÀı¿¡ °°Àº ÀÌ¸§À» Å×ÀÌºíÀ» ³ª¿­ÇÏ¿©, ´Ù¸¥ Å×ÀÌºíÀÎ °ÍÃ³·³ ÀÎ½ÄÇØ¼­
-Á¶ÀÎÇÏ¿© ±× °á°ú¹°À» Ãâ·ÂÇÏ´Â °ÍÀ» ¸»ÇÑ´Ù.
+self join : ë§ ê·¸ëŒ€ë¡œ ìê¸° ìì‹ ê³¼ ì¡°ì¸ì„ ë§ºëŠ” ê²ƒì„ ë§í•œë‹¤.
+fromì ˆì— ê°™ì€ ì´ë¦„ì„ í…Œì´ë¸”ì„ ë‚˜ì—´í•˜ì—¬, ë‹¤ë¥¸ í…Œì´ë¸”ì¸ ê²ƒì²˜ëŸ¼ ì¸ì‹í•´ì„œ
+ì¡°ì¸í•˜ì—¬ ê·¸ ê²°ê³¼ë¬¼ì„ ì¶œë ¥í•˜ëŠ” ê²ƒì„ ë§í•œë‹¤.
 select *
-from Å×ÀÌºí¸í alias01, µ¿ÀÏÅ×ÀÌºí¸í alias02
-where alias01.¿¬°üÄÃ·³ = alias2.¿¬°üÄÃ·³
-ex) »ç¿øÅ×ÀÌºí(emp)¿¡¼­  »ç¿ø¸í  °ü¸®ÀÚ¸íÀ» Ãâ·ÂÇÏ¼¼¿ä..
+from í…Œì´ë¸”ëª… alias01, ë™ì¼í…Œì´ë¸”ëª… alias02
+where alias01.ì—°ê´€ì»¬ëŸ¼ = alias2.ì—°ê´€ì»¬ëŸ¼
+ex) ì‚¬ì›í…Œì´ë¸”(emp)ì—ì„œ  ì‚¬ì›ëª…  ê´€ë¦¬ìëª…ì„ ì¶œë ¥í•˜ì„¸ìš”..
 */
 select work.ename, work.mgr,manager.ename 
 from emp work, emp manager
 where work.mgr = manager.empno;
 /*
-°èÃşÇü join°ü°è Á¤º¸ Å×ÀÌºí ¸¸µé±â(self join)
-1. ±¸Á¶¸¦ Á¤¸®ÇÑ´Ù..
-	id¿Í »óÀ§id¸¦ ÀÔ·ÂÇÏ´Â key¸¦ ¸¸µç´Ù.
+ê³„ì¸µí˜• joinê´€ê³„ ì •ë³´ í…Œì´ë¸” ë§Œë“¤ê¸°(self join)
+1. êµ¬ì¡°ë¥¼ ì •ë¦¬í•œë‹¤..
+	idì™€ ìƒìœ„idë¥¼ ì…ë ¥í•˜ëŠ” keyë¥¼ ë§Œë“ ë‹¤.
 	numid, parentnumid, role01, name
-	¾ÆÀÌµğ, »óÀ§¾ÆÀÌµğ, ¿ªÇÒ, ÀÌ¸§
-2. Å×ÀÌºíÀ» »ı¼ºÇÑ´Ù.
+	ì•„ì´ë””, ìƒìœ„ì•„ì´ë””, ì—­í• , ì´ë¦„
+2. í…Œì´ë¸”ì„ ìƒì„±í•œë‹¤.
 	create table family(
 		numid number,
 		parentnumid number,
 		role01 varchar2(100),
 		name varcahr2(500)
 	);	
-3. µ¥ÀÌÅÍ¸¦ ÀÔ·ÂÇÑ´Ù.(À§¿¡ ¼¼¿ö³õÀº °èÃşÇü ±¸Á¶¿¡ ÀÇÇÑ µ¥ÀÌÅÍ ÀÔ·ÂÃ³¸®)
-	insert into family values(1,0,'ÇÒ¾Æ¹öÁö','È«±æµ¿');
-	insert into family values(2,1,'¾Æ¹öÁö','È«Á¤±æ');
-	insert into family values(3,2,'¾Æµé','È«ÇöÈ£');
-	insert into family values(4,1,'»ïÃÌ','È«Á¤È£');
+3. ë°ì´í„°ë¥¼ ì…ë ¥í•œë‹¤.(ìœ„ì— ì„¸ì›Œë†“ì€ ê³„ì¸µí˜• êµ¬ì¡°ì— ì˜í•œ ë°ì´í„° ì…ë ¥ì²˜ë¦¬)
+	insert into family values(1,0,'í• ì•„ë²„ì§€','í™ê¸¸ë™');
+	insert into family values(2,1,'ì•„ë²„ì§€','í™ì •ê¸¸');
+	insert into family values(3,2,'ì•„ë“¤','í™í˜„í˜¸');
+	insert into family values(4,1,'ì‚¼ì´Œ','í™ì •í˜¸');
 	
 	
-4. ÀÔ·ÂµÈ µ¥ÀÌÅÍ ³»¿ëÀÌ Á¤»óÀûÀ¸·Î µÇ¾î ÀÖ´ÂÁö È®ÀÎÇÑ´Ù.
-	- Á¶È¸ Ã³¸®..
+4. ì…ë ¥ëœ ë°ì´í„° ë‚´ìš©ì´ ì •ìƒì ìœ¼ë¡œ ë˜ì–´ ìˆëŠ”ì§€ í™•ì¸í•œë‹¤.
+	- ì¡°íšŒ ì²˜ë¦¬..
 */
 	create table family(
 		numid number,
@@ -166,12 +166,12 @@ where work.mgr = manager.empno;
 		role01 varchar2(100),
 		name varchar2(500)
 	);	
-	insert into family values(1,0,'ÇÒ¾Æ¹öÁö','È«±æµ¿');
-	insert into family values(2,1,'¾Æ¹öÁö','È«Á¤±æ');
-	insert into family values(3,2,'¾Æµé','È«ÇöÈ£');
-	insert into family values(4,1,'»ïÃÌ','È«Á¤È£');
+	insert into family values(1,0,'í• ì•„ë²„ì§€','í™ê¸¸ë™');
+	insert into family values(2,1,'ì•„ë²„ì§€','í™ì •ê¸¸');
+	insert into family values(3,2,'ì•„ë“¤','í™í˜„í˜¸');
+	insert into family values(4,1,'ì‚¼ì´Œ','í™ì •í˜¸');
 	select * from family;
-/* ÀÌ¸§  role »óÀ§ÀÌ¸§
+/* ì´ë¦„  role ìƒìœ„ì´ë¦„
 */	
 select cur.name, cur.role01, par.name pname
 from family cur, family par

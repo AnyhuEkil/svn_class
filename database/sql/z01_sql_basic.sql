@@ -1,64 +1,64 @@
 /*
 1. DML : Data Maniplulation Language
-1) select : Á¶È¸½Ã »ç¿ë.
-2) insert : µ¥ÀÌÅÍ ÀÔ·Â½Ã »ç¿ë.
-   insert into Å×ÀÌºí¸í values(µ¥ÀÌÅÍ1, Å×ÀÌÅÍ2, Å×ÀÌÅÍ3);
+1) select : ì¡°íšŒì‹œ ì‚¬ìš©.
+2) insert : ë°ì´í„° ìž…ë ¥ì‹œ ì‚¬ìš©.
+   insert into í…Œì´ë¸”ëª… values(ë°ì´í„°1, í…Œì´í„°2, í…Œì´í„°3);
    
 */
 select * from dept;
 /*
-Å×ÀÌºí º¹»çÇÏ±â..
-create table »õ·Î¿îÅ×ÀÌºí¸í
-as select * from º¹»çÇÒÅ×ÀÌºí¸í;
+í…Œì´ë¸” ë³µì‚¬í•˜ê¸°..
+create table ìƒˆë¡œìš´í…Œì´ë¸”ëª…
+as select * from ë³µì‚¬í• í…Œì´ë¸”ëª…;
 */
 create table dept01
 as select * from dept;
 select * from dept01;
 /*
-µ¥ÀÌÅÍ ÀÔ·Â1)
-ex) insert into dept01 values(50,'ÃÑ¹«ºÎ','¼­¿ï');
+ë°ì´í„° ìž…ë ¥1)
+ex) insert into dept01 values(50,'ì´ë¬´ë¶€','ì„œìš¸');
 */
-insert into dept01 values(50,'ÃÑ¹«ºÎ','¼­¿ï');
+insert into dept01 values(50,'ì´ë¬´ë¶€','ì„œìš¸');
 select * from dept01;
-commit; -- È®Á¤Ã³¸®, ÀçÁ¢¼ÓÇÏ°Å³ª ´Ù¸¥ »ç¿ëÀÚµµ º¯°æµÈ µ¥ÀÌÅÍ¸¦ º¼ ¼ö ÀÖ°Ô.
+commit; -- í™•ì •ì²˜ë¦¬, ìž¬ì ‘ì†í•˜ê±°ë‚˜ ë‹¤ë¥¸ ì‚¬ìš©ìžë„ ë³€ê²½ëœ ë°ì´í„°ë¥¼ ë³¼ ìˆ˜ ìžˆê²Œ.
 /*
-µ¥ÀÌÅÍ ÀÔ·Â2
-insert into Å×ÀÌºí¸í(º¯°æÇÒÄÃ·³¸í1, º¯°æÇÒ ÄÃ·³¸í2) 
-           values(Ã¹¹øÂ°ÀÔ·ÂÇÒµ¥ÀÌÅÍ,µÎ¹øÂ°ÀÔ·ÂÇÒ µ¥ÀÌÅÍ);
-ex) dept01Å×ÀÌºí¿¡¼­ deptno¸¸ 60À» ÀÔ·ÂÇÑ´Ù.
-    dept01Å×ÀÌºí¿¡¼­ deptno¿Í loc¸¸ ÀÔ·ÂÇÑ´Ù.
+ë°ì´í„° ìž…ë ¥2
+insert into í…Œì´ë¸”ëª…(ë³€ê²½í• ì»¬ëŸ¼ëª…1, ë³€ê²½í•  ì»¬ëŸ¼ëª…2) 
+           values(ì²«ë²ˆì§¸ìž…ë ¥í• ë°ì´í„°,ë‘ë²ˆì§¸ìž…ë ¥í•  ë°ì´í„°);
+ex) dept01í…Œì´ë¸”ì—ì„œ deptnoë§Œ 60ì„ ìž…ë ¥í•œë‹¤.
+    dept01í…Œì´ë¸”ì—ì„œ deptnoì™€ locë§Œ ìž…ë ¥í•œë‹¤.
 */
 insert into dept01(deptno) values(60);
 select * from dept01;
-insert into dept01(deptno, loc) values(70,'ÀÎÃµ');
+insert into dept01(deptno, loc) values(70,'ì¸ì²œ');
 /*
-3) update : ÀÔ·ÂµÇ¾î ÀÖ´Â µ¥ÀÌÅÍ ³»¿ëÁß, º¯°æÀÌ ÇÊ¿äÇÑ ºÎºÐÀ»
-	¼öÁ¤Ã³¸®ÇÑ´Ù.
-	update Å×ÀÌºí¸í
-	  set º¯°æÇÏ°íÀÚÇÏ´ÂÄÃ·³¸í1=º¯°æÇÒµ¥ÀÌÅÍ,
-	  	  º¯°æÇÏ°íÀÚÇÏ´ÂÄÃ·³¸í2=º¯°æÇÒµ¥ÀÌÅÍ
-	 where º¯°æÇÏ°íÀÚÇÏ´Â Á¶°Ç(ÄÃ·³¸í=Á¶°Çµ¥ÀÌÅÍ);
+3) update : ìž…ë ¥ë˜ì–´ ìžˆëŠ” ë°ì´í„° ë‚´ìš©ì¤‘, ë³€ê²½ì´ í•„ìš”í•œ ë¶€ë¶„ì„
+	ìˆ˜ì •ì²˜ë¦¬í•œë‹¤.
+	update í…Œì´ë¸”ëª…
+	  set ë³€ê²½í•˜ê³ ìží•˜ëŠ”ì»¬ëŸ¼ëª…1=ë³€ê²½í• ë°ì´í„°,
+	  	  ë³€ê²½í•˜ê³ ìží•˜ëŠ”ì»¬ëŸ¼ëª…2=ë³€ê²½í• ë°ì´í„°
+	 where ë³€ê²½í•˜ê³ ìží•˜ëŠ” ì¡°ê±´(ì»¬ëŸ¼ëª…=ì¡°ê±´ë°ì´í„°);
 */
 select * from dept01;
--- dept01¿¡ deptno°¡ 60À» Á¶°ÇÀ¸·Î ÇÏ´Â µ¥ÀÌÅÍ¸¦ dname ÀÎ»ç, loc ´ëÀüÀ¸·Î
--- º¯°æÃ³¸®.
+-- dept01ì— deptnoê°€ 60ì„ ì¡°ê±´ìœ¼ë¡œ í•˜ëŠ” ë°ì´í„°ë¥¼ dname ì¸ì‚¬, loc ëŒ€ì „ìœ¼ë¡œ
+-- ë³€ê²½ì²˜ë¦¬.
 update dept01
-  set dname='ÀÎ»ç',
-      loc='´ëÀü'
+  set dname='ì¸ì‚¬',
+      loc='ëŒ€ì „'
 where deptno=60;
 select * from dept01;	  
--- È®ÀÎ¿¹Á¦..
+-- í™•ì¸ì˜ˆì œ..
 -- select * from emp;
--- emp01ÀÌ¶ó´Â º¹»ç Å×ÀÌºíÀ» ¸¸µé°í
--- 1) empno°¡ °¡Àå ¸¹Àº ¹øÈ£º¸´Ù +1ÇØ¼­, ename°ú job, sal¸¦ ÀÔ·ÂÇÏ¼¼¿ä
--- 2) ±×¿Ü¿¡ ÄÃ·³ mrg, hirdate(sysdate-ÇöÀç³¯Â¥·Î¼öÁ¤), deptno´Â 40À¸·Î ¼öÁ¤Ã³¸®ÇÏ¼¼¿ä
+-- emp01ì´ë¼ëŠ” ë³µì‚¬ í…Œì´ë¸”ì„ ë§Œë“¤ê³ 
+-- 1) empnoê°€ ê°€ìž¥ ë§Žì€ ë²ˆí˜¸ë³´ë‹¤ +1í•´ì„œ, enameê³¼ job, salë¥¼ ìž…ë ¥í•˜ì„¸ìš”
+-- 2) ê·¸ì™¸ì— ì»¬ëŸ¼ mrg, hirdate(sysdate-í˜„ìž¬ë‚ ì§œë¡œìˆ˜ì •), deptnoëŠ” 40ìœ¼ë¡œ ìˆ˜ì •ì²˜ë¦¬í•˜ì„¸ìš”
 select * from emp;
 create table emp01
 as select * from emp;
 select max(empno)+1 from emp01;
 -- 7935
 insert into emp01(empno, ename, job, sal) 
-          values(7935, 'È«±æµ¿','SUPERMAN',5000);
+          values(7935, 'í™ê¸¸ë™','SUPERMAN',5000);
 commit;		  
 SELECT * FROM emp01 where empno=7935;
 update emp01
@@ -66,10 +66,10 @@ update emp01
        hiredate=sysdate,
 	   deptno=40
 where empno=7935;
---  ¼÷Á¦
--- emp03 º¹»çÅ×ÀÌºí »ý¼º
--- 1. ÀÔ·Â  empnoÀÇ °¡Àå ÀÛÀº¼öº¸´Ù -1, mgr: CLERK ÀÇ mgrÀÔ·Â, sal:Æò±Õ¿¬ºÀ, 
---    comm:ÀüÃ¼commÀÇ ÇÕ°è
+--  ìˆ™ì œ
+-- emp03 ë³µì‚¬í…Œì´ë¸” ìƒì„±
+-- 1. ìž…ë ¥  empnoì˜ ê°€ìž¥ ìž‘ì€ìˆ˜ë³´ë‹¤ -1, mgr: CLERK ì˜ mgrìž…ë ¥, sal:í‰ê· ì—°ë´‰, 
+--    comm:ì „ì²´commì˜ í•©ê³„
 select min(empno)-1, avg(sal), sum(comm)
 from EMP03; -- 7368, 2073.21, 2200
 select mgr
@@ -80,49 +80,49 @@ INSERT INTO EMP03(EMPNO, SAL, COMM, MGR) VALUES( 7368,2073.21,2200,7788);
 INSERT INTO EMP03(EMPNO, SAL, COMM, MGR) VALUES( 7368,2073.21,2200,7698);
 INSERT INTO EMP03(EMPNO, SAL, COMM, MGR) VALUES( 7368,2073.21,2200,7782);
 SELECT * FROM EMP03;
--- 2. ¼öÁ¤ ename:'½Å±æµ¿', jobÀº SUPERMAN, hirdate´Â ÃÖ±Ù¿¡ ÀÔ»çÀÏ+1
+-- 2. ìˆ˜ì • ename:'ì‹ ê¸¸ë™', jobì€ SUPERMAN, hirdateëŠ” ìµœê·¼ì— ìž…ì‚¬ì¼+1
 SELECT MAX(HIREDATE)+1
 FROM EMP;
 	UPDATE EMP03
-		SET ENAME='½Å±æµ¿',
+		SET ENAME='ì‹ ê¸¸ë™',
 		JOB='SUPERMAN',
 		HIREDATE=(SELECT MAX(HIREDATE)+1 FROM EMP03);
 select * from  EMP03;
 /*
-4. delete : Æ¯Á¤ Á¶°ÇÀÇ µ¥ÀÌÅÍ¸¦ »èÁ¦Ã³¸®ÇÏ´Â ±¸¹®
-	delete [¾øÀ½] from Å×ÀÌºí¸í
-	where Á¶°Ç[ÄÃ·³¸í = Á¶°Çµ¥ÀÌÅÍ]
+4. delete : íŠ¹ì • ì¡°ê±´ì˜ ë°ì´í„°ë¥¼ ì‚­ì œì²˜ë¦¬í•˜ëŠ” êµ¬ë¬¸
+	delete [ì—†ìŒ] from í…Œì´ë¸”ëª…
+	where ì¡°ê±´[ì»¬ëŸ¼ëª… = ì¡°ê±´ë°ì´í„°]
 */
--- DNAMEÀÌ 'SALES'ÀÎ µ¥ÀÌÅÍ¸¦ DEPT01¿¡¼­ »èÁ¦ÇÏ½Ã¿À..
+-- DNAMEì´ 'SALES'ì¸ ë°ì´í„°ë¥¼ DEPT01ì—ì„œ ì‚­ì œí•˜ì‹œì˜¤..
 DELETE FROM dept01
 where DNAME='SALES';
--- È®ÀÎ¿¹Á¦ deptno°¡ 50ÀÌ»óÀÎ µ¥ÀÌÅÍ¸¦ ¸ðµÎ »èÁ¦ÇÏ½Ã¿À..
+-- í™•ì¸ì˜ˆì œ deptnoê°€ 50ì´ìƒì¸ ë°ì´í„°ë¥¼ ëª¨ë‘ ì‚­ì œí•˜ì‹œì˜¤..
 select * from dept01;
 delete from dept01
 where deptno>=50;
--- emp01Å×ÀÌºí commÀÌ nullÀÌ°í, deptno°¡ 20ÀÎ µ¥ÀÌÅÍ¸¦ »èÁ¦ÇÏ¼¼¿ä.
+-- emp01í…Œì´ë¸” commì´ nullì´ê³ , deptnoê°€ 20ì¸ ë°ì´í„°ë¥¼ ì‚­ì œí•˜ì„¸ìš”.
 delete from emp01
 where comm is null
 and deptno=20;
 /*
-Transaction(Æ®·£Àè¼Ç) : µ¥ÀÌÅÍº£ÀÌ½º¿¡¼­ Ã³¸®ÀÇ ÇÑ ´ÜÀ§¸¦ ÀÇ¹ÌÇÏ¸ç, 
-¿©·¯°³ÀÇ sql¹®ÀÇ ÇÏ³ªÀÇ ³í¸®Àû ÀÛ¾÷ ´ÜÀ§¸¦ Ã³¸®ÇÏ´Âµ¥ ÀÌ¸¦ ÀÇ¹ÌÇÏ±âµµ ÇÑ´Ù.
-TCL(Trasaction Control Language) : ÀÌ·¯ÇÑ Æ®·£Àè¼ÇÀ» Á¦¾î¸¦ À§ÇÑ ¸í·É¾î..
- commit : µ¥ÀÌÅÍÀÇ dmlÀ» ÅëÇØ ¼öÁ¤,»èÁ¦, ÀÔ·ÂµÈ ³»¿ëÀ» È®Á¤Ã³¸®..
- rollback : µ¥ÀÌÅÍ¸¦ commitÇÏ±âÀü¿¡ ¼öÁ¤ »èÁ¦ ÀÔ·ÂµÈ ³»¿ëÀ» ¿øº¹Ã³¸®..
- savepoint : µ¥ÀÌÅÍ¸¦ Æ¯Á¤½ÃÁ¡À¸·Î ¿øº¹Ã³¸®ÇÏ°íÀÚ ÇÒ¶§, ½ÃÁ¡À» saveÇÏ´Â °ÍÀ» ¸»ÇÑ´Ù.
+Transaction(íŠ¸ëžœìž­ì…˜) : ë°ì´í„°ë² ì´ìŠ¤ì—ì„œ ì²˜ë¦¬ì˜ í•œ ë‹¨ìœ„ë¥¼ ì˜ë¯¸í•˜ë©°, 
+ì—¬ëŸ¬ê°œì˜ sqlë¬¸ì˜ í•˜ë‚˜ì˜ ë…¼ë¦¬ì  ìž‘ì—… ë‹¨ìœ„ë¥¼ ì²˜ë¦¬í•˜ëŠ”ë° ì´ë¥¼ ì˜ë¯¸í•˜ê¸°ë„ í•œë‹¤.
+TCL(Trasaction Control Language) : ì´ëŸ¬í•œ íŠ¸ëžœìž­ì…˜ì„ ì œì–´ë¥¼ ìœ„í•œ ëª…ë ¹ì–´..
+ commit : ë°ì´í„°ì˜ dmlì„ í†µí•´ ìˆ˜ì •,ì‚­ì œ, ìž…ë ¥ëœ ë‚´ìš©ì„ í™•ì •ì²˜ë¦¬..
+ rollback : ë°ì´í„°ë¥¼ commití•˜ê¸°ì „ì— ìˆ˜ì • ì‚­ì œ ìž…ë ¥ëœ ë‚´ìš©ì„ ì›ë³µì²˜ë¦¬..
+ savepoint : ë°ì´í„°ë¥¼ íŠ¹ì •ì‹œì ìœ¼ë¡œ ì›ë³µì²˜ë¦¬í•˜ê³ ìž í• ë•Œ, ì‹œì ì„ saveí•˜ëŠ” ê²ƒì„ ë§í•œë‹¤.
 */
 select * from dept01;
--- 1) dept01Å×ÀÌºí¿¡ deptno 30 'ÃÑ¹«' '°­³²'À» ÀÔ·ÂÇÑ µÚ, rollbackÃ³¸®¸¦ ÇØº»´Ù.
--- 2) dept01Å×ÀÌºí¿¡ deptno 40 'ÀÎ»ç' '´ëÀü'À» ÀÔ·ÂÇÑµÚ,
---        commitÇÏ°í  ÀçÁ¢¼ÓÇÑ °æ¿ì¿Í commitÇÏÁö ¾Ê°í ÀçÁ¢¼ÓÇÑ °æ¿ì µ¥ÀÌÅÍÀÇ º¯°æ ³»¿ëÀ»
---        È®ÀÎÇÑ´Ù.
-insert into dept01 values(30,'ÃÑ¹«','°­³²');
-rollback;   -- µ¥ÀÌÅÍ°¡ ÀÔ·ÂµÇ±â ÀüÀ¸·Î µ¹¾Æ°¡´Â °ÍÀ» È®ÀÎÇÒ ¼ö ÀÖ´Ù.
- insert into dept01 values(50,'ÀÎ»ç1','´ëÀü1');
--- dbÁ¢¼ÓÀ» ²÷´Â´Ù.
--- ¿ÜºÎ¿¡¼­ comitÇÏ±â Àü¿¡´Â µ¥ÀÌÅÍ°¡ º¯°æ ¿øº¹ÀÌ µÈ´Ù.
--- tool¿¡ µû¶ó autocommitÀÌ ¹ß»ýÇÏ´Â °æ¿ì°¡ ÀÖ´Ù..
+-- 1) dept01í…Œì´ë¸”ì— deptno 30 'ì´ë¬´' 'ê°•ë‚¨'ì„ ìž…ë ¥í•œ ë’¤, rollbackì²˜ë¦¬ë¥¼ í•´ë³¸ë‹¤.
+-- 2) dept01í…Œì´ë¸”ì— deptno 40 'ì¸ì‚¬' 'ëŒ€ì „'ì„ ìž…ë ¥í•œë’¤,
+--        commití•˜ê³   ìž¬ì ‘ì†í•œ ê²½ìš°ì™€ commití•˜ì§€ ì•Šê³  ìž¬ì ‘ì†í•œ ê²½ìš° ë°ì´í„°ì˜ ë³€ê²½ ë‚´ìš©ì„
+--        í™•ì¸í•œë‹¤.
+insert into dept01 values(30,'ì´ë¬´','ê°•ë‚¨');
+rollback;   -- ë°ì´í„°ê°€ ìž…ë ¥ë˜ê¸° ì „ìœ¼ë¡œ ëŒì•„ê°€ëŠ” ê²ƒì„ í™•ì¸í•  ìˆ˜ ìžˆë‹¤.
+ insert into dept01 values(50,'ì¸ì‚¬1','ëŒ€ì „1');
+-- dbì ‘ì†ì„ ëŠëŠ”ë‹¤.
+-- ì™¸ë¶€ì—ì„œ comití•˜ê¸° ì „ì—ëŠ” ë°ì´í„°ê°€ ë³€ê²½ ì›ë³µì´ ëœë‹¤.
+-- toolì— ë”°ë¼ autocommitì´ ë°œìƒí•˜ëŠ” ê²½ìš°ê°€ ìžˆë‹¤..
 select * from emp01;
 
 

@@ -1,99 +1,99 @@
--- ÄÃ·³¸í¿¡ ÀÌ¸§(º°¸í) ºÙÀÌ±â!!
+-- ì»¬ëŸ¼ëª…ì— ì´ë¦„(ë³„ëª…) ë¶™ì´ê¸°!!
 
 select * from emp;
--- empno¸¦ º°ÄªÀ¸·Î companyNo·Î ¾²±â·Î Çß´Ù. Ãâ·ÂÇÏ¼¼¿ä..
--- ÄÃ·³¸í as ³ªÅ¸³¯ º°ÄªÄÃ·³¸í alias
+-- empnoë¥¼ ë³„ì¹­ìœ¼ë¡œ companyNoë¡œ ì“°ê¸°ë¡œ í–ˆë‹¤. ì¶œë ¥í•˜ì„¸ìš”..
+-- ì»¬ëŸ¼ëª… as ë‚˜íƒ€ë‚  ë³„ì¹­ì»¬ëŸ¼ëª… alias
 select empno as companyNo from emp;
--- º°ÄªÀº ÇÁ·Î±×·¥ ¿µ¿ª¿¡¼­ Áß¿äÇÑ ÀÇ¹Ì¸¦ °¡Áø´Ù..
--- ´ë´Ù¼ö ÇÁ·Î±×·¥Àº º°ÄªÀ¸·Î °£ÆíÇÏ°Ô »ç¿ëÇÏ´Â °æ¿ì°¡ ¸¹´Ù.
--- ex) rs.getString("º°Äª/ÄÃ·³¸í")
---  as ´ë½Å¿¡ °ø¹é(' ')À¸·Î Ã³¸®ÇÑ´Ù.
-select '»ç¹øÀº'||empno || ' ÀÔ´Ï´Ù!' show from emp;
--- ½ÇÁ¦ application¿¡¼­´Â rs.getString("show")·Î Ã³¸®µÈ´Ù.
+-- ë³„ì¹­ì€ í”„ë¡œê·¸ëž¨ ì˜ì—­ì—ì„œ ì¤‘ìš”í•œ ì˜ë¯¸ë¥¼ ê°€ì§„ë‹¤..
+-- ëŒ€ë‹¤ìˆ˜ í”„ë¡œê·¸ëž¨ì€ ë³„ì¹­ìœ¼ë¡œ ê°„íŽ¸í•˜ê²Œ ì‚¬ìš©í•˜ëŠ” ê²½ìš°ê°€ ë§Žë‹¤.
+-- ex) rs.getString("ë³„ì¹­/ì»¬ëŸ¼ëª…")
+--  as ëŒ€ì‹ ì— ê³µë°±(' ')ìœ¼ë¡œ ì²˜ë¦¬í•œë‹¤.
+select 'ì‚¬ë²ˆì€'||empno || ' ìž…ë‹ˆë‹¤!' show from emp;
+-- ì‹¤ì œ applicationì—ì„œëŠ” rs.getString("show")ë¡œ ì²˜ë¦¬ëœë‹¤.
 select * from emp;
--- ´ÙÀ½ÀÇ ³»¿ëÀ» º¯°æµÈ ÄÃ·³À¸·Î ³ªÅ¸³»¼¼¿ä..
--- ÄÃ·³¸í        depandname   upgradeRatio   enterCompany  
--- Ãâ·Âµ¥ÀÌÅÍ  (ºÎ¼­¹øÈ£)ÀÌ¸§    ¿¬ºÀÀÇ 10%     ÀÔ»ç³â¿ùÀÏ
+-- ë‹¤ìŒì˜ ë‚´ìš©ì„ ë³€ê²½ëœ ì»¬ëŸ¼ìœ¼ë¡œ ë‚˜íƒ€ë‚´ì„¸ìš”..
+-- ì»¬ëŸ¼ëª…        depandname   upgradeRatio   enterCompany  
+-- ì¶œë ¥ë°ì´í„°  (ë¶€ì„œë²ˆí˜¸)ì´ë¦„    ì—°ë´‰ì˜ 10%     ìž…ì‚¬ë…„ì›”ì¼
 select '( '||deptno||' ) '|| ename depandname, sal*0.1 upgradeRatio, 
 		hiredate enterCompany from emp;
--- 	°ø¹é°ªÀ» º°ÄªÀ¸·Î Ã³¸®ÇÏ±â..: " "»çÀÌ º°Äª¸íÀ» Àû¾îÁØ´Ù.
+-- 	ê³µë°±ê°’ì„ ë³„ì¹­ìœ¼ë¡œ ì²˜ë¦¬í•˜ê¸°..: " "ì‚¬ì´ ë³„ì¹­ëª…ì„ ì ì–´ì¤€ë‹¤.
 select ename "name intro" from emp;
--- ÇÑ±ÛÀ» º°ÄªÀ¸·Î Ã³¸®ÇÒ ¶§µµ, " "»çÀÌ¿¡ Ã³¸®
-select deptno "ºÎ¼­¹øÈ£" from emp;
+-- í•œê¸€ì„ ë³„ì¹­ìœ¼ë¡œ ì²˜ë¦¬í•  ë•Œë„, " "ì‚¬ì´ì— ì²˜ë¦¬
+select deptno "ë¶€ì„œë²ˆí˜¸" from emp;
 
 select * from emp;
--- Áßº¹°ª Ã³¸® : µ¥ÀÌÅÍº£ÀÌ½º¿¡¼­´Â µ¿ÀÏÇÑ °ªÀ» ÀÔ·ÂÇÏ´Â °ÍÀ» Å×ÀÌºí´ÜÀ§·Î
--- ÀÔ·ÂÇÏ´Â °ÍÀ» ²¨·ÁÇÑ´Ù. 
--- ÄÃ·³¿¡ ÀÖ´Â ¸ðµç µ¥ÀÌÅÍ°¡ µ¿ÀÏÇØ¼­´Â ¾ÈµÈ´Ù´Â ¸»ÀÌ´Ù.
--- ±×·±µ¥, ÇÑ°³ ÄÃ·³À¸·Î Á¶È¸ÇÒ ¶§´Â µ¿ÀÏÇÑ µ¥ÀÌÅÍ°¡ ³ªÅ¸³¯ ¼ö ÀÖ´Ù.
+-- ì¤‘ë³µê°’ ì²˜ë¦¬ : ë°ì´í„°ë² ì´ìŠ¤ì—ì„œëŠ” ë™ì¼í•œ ê°’ì„ ìž…ë ¥í•˜ëŠ” ê²ƒì„ í…Œì´ë¸”ë‹¨ìœ„ë¡œ
+-- ìž…ë ¥í•˜ëŠ” ê²ƒì„ êº¼ë ¤í•œë‹¤. 
+-- ì»¬ëŸ¼ì— ìžˆëŠ” ëª¨ë“  ë°ì´í„°ê°€ ë™ì¼í•´ì„œëŠ” ì•ˆëœë‹¤ëŠ” ë§ì´ë‹¤.
+-- ê·¸ëŸ°ë°, í•œê°œ ì»¬ëŸ¼ìœ¼ë¡œ ì¡°íšŒí•  ë•ŒëŠ” ë™ì¼í•œ ë°ì´í„°ê°€ ë‚˜íƒ€ë‚  ìˆ˜ ìžˆë‹¤.
 select deptno from emp;
--- ÀÏ¶§, ÇÏ³ª ¶Ç´Â ´Ù¼öÀÇ ÄÃ·³ÀÇ µ¥ÀÌÅÍ°¡ µ¿ÀÏÇÑ °ÍÀ» filtering ÇØÁÖ´Â Ã³¸®°¡
--- ÀÖ´Âµ¥ ÀÌ¸¦ distinct¶ó°í ÇÑ´Ù.
--- È°¿ëÇü½Ä select distinct ÄÃ·³1, ÄÃ·³2.. from Å×ÀÌºí
+-- ì¼ë•Œ, í•˜ë‚˜ ë˜ëŠ” ë‹¤ìˆ˜ì˜ ì»¬ëŸ¼ì˜ ë°ì´í„°ê°€ ë™ì¼í•œ ê²ƒì„ filtering í•´ì£¼ëŠ” ì²˜ë¦¬ê°€
+-- ìžˆëŠ”ë° ì´ë¥¼ distinctë¼ê³  í•œë‹¤.
+-- í™œìš©í˜•ì‹ select distinct ì»¬ëŸ¼1, ì»¬ëŸ¼2.. from í…Œì´ë¸”
 select distinct deptno from emp;
 select * from emp;
--- È®ÀÎ¿¹Á¦1) -mgrÀ» µ¿ÀÏ°ª ¾øÀÌ Ãâ·ÂÇÏ¼¼¿ä..
--- È®ÀÎ¿¹Á¦2) job°ú mgr ÄÃ·³ÀÌ µ¿ÀÏ°ª ¾øÀÌ Ãâ·ÂÇÏ¼¼¿ä.
+-- í™•ì¸ì˜ˆì œ1) -mgrì„ ë™ì¼ê°’ ì—†ì´ ì¶œë ¥í•˜ì„¸ìš”..
+-- í™•ì¸ì˜ˆì œ2) jobê³¼ mgr ì»¬ëŸ¼ì´ ë™ì¼ê°’ ì—†ì´ ì¶œë ¥í•˜ì„¸ìš”.
 select distinct mgr from emp;
 select distinct job, mgr from emp;
 /*
-Á¶°ÇÃ³¸®..
-Æ¯Á¤ÇÑ µ¥ÀÌÅÍ list³»¿ë¿¡¼­ ÇÊ¿äÇÑ µ¥ÀÌÅÍÇÑ Çà´ÜÀ§·Î filteringÇÏ´Â °ÍÀ»
-¸»ÇÑ´Ù.
-1. ¹üÀ§ Ã³¸®..
+ì¡°ê±´ì²˜ë¦¬..
+íŠ¹ì •í•œ ë°ì´í„° listë‚´ìš©ì—ì„œ í•„ìš”í•œ ë°ì´í„°í•œ í–‰ë‹¨ìœ„ë¡œ filteringí•˜ëŠ” ê²ƒì„
+ë§í•œë‹¤.
+1. ë²”ìœ„ ì²˜ë¦¬..
 */
 select * from emp;
--- ¿¬ºÀÀÌ 3000ÀÌ»óÀÎ µ¥ÀÌÅÍ¸¦ list Ã³¸®..
--- where ÄÃ·³¸í > Á¶°Çµ¥ÀÌÅÍ
+-- ì—°ë´‰ì´ 3000ì´ìƒì¸ ë°ì´í„°ë¥¼ list ì²˜ë¦¬..
+-- where ì»¬ëŸ¼ëª… > ì¡°ê±´ë°ì´í„°
 select * from emp
 where sal>=3000;
--- µ¥ÀÌÅÍº£ÀÌ½º¼­ ¾²ÀÌ´Â ºñ±³¿¬»êÀÚ
--- = (*), >, <, >=, <=,   <>,!=(´Ù¸¦¶§)
+-- ë°ì´í„°ë² ì´ìŠ¤ì„œ ì“°ì´ëŠ” ë¹„êµì—°ì‚°ìž
+-- = (*), >, <, >=, <=,   <>,!=(ë‹¤ë¥¼ë•Œ)
 select * from emp;
--- 1) ºÎ¼­¹øÈ£ 30ÀÎ µ¥ÀÌÅÍ¸¦ list ÇÏ¼¼¿ä..
+-- 1) ë¶€ì„œë²ˆí˜¸ 30ì¸ ë°ì´í„°ë¥¼ list í•˜ì„¸ìš”..
 select * from emp
 where deptno=30;
--- 2) ¿¬ºÀÀÌ 1000¹Ì¸¸ÀÎ µ¥ÀÌÅÍ
+-- 2) ì—°ë´‰ì´ 1000ë¯¸ë§Œì¸ ë°ì´í„°
 select * from emp
 where sal<1000;
--- 3) enameÀÌ SMITHÀÎ µ¥ÀÌÅÍ
+-- 3) enameì´ SMITHì¸ ë°ì´í„°
 select * from emp where ename='SMITH';
--- 4) COMMÀÌ NULLÀÎ µ¥ÀÌÅÍ(*) - Áö±Ý±îÁö ¹è¿î ÇÔ¼öÈ°¿ë
+-- 4) COMMì´ NULLì¸ ë°ì´í„°(*) - ì§€ê¸ˆê¹Œì§€ ë°°ìš´ í•¨ìˆ˜í™œìš©
 select * from emp where nvl(comm,0)=0;
--- 	null°ªÀ» ³ªÅ¸³»´Â keyword is null
+-- 	nullê°’ì„ ë‚˜íƒ€ë‚´ëŠ” keyword is null
 select * from emp where comm is null; 
---null°ª ¾Æ´Ò ¶§, is not null
+--nullê°’ ì•„ë‹ ë•Œ, is not null
 select * from emp where comm is not null;
--- 5) MGRÀÌ 7698ÀÌ ¾Æ´Ñ µ¥ÀÌÅÍ
+-- 5) MGRì´ 7698ì´ ì•„ë‹Œ ë°ì´í„°
 select * from emp where mgr != 7698;
--- ¿­°ú ÇàÀÇ µÎ°¡Áö Á¶°ÇÀ» °®Ãá µ¥ÀÌÅÍ listÇÏ±â..
--- ÇàÀÇ multi Á¶°Ç¿¡ ´ëÇÑ Ã³¸®..
+-- ì—´ê³¼ í–‰ì˜ ë‘ê°€ì§€ ì¡°ê±´ì„ ê°–ì¶˜ ë°ì´í„° listí•˜ê¸°..
+-- í–‰ì˜ multi ì¡°ê±´ì— ëŒ€í•œ ì²˜ë¦¬..
 select * from emp;
--- ¿¬ºÀÀÌ 3000ÀÌ»óÀÎ »ç¶÷ÀÇ ÀÌ¸§°ú ¿¬ºÀÀ» list
+-- ì—°ë´‰ì´ 3000ì´ìƒì¸ ì‚¬ëžŒì˜ ì´ë¦„ê³¼ ì—°ë´‰ì„ list
 select ename, sal 
 from emp
 where sal>=3000;
 select * from emp;
--- ¿¬ºÀÀÌ 2000ÀÌÇÏÀÌ°í Á÷Ã¥ÀÌ SALESMANÀÎ »ç¶÷ÀÇ
--- ÀÌ¸§, Á÷Ã¥, ¿¬ºÀÀ» Ãâ·Â..
-select ename "ÀÌ¸§", job "Á÷Ã¥", sal "¿¬ºÀ"
+-- ì—°ë´‰ì´ 2000ì´í•˜ì´ê³  ì§ì±…ì´ SALESMANì¸ ì‚¬ëžŒì˜
+-- ì´ë¦„, ì§ì±…, ì—°ë´‰ì„ ì¶œë ¥..
+select ename "ì´ë¦„", job "ì§ì±…", sal "ì—°ë´‰"
 from emp
 where sal<=2000
 and job='SALESMAN';
--- ÄÃ·³¸íÀº ´ë¼Ò¹®ÀÚ ±¸ºÐÇÏÁö ¾ÊÁö¸¸, µ¥ÀÌÅÍ´Â ´ë¼Ò¹®ÀÚ ±¸ºÐÇÑ´Ù.
--- ¿¬½À¿¹Á¦
--- 1. EMPÁß¿¡ ±Þ¿©°¡ 2000¹Ì¸¸ÀÌ µÇ´Â »ç¿ø Á¤º¸ Áß¿¡ »ç¹ø°ú ±Þ¿©¸¦ Ãâ·ÂÇÏ¶ó.
+-- ì»¬ëŸ¼ëª…ì€ ëŒ€ì†Œë¬¸ìž êµ¬ë¶„í•˜ì§€ ì•Šì§€ë§Œ, ë°ì´í„°ëŠ” ëŒ€ì†Œë¬¸ìž êµ¬ë¶„í•œë‹¤.
+-- ì—°ìŠµì˜ˆì œ
+-- 1. EMPì¤‘ì— ê¸‰ì—¬ê°€ 2000ë¯¸ë§Œì´ ë˜ëŠ” ì‚¬ì› ì •ë³´ ì¤‘ì— ì‚¬ë²ˆê³¼ ê¸‰ì—¬ë¥¼ ì¶œë ¥í•˜ë¼.
 select ename, sal from emp where sal<2000;
--- 2. ¿¬ºÀ°ú º¸³Ê½ºÀÇ ÇÕ»ê ±Ý¾×ÀÌ 1500¹Ì¸¸ÀÎ »ç¶÷ÀÇ ÀÌ¸§, ¿¬ºÀ, º¸³Ê½º, 
---    ÇÕ»ê¾×À» Ãâ·ÂÇÏ¼¼¿ä.
+-- 2. ì—°ë´‰ê³¼ ë³´ë„ˆìŠ¤ì˜ í•©ì‚° ê¸ˆì•¡ì´ 1500ë¯¸ë§Œì¸ ì‚¬ëžŒì˜ ì´ë¦„, ì—°ë´‰, ë³´ë„ˆìŠ¤, 
+--    í•©ì‚°ì•¡ì„ ì¶œë ¥í•˜ì„¸ìš”.
 select ename, sal, comm from emp where sal+nvl(comm,0)<1500;
--- 3. MGRÀÌ NULLÀÎ »ç¶÷ JOB, ÀÌ¸§, ¿¬ºÀÀ» Ãâ·ÂÇÏ¼¼¿ä.
+-- 3. MGRì´ NULLì¸ ì‚¬ëžŒ JOB, ì´ë¦„, ì—°ë´‰ì„ ì¶œë ¥í•˜ì„¸ìš”.
 select job, ename, sal from emp where mgr is null;
--- 4. JOBÀÌ CLERKÀÎ »ç¶÷Áß DEPTNO°¡ 30ÀÎ »ç¶÷ÀÇ ÀÌ¸§, Á÷Ã¥, 
---    ºÎ¼­¹øÈ£¸¦ Ãâ·ÂÇÏ¼¼¿ä
+-- 4. JOBì´ CLERKì¸ ì‚¬ëžŒì¤‘ DEPTNOê°€ 30ì¸ ì‚¬ëžŒì˜ ì´ë¦„, ì§ì±…, 
+--    ë¶€ì„œë²ˆí˜¸ë¥¼ ì¶œë ¥í•˜ì„¸ìš”
 select ename, job, deptno from emp where job = 'CLERK';
--- 5. ¿¬ºÀÀÌ 2000¿¡¼­ 3000 »çÀÌ¿¡ ÀÖ´Â »ç¶÷ÀÇ ºÎ¼­¹øÈ£, 
---    ÀÌ¸§, ¿¬ºÀÀ» Ãâ·ÂÇÏ¼¼¿ä.
+-- 5. ì—°ë´‰ì´ 2000ì—ì„œ 3000 ì‚¬ì´ì— ìžˆëŠ” ì‚¬ëžŒì˜ ë¶€ì„œë²ˆí˜¸, 
+--    ì´ë¦„, ì—°ë´‰ì„ ì¶œë ¥í•˜ì„¸ìš”.
 select deptno, ename, sal
 from emp where sal>=2000 and sal<=3000;
 select * from emp;

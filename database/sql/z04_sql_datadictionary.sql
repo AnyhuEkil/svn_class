@@ -1,25 +1,25 @@
 /*
-µ¥ÀÌÅÍ »çÀü(µ¥ÀÌÅÍ dictionary)
-°ü¸®ÀÚ¿¡¼­ µ¥ÀÌÅÍº£ÀÌ½º¿Í °ü·ÃµÈ Á¤º¸¸¦ Á¦°øÇÏ´Â °ÍÀ» ¸»ÇÑ´Ù.
+ë°ì´í„° ì‚¬ì „(ë°ì´í„° dictionary)
+ê´€ë¦¬ìžì—ì„œ ë°ì´í„°ë² ì´ìŠ¤ì™€ ê´€ë ¨ëœ ì •ë³´ë¥¼ ì œê³µí•˜ëŠ” ê²ƒì„ ë§í•œë‹¤.
 
-DBA_XXX : °ü¸®ÀÚ¸¸ Á¢±Ù°¡´ÉÇÑ °´Ã¼(Å×ÀÌºí µî)ÀÇ Á¤º¸ Á¶È¸.
-ALL_XXX : ÀÚ½Å °èÁ¤ ¼ÒÀ¯ ¶Ç´Â ±ÇÇÑÀ» ºÎ¿© ¹ÞÀº °´Ã¼(Å×ÀÌºí)ÀÇ Á¤º¸Á¶È¸
-USER_XXX : ÀÚ½ÅÀÇ °èÁ¤ÀÌ ¼ÒÀ¯ÇÑ °´Ã¼ µî¿¡ °ü·Ã Á¤º¸ Á¶È¸.
+DBA_XXX : ê´€ë¦¬ìžë§Œ ì ‘ê·¼ê°€ëŠ¥í•œ ê°ì²´(í…Œì´ë¸” ë“±)ì˜ ì •ë³´ ì¡°íšŒ.
+ALL_XXX : ìžì‹  ê³„ì • ì†Œìœ  ë˜ëŠ” ê¶Œí•œì„ ë¶€ì—¬ ë°›ì€ ê°ì²´(í…Œì´ë¸”)ì˜ ì •ë³´ì¡°íšŒ
+USER_XXX : ìžì‹ ì˜ ê³„ì •ì´ ì†Œìœ í•œ ê°ì²´ ë“±ì— ê´€ë ¨ ì •ë³´ ì¡°íšŒ.
 */
 select * from user_tables
-where table_name like '%EMP%'; -- »ç¿ëÀÚ Å×ÀÌºí °ü·Ã Á¤º¸..
+where table_name like '%EMP%'; -- ì‚¬ìš©ìž í…Œì´ë¸” ê´€ë ¨ ì •ë³´..
 /*
-Á¦¾àÁ¶°Ç È®ÀÎÇÏ±â..
-user_constraints¿¡¼­ °¢ Å×ÀÌºíÀÇ ¹«°á¼º Á¦¾àÁ¶°Ç¿¡ °ü·ÃµÈ ³»¿ëÀ» µ¥ÀÌÅÍ
-µñ¼Å³Ê¸®¸¦ ÅëÇØ¼­ È®ÀÎÇÒ ¼ö ÀÕ´Ù.
+ì œì•½ì¡°ê±´ í™•ì¸í•˜ê¸°..
+user_constraintsì—ì„œ ê° í…Œì´ë¸”ì˜ ë¬´ê²°ì„± ì œì•½ì¡°ê±´ì— ê´€ë ¨ëœ ë‚´ìš©ì„ ë°ì´í„°
+ë”•ì…”ë„ˆë¦¬ë¥¼ í†µí•´ì„œ í™•ì¸í•  ìˆ˜ ìž‡ë‹¤.
 ## contraint_type
 P : primary_key
 R : foreign_key
 U : unique
 C : check, not null
 
-** µ¥ÀÌÅÍ »çÀüÀ» ÅëÇØ¼­ »ý¼ºµÈ Å×ÀÌºíÀÇ ¸ñ·Ï, Å×ÀÌºíÀÇ ±¸Á¶, Á¦¾àÁ¶°ÇÀ» 
-È®ÀÎÇÒ ¼ö ÀÖ´Ù..
+** ë°ì´í„° ì‚¬ì „ì„ í†µí•´ì„œ ìƒì„±ëœ í…Œì´ë¸”ì˜ ëª©ë¡, í…Œì´ë¸”ì˜ êµ¬ì¡°, ì œì•½ì¡°ê±´ì„ 
+í™•ì¸í•  ìˆ˜ ìžˆë‹¤..
 */
 select * from user_constraints
 where table_name like '%DEPT%';

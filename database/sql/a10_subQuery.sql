@@ -1,11 +1,11 @@
 /*
-¼­ºê Äõ¸®¸¦ ÀÌ¿ëÇÑ µ¥ÀÌÅÍ Ãß°¡.
-insert ±¸¹®À» select¿Í È¥ÇÕÇØ¼­, µ¥ÀÌÅÍ¸¦ ÀÔ·Â Ã³¸®°¡ °¡´É.
-Çü½Ä : INSERT INTO Å×ÀÌºí¸í
-       SELECT * FROM ÀÔ·ÂÇÒÅ×ÀÌºí; ÇØ´ç SQL·Î ¿©·¯ ¶óÀÎÀÇ µ¥ÀÌÅÍ
-	   ¸¦ ÇÑ¹ø¿¡ ÀÔ·ÂÇÒ ¼ö ÀÖ´Ù..
-	   ÁÖÀÇÇÒ Á¡) ÀÔ·ÂÇÒ Å×ÀÌºíÀÇ ÄÃ·³°ú SELECT [¼±ÅÃÄÃ·³¸í]ÀÇ
-	   ÄÃ·³ °¹¼ö¿Í TYPEÀÌ µ¿ÀÏÇÏ¿©¾ß ÇÑ´Ù.
+ì„œë¸Œ ì¿¼ë¦¬ë¥¼ ì´ìš©í•œ ë°ì´í„° ì¶”ê°€.
+insert êµ¬ë¬¸ì„ selectì™€ í˜¼í•©í•´ì„œ, ë°ì´í„°ë¥¼ ì…ë ¥ ì²˜ë¦¬ê°€ ê°€ëŠ¥.
+í˜•ì‹ : INSERT INTO í…Œì´ë¸”ëª…
+       SELECT * FROM ì…ë ¥í• í…Œì´ë¸”; í•´ë‹¹ SQLë¡œ ì—¬ëŸ¬ ë¼ì¸ì˜ ë°ì´í„°
+	   ë¥¼ í•œë²ˆì— ì…ë ¥í•  ìˆ˜ ìˆë‹¤..
+	   ì£¼ì˜í•  ì ) ì…ë ¥í•  í…Œì´ë¸”ì˜ ì»¬ëŸ¼ê³¼ SELECT [ì„ íƒì»¬ëŸ¼ëª…]ì˜
+	   ì»¬ëŸ¼ ê°¯ìˆ˜ì™€ TYPEì´ ë™ì¼í•˜ì—¬ì•¼ í•œë‹¤.
 	   
 */
 select * from emp_structor;
@@ -14,12 +14,12 @@ INSERT INTO emp_structor
 SELECT * FROM EMP
 WHERE SAL>=3000;
 SELECT * FROM emp_structor;
--- ÄÃ·³ ÁöÁ¤ ¹× º¯°æ
+-- ì»¬ëŸ¼ ì§€ì • ë° ë³€ê²½
 /*
-	insert into Å×ÀÌºí¸í(ÄÃ·³1, ÄÃ·³2, ÄÃ·³3)
-				select ÄÃ·³1, ÄÃ·³1+ÄÃ·³2, ÇÔ¼ö(ÄÃ·³3)
-				from Å×ÀÌºí¸í
-				where Á¶°Ç..
+	insert into í…Œì´ë¸”ëª…(ì»¬ëŸ¼1, ì»¬ëŸ¼2, ì»¬ëŸ¼3)
+				select ì»¬ëŸ¼1, ì»¬ëŸ¼1+ì»¬ëŸ¼2, í•¨ìˆ˜(ì»¬ëŸ¼3)
+				from í…Œì´ë¸”ëª…
+				where ì¡°ê±´..
 */
 
 INSERT INTO emp_structor(empno, sal, ename)
@@ -34,26 +34,26 @@ as select deptno, dname, loc, '     ' kname, 0 membercnt .
    where 1=0;
 select * from dept_sub;  
 	select deptno, dname, loc, 
-	      decode(deptno, 10,'È¸°è',20,'°¨»ç',30,'¿µ¾÷', 40, '¿î¿µ','¾øÀ½') kname, 
+	      decode(deptno, 10,'íšŒê³„',20,'ê°ì‚¬',30,'ì˜ì—…', 40, 'ìš´ì˜','ì—†ìŒ') kname, 
 	    0 membercnt 
 	   from dept;
 	insert into dept_sub
 	select deptno, dname, loc, 
-	      decode(deptno, 10,'È¸°è',20,'°¨»ç',30,'¿µ¾÷', 
-		  			40, '¿î¿µ','¾øÀ½') kname, 
+	      decode(deptno, 10,'íšŒê³„',20,'ê°ì‚¬',30,'ì˜ì—…', 
+		  			40, 'ìš´ì˜','ì—†ìŒ') kname, 
 	      (select count(*) from emp where deptno=a.deptno ) membercnt 
 	   from dept a;
 select count(*) from emp where deptno=30;	
 select a.*,
-      decode(deptno, 10,'È¸°è',
-                     20,'°¨»ç',
-		     30,'¿µ¾÷', 
-	  	     40,'¿î¿µ',
-		     '¾øÀ½') kname 
+      decode(deptno, 10,'íšŒê³„',
+                     20,'ê°ì‚¬',
+		     30,'ì˜ì—…', 
+	  	     40,'ìš´ì˜',
+		     'ì—†ìŒ') kname 
 from dept a;
 	select deptno, dname, loc, 
-	      decode(deptno, 10,'È¸°è',20,'°¨»ç',30,'¿µ¾÷', 
-		  			40, '¿î¿µ','¾øÀ½') kname, 
+	      decode(deptno, 10,'íšŒê³„',20,'ê°ì‚¬',30,'ì˜ì—…', 
+		  			40, 'ìš´ì˜','ì—†ìŒ') kname, 
 	      (select count(*) from emp 
 		  where deptno=a.deptno ) membercnt 
 	   from dept a;	
@@ -61,17 +61,17 @@ select count(*)
          from emp 
 	 where deptno=20;	    
 /*
-¼öÁ¤ ¼­¹öÄõ¸®:
-	¼öÁ¤ÇÏ´Â main sql¿¡¼­µµ subquery·Î ÇØ´ç ³»¿ëÀÇ °á°ú¸¦
-	Ã³¸®ÇÏ´Â °ÍÀ» ¸»ÇÑ´Ù..
-update Å×ÀÌºí¸í
-  set ÄÃ·³¸í = µ¥ÀÌÅÍ(µ¥ÀÌÅÍºÎºĞÀ» subquery·Î Ã³¸® 
-                    select ÄÃ·³¸í
-                    from Å×ÀÌºí where Á¶°Ç
+ìˆ˜ì • ì„œë²„ì¿¼ë¦¬:
+	ìˆ˜ì •í•˜ëŠ” main sqlì—ì„œë„ subqueryë¡œ í•´ë‹¹ ë‚´ìš©ì˜ ê²°ê³¼ë¥¼
+	ì²˜ë¦¬í•˜ëŠ” ê²ƒì„ ë§í•œë‹¤..
+update í…Œì´ë¸”ëª…
+  set ì»¬ëŸ¼ëª… = ë°ì´í„°(ë°ì´í„°ë¶€ë¶„ì„ subqueryë¡œ ì²˜ë¦¬ 
+                    select ì»¬ëŸ¼ëª…
+                    from í…Œì´ë¸” where ì¡°ê±´
 					)
- where Á¶°Ç
- ex) empno°¡ 7369ÀÎ »ç¶÷ÀÇ º¸³Ê½º(comm), 
-        ÀüÃ¼ º¸³Ê½ºÀÇ Æò±ÕÀ» ÇÒ´ç ÇÒ·Á°í ÇÑ´Ù. 
+ where ì¡°ê±´
+ ex) empnoê°€ 7369ì¸ ì‚¬ëŒì˜ ë³´ë„ˆìŠ¤(comm), 
+        ì „ì²´ ë³´ë„ˆìŠ¤ì˜ í‰ê· ì„ í• ë‹¹ í• ë ¤ê³  í•œë‹¤. 
 */
 -- 1. subquery
 select avg(comm)
@@ -82,9 +82,9 @@ update emp
  			 from emp  )
  where empno=7369;
  select * from emp;
---  È®ÀÎ¿¹Á¦.
--- 1. emp_sub77 ÀÌ¶ó´Â empÀÇ º¹»çÅ×ÀÌºíÀ» »ı¼º.
--- 2. emp_sub77¿¡¼­ commÀÌ null°ªÀÎ µ¥ÀÌÅÍ¿¡ salÀÇ ÃÖÀú°ªÀ¸·Î ¼öÁ¤ÇÏ¼¼¿ä.
+--  í™•ì¸ì˜ˆì œ.
+-- 1. emp_sub77 ì´ë¼ëŠ” empì˜ ë³µì‚¬í…Œì´ë¸”ì„ ìƒì„±.
+-- 2. emp_sub77ì—ì„œ commì´ nullê°’ì¸ ë°ì´í„°ì— salì˜ ìµœì €ê°’ìœ¼ë¡œ ìˆ˜ì •í•˜ì„¸ìš”.
 create table emp_sub77
 as select * from emp;
 update emp_sub77

@@ -1,11 +1,11 @@
---°èÁ¤»ý¼º
+--ê³„ì •ìƒì„±
 CREATE USER scott IDENTIFIED BY tiger;
 --USER created.
--- Á¢¼Ó ¹× Å×ÀÌºí °ü·Ã ±ÇÇÑÀ» ÁÖ°í
+-- ì ‘ì† ë° í…Œì´ë¸” ê´€ë ¨ ê¶Œí•œì„ ì£¼ê³ 
 GRANT CONNECT, RESOURCE TO scott;
---CONNECT : µ¥ÀÌÅÍº£ÀÌ½º¿¡ Á¢¼ÓÇÒ¼ö ÀÖ´Â ±âº»±ÇÇÑÀ» °¡Áø·Ñ
---RESOURCE : ±âº»ÀûÀÎ °´Ã¼(Å×ÀÌºí, ÀÎµ¦½º, ºä, Å¬·¯½ºÆ® µî)À» »ý¼º, º¯°æ, »èÁ¦ÇÒ ¼ö ÀÖ´Â ±ÇÇÑÀ» °¡Áø·Ñ
---¼¼¼Ç ±ÇÇÑ ÁÖ°í
+--CONNECT : ë°ì´í„°ë² ì´ìŠ¤ì— ì ‘ì†í• ìˆ˜ ìžˆëŠ” ê¸°ë³¸ê¶Œí•œì„ ê°€ì§„ë¡¤
+--RESOURCE : ê¸°ë³¸ì ì¸ ê°ì²´(í…Œì´ë¸”, ì¸ë±ìŠ¤, ë·°, í´ëŸ¬ìŠ¤íŠ¸ ë“±)ì„ ìƒì„±, ë³€ê²½, ì‚­ì œí•  ìˆ˜ ìžˆëŠ” ê¶Œí•œì„ ê°€ì§„ë¡¤
+--ì„¸ì…˜ ê¶Œí•œ ì£¼ê³ 
 grant alter session to scott;
 CREATE TABLE EMP
 
